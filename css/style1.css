@@ -1,0 +1,3940 @@
+	/* Slider */
+
+.slick-slider
+
+{
+
+    position: relative;
+
+
+
+    display: block;
+
+    box-sizing: border-box;
+
+
+
+    -webkit-user-select: none;
+
+       -moz-user-select: none;
+
+        -ms-user-select: none;
+
+            user-select: none;
+
+
+
+    -webkit-touch-callout: none;
+
+    -khtml-user-select: none;
+
+    -ms-touch-action: pan-y;
+
+        touch-action: pan-y;
+
+    -webkit-tap-highlight-color: transparent;
+
+}
+
+
+
+.slick-list
+
+{
+
+    position: relative;
+
+
+
+    display: block;
+
+    overflow: hidden;
+
+
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+.slick-list:focus
+
+{
+
+    outline: none;
+
+}
+
+.slick-list.dragging
+
+{
+
+    cursor: pointer;
+
+    cursor: hand;
+
+}
+
+
+
+.slick-slider .slick-track,
+
+.slick-slider .slick-list
+
+{
+
+    -webkit-transform: translate3d(0, 0, 0);
+
+       -moz-transform: translate3d(0, 0, 0);
+
+        -ms-transform: translate3d(0, 0, 0);
+
+         -o-transform: translate3d(0, 0, 0);
+
+            transform: translate3d(0, 0, 0);
+
+}
+
+
+
+.slick-track
+
+{
+
+    position: relative;
+
+    top: 0;
+
+    left: 0;
+
+
+
+    display: block;
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+}
+
+.slick-track:before,
+
+.slick-track:after
+
+{
+
+    display: table;
+
+
+
+    content: '';
+
+}
+
+.slick-track:after
+
+{
+
+    clear: both;
+
+}
+
+.slick-loading .slick-track
+
+{
+
+    visibility: hidden;
+
+}
+
+
+
+.slick-slide
+
+{
+
+    display: none;
+
+    float: left;
+
+
+
+    height: 100%;
+
+    min-height: 1px;
+
+}
+
+[dir='rtl'] .slick-slide
+
+{
+
+    float: right;
+
+}
+
+.slick-slide img
+
+{
+
+    display: block;
+
+}
+
+.slick-slide.slick-loading img
+
+{
+
+    display: none;
+
+}
+
+.slick-slide.dragging img
+
+{
+
+    pointer-events: none;
+
+}
+
+.slick-initialized .slick-slide
+
+{
+
+    display: block;
+
+}
+
+.slick-loading .slick-slide
+
+{
+
+    visibility: hidden;
+
+}
+
+.slick-vertical .slick-slide
+
+{
+
+    display: block;
+
+
+
+    height: auto;
+
+
+
+    border: 1px solid transparent;
+
+}
+
+.slick-arrow.slick-hidden {
+
+    display: none;
+
+}
+
+.slickblock{width:100%;height:540px;}
+
+
+
+.slick-dots {
+
+    position: absolute;
+
+    top: 417px;
+
+    left:260px;
+
+    list-style: none;
+
+    display: block;
+
+    padding: 0;
+
+    width:150px;
+
+    }
+
+.slick-dots li {
+
+        position: relative;
+
+        display: inline-block;
+
+        height: 8px;
+
+        width: 8px;
+
+        margin: 0 9px;
+
+        padding: 0;
+
+        cursor: pointer;       
+
+    }
+
+.slick-dots li.slick-active {
+
+         	margin: 0 10px;
+
+        }
+
+         	
+
+.slick-dots li button {
+
+            border: 0;
+
+            display: block;
+
+            width: 8px;
+
+            height: 8px;
+
+          /*          border-radius: 50%;*/
+
+             background: url('http://localhost/solarkitindia.com/images/icons/oval.svg') no-repeat;
+
+    background-size: 8px 8px;
+
+    background-position: center center;
+
+    
+
+    outline: none;
+
+            line-height: 0px;
+
+            font-size: 0px;
+
+            color: transparent;
+
+            cursor: pointer;}
+
+            
+
+.slick-dots li button:hover, .slick-dots li button:focus {
+
+                outline: none;}
+
+            
+
+        
+
+        .slick-dots li.slick-active button {
+
+            width: 12px;
+
+            height: 12px;
+
+             background: url('http://localhost/solarkitindia.com/images/icons/oval_big.svg') no-repeat;
+
+    background-size: 12px;
+
+            /*background: #FF5345;*/
+
+        }
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#slickblock {margin: 18px 0;}
+
+
+
+
+
+.slicktitle{
+
+width: 550px;
+
+    height: 130px;   
+
+    font-family: Adieu;
+
+font-style: normal;
+
+font-weight: normal;
+
+font-size: 64px;
+
+line-height: 64px;
+
+/* or 100% */
+
+letter-spacing: -3.6px;
+
+color: #241F20;
+
+    position: absolute;
+
+    top: 41px;}
+
+
+
+.slickdescription{
+
+	
+
+width: 547px;
+
+    height: 60px;
+
+
+
+    font-family: Silka;
+
+    font-style: normal;
+
+    font-weight: 500;
+
+    font-size: 24px;
+
+    line-height: 30px;
+
+    color: #868F9F;
+
+    position: absolute;
+
+    top: 191px;
+
+
+
+
+
+}
+
+
+
+
+
+#slickblock a.btns{
+
+	width: 200px;
+
+	height: 50px;
+
+	
+
+	position:relative;
+
+	top:428px;
+
+border-radius: 5px;
+
+font-family: Silka;
+
+font-style: normal;
+
+font-weight: 500;
+
+font-size: 15px;
+
+line-height: 50px;
+
+/* identical to box height */
+
+text-align: center;
+
+letter-spacing: -0.333333px;
+
+color: #FFFFFF;
+
+display: grid;
+
+    background: #FF5345 url(http://localhost/solarkitindia.com/images/icons/learn_more.svg) no-repeat;
+
+    background-size: 20px 5px;
+
+    background-position: 146px center;
+
+}
+
+#slickblock .slickimage{
+
+	float:right;
+
+width: 420px;
+
+    height: 500px;
+
+    position: relative;
+
+    margin-right: 50px;
+
+    top: 0;
+
+    
+
+	
+
+}
+
+#slickblock .slickimage img{
+
+width: 420px;
+
+    height: 500px;
+
+
+
+}
+
+.slickicons{
+
+	position: absolute;
+
+    top: 291.85px;
+
+  }
+
+
+
+.slickicons div {
+
+	float:left;
+
+	margin-right:20.98px;	
+
+opacity: 0.2;}
+
+
+
+.slickicons div a{
+
+font-family: Silka;
+
+font-style: normal;
+
+font-weight: 500;
+
+font-size: 14.0625px;
+
+line-height: 19px;
+
+/* or 132% */
+
+
+
+letter-spacing: -0.200893px;
+
+margin-right:20.98px;}
+
+
+
+.slickicons div.active{opacity: 1;}
+
+
+
+.slickicons div a span{
+
+	position: relative;
+
+    bottom: -10px;
+
+    height: 35px;
+
+    text-transform: uppercase;
+
+    }
+
+
+
+.slickicons div.active a span{font-weight: 700;}
+
+
+
+
+
+
+
+.Group83 {
+
+width: 84.94px;
+
+height: 89.12px;
+
+}
+
+.Group83 img{
+
+	width: 29.49px;
+
+	height: 37.36px;}
+
+.Group82{
+
+width: 99px;
+
+height: 89.12px;
+
+}
+
+.Group82 img{
+
+	width: 38.95px;
+
+	height: 37.92px;}
+
+.Group81{
+
+width: 107.93px;
+
+height: 89.12px;
+
+}
+
+.Group81 img{
+
+	width: 59.46px;
+
+	height: 39.83px;}
+
+.Group84{
+
+width: 89.94px;
+
+height: 89.12px;
+
+}
+
+.Group84 img{
+
+	width: 41.18px;
+
+	height: 37.67px;}
+
+.Group85{
+
+width: 100px;
+
+height: 89.12px;
+
+margin-right:0;}
+
+.Group85 img{
+
+	width: 43.85px;
+
+	height: 40.32px;
+
+}
+
+
+
+/* -------------------------------------------------------------*/
+
+/* 
+
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+
+  ##Screen = B/w 481px to 767px
+
+*/
+
+
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+  .slickblock {
+
+    height:480px!important;
+
+}
+
+  #slickblock .slickimage,#slickblock .slickimage img {
+
+    width: 324px!important;
+
+    height: 386px!important;
+
+    margin-right:0!important;
+
+}
+
+
+
+
+
+.slicktitle {
+
+width: 342px!important;
+
+height: 100px!important;
+
+font-size: 42px!important;
+
+line-height: 48px!important;
+
+/* or 114% */
+
+letter-spacing: -3.6px!important;
+
+top:50px!important;  
+
+}
+
+
+
+.slickdescription {
+
+ width: 344px!important;
+
+height: 80px!important;
+
+font-size: 18px!important;
+
+line-height: 24px!important;
+
+/* or 133% */
+
+ top: 170px!important;
+
+    }
+
+
+
+
+
+.slick-dots {
+
+	top:383px!important;
+
+	
+
+}
+
+.slickicons{
+
+	top: 280px!important;	
+
+}
+
+
+
+.slickicons div a{
+
+	margin-right:13.79px!important;
+
+font-size: 10px!important;
+
+line-height: 12px!important;
+
+/* or 120% */
+
+
+
+letter-spacing: -0.200893px!important;
+
+
+
+}
+
+
+
+.Group83 {
+
+width: 56.65px!important;
+
+height: 59.44px!important;
+
+}
+
+.Group83 img{
+
+	width: 19.67px!important;
+
+	height: 24.92px!important;}
+
+.Group82{
+
+width: 66.65px!important;
+
+height: 59.44px!important;
+
+}
+
+.Group82 img{
+
+	width: 25.98px!important;
+
+	height: 25.29px!important;}
+
+.Group81{
+
+width: 71.98px!important;
+
+height: 59.44px!important;
+
+}
+
+.Group81 img{
+
+	width: 39.66px!important;
+
+	height: 26.57px!important;}
+
+.Group84{
+
+width: 59.98px!important;
+
+height: 59.44px!important;
+
+}
+
+.Group84 img{
+
+	width: 27.47px!important;
+
+	height:25.13px!important;}
+
+.Group85{
+
+width: 59.98px!important;
+
+height: 59.44px!important;
+
+}
+
+.Group85 img{
+
+	width: 29.24px!important;
+
+	height: 26.93px!important;
+
+}
+
+
+
+
+
+#slickblock a.btns {
+
+top:390px!important;
+
+    width: 222px!important;
+
+    height: 40px!important;
+
+    font-size: 14px!important;
+
+line-height: 39px!important;
+
+    background-position: 155px center!important;
+
+
+
+}
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+
+  ##Screen = B/w 320px to 479px
+
+*/
+
+
+
+@media (min-width: 360px) and (max-width: 480px) {
+
+.lpruka{
+
+background:url('http://localhost/solarkitindia.com/images/icons/lpruka.svg');
+
+position:absolute;
+
+width: 50px;
+
+height: 41px;
+
+left: 188px;
+
+top: 588px;
+
+
+
+}
+
+.slickblock {
+
+    height: 780px!important;
+
+}
+
+
+
+
+
+#slickblock .slickimage{
+
+	float:none!important;
+
+	left:16px!important;
+
+}
+
+#slickblock .slickimage,#slickblock .slickimage img {
+
+    width: 320px!important;
+
+    height: 380px!important;
+
+   
+
+
+
+}
+
+
+
+.slicktitle {
+
+display:none;
+
+}
+
+.slickdescription {
+
+   width: 244px!important;
+
+height: 80px!important;
+
+left: 27px;
+
+font-size: 18px!important;
+
+line-height: 28px!important;
+
+/* or 156% */
+
+ position: absolute;
+
+    top: 626px!important;
+
+    }
+
+
+
+
+
+.slick-dots {
+
+   left: 119px!important;
+
+top: 400px!important;
+
+}
+
+
+
+.slickicons{
+
+	left:25px!important;
+
+	top: 460px!important;
+
+	display:flex;
+
+}
+
+.slickicons div {
+
+	width: 246px!important;
+
+height: 240px!important;
+
+}
+
+.slickicons div img{
+
+    width: 65px!important;
+
+    height: auto!important;
+
+}	
+
+.slickicons div span{
+
+width: 231px!important;
+
+height: 60px!important;
+
+font-size: 28px!important;
+
+line-height: 34px!important;
+
+/* or 121% */
+
+display: flex;
+
+align-items: center;
+
+letter-spacing: -1px!important;
+
+text-transform: initial!important;
+
+}
+
+
+
+
+
+.slickicons div:not(.active) {
+
+  display:none;
+
+}
+
+
+
+
+
+#slickblock a.btns {
+
+top:350px!important;
+
+left:25px!important;
+
+    width: 264px!important;
+
+}
+
+}
+
+/* ******************************************************* */
+
+
+
+
+
+
+
+
+
+
+
+.prod_1{width: 995px;
+
+margin:60px auto 0 auto;
+
+height: 67px;
+
+font-family: Adieu;
+
+font-style: normal;
+
+font-weight: normal;
+
+font-size: 52px;
+
+line-height: 56px;
+
+/* or 108% */
+
+text-align: center;
+
+letter-spacing: -2.3px;
+
+color: #241F20;}
+
+
+
+.prod_1p{
+
+	margin:0 103px;
+
+/*width: 994px;*/
+
+
+
+font-family: Silka;
+
+font-style: normal;
+
+font-weight: 500;
+
+font-size: 18px;
+
+line-height: 26px;
+
+/* or 144% */
+
+text-align: center;
+
+color: #868F9F;
+
+padding-bottom:47px}
+
+
+
+.prod_1a{margin:60px auto 80px auto;
+
+width: 650px;
+
+text-align: center;
+
+display: table;}
+
+
+
+.prod_1a a{
+
+width: 325px;
+
+height: 86px;
+
+display:table-cell;
+
+background: #FFFAF9;
+
+border-top: 1px solid #FF5345;
+
+border-bottom: 1px solid #FF5345;
+
+border-right: 1px solid #FF5345;
+
+border-radius: 0px 4px 4px 0px;
+
+font-family: Silka;
+
+font-style: normal;
+
+font-weight: 500;
+
+font-size: 18px;
+
+line-height: 86px;
+
+/* identical to box height, or 178% */
+
+color: #241F20;
+
+}
+
+
+
+.prod_1a a.disabled {background-color:#F2F2F2;border-color:#F2F2F2;
+
+border-right: 1px solid #FF5345;color:#D8D8D8;
+
+}
+
+
+
+
+
+.prod_1a a:first-child {
+
+border-right: 1px solid #FF5345;
+
+border-radius: 4px 0px 0px 4px;
+
+
+
+}
+
+.btns span{
+
+padding-left: 64px;
+
+    display: block;
+
+  }
+
+    
+
+.prod_1a a.disabled span {filter: invert(49%) sepia(2%) saturate(3%) hue-rotate(334deg) brightness(160%) contrast(101%);
+
+}
+
+
+
+.btns.metal{	
+
+    background-image: url('http://localhost/solarkitindia.com/images/icons/ico-metal-roof.png');
+
+    background-repeat:no-repeat;
+
+    background-size: 62px 25px;
+
+    background-position: 70px 27px;
+
+    
+
+   }
+
+.btns.flat{	
+
+    background-image: url('http://localhost/solarkitindia.com/images/icons/ico-flat-roof.png');
+
+    background-repeat:no-repeat;
+
+    background-size: 44px 36px;
+
+    background-position: 86px 27px;
+
+    /*padding-left: 20px;
+
+    display: block;
+
+    margin-left: 86px;*/
+
+   }
+
+
+
+.prod_2{width: 995px;
+
+margin: 40px auto 0 auto;
+
+height: 40px;
+
+font-family: Adieu;
+
+font-style: normal;
+
+font-weight: normal;
+
+font-size: 36px;
+
+line-height: 42px;
+
+/* or 117% */
+
+text-align: center;
+
+letter-spacing: -2.3px;
+
+color: #241F20;}
+
+
+
+
+
+.prod_block{margin-top:50px;width:100%;}
+
+.prod_block1{width:390px;float:left;}
+
+.prod_block2{width:722px;float:right;margin-bottom: 40px;}
+
+.prod_container{/*padding-left:60px*/}
+
+.prod_title{margin-bottom:30px;
+
+font-family: Silka;
+
+font-style: normal;
+
+font-weight: bold;
+
+font-size: 16px;
+
+line-height: 28px;
+
+/* or 175% */
+
+display: flex;
+
+align-items: center;
+
+letter-spacing: -0.355556px;
+
+color: #241F20;}
+
+.prod_title span{font-family: Silka;}
+
+.prod_title.description{margin-bottom:20px;
+
+}
+
+.select{display: table;margin-bottom:30px;}
+
+.select a{width: 195px;
+
+height: 96px;
+
+text-align: center;
+
+background: #FFFFFF;
+
+border: 1px solid #B9C0CC;
+
+display:table-cell;
+
+}
+
+
+
+#s30,#s41,#s65,#s100,#sss,#ssd,#sri,#sgl{
+
+    width: 97.5px;
+
+}
+
+.select #slr.col{
+
+	width:390px;
+
+}
+
+
+
+.select a:first-child {
+
+/*border-right: 1px solid #FF5345;*/
+
+border-radius: 4px 0px 0px 4px;
+
+}
+
+.select a:last-child{
+
+border-radius: 0px 4px 4px 0px;	
+
+}
+
+
+
+.select a.active{background: #FFFAF9;
+
+border: 1px solid #FF5345;
+
+}
+
+.select a span{
+
+position: relative;
+
+    top: 68px;
+
+    font-family: Silka;
+
+font-style: normal;
+
+font-weight: 500;
+
+font-size: 14px;
+
+line-height: 18px;
+
+/* identical to box height, or 129% */
+
+color: #241F20;}
+
+
+
+#stf{background-image: url('http://localhost/solarkitindia.com/images/icons/Trapez.svg');}
+
+#str{background-image: url('http://localhost/solarkitindia.com/images/icons/Trapez.svg');}
+
+#sse{background-image: url('http://localhost/solarkitindia.com/images/icons/Seam.svg');}
+
+#spo{background-image: url('http://localhost/solarkitindia.com/images/icons/Portrait.svg');}
+
+#sla{background-image: url('http://localhost/solarkitindia.com/images/icons/Landscape.svg');}
+
+#ssr{background-image: url('http://localhost/solarkitindia.com/images/icons/Short-Rail.svg');}
+
+#slr{background-image: url('http://localhost/solarkitindia.com/images/icons/Long-Rail.svg');}
+
+#s30{background-image: url('http://localhost/solarkitindia.com/images/icons/Rail-30.svg');}
+
+#s41{background-image: url('http://localhost/solarkitindia.com/images/icons/Rail-30.svg');}
+
+#s65{background-image: url('http://localhost/solarkitindia.com/images/icons/Rail-65.svg');}
+
+#s100{background-image: url('http://localhost/solarkitindia.com/images/icons/Rail-65.svg');}
+
+#smc{background-image: url('http://localhost/solarkitindia.com/images/icons/End-Mid-Clamp.svg');}
+
+#sar{background-image: url('http://localhost/solarkitindia.com/images/icons/Raymond-Clip.svg');}
+
+#sss{background-image: url('http://localhost/solarkitindia.com/images/icons/Screw 1.svg');}
+
+#ssd{background-image: url('http://localhost/solarkitindia.com/images/icons/Screw 2.svg');}
+
+#sri{background-image: url('http://localhost/solarkitindia.com/images/icons/Rivet.svg');}
+
+#sgl{background-image: url('http://localhost/solarkitindia.com/images/icons/Glue.svg');}
+
+
+
+#stf,#str,#sse,#spo,#sla,#ssr,#slr,#s30,#s41,#s65,#s100,#smc,#sar,#ssr,#sss,#ssd,#sri,#sgl{
+
+    background-repeat: no-repeat;
+
+    background-size: 48px 48px;
+
+    background-position: center 10px;
+
+    }
+
+
+
+.prod_block1 button, .prod_block1 a.finish {
+
+	cursor: pointer;
+
+	width: 390px;
+
+height: 50px;
+
+line-height: 50px;
+
+background: #FFF;
+
+border-radius: 5px;
+
+
+
+font-family: Silka;
+
+font-style: normal;
+
+font-weight: 500;
+
+font-size: 15px;
+
+/* identical to box height */
+
+text-align: center;
+
+letter-spacing: -0.333333px;
+
+border: 1px solid #FF5345;
+
+color:#FF5345;
+
+margin-bottom:20px;}
+
+
+
+.prod_block1 button.next,.prod_block1 a.finish {color:white;
+
+background: #FF5345;}
+
+
+
+.prod_block1 a.finish {display: none;}
+
+p.desc{
+
+	max-width:390px;
+
+font-family: Silka;
+
+font-size: 18px;
+
+font-style: normal;
+
+font-weight: 500;
+
+line-height: 30px;
+
+letter-spacing: -0.35555556416511536px;
+
+text-align: left;}
+
+p.desc strong{
+
+font-weight: 700;
+
+}
+
+
+
+.prod_block2 img{border: 1px solid #D8D8D8;width:100%;max-width:width:632px;}
+
+
+
+.prod_block2 a{
+
+font-family: Silka;
+
+font-style: normal;
+
+font-weight: 500;
+
+font-size: 15px;
+
+line-height: 18px;
+
+/* identical to box height */
+
+letter-spacing: -0.333333px;
+
+color: #FF5345;
+
+margin-right:40px;margin-top:33px;display: inline-block;}
+
+
+
+.prod_block2 a span.download{width:184px;display:grid;background: url('http://localhost/solarkitindia.com/images/icons/download.svg') no-repeat;
+
+    background-size: 24px 24px;
+
+    background-position: right;}
+
+.prod_block2 a span.request{width:139px;background: url('http://localhost/solarkitindia.com/images/icons/request.svg') no-repeat;
+
+    background-size: 24px 24px;
+
+    background-position: right;display: grid;}
+
+    
+
+    
+
+    
+
+    
+
+button.next:disabled {
+
+    background: #f2f2f2;
+
+    color: #241F20;
+
+    border-color: #f2f2f2;
+
+}
+
+    
+
+    
+
+    
+
+.step{ margin:40px 0 27px 0;height:48px;
+
+}
+
+.step-container{
+
+      width: 100%;
+
+    
+
+  }  
+
+  
+
+      .progress {
+
+      	background-color: #FFF;
+
+  width: 100%;
+
+  display: table;
+
+  table-layout: fixed;
+
+  padding: 0;
+
+  margin: 0;
+
+  overflow: auto;
+
+}
+
+.progress__step {
+
+	counter-increment: step-number;
+
+  display: table-cell;
+
+  text-align: center;
+
+  vertical-align: top;
+
+  position: relative;
+
+  color: #fff; 
+
+}
+
+.progress__step::before {
+
+  content: "";
+
+  display: block;
+
+  width: 24px;
+
+  height: 24px;
+
+  border-radius: 50%;
+
+  margin: 0 auto;
+
+  position: relative;
+
+    z-index: 2;
+
+    top: 8px;
+
+}
+
+.progress__step:not(:first-child)::after {
+
+  content: "";
+
+  position: absolute;
+
+  top: 1.4em;
+
+  left: -50%;
+
+  width: 100%;
+
+  height: 2px;
+
+  z-index: 1;
+
+}
+
+
+
+/* steps before the active step */
+
+.progress__step::before, .progress__step::after {
+
+  background-color: #FF5345;
+
+}
+
+.progress__step::before {
+
+  background-color: #FF5345;
+
+  
+
+}
+
+
+
+/* steps after the active step */
+
+.progress__step--active ~ .progress__step::before {
+
+      background-color: #E6EAF1;  
+
+}
+
+.progress__step--active ~ .progress__step::after {
+
+  background-color: #E6EAF1;
+
+}
+
+
+
+/* the active step */
+
+.progress__step--active::before {
+
+  background-color: #FFF;
+
+    border: 2px solid #FF5345;
+
+    width: 48px;
+
+    height: 48px;
+
+    top: -2px;
+
+     content: counter(step-number);
+
+    font-family: Adieu;
+
+    font-style: normal;
+
+    font-weight: normal;
+
+    font-size: 24px;
+
+    line-height: 44px;
+
+    align-items: center;
+
+    text-align: center;
+
+    letter-spacing: -2.3px;
+
+    color: #FF5345;
+
+}
+
+.progress__step--active {
+
+  color: #FF5345;
+
+}
+
+   
+
+  .progress__step--active ~ .progress__step a {
+
+  display:none;
+
+} 
+
+.progress li a{position: relative;
+
+    z-index: 2;
+
+    top: -14px;
+
+    color: transparent;}
+
+
+
+
+
+.line1{opacity: 0.4;
+
+height: 0px;
+
+border: 1px solid #B9C0CC;}
+
+
+
+
+
+.prod_more{margin-bottom:39px;}
+
+.show-more{display:none;}	
+
+	
+
+	
+
+
+
+
+
+/* -------------------------------------------------------------*/
+
+/* 
+
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+
+  ##Screen = B/w 481px to 767px
+
+*/
+
+
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+
+
+.prod_1 {
+
+    width: 705px!important;
+
+    margin: 50px auto 0 auto!important;
+
+    height: 40px!important;
+
+font-size: 28px!important;
+
+line-height: 38px!important;
+
+/* or 136% */
+
+letter-spacing: -1.6px!important;
+
+}
+
+
+
+.prod_1a {
+
+    margin: 40px auto 44px auto!important;
+
+    width: 500px!important;    
+
+}
+
+
+
+.prod_1a a {
+
+    width: 250px!important;
+
+    height: 82px!important;
+
+   
+
+}
+
+.btns span {
+
+    padding-left: 0;}
+
+.btns.flat {
+
+    background-size: 44px 36px!important;
+
+    background-position: 45px 27px!important;
+
+}
+
+.btns.metal {
+
+    background-size: 62px 25px!important;
+
+    background-position: 39px 27px!important;
+
+}
+
+
+
+.prod_1a a.flat span {
+
+    width: 95px!important;
+
+    height: 32px!important;
+
+    font-size: 18px!important;
+
+    line-height: 32px!important;
+
+    text-align: center!important;
+
+    position: relative!important;
+
+    top: 25px!important;
+
+    left: 106px!important;
+
+}
+
+.prod_1a a.metal span {
+
+    width: 120px!important;
+
+    height: 32px;
+
+    font-size: 18px!important;
+
+    line-height: 32px!important;
+
+    text-align: center!important;
+
+    position: relative!important;
+
+    top: 25px!important;
+
+    left: 108px!important;
+
+	
+
+}
+
+	
+
+.prod_1p {
+
+    padding-bottom: 40px!important;    
+
+   max-width: 708px!important;
+
+  /*margin:0 10px!important;*/
+
+font-size: 14px!important;
+
+line-height: 20px!important;
+
+/* or 143% */
+
+}
+
+
+
+
+
+
+
+
+
+.prod_2 {
+
+	margin-top: 40px!important;
+
+width: 708px!important;
+
+height: 30px!important;
+
+font-size: 28px!important;
+
+line-height: 36px!important;
+
+/* or 129% */
+
+letter-spacing: -1.3px!important;
+
+
+
+}
+
+
+
+.step {
+
+    margin: 20px auto 30px auto!important;
+
+    height: 48px!important;
+
+}
+
+.prod_block {
+
+     margin-top: 0!important;
+
+ }
+
+
+
+.prod_block2 {
+
+    width: 407px!important;  
+
+    margin: 0 auto;
+
+    floa:none;  
+
+}
+
+.prod_block2 a {
+
+    margin-right: 30px!important;
+
+    margin-top: 20px!important;
+
+
+
+}
+
+
+
+.prod_block1 {
+
+    width: 280px!important;  
+
+    
+
+}
+
+.prod_title {
+
+    margin-bottom: 20px!important;
+
+    font-size: 14px!important;
+
+}
+
+
+
+
+
+.prod_block1 button {
+
+    width: 280px!important;  
+
+    height: 40px!important;
+
+    line-height: 40px!important;  
+
+    font-size: 15px!important;  
+
+
+
+}
+
+
+
+.desc {width: 280px!important; 
+
+font-size: 16px!important;
+
+line-height: 24px!important;
+
+/* or 150% */
+
+letter-spacing: -0.355556px!important;
+
+ }
+
+
+
+.components .compo,.components .line {
+
+    padding-left: 0!important;
+
+}    
+
+    
+
+.compo_block{
+
+width: 222px!important; 
+
+    margin: 40px 20px 0 0!important; 
+
+}
+
+.compo_block:nth-child(3n+0) {
+
+    margin-right: 0!important; 
+
+}
+
+
+
+.compo_block h3 {
+
+ margin: 28px 0 0 0!important;
+
+width: 222px!important;
+
+height: 30px!important;
+
+font-size: 18px!important;
+
+line-height: 26px!important;
+
+/* or 144% */
+
+}
+
+.compo_block img {
+
+    width: 222px!important;
+
+    height: auto!important;
+
+}
+
+.compo_block li {
+
+    width: 185px!important;
+
+    font-size: 14px!important;
+
+   padding-left: 26px!important;
+
+    
+
+}
+
+
+
+
+
+.siq_bR {
+
+    bottom: 10px!important;
+
+    left: 700px!important;
+
+   }
+
+}	
+
+/* 
+
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+
+  ##Screen = B/w 320px to 479px
+
+*/
+
+
+
+@media (min-width: 360px) and (max-width: 480px) {
+
+	
+
+	.prod_1 {
+
+    width: 320px!important;
+
+    margin: 40px auto 0 auto!important;
+
+    height: 67px!important;
+
+ font-size: 28px!important;
+
+line-height: 34px!important;
+
+}
+
+
+
+.prod_1a {
+
+        margin: 40px auto!important;
+
+    width: 320px!important;
+
+    
+
+}
+
+
+
+.prod_1a a {
+
+    width: 160.5px!important;
+
+   font-size: 18px!important;
+
+line-height: 20px!important;
+
+}
+
+
+
+
+
+.btns.flat {
+
+    background-position: 29px 27px!important;    
+
+}
+
+.btns.metal {
+
+    background-position: 15px 30px!important;    
+
+}
+
+
+
+
+
+.prod_1a a.flat span{
+
+width: 70px!important;
+
+height: 40px;
+
+font-size: 18px!important;
+
+line-height: 20px!important;
+
+/* or 111% */
+
+text-align: center!important;
+
+position: relative!important;
+
+    top: 22px!important;
+
+    left: 35px!important;
+
+    
+
+}
+
+
+
+.prod_1a a.metal span{
+
+width: 70px!important;
+
+height: 40px;
+
+font-size: 18px!important;
+
+line-height: 20px!important;
+
+/* or 111% */
+
+text-align: center!important;
+
+position: relative!important;
+
+    top: 22px!important;
+
+    left: 30px!important;
+
+}
+
+
+
+
+
+
+
+.show-more{
+
+	color:#FF5345;
+
+	display:block!important;
+
+text-align: center!important;
+
+}
+
+.prod_1p {
+
+	width: 320px!important;
+
+    height: 180px!important;
+
+	margin: 0 auto!important;
+
+	overflow: hidden!important;
+
+	font-size: 14px!important;
+
+line-height: 22px!important;
+
+position:relative!important;
+
+}
+
+
+
+.prod_2 {
+
+	margin: 50px auto 45px auto!important;
+
+	width: 320px!important;
+
+	 height: 102px!important;
+
+	font-size: 28px!important;	 
+
+line-height: 34px!important;
+
+/* or 121% */
+
+text-align: center!important;
+
+letter-spacing: -1px!important;
+
+}
+
+
+
+.progress__step--active::before {
+
+    width: 40px!important;
+
+    height: 40px!important;
+
+    top: 0!important;    
+
+    line-height: 36px!important;
+
+    font-size: 20px!important;
+
+   }
+
+   
+
+   .step {
+
+    width: 320px!important;
+
+    margin:0 auto!important;
+
+   }
+
+   
+
+.prod_title {
+
+    margin-bottom: 20px!important;
+
+    }   
+
+   .prod_block2 {
+
+    width: 320px!important;
+
+    float: none!important;
+
+    margin:0 auto!important;
+
+    
+
+}
+
+.prod_block2 {
+
+margin: 10px auto 0 auto!important;}
+
+.prod_block2 a{
+
+	    margin-top: 20px!important;
+
+	    font-size: 12px!important;
+
+line-height: 14px!important;
+
+display: table-cell!important;
+
+padding-right:40px!important;
+
+}
+
+	
+
+	.prod_block2 a span.download {
+
+    width: 138px!important;
+
+    background-size: 18px!important; 
+
+}
+
+	.prod_block2 a span.request {
+
+    width: 110px!important;
+
+    background-size: 18px!important; 
+
+}
+
+
+
+.prod_block1{margin:30px auto 0 auto!important;!important;
+
+width:320px!important;
+
+float:none!important;}
+
+.prod_block1 button {width:320px!important;}
+
+.p.desc{width:320px!important;
+
+font-size: 16px!important;
+
+line-height: 22px!important;
+
+/* or 137% */
+
+letter-spacing: -0.355556px!important;
+
+}
+
+
+
+.siq_bR {
+
+    bottom: 10px!important;
+
+    left: 300px!important;
+
+    
+
+    }
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.section.components{background: #f1f5f9; padding: 55px 0;}
+
+
+
+.components .line{margin: 0 0 0 42px;}
+
+ .components .compo{
+
+  display: inline-grid;
+
+  grid-template-columns: 340px 340px 340px;
+
+  column-gap: 48px;
+
+  margin-left: 40px;
+
+  }
+
+
+
+ .compo_block {
+
+   width:340px;
+
+  margin:40px 0 0 0;
+
+}
+
+/*
+
+.compo_block:nth-child(3n+0){   
+
+  margin-right:0;
+
+}
+
+*/.compo_block img{
+
+width: 340px;
+
+height: auto;}
+
+
+
+.compo_block h3{
+
+width: 340px;
+
+height: 30px;
+
+font-family: Adieu;
+
+font-style: normal;
+
+font-weight: normal;
+
+font-size: 20px;
+
+line-height: 32px;
+
+/* or 160% */
+
+letter-spacing: -1.2px;
+
+color: #241F20;
+
+margin: 40px 0 0 0;
+
+}
+
+.compo_block ul{
+
+margin-top: 20px; 
+
+}
+
+.compo_block li{
+
+width: 306px;
+
+ position: relative;
+
+        list-style-type: none;
+
+ padding-left:34px;       
+
+font-family: Silka;
+
+font-style: normal;
+
+font-weight: 500;
+
+font-size: 16px;
+
+line-height: 38px;
+
+/* or 237% */
+
+letter-spacing: -0.355556px;
+
+color: #47505E;}
+
+.compo_block li:before {
+
+  content: "";
+
+        position: absolute;
+
+        top: 9px;
+
+        left:0;
+
+        width: 20px;
+
+        height: 20px;
+
+        background-image: url('http://localhost/solarkitindia.com/images/icons/s.svg');
+
+        background-size: 14px 17px;
+
+  background-repeat:no-repeat;
+
+  }
+
+  
+
+  /* -------------------------------------------------------------*/
+
+/* 
+
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+
+  ##Screen = B/w 481px to 767px
+
+*/
+
+
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+
+
+  .components .line{margin: 0 0 0 20px!important;}
+
+ .components .compo{
+
+grid-template-columns: 222px 222px 222px!important;
+
+  column-gap: 20px!important;
+
+  margin-left:20px!important;
+
+  }
+
+
+
+ .compo_block {
+
+   width:222px!important;
+
+  margin:55px 0 0 0!important;
+
+}
+
+
+
+.compo_block img{
+
+width: 222px!important;}
+
+
+
+.compo_block h3{
+
+width: 222px!important;
+
+height: 30px!important;
+
+font-size: 18px!important;
+
+line-height: 26px!important;
+
+/* or 140% */
+
+letter-spacing: -1.2px!important;
+
+margin: 28px 0 0 0!important;
+
+}
+
+.compo_block ul{
+
+margin-top: 20px!important;
+
+}
+
+
+
+.compo_block li{
+
+width: 185px!important;
+
+padding-left:26px!important;
+
+font-size: 14px!important;
+
+line-height: 38px!important;
+
+}
+
+
+
+
+
+  
+
+ }
+
+ /* 
+
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+
+  ##Screen = B/w 320px to 479px
+
+*/
+
+
+
+@media (min-width: 360px) and (max-width: 480px) {
+
+
+
+.components .line{margin: 0 0 0 20px!important;}
+
+
+
+ .components .compo{
+
+grid-template-columns: none!important;
+
+  column-gap: unset!important;
+
+  margin-left:20px!important;
+
+  }
+
+
+
+ .compo_block {
+
+   width:320px!important;
+
+  margin:40px 0 0 0!important;
+
+}
+
+
+
+.compo_block img{
+
+width: 320px!important;
+
+}
+
+
+
+.compo_block h3{
+
+width: 320px!important;
+
+height: 40px!important;
+
+font-size: 20px!important;
+
+line-height: 28px!important;
+
+/* or 140% */
+
+letter-spacing: -1.2px!important;
+
+margin: 28px 0 0 0!important;
+
+}
+
+.compo_block ul{
+
+margin-top: 10px!important;
+
+}
+
+
+
+.compo_block li{
+
+width: 278px!important;
+
+padding-left:42px!important;
+
+font-size: 16px!important;
+
+line-height: 38px!important;
+
+}
+
+
+
+
+
+}
+
+
+
+.prod_container1{position:relative;}
+
+.i_finish{
+
+	background-image: url('http://localhost/solarkitindia.com/images/icons/i_finish.svg');
+
+position: absolute;
+
+background-repeat:no-repeat;
+
+width: 94px;
+
+height: 106px;
+
+top:84px;right:34px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.section.title{margin-bottom: 60px;}
+
+.section.title img {
+
+	margin-top: 51px;
+
+width:100%;
+
+}
+
+.section.title .title{
+
+width: 995px;
+
+height: 60px;
+
+margin: 40px auto 0 auto;
+
+
+
+font-family: Adieu;
+
+font-style: normal;
+
+font-weight: normal;
+
+font-size: 48px;
+
+line-height: 48px;
+
+/* or 100% */
+
+text-align: center;
+
+letter-spacing: -2.3px;
+
+color: #241F20;
+
+}
+
+
+
+.section.title p{
+
+width: 994px;
+
+
+
+margin: 40px auto 0 auto;
+
+font-family: Silka;
+
+font-style: normal;
+
+font-weight: 500;
+
+font-size: 18px;
+
+line-height: 26px;
+
+/* or 144% */
+
+text-align: center;
+
+color: #868F9F;}
+
+
+
+
+
+.section.benefits{}
+
+.benefits .container{}
+
+.benefit{background: #F1F5F9;padding: 60px 40px;}
+
+.benefit .line {margin: 0;}
+
+.benefits ul{  columns: 2;
+
+  -webkit-columns: 2;
+
+  -moz-columns: 2;}
+
+.benefits li{position: relative;
+
+width: 450px;
+
+min-height: 72px;
+
+margin-bottom: 20px;
+
+padding-left:47px;
+
+font-family: Silka;
+
+font-style: normal;
+
+font-weight: 500;
+
+font-size: 18px;
+
+line-height: 26px;
+
+/* or 144% */
+
+color: #47505E;}
+
+.benefits li:before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 4px;
+
+    left: 0;
+
+    width: 24px;
+
+    height: 24px;
+
+    background-image: url(http://localhost/solarkitindia.com/images/icons/s.svg);
+
+    background-size: 19px 24px;
+
+    background-repeat: no-repeat;
+
+}
+
+
+
+
+
+/* -------------------------------------------------------------*/
+
+/* 
+
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+
+  ##Screen = B/w 481px to 767px
+
+*/
+
+
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+
+
+
+
+.section.title .title{
+
+width:705px!important;
+
+height: 40px!important;
+
+font-size: 28px!important;
+
+line-height: 38px!important;
+
+letter-spacing: -1.6px!important;
+
+}
+
+.section.title p{
+
+	margin: 19px auto 0 auto!important;
+
+width:586px!important;
+
+font-size: 14px!important;
+
+line-height: 22px!important;
+
+letter-spacing: -1px!important;
+
+}
+
+
+
+	
+
+	.benefit{padding: 60px 30px!important;}
+
+.benefit .line {margin: 0!important;}
+
+  
+
+.benefits li{
+
+width: 236px!important;
+
+min-height: 66px!important;
+
+padding-left:27px!important;
+
+font-size: 16px!important;
+
+line-height: 19px!important;
+
+}
+
+.benefits li:before {
+
+    top: 4px!important;
+
+    width: 17px!important;
+
+    height: 17px!important;
+
+    background-size: 14px 17px!important;
+
+}
+
+
+
+
+
+}
+
+/* 
+
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+
+  ##Screen = B/w 320px to 479px
+
+*/
+
+
+
+
+
+@media (min-width: 360px) and (max-width: 480px) {
+
+	
+
+	
+
+	
+
+.section.title .title{
+
+width:320px!important;
+
+height: 34px!important;
+
+font-size: 28px!important;
+
+line-height: 34px!important;
+
+letter-spacing: -1px!important;
+
+}
+
+.section.title p{
+
+	margin: 21px auto 0 auto!important;
+
+width:320px!important;
+
+font-size: 14px!important;
+
+line-height: 22px!important;
+
+letter-spacing: -1px!important;
+
+}
+
+
+
+	
+
+	.benefit{padding: 60px 20px!important;}
+
+.benefit .line {margin: 0!important;}
+
+.benefits ul{  
+
+  columns:1!important;
+
+  -webkit-columns:1!important;
+
+  -moz-columns:1!important;
+
+  }
+
+  
+
+.benefits li{
+
+width: 278px!important;
+
+min-height: 66px!important;
+
+padding-left:27px!important;
+
+font-size: 16px!important;
+
+line-height: 22px!important;
+
+}
+
+.benefits li:before {
+
+    top: 4px!important;
+
+    width: 17px!important;
+
+    height: 17px!important;
+
+    background-size: 14px 17px!important;
+
+}
+
+	
+
+	}
+
+
+
+
+
+
+
+
+
+/*************************************************************************************************/
+
+  .pad0 .row{margin-bottom:0;}
+
+  .pad27 {padding-top:27px;}
+
+  .pad27 .row{margin-bottom:0;}
+
+  
+
+  .solutions{margin-right:29px;  width: 276px;height: 279px;float:left; position: relative;}
+
+  .solutions:last-of-type {margin-right:0;}
+
+  .solutions img,.img__description {width: 253.34px; height: 253.34px;}
+
+
+
+  .img__description {position: absolute; 
+
+  	top: 0; bottom: 0; left: 0;  right: 0;
+
+    background: linear-gradient(0deg, rgba(255, 83, 69, 0.8), rgba(255, 83, 69, 0.8));    
+
+
+
+  font-family: Silka;
+
+font-style: normal;
+
+font-weight: bold;
+
+font-size: 24px;
+
+line-height: 130%;
+
+/* or 31px */
+
+display: flex;
+
+align-items: center;
+
+text-align: center;
+
+color: #FFFFFF;
+
+  visibility: hidden;
+
+  opacity: 0;
+
+  /* transition effect. not necessary */
+
+  transition: opacity .2s, visibility .2s;
+
+}
+
+.img__description span{ 
+
+  	width:168px; margin: 0 auto;
+
+    vertical-align: middle;
+
+  	}
+
+
+
+.solutions:hover .img__description {
+
+  visibility: visible;
+
+  opacity: 1;
+
+
+
+}
+
+
+
+.solutions .flip-this {
+
+   position: absolute;
+
+    width: 52.78px;
+
+    height: 52.78px;
+
+    background: #FF5345;
+
+    color: #fff;
+
+    display: block;
+
+    border-radius: 50%;
+
+    right: 0;
+
+    top: 225px;
+
+    font-size: 33px;
+
+   
+
+font-style: normal;
+
+font-weight: bold;
+
+
+
+    text-align: center;
+
+}
+
+.solutions:hover .flip-this{
+
+	 
+
+	transform: rotate(45deg);
+
+    transition: all 0.3s ease-in-out 0s;
+
+}
+
+
+
+.section h2.solutionsh2{margin:0 0 30px 0;}
+
+
+
+/* -------------------------------------------------------------*/
+
+/* 
+
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+
+  ##Screen = B/w 481px to 767px
+
+*/
+
+
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+
+
+
+
+.solutions {
+
+    margin-right: 22px!important;
+
+    width: 160px!important;
+
+    height: 160px!important;
+
+     
+
+}
+
+.solutions img, .img__description {
+
+ width: 160px!important;
+
+height: 160px!important;
+
+}
+
+
+
+.img__description {
+
+	
+
+font-size: 18px!important;
+
+line-height: 130%!important;
+
+}
+
+.solutions .flip-this {
+
+	width: 32px!important;
+
+    height: 32px!important;
+
+	top: 145px!important;
+
+	font-size: 26px!important;
+
+    font-weight: normal!important;
+
+    margin-left: 68px!important;
+
+    line-height: 33px!important;
+
+    right:62px!important;
+
+    }
+
+
+
+}
+
+
+
+/* 
+
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+
+  ##Screen = B/w 320px to 479px
+
+*/
+
+
+
+@media (min-width: 360px) and (max-width: 480px) {
+
+
+
+.section h2.solutionsh2{
+
+font-size: 28px!important;
+
+line-height: 34px!important;
+
+/* or 121% */
+
+display: flex;
+
+align-items: center;
+
+letter-spacing: -0.01em!important;
+
+left:22px!important;}
+
+
+
+.solutions {
+
+    margin-right: 0!important;
+
+    width: 327.78px!important;
+
+    height: 336px!important;
+
+     left:16px!important;
+
+}
+
+.solutions img, .img__description {
+
+ width: 301px!important;
+
+height: 301px!important;
+
+}
+
+.solutions .flip-this {
+
+    top: 261px!important;
+
+    }
+
+
+
+.siq_bR {
+
+    bottom: 10px!important;
+
+    left: 300px!important;}
+
+}
+
+
+
+/****************************************************************************************************/
+
+
+
+.slick-dots{width:160px;}
+
+.Group86 {
+
+width: 84.94px;
+
+height: 89.12px;
+
+}
+
+.Group86 img{
+
+	width: 73px;
+
+	height: 37.36px;
+
+}
+
+
+
+
+
+/* ************************************************************************************* */
+
+
+
+
+
+ .features .row div{
+
+ height:220px; 
+
+ background-size: auto 216px; 
+
+ margin: 0; padding: 0;
+
+ background-repeat: no-repeat;  
+
+ background-attachment: scroll; 
+
+ }
+
+ 
+
+ 
+
+ .baner-flex_1{display:flex;}
+
+ 
+
+ p.flex-features{
+
+text-align: center;
+
+    vertical-align: middle;
+
+    margin: 3% 25%;
+
+    color: #555;
+
+    
+
+	position: relative;
+
+  top: 50%;
+
+  -ms-transform: translateY(-50%);
+
+  -webkit-transform: translateY(-50%);
+
+  transform: translateY(-50%);
+
+  
+
+    }    
+
+ p.flex-features em{color:#3e74b0!important;font-size: 30px;}
+
+ 
+
+ .flex_1-title{
+
+ 	background: #3e74b0;
+
+    color: white;
+
+    font-size: 24px;
+
+    font-family: Silka;
+
+    padding: 3px 50px;
+
+    max-width: 480px;
+
+    text-align: left;
+
+    margin: 35px 0 20px 0;
+
+ }
+
+ 
+
+ .flex-parm .slogo{
+
+    max-height: 115px;
+
+    margin-top: 22px;}
+
+ 
+
+ .flex-parm-title{color: #555;
+
+    font-family: SilkaRegular;
+
+    font-weight: 700;
+
+    font-size: 20px;
+
+}
+
+.flex-parm p{
+
+    border-top: 1px solid #888;
+
+    border-bottom: 1px solid #888;
+
+    margin: 0;
+
+    color: #555;
+
+    font-family: SilkaRegular;
+
+}
+
+.flex-parm li {
+
+    float: left;
+
+    width: 30%;
+
+    font-size: 14px;
+
+    margin: 0 5px;
+
+}
+
+
+
+.flex-parm .img{
+
+    max-height: 166px; padding:0;
+
+ }
+
+ .flex-parm .img img {
+
+    max-width: 31%;
+
+    padding: 5px 0;
+
+    border-left: 1px solid #3e74b0;
+
+    margin: 0;
+
+    float: left;
+
+}.flex-parm .img img:first-child {
+
+    border-left: 0px solid #3e74b0;
+
+   
+
+}
+
+.assemly {
+
+	color:white;
+
+	line-height: 24px;
+
+    font-size: 18px;
+
+    padding-bottom: 27px;}
+
+.assemly .flex_x2-title{
+
+ 	color: white;
+
+    font-size: 24px;
+
+    font-family: Silka;    
+
+	 margin-top: 30px;
+
+ }
+
+.assemly p{border-top: 1px solid white;
+
+    border-bottom: 1px solid white;
+
+    color: white;
+
+	padding: 5px 0;
+
+    margin: 8px 0;
+
+    }
+
+.assemly .flex_x2-title{color:white;}
+
+
+
+.assemly .col.s12 .col.s12,.assemly .col.s12 .col.s6{padding:0;display: flex;}
+
+
+
+.quality{line-height: 24px;
+
+    font-size: 18px	;}
+
+
+
+.ekotool{margin:0;max-width: 100%;}
+
+
+
+.collapsible.flex_3 {margin: 0;}
+
+.collapsible.flex_3,.collapsible-body{ border: none;
+
+    box-shadow: none;
+
+}
+
+
+
+.collapsible.flex_3 .material-icons {
+
+    font-size: 35px;}
+
+
+
+.flex-compo{}
+
+
+
+.flex-compo .compo_block {
+
+    width: 100%;
+
+    margin: 0; 
+
+}
+
+
+
+.components .compo.flex-compo  {
+
+    display: inline-grid;
+
+    grid-template-columns: 540px 540px; 
+
+    column-gap: 48px;
+
+    margin-left: 40px;
+
+}
+
+.flex-compo .compo_block li {
+
+    width: 100%;
+
+    max-width: 420px;
+
+	font-size:18px;
+
+	line-height:24px;
+
+	padding-left: 25px;
+
+	margin-bottom: 10px;
+
+}
+
+.flex-compo .compo_block li:before {
+
+    top: 2px;}
+
+
+
+.flex-compo .compo_block span {
+
+    display: inherit;
+
+}
+
+
+
+@media (min-width: 360px) and (max-width: 480px){
+
+.flex-compo .compo_block {
+
+    margin: 0!important;
+
+}
+
+.flex-compo .components .compo {
+
+    margin-left: 10px!important;
+
+}
+
+.flex-compo .compo_block li {
+
+    width: 310px!important;
+
+    padding-left: 24px!important;
+
+    font-size: 18px!important;
+
+    line-height: 24px!important;
+
+}
+
+
+
+}
+
+
+
+.ulcompo{
+
+	column-count: 3;
+
+    column-gap: 58px;
+
+    column-rule: 1px solid #888;
+
+    column-width: 227px;}
+
+
+
+
+
+ .quality p {font-family: SilkaRegular;
+
+ }
+
+ 
+
+ .flex-toggle{display:none;}
+
+ .flex-bod p,.flex-bod p span{color: #555;
+
+    font-family: Silka;}
+
+ .flex-bod p em {
+
+    color: #3e74b0!important;
+
+    font-size: 30px;
+
+	line-height: 22px;
+
+
+
+}
+
+ 
+
+ .flex_3 a {
+
+    font-family: Silka;
+
+    font-style: normal;
+
+    font-weight: 500;
+
+    font-size: 22px;
+
+    line-height: 18px;
+
+    letter-spacing: -0.333333px;
+
+    color: #FF5345;
+
+    margin-right: 40px;
+
+    margin-top: 33px;
+
+    display: inline-block;
+
+}
+
+ .flex_3 a span.download {
+
+    width: 270px;
+
+    display: grid;
+
+    background: url(http://localhost/solarkitindia.com/images/icons/download.svg) no-repeat;
+
+    background-size: 24px 24px;
+
+    background-position: right;
+
+ }
+
+ 
+
+ 
+
+ 
+
+@media only screen and (max-width: 700px){
+
+.flex_1-title {
+
+    font-size: 20px;
+
+    padding: 3px 10px;
+
+    max-width: auto;
+
+    }
+
+.assemly .flex_x2-title{ 	
+
+    font-size: 20px;
+
+	margin-top: 27px;
+
+}
+
+ .features .row {
+
+    margin-bottom: 0!important;
+
+ }
+
+.flex-parm .col.s2{display:none!important;}
+
+
+
+.quality-blok{height: 680px!important;
+
+   background: url(http://localhost/solarkitindia.com/images/after_launch/QUALITY_ASSURANCE_1.png) no-repeat,url(http://localhost/solarkitindia.com/images/after_launch/QUALITY_ASSURANCE_2.png) bottom center no-repeat!important;
+
+    background-size: 100%!important;
+
+}
+
+
+
+}
+
+
+
+@media only screen and (max-width: 640px){
+
+.baner-flex{height: 145px!important;
+
+ background-image:url(http://localhost/solarkitindia.com/images/after_launch/Product_Launch_Website_Banner.gif)!important;}
+
+.zohovid .embed-responsive {margin-bottom: 20px;}
+
+   
+
+ .features .row div{
+
+  background-size: contain!important;
+
+  height:150px!important;
+
+  }
+
+ 
+
+ .features .fbg-1 {background-image: url(http://localhost/solarkitindia.com/images/after_launch/Feature-1_mob.png)!important;}
+
+ .features .fbg-2 {background-image: url(http://localhost/solarkitindia.com/images/after_launch/Feature-2_mob.png)!important;}
+
+ .features .fbg-3 {background-image: url(http://localhost/solarkitindia.com/images/after_launch/Feature-3_mob.png)!important;}
+
+ .features .fbg-4 {background-image: url(http://localhost/solarkitindia.com/images/after_launch/Feature-4_mob.png)!important;}
+
+ .features .fbg-5 {background-image: url(http://localhost/solarkitindia.com/images/after_launch/Feature-5_mob.png)!important;}
+
+ .features .fbg-6 {background-image: url(http://localhost/solarkitindia.com/images/after_launch/Feature-6_mob.png)!important;}
+
+ .features .fbg-7 {background-image: url(http://localhost/solarkitindia.com/images/after_launch/Feature-7_mob.png)!important;}
+
+ .features .fbg-8 {background-image: url(http://localhost/solarkitindia.com/images/after_launch/Feature-8_mob.png)!important;}
+
+ .features .fbg-9 {background-image: url(http://localhost/solarkitindia.com/images/after_launch/Feature-9_mob.png)!important;}
+
+ 
+
+ p.flex-features {
+
+   margin: 1% 18%!important;
+
+    line-height: 18px!important;
+
+    font-size: 14px!important;}
+
+ 
+
+ 
+
+ .flex-parm {
+
+    text-align: center!important;
+
+	position: relative!important;
+
+	min-height: 455px;
+
+}
+
+ .flex-parm p {  width: 250px;
+
+    height: 56px;
+
+    margin: 0 auto;}
+
+ .flex-parm li {
+
+    float: none!important;
+
+    width: 100%!important;
+
+    font-size: 16px!important;
+
+    }
+
+ .flex-parm ul{
+
+    position: relative!important;
+
+    top: 150px!important;
+
+    
+
+}
+
+ .flex-parm .img {
+
+    position: absolute!important;
+
+    top: 116px!important;
+
+}
+
+ .flex-parm .img img {
+
+    max-width: 33%!important;}
+
+
+
+ .ulcompo li.tit {margin: 25px 0 5px 0;}
+
+ .quality p {position:relative!important;
+
+top:270px!important;
+
+ }
+
+ }
+
+
+

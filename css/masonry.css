@@ -1,0 +1,282 @@
+
+
+
+.masonry-wrapper {
+  padding: 1.5em;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.masonry {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(100px,1fr));
+  grid-gap: 20px;
+  grid-auto-rows: 0;
+}
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+  .masonry {
+    grid-template-columns: repeat(2, minmax(100px,1fr));
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .masonry {
+    grid-template-columns: repeat(4, minmax(100px,1fr));
+  }
+}
+.masonry-item, .masonry-content {
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.masonry-content {
+  overflow: hidden;
+}
+.masonry-item {
+  color: #646464;
+}
+.masonry-title, .masonry-description {
+  margin: 0;
+}
+.masonry-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 1rem 0;
+  line-height:2rem;
+}
+.masonry-description {
+  padding: 1rem 0;
+ // font-size: .75rem;
+  border-top: 1px solid rgba(0, 0, 0, .05);
+}
+ .masonry-footer:active, .masonry-footer:focus {
+  opacity: .75;
+}
+
+
+
+.masonry .masonry-content a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    background: rgba(255,255,255,.1);
+    width: 100%;
+    height: 100%;
+    -webkit-transition: ease-out .2s;
+    transition: ease-out .2s
+}
+
+.masonry .masonry-content a img {
+    width: 100%;
+    -webkit-transition: ease-out .2s;
+    transition: ease-out .2s
+}
+
+
+.masonry .masonry-content a:hover:before {
+    opacity: 1
+}
+.masonry .masonry-content  a:hover img {
+    -webkit-transform: scale(1.02);
+    transform: scale(1.02)
+}
+
+
+
+
+.masonry .text-btn {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 6px;
+    color: #646464!important;
+    -webkit-transition: linear .1s;
+    transition: linear .1s
+}
+
+.masonry .text-btn:after,.masonry .text-btn:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px
+}
+
+.masonry .text-btn:before {
+    background: rgba(0,0,0,.2);
+    width: 100%;
+}
+
+.masonry .text-btn:after {
+    background: rgba(0,0,0,.9);
+    width: 0;
+    -webkit-transition: ease-out .2s;
+    transition: ease-out .2s
+}
+
+.masonry .text-btn:hover {
+    color: #141414
+}
+
+.masonry .text-btn:hover:after {
+    width: 100%
+}
+
+
+
+
+.masonry .text-btn {
+    
+    letter-spacing: 1px;
+  text-transform: uppercase;
+ }
+
+
+
+
+
+
+
+
+
+.mas-wrapper {
+  padding: 1.5em;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.mas-item, .mas-content {
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.mas-content {
+  overflow: hidden;
+  height:570px;
+}
+.mas-item {
+  color: #646464;
+}
+.mas-title, .mas-description {
+  margin: 0;
+}
+ h3.mas-title { font-size: 20px;} 
+  .mas-title {
+    font-weight: 700;
+    padding: 1rem 0 0 0;
+    line-height: 1.5em;
+    height: 5.4em;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+h3.mas-title a{
+  font-size: 20px;
+ 
+}
+.mas-description { 
+padding: 0 0 10px 0;
+    border-top: 1px solid rgba(0, 0, 0, .05);
+    height: 144px;
+    overflow: hidden;
+    line-height: 24px;
+
+
+}
+
+.mas-description p { 
+padding: 0;margin:0;
+
+}
+
+ .mas-footer:active, .mas-footer:focus {
+  opacity: .75;
+}
+
+
+
+.mas .mas-content a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    background: rgba(255,255,255,.1);
+    width: 100%;
+    height: 100%;
+    -webkit-transition: ease-out .2s;
+    transition: ease-out .2s
+}
+
+.mas .mas-content a img {
+    width: 100%;
+    -webkit-transition: ease-out .2s;
+    transition: ease-out .2s
+}
+
+
+.mas .mas-content a:hover:before {
+    opacity: 1
+}
+.mas .mas-content  a:hover img {
+    -webkit-transform: scale(1.02);
+    transform: scale(1.02)
+}
+
+
+
+
+.mas .text-btn {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 6px;
+    color: #646464!important;
+    -webkit-transition: linear .1s;
+    transition: linear .1s
+}
+
+.mas .text-btn:after,.mas .text-btn:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px
+}
+
+.mas .text-btn:before {
+    background: rgba(0,0,0,.2);
+    width: 100%;
+}
+
+.mas .text-btn:after {
+    background: rgba(0,0,0,.9);
+    width: 0;
+    -webkit-transition: ease-out .2s;
+    transition: ease-out .2s
+}
+
+.mas .text-btn:hover {
+    color: #141414
+}
+
+.mas .text-btn:hover:after {
+    width: 100%
+}
+
+
+
+
+.mas .text-btn {
+    
+    letter-spacing: 1px;
+  text-transform: uppercase;
+ }
+
+
+
+.mas-content a.more {
+    margin: 20px 0 50px 0;
+ 
+}

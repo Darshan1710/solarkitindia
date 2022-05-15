@@ -1,0 +1,20 @@
+<?phpxml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title> Icons / Line / Rail-65</title>
+    <g id="-Icons-/-Line-/-Rail-65" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M27.5,22.5 L35.9737151,39.3781268 C36.1261113,39.6676796 35.8009994,39.972472 35.5216064,39.8048362 L3.79017438,21.1921784 C3.59713917,21.0728014 3.58189955,20.7959482 3.75969513,20.6613316 L12.5,15.5" id="Stroke-1" stroke="#111111" stroke-linecap="round"></path>
+        <path d="M17.1906643,12.2559662 C18.1013995,11.7181582 19.4675023,10.9114461 21.2889727,9.83583" id="Stroke-1-Copy" stroke="#111111" stroke-linecap="round"></path>
+        <g id="Group" transform="translate(10.847859, 13.000000)" stroke="#111111" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="17.7228105" y1="8.35795577" x2="15.1295349" y2="9.91239716" id="Stroke-3"></line>
+            <polyline id="Stroke-5" points="15.1308049 9.91315915 0.475047454 1.37918575 3.15214097 0 17.7240805 8.35871775"></polyline>
+        </g>
+        <g id="Group-Copy" transform="translate(19.457535, 7.448181)" stroke="#111111" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="17.7228105" y1="8.35795577" x2="15.1295349" y2="9.91239716" id="Stroke-3"></line>
+            <polyline id="Stroke-5" points="15.1308049 9.91315915 0.865371975 1.43100457 3.54246549 0.0518188157 17.7240805 8.35871775"></polyline>
+        </g>
+        <line x1="35.8228429" y1="39.7972164" x2="44.4637083" y2="34.2576139" id="Stroke-7" stroke="#111111" stroke-linecap="round"></line>
+        <path d="M36.1096755,16.9481812 L44.5833906,33.8263079 C44.7357868,34.1158608 44.4106749,34.4206532 44.1312818,34.2530173 C40.1148955,31.8971317 37.1026057,30.1302175 35.0944126,28.9522747" id="Stroke-1-Copy-2" stroke="#111111" stroke-linecap="round"></path>
+        <line x1="38.2602649" y1="22.1195509" x2="35.0944126" y2="20.336404" id="Path-8" stroke="#111111" stroke-linecap="round"></line>
+        <line x1="30" y1="27" x2="38.5" y2="22" id="Path-7" stroke="#111111"></line>
+    </g>
+</svg>

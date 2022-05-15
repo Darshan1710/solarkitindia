@@ -1,0 +1,25 @@
+
+RewriteEngine On
+
+
+RewriteRule ^products1/$ product1.php [PT]
+RewriteRule ^products/$ prod.php [PT]
+
+RewriteRule ^product-flet-roof/$ prod3.php [PT]
+RewriteRule ^product-metal-roof/$ prodx4.php [PT]  
+
+RewriteRule ^references/$ references.php [PT]
+
+
+RewriteRule ^ref-detail/$ ref_detail.php [PT]
+RewriteRule ^blog-detail/$ blog_detail.php [PT]
+
+
+#RewriteRule ^contact?$ contact.php [PT] 
+
+#RewriteRule ^blog?$ blog.php [PT] 
+#RewriteRule ^our-projects/?$ our_projects.php [PT] 
+
+
+RewriteRule ^([^.^/]+)(/)?$ index.php?url=$1 [PT]
+ 

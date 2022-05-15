@@ -1,0 +1,202 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700|Montserrat:400,400i,500);
+
+body, a, p {
+    font-family: Montserrat;
+    font-size: 15px;
+}
+
+
+a {
+	color: #a3bf58!important;
+}
+
+h1,h2,h3, h1 a {
+	color: #a3bf58!important;
+	margin: 1.9466666667rem 0 .168rem 0;
+}
+h2, h2 a {
+    font-size: 3.1rem;
+   }
+h3, h3 a {
+    font-size: 2.4rem;
+   }
+.top {
+    margin-top: 60px;
+}
+#products .parallax-container {
+      height: 250px;
+    }
+#products h3 {
+      margin:0;
+    }
+ #cert {background:#a3bf58;}
+ @media only screen and (max-width: 600px){
+ 	#cert {background:#ffffff;}
+ 	#cert .container {  width: 100%;}
+ }   
+.block170{height:170px;
+-moz-box-shadow:    inset 0 0 1px #000000;
+   -webkit-box-shadow: inset 0 0 1px #000000;
+   box-shadow:         inset 0 0 1px #000000;
+   }
+   
+.block170 span {display: block;color:white;font-weight: 500;}  
+.block170 img {max-width:100px;margin-top:5px;}
+  
+.block170.no-text img {max-width:90%;margin-top:0;}
+
+.block15{padding:15px;}
+
+.brand-logo{top: 5px;}
+.brand-logo img{max-width:170px;}
+
+.navbar-fixed {
+    position: fixed;
+    top: 0;
+    }
+.nav-wrapper{
+ background-color: white!important;
+}
+nav ul a {
+	color: #a3bf58!important;
+}
+
+#products ul:not(.browser-default) > li {
+    
+    margin-left: 10px;
+}
+#products ul li{
+overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    }
+    
+#products li::before {content: "-"; color: #a3bf58;
+  display: inline-block; width: 1em;
+  /*margin-left: -1em;*/
+  }
+  
+.divider-line{max-width:100%;width:15%;
+    border-top-width: 3px;
+    border-top-style: solid;
+    border-top-color: #a3bf58;
+    margin: 0;
+    display: inline-block;
+}
+.hr-big {
+    max-width: 100%;
+    width: 100%;
+    border-top-width: 3px;
+    border-top-style: solid;
+    border-top-color: #a3bf58;
+    margin: 25px 0;
+    display: inline-block;
+}
+a .button-label{    position: relative;
+    text-align: center;
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+    transition: .3s;
+    line-height: 24px;
+    border: 2px solid;
+    letter-spacing: .64px;
+    border-radius: 35px;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffffff;
+    background-color: #a3bf58;
+    border-color: #a3bf58;
+    padding: 14px 38px;
+    }
+
+a .button-label:hover{background:#f68b1f; border-color: #f68b1f;}
+a.more{
+    margin: 20px 0;
+    display: inline-block;  }
+    
+    #contact {background: #f9f9f9;}
+    
+    
+    table.tech td{padding: 2px;
+    border: 1px solid #555;}
+    
+ #contact .row {
+  margin-bottom: 0;
+}
+.blog ul ul { list-style:none; padding: 5px 20px; margin: 5px 10px;     list-style-type: none;
+}
+ 
+
+.produkt-content{
+width:200px!important;
+top:63px!important;}
+
+
+
+.card a .button-label {
+    padding: 7px 19px;
+}
+
+.sidenav li {border-top:1px solid #eee;}
+
+.sidenav li ul li{border-top:1px solid #eee;             }
+
+.sidenav li ul li a {
+    padding-left: 50px;}
+    
+.abhijitscript [type="checkbox"] + span:not(.lever) {
+    
+    padding-left: 25px;
+    height: 25px;
+    line-height: 25px;
+    font-size: .8rem;
+}
+
+.abhijitscript .input-field {
+    margin-top: .5rem;
+    margin-bottom: 0;
+}
+.abhijitscript .priv {
+    margin-top: 0;
+     margin-bottom: 1rem;
+}
+.abhijitscript p {
+    margin: 0;
+}
+
+
+
+@media only screen and (max-width: 600px){
+ 
+h2, h2 a {
+    font-size: 2.2rem;
+}
+
+}
+
+
+
+.masonry h3 a{  font-size: 1.5rem;
+}
+.masonry-description {
+   padding: 0;}
+   
+
+
+
+/* ************************************* */
+	#sum .block{display: flex; flex-wrap: wrap;}
+	#sum .block .item{max-width:33%;flex: 1 1 20%;text-align:center;}
+	#sum ul > li:not(.browser-default)  { margin-left: 0;}
+	#sum ul li {    overflow: hidden;    white-space: nowrap;    text-overflow: ellipsis;}
+	#sum li {margin:0 5px;}
+	#sum li:before {content:"";width: auto;}
+	#sum li {font-size:12px; padding:5px;border-bottom:1px solid #eee;}
+	#sum li.title {font-size:15px; font-weight: bold;}
+	#sum li span{font-size:15px;display:block;font-weight: bold;}
+	#sum li em{color:goldenrod;}
+	@media only screen and (max-width: 450px){
+		#sum li em.material-icons { font-size: 15px;}
+		}
+	#sum li:last-of-type{border:none;}
+/* ************************************* */	

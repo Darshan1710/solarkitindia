@@ -1,0 +1,18 @@
+<?phpxml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title> Icons / Line / Long-Rail</title>
+    <g id="-Icons-/-Line-/-Long-Rail" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Group-20" transform="translate(3.000000, 3.500000)" stroke="#111111">
+            <polygon id="Stroke-1" points="31.854336 21.302672 29.279456 22.740592 3.682656 7.498032 6.014336 6.032752"></polygon>
+            <polyline id="Stroke-2" points="3.641008 23.309376 0.759088 24.680416 27.243568 40.050656 30.593648 38.314816 30.593648 22.382176"></polyline>
+            <line x1="4.369696" y1="7.71752" x2="4.369696" y2="17.41208" id="Stroke-4"></line>
+            <polygon id="Stroke-5" points="41.630368 16.068704 39.055488 17.509664 13.458688 2.264064 15.790368 0.801824"></polygon>
+            <polyline id="Stroke-7" points="40.368768 17.149424 40.368768 33.082064 30.592128 38.313904 29.008288 37.246864"></polyline>
+            <line x1="14.145728" y1="2.486592" x2="14.145728" y2="9.971072" id="Stroke-10"></line>
+            <polyline id="Stroke-11" points="30.732272 29.57664 40.210992 24.08336 36.149552 21.7456"></polyline>
+            <polygon id="Stroke-13" points="27.228976 36.582624 27.228976 34.156704 30.463536 32.271904 4.252656 17.312064 1.018096 19.196864 1.018096 21.625824"></polygon>
+            <line x1="27.228976" y1="34.157312" x2="1.018096" y2="19.197472" id="Stroke-15"></line>
+            <line x1="40.368768" y1="33.082672" x2="36.775488" y2="30.830032" id="Stroke-17"></line>
+        </g>
+    </g>
+</svg>

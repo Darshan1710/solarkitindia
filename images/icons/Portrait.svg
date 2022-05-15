@@ -1,0 +1,27 @@
+<?phpxml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title> Icons / Line / Portrait</title>
+    <g id="-Icons-/-Line-/-Portrait" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Group-29" transform="translate(0.000000, 14.000000)" stroke="#111111">
+            <polyline id="Stroke-1" points="0.5 19.29428 3.5 16.29428 6.5 16.29428 9 18.79428 12.5 18.79428"></polyline>
+            <polyline id="Stroke-3" points="12.4892 18.79628 15.0232 16.29428 18.0232 16.29428 20.5232 18.79428 24.0232 18.79428"></polyline>
+            <polyline id="Stroke-5" points="24.0146 18.79628 26.5506 16.29428 29.5506 16.29428 32.0506 18.79428 46.2046 4.64028"></polyline>
+            <line x1="44.2236" y1="2.65748" x2="46.2056" y2="4.63948" id="Stroke-7"></line>
+            <line x1="18.0234" y1="16.29428" x2="20.1414" y2="14.17628" id="Stroke-10"></line>
+            <line x1="15.0166" y1="16.29428" x2="17.1526" y2="14.15828" id="Stroke-11"></line>
+            <line x1="29.5498" y1="16.29428" x2="31.7258" y2="14.11628" id="Stroke-12"></line>
+            <line x1="26.544" y1="16.29428" x2="28.722" y2="14.11628" id="Stroke-13"></line>
+            <line x1="6.5" y1="16.29428" x2="8.67" y2="14.12428" id="Stroke-14"></line>
+            <line x1="3.4882" y1="16.29428" x2="5.6582" y2="14.12428" id="Stroke-15"></line>
+            <line x1="9" y1="18.79428" x2="13.672" y2="14.12028" id="Stroke-16"></line>
+            <line x1="20.5234" y1="18.79428" x2="25.2214" y2="14.09628" id="Stroke-18"></line>
+            <polyline id="Stroke-21" points="33.5966 13.26888 35.6886 13.26888 35.6886 11.32288"></polyline>
+            <polyline id="Stroke-22" points="4.4844 11.85088 2.4524 11.85088 2.4524 13.67288"></polyline>
+            <polyline id="Stroke-23" points="38.419 8.44468 40.511 8.44468 40.511 6.38868"></polyline>
+            <polyline id="Stroke-24" points="9.628 7.02668 7.594 7.02668 7.594 8.85468"></polyline>
+            <polyline id="Stroke-25" points="42.4688 4.39588 44.5608 4.39588 44.5608 2.36988"></polyline>
+            <polyline id="Stroke-26" points="13.789 2.97788 11.793 2.97788 11.793 4.84588"></polyline>
+            <polyline id="Stroke-27" points="2.2998 14.07168 32.7398 14.07168 46.3118 0.49968 16.5818 0.49968 2.3018 14.07168"></polyline>
+        </g>
+    </g>
+</svg>

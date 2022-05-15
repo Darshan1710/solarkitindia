@@ -1,0 +1,16 @@
+<?phpxml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title> Icons / Line / Rail-30</title>
+    <g id="-Icons-/-Line-/-Rail-30" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="Group-17" transform="translate(3.000000, 8.000000)" stroke="#111111">
+            <path d="M26.2784414,18.0358381 L32.9737151,31.3781268 C33.1261113,31.6676796 32.8009994,31.972472 32.5216064,31.8048362 L0.790174377,13.1921784 C0.597139171,13.0728014 0.581899549,12.7959482 0.759695134,12.6613316 L6.89110287,8.42217684" id="Stroke-1"></path>
+            <line x1="27.6017485" y1="16.993956" x2="25.0084729" y2="18.5483974" id="Stroke-3" stroke-linejoin="round"></line>
+            <polyline id="Stroke-5" stroke-linejoin="round" points="25.0097429 18.5491594 15.7161137 13.1390937 5.878938 7.56139222 8.55603152 6.18220647 27.6030185 16.994718"></polyline>
+            <line x1="32.8228429" y1="31.7972164" x2="41.4637083" y2="26.2576139" id="Stroke-7"></line>
+            <line x1="11.7444143" y1="5.52207687" x2="15.5136807" y2="2.87546259" id="Stroke-9"></line>
+            <path d="M34.9015273,12.4896318 L41.596801,25.8319205 C41.7491972,26.1214733 41.4240853,26.4262657 41.1446922,26.2586299 L29.4101836,19.3830206" id="Stroke-11"></path>
+            <line x1="36.2261044" y1="11.4477497" x2="33.6328288" y2="13.0021911" id="Stroke-13" stroke-linejoin="round"></line>
+            <polyline id="Stroke-15" stroke-linejoin="round" points="33.6340987 13.0029531 24.3379296 7.59288744 14.5032938 2.01518596 17.1803873 0.636000206 36.2273743 11.4485117"></polyline>
+        </g>
+    </g>
+</svg>
