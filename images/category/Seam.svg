@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title> Icons / Line / Seam</title>
+    <g id="-Icons-/-Line-/-Seam" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Group-14" transform="translate(3.710272, 6.000000)" stroke="#111111">
+            <polygon id="Stroke-1" points="32.2215374 18.4387063 29.7664803 19.8097123 5.35793747 5.27646992 7.58401049 3.87937722"></polygon>
+            <polygon id="Stroke-2" points="37.2800564 14.9088734 34.8249993 16.2827778 10.859932 2.13214178 13.1497727 0.622006307"></polygon>
+            <polyline id="Stroke-4" points="5.52634221 5.59907659 5.52634221 8.45123265 4.30895853 18.4395759 0.723473731 21.0279655 25.7262157 35.5901932 29.308802 32.9960065 30.5290842 23.0134603 30.5290842 19.5815977"></polyline>
+            <polyline id="Stroke-7" points="4.30779911 18.4387063 29.3076426 32.9951369 36.3829606 28.3864701"></polyline>
+            <polyline id="Stroke-8" points="27.2937421 21.127675 30.5285045 23.0117212 36.3371638 19.4378305"></polyline>
+            <polyline id="Stroke-9" points="36.4264386 15.5204637 36.4264386 19.3291356 36.1220927 28.5551647 39.2467108 26.3435844 36.7307845 24.665334"></polyline>
+            <line x1="9.49066521" y1="4.47821405" x2="11.5660145" y2="3.1303964" id="Stroke-11"></line>
+            <line x1="36.1209333" y1="28.5551647" x2="33.4977613" y2="26.978363" id="Stroke-12"></line>
+            <line x1="36.4264386" y1="19.330295" x2="34.011961" y2="18.0491436" id="Stroke-13"></line>
+        </g>
+    </g>
+</svg>

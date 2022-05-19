@@ -95,7 +95,7 @@ RewriteRule ^flextilt-inovation-2021 /flextilt-pro-tilted-solar-structure [R]
 RewriteRule ^careers/$ careers.php [PT]
 
 #RewriteRule ^products/$ prod.php [PT]
-RewriteRule ^products/$ products.php [PT]
+RewriteRule ^products2/$ products2.php [PT]
 
 #RewriteRule ^xxx/$ xxx.php [PT]
 RewriteRule ^product-flat-roof/$ products.php [PT]
@@ -111,5 +111,4 @@ RewriteRule ^career/$ careers.php [PT]
 RewriteRule ^sitemap\.xml$ sitemap.php [L]
 RewriteRule ^sitemap$ sitemap.php [L]
 
-RewriteRule ^([^.^/]+)(/)?$ index.php?url=$1 [PT]
  
