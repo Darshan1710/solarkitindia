@@ -1,19 +1,11 @@
 <div class="section" id="cta">
-
-    <a name="form"></a>
     <div class="container">
-
         <div class="row">
-
             <div class="col s12 m6 push-m6">
-
-                <div class="vertical-center">
-
+                <div class="vertical-center">\
                     <span>Start using the most effective mounting system</span>
-
                     <p>Ask our specialist about all the benefits of Solar-Kit system or leave your contact and our
                         specialist will contact you within 24 hours.</p>
-
                 </div>
             </div>
 
@@ -490,10 +482,17 @@
 
     <div class="container clear">
         <div class="row">
-            <div class="col s12 m6">
+            <div class="col s12 m3">
                 <p class="blockA">We keep your solar panels in place</p>
                 <a class="logo blockB" title="Solar-kit.in" href="https://www.solar-kit.in/"><img
-                            src="https://www.solar-kit.in/images/SK_logo_187x42.png" alt="Solar-kit.in"></a></div>
+                            src="https://www.solar-kit.in/images/SK_logo_187x42.png" alt="Solar-kit.in"></a>
+            </div>
+            <div class="col s12 m3">
+                <ul class="mtree transit">
+                    <li><a href="index2.php">Home Page</a></li>
+                    <li><a href="productdemo.php">Product</a> </li>
+                </ul>
+            </div>
 
             <div class="col s12 m3"><span>Office</span>
                 <p class="lit">Mounting Solar-Kit Private Limited <br>Survey No. 74, Paras Complex, <br>Plaspaphata,

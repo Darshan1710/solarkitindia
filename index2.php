@@ -256,7 +256,7 @@ include("header.php");
                             <a href="#" class="image">
                                 <img id="product_detail_img"
                                      alt="<?php echo $newProductsRow['title']; ?>"
-                                     src="demo/uploadfile/202105/05/9a21386b3f7416085134a36d4dcd7459_small.jpg"/></a>
+                                     src="<?php echo $link.$newProductsRow['thumbnail']; ?>"/></a>
                             <a href="#" class="title"><?php echo $newProductsRow['title']; ?></a>
                             <div class="text"><?php echo $newProductsRow['short_description']; ?></div>
                             <a rel="nofollow" href="#" class="more">view more<i></i></a>
