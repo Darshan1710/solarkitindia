@@ -1676,7 +1676,6 @@ transform: translateX(-3px); } }
 .news_content{ background: url(../images/news_bg.jpg) no-repeat bottom center; padding: 59px 0 70px}
  .news_content .list{list-style: none; margin: 54px -15px 0}
  .news_content .list li {list-style: none; padding:0 15px; }
-.news_content .list li:nth-child(2){ top:20px }
 .news_content .list li .image{position:relative;overflow:hidden;}
 .news_content .list li .image >a {position:absolute;left:0;top:0;width:100%;height:100%;display:block;z-index:20;}
 .news_content .list li .image img{max-width:100%;width:100%;height:auto;transition:all .9s;}

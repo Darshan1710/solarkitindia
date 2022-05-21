@@ -15,6 +15,7 @@ include("header.php");
     <!-- <script type="text/javascript" src="template/js/jquery-1.8.3.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"
             integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="demo/js/front/common.js"></script>
     <script type="text/javascript" src="demo/template/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="demo/template/js/demo.js"></script>
@@ -23,53 +24,17 @@ include("header.php");
     <link rel="stylesheet" type="text/css" href="demo/template/css/style.css">
     <link rel="stylesheet" type="text/css" href="demo/template/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="demo/template/css/custom.css">
-
+    <link rel="stylesheet" type="text/css" href="demo/template/css/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="demo/template/css/owl.theme.default.min.css">
 
 </head>
 <body>
 
-
 <div class="slide_content">
     <div class="htmleaf-container">
-        <div id="bootstrap-touch-slider" class="carousel bs-slider fade  control-round indicators-line"
-             data-ride="carousel" data-pause="hover" data-interval="5000">
-            <ol class="carousel-indicators">
-
-                <li data-target="#bootstrap-touch-slider" data-slide-to="0" class="active"></li>
-
-                <li data-target="#bootstrap-touch-slider" data-slide-to="1"></li>
-
-                <li data-target="#bootstrap-touch-slider" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner" role="listbox">
-
-                <div class="item active">
-                    <a href="#"><img src="images/banner/solar-mounting_all-product-launch.png"
-                                     alt="Solar Panel Mounting Brackets" class="slide-image"/></a>
-
-                </div>
-                <div class="item">
-                    <a href="#"><img
-                                src="images/banner/solar-mounting_all-product-launch.png"
-                                alt="Tile Roof Solar Mounting Brackets" class="slide-image"/></a>
-
-                </div>
-                <div class="item">
-                    <a href="#"><img src="images/banner/solar-mounting_all-product-launch.png"
-                                     alt="Solar mounting brackets" class="slide-image"/></a>
-
-                </div>
-
-
-            </div>
-            <div class="left carousel-control" rel="nofollow" href="#bootstrap-touch-slider" role="button"
-                 data-slide="prev">
-                <div class="icon icon-wrap"></div>
-            </div>
-
-            <div class="right carousel-control" rel="nofollow" href="#bootstrap-touch-slider" role="button"
-                 data-slide="next">
-                <div class="icon icon-wrap"></div>
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <img src="images/banner/solar-mounting_all-product-launch.png" class="img-responsive">
             </div>
         </div>
 
@@ -96,16 +61,11 @@ include("header.php");
                             <div class="images"
                                  style="background-image: url(demo/uploadfile/category/f4fa715dceb26ac5d143123c121ac2d4.jpg)"></div>
                             <div class="in_categ_w">
-                                <img class="in_categ_img" src="<?php echo $link . $cat['image']; ?>"
+                                <img class="in_categ_img" src="<?php echo $image_link . $cat['image']; ?>"
                                      alt="Metal Roof Solar Mounting System">
                                 <p class="title"><?php echo $cat['category'] ?></p>
                                 <em class="line"></em>
-                                <div class="text">Bristar metal roof solar mounting systems are widely applied for
-                                    commercial
-                                    and residential tin roof project. With wide range of metal roof clamps, it is
-                                    possible to
-                                    mount panels on almost all sorts of tin rooftops.&nbsp;
-                                </div>
+                                <div class="text"><?php echo $cat['short_description']; ?></div>
                                 <span class="main_more"><a rel="nofollow" href="#">view more</a></span>
                             </div>
                         </div>
@@ -121,7 +81,7 @@ include("header.php");
     <div class="container about_topw">
         <div class="about_top clearfix">
             <div class="about_since">
-                <em>2010</em>
+                <em>2018</em>
                 <p>Company Establishment</p>
             </div>
             <div class="in_videoW">
@@ -160,16 +120,15 @@ include("header.php");
                 <p class="about_title">Mounting Solar-Kit Private Limited</p>
                 <div class="text text-justify">
                     Established in the year 2018 at Navi Mumbai, Maharashtra, We "Mounting Solar-Kit Private Limited”
-                    are a Sole
-                    Proprietorship based firm, engaged as the foremost Manufacturer and Supplier of Solar Panel Mounting
-                    Structure,
-                    Trapezoidal Roof Solar Structure and Standing Seam Roof 180° Solar Structure and Flat Roof Ballasted
-                    Structure.
-                    These products are offered by us at most affordable rates. Our products are high in demand due to
-                    their premium
-                    quality, seamless finish, different patterns and affordable prices. Furthermore, we ensure to timely
-                    deliver these
-                    products to our clients, through this we have gained a huge client base in the market.
+                    are a Sole Proprietorship based firm, engaged as the foremost Manufacturer and Supplier of Solar
+                    Panel Mounting
+                    Structure, Trapezoidal Roof Solar Structure and Standing Seam Roof 180° Solar Structure and Flat
+                    Roof Ballasted
+                    Structure. These products are offered by us at most affordable rates. Our products are high in
+                    demand due to
+                    their premium quality, seamless finish, different patterns and affordable prices. Furthermore, we
+                    ensure to timely
+                    deliver these products to our clients, through this we have gained a huge client base in the market.
                 </div>
                 <span class="main_more"><a rel="nofollow" href="#">view more<i></i></a></span>
                 <span class="main_more more_conts"><a rel="nofollow"
@@ -198,12 +157,12 @@ include("header.php");
 
                 <div class="slider autoplay1">
                     <div>
-                        <div class="li"><a href="about-us_d1.html"><img
+                        <div class="li"><a href="#"><img
                                         src="demo/uploadfile/bannerimg/16230471101468.jpg"
                                         alt="Metal Roof Solar Mounts"></a></div>
                     </div>
                     <div>
-                        <div class="li"><a href="about-us_d1.html"><img
+                        <div class="li"><a href="#"><img
                                         src="demo/uploadfile/bannerimg/1617011897434831503.jpg"
                                         alt="Metal Roof Solar Mounts"></a></div>
                     </div>
@@ -256,7 +215,7 @@ include("header.php");
                             <a href="#" class="image">
                                 <img id="product_detail_img"
                                      alt="<?php echo $newProductsRow['title']; ?>"
-                                     src="<?php echo $link.$newProductsRow['thumbnail']; ?>"/></a>
+                                     src="<?php echo $image_link . $newProductsRow['thumbnail']; ?>"/></a>
                             <a href="#" class="title"><?php echo $newProductsRow['title']; ?></a>
                             <div class="text"><?php echo $newProductsRow['short_description']; ?></div>
                             <a rel="nofollow" href="#" class="more">view more<i></i></a>
@@ -337,7 +296,7 @@ include("header.php");
                     <li class="col-sm-3">
                         <div class="in_CaseL_m">
                             <a href="#"></a>
-                            <img src="<?php echo $link . $projectRow['image'] ?>"
+                            <img src="<?php echo $image_link . $projectRow['image'] ?>"
                                  alt="<?php echo $projectRow['title'] ?>">
                             <div class="wrap">
                                 <i class="icon"></i>
@@ -360,8 +319,8 @@ include("header.php");
             <div class="clearfix percent-blocks" data-waypoint-scroll="true">
                 <div class="numbers__one"
                      style="background-image:url(demo/uploadfile/single/5a60308ab3b89173f391d487528139aa.png)">
-                    <div class="numbers__body chart" data-percent="2010">
-                        <div class="numbers__num percent">2010</div>
+                    <div class="numbers__body chart" data-percent="2018">
+                        <div class="numbers__num percent">2018</div>
 
                     </div>
                     <div class="number__desc">Established</div>
@@ -404,77 +363,33 @@ include("header.php");
             <p>Know more about the solar mounting systems</p>
         </div>
         <ul class="list clearfix">
-            <li class="col-sm-4 col-xs-12">
-                <div class="image">
-                    <a href="how-to-effectively-extend-the-service-life-of-solar-panel-mounting-brackets_n9.html"></a>
-                    <img src="demo/uploadfile/news/33caa5a8c73e64ca8ad247b1712426ec.jpg"
-                         alt="How to effectively extend the service life of solar panel mounting brackets?">
-                    <div class="date"><em>29</em>
-                        <p>Mar</p></div>
+            <?php $blogQuery = "SELECT * FROM blogs LIMIT 3";
+            $blogs = mysqli_query($db, $blogQuery);
+            if ($blogs) {
+                foreach ($blogs as $blogRow) {
+                    ?>
+                    <li class="col-sm-4 col-xs-12">
+                        <div class="image">
+                            <a href="<?php echo $blogRow['url'] ?>"></a>
+                            <img src="<?php echo $image_link . $blogRow['img'] ?>"
+                                 alt="<?php echo $blogRow['title']; ?>">
+                            <div class="date"><em>29</em>
+                                <p>Mar</p></div>
 
-                </div>
-                <div class="wrap">
-                    <a href="how-to-effectively-extend-the-service-life-of-solar-panel-mounting-brackets_n9.html"
-                       class="title">How to effectively extend the service life of solar panel mounting brackets?</a>
-                    <div class="text">Ground photovoltaic system is generally adopts a concrete strip (block) foundation
-                        form. The challenges faced by the design of solar panel mounting brackets, the most important
-                        feature of the assembly...
-                    </div>
-                    <span class="page_date">Mar 29, 2021</span>
+                        </div>
+                        <div class="wrap">
+                            <a href="<?php echo $blogRow['url'] ?>"
+                               class="title"><?php echo $blogRow['title']; ?></a>
+                            <div class="text"><?php echo $blogRow['description']; ?></div>
+                            <span class="page_date">Mar 29, 2021</span>
 
-                    <a rel="nofollow"
-                       href="how-to-effectively-extend-the-service-life-of-solar-panel-mounting-brackets_n9.html"
-                       class="page_more">view more<i></i></a>
-                </div>
-            </li>
-            <li class="col-sm-4 col-xs-12">
-                <div class="image">
-                    <a href="what-are-the-components-of-the-small-flat-photovoltaic-solar-mounting-brackets_n8.html"></a>
-                    <img src="demo/uploadfile/news/3c46c1bd13b873ed48ba7b21b76d6154.jpg"
-                         alt="What are the components of the small flat photovoltaic solar mounting brackets?">
-                    <div class="date"><em>07</em>
-                        <p>May</p></div>
-
-                </div>
-                <div class="wrap">
-                    <a href="what-are-the-components-of-the-small-flat-photovoltaic-solar-mounting-brackets_n8.html"
-                       class="title">What are the components of the small flat photovoltaic solar mounting brackets?</a>
-                    <div class="text">Generally, the installation of small flat photovoltaic brackets is mainly divided
-                        into three main components, which are triangle beam bracket, cross beam bracket and vertical
-                        bracket, the main purpose...
-                    </div>
-                    <span class="page_date">May 07, 2021</span>
-
-                    <a rel="nofollow"
-                       href="what-are-the-components-of-the-small-flat-photovoltaic-solar-mounting-brackets_n8.html"
-                       class="page_more">view more<i></i></a>
-                </div>
-            </li>
-            <li class="col-sm-4 col-xs-12">
-                <div class="image">
-                    <a href="what-aspects-of-the-photovoltaic-solar-mounting-support-that-you-need-to-focus-on_n7.html"></a>
-                    <img src="demo/uploadfile/news/652c687da159dc389c039076723d2f17.jpg"
-                         alt="What aspects of the photovoltaic solar mounting support that you need to focus on?">
-                    <div class="date"><em>29</em>
-                        <p>Mar</p></div>
-
-                </div>
-                <div class="wrap">
-                    <a href="what-aspects-of-the-photovoltaic-solar-mounting-support-that-you-need-to-focus-on_n7.html"
-                       class="title">What aspects of the photovoltaic solar mounting support that you need to focus
-                        on?</a>
-                    <div class="text">As an emerging industry, photovoltaic solar mounting supports are facing more and
-                        more customer needs. At the same time, some customers lack the knowledge of photovoltaic solar
-                        mounting support bracke...
-                    </div>
-                    <span class="page_date">Mar 29, 2021</span>
-
-                    <a rel="nofollow"
-                       href="what-aspects-of-the-photovoltaic-solar-mounting-support-that-you-need-to-focus-on_n7.html"
-                       class="page_more">view more<i></i></a>
-                </div>
-            </li>
-
+                            <a rel="nofollow"
+                               href="<?php echo $blogRow['url'] ?>"
+                               class="page_more">view more<i></i></a>
+                        </div>
+                    </li>
+                <?php }
+            } ?>
         </ul>
     </div>
 </div>
@@ -518,7 +433,7 @@ include("header.php");
 </div>
 
 
-<?php include("footer.php"); ?>
+<?php include("footer1.php"); ?>
 
 <a href="javascript:;" rel="nofollow" class="back_top"></a>
 
@@ -613,215 +528,29 @@ include("header.php");
     <a href="contact-us_d2.html"><i class="fa fa-comments-o"></i>
         <p>contact</p></a>
 </div>
-<script type="text/javascript">
-    $('#bootstrap-touch-slider').bsTouchSlider();
-</script>
+
 <script type="text/javascript" src="demo/template/js/slick.js"></script>
 <script type="text/javascript" src="demo/template/js/wow.min.js"></script>
 <script type="text/javascript" src="demo/template/js/owl.carousel.min.js"></script>
 <script type="text/javascript">
     baguetteBox.run('.tz-gallery');
-</script>
-<script>
-    (function ($) {
-        var $nav = $('#main-nav');
-        var $toggle = $('.toggle');
-        var defaultData = {
-            maxWidth: false,
-            customToggle: $toggle,
-            levelTitles: true
-        };
 
-        // we'll store our temp stuff here
-        var $clone = null;
-        var data = {};
-
-        // calling like this only for demo purposes
-
-        const initNav = function (conf) {
-            if ($clone) {
-                // clear previous instance
-                $clone.remove();
-            }
-
-            // remove old toggle click event
-            $toggle.off('click');
-
-            // make new copy
-            $clone = $nav.clone();
-
-            // remember data
-            $.extend(data, conf)
-
-            // call the plugin
-            $clone.hcMobileNav($.extend({}, defaultData, data));
-        }
-
-        // run first demo
-        initNav({});
-
-        $('.actions').find('a').on('click', function (e) {
-            e.preventDefault();
-
-            var $this = $(this).addClass('active');
-            var $siblings = $this.parent().siblings().children('a').removeClass('active');
-
-            initNav(eval('(' + $this.data('demo') + ')'));
-        });
-    })(jQuery);
-</script>
-<script>
-    /*------------------------------------------------------------------
-    [Table of contents]
-
-    - Author:  Andrey Sokoltsov
-    - Profile:	http://themeforest.net/user/andreysokoltsov
-    --*/
-
-    (function () {
-
-        "use strict";
-
-        var Core = {
-
-            initialized: false,
-
-            initialize: function () {
-
-                if (this.initialized) return;
-                this.initialized = true;
-
-                this.build();
-
+    $('.owl-carousel').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:true,
+        responsive:{
+            0:{
+                items:1
             },
-
-            build: function () {
-
-
-                // Counter
-                this.initNumberCounter();
-
-
+            600:{
+                items:1
             },
-
-
-            initNumberCounter: function (options) {
-                if ($('body').length) {
-                    var waypointScroll = $('.percent-blocks').data('waypoint-scroll');
-                    if (waypointScroll) {
-                        $(window).on('scroll', function () {
-                            var winH = $(window).scrollTop();
-                            $('.percent-blocks').waypoint(function () {
-                                $('.chart').each(function () {
-                                    CharsStart();
-                                });
-                            }, {
-                                offset: '80%'
-                            });
-                        });
-                    }
-                }
-
-                function CharsStart() {
-                    $('.chart').easyPieChart({
-                        barColor: false,
-                        trackColor: false,
-                        scaleColor: false,
-                        scaleLength: false,
-                        lineCap: false,
-                        lineWidth: false,
-                        size: false,
-                        animate: 1000,
-                        onStep: function (from, to, percent) {
-                            $(this.el).find('.percent').text(Math.round(percent));
-                        }
-                    });
-                }
-            },
-
-
-        };
-
-        Core.initialize();
-
-    })();
-</script>
-<script>
-    (function (window, document) {
-        'use strict';
-        var hotcss = {};
-        (function () {
-            var viewportEl = document.querySelector('meta[name="viewport"]'),
-                hotcssEl = document.querySelector('meta[name="hotcss"]'),
-                dpr = window.devicePixelRatio || 1,
-                maxWidth = 640,
-                designWidth = 0;
-
-            document.documentElement.setAttribute('data-dpr', dpr);
-            hotcss.dpr = dpr;
-            document.documentElement.setAttribute('max-width', maxWidth);
-            hotcss.maxWidth = maxWidth;
-            if (designWidth) {
-                document.documentElement.setAttribute('design-width', designWidth);
-                hotcss.designWidth = designWidth;
+            1000:{
+                items:1
             }
-        })();
-        hotcss.px2rem = function (px, designWidth) {
-            if (!designWidth) {
-                designWidth = parseInt(hotcss.designWidth, 10);
-            }
-            return parseInt(px, 10) * 640 / designWidth / 20;
         }
-        hotcss.rem2px = function (rem, designWidth) {
-            if (!designWidth) {
-                designWidth = parseInt(hotcss.designWidth, 10);
-            }
-            return rem * 20 * designWidth / 640;
-        }
-        hotcss.mresize = function () {
-            var innerWidth = document.documentElement.getBoundingClientRect().width || window.innerWidth;
-            if (hotcss.maxWidth && (innerWidth / hotcss.dpr > hotcss.maxWidth)) {
-                innerWidth = hotcss.maxWidth * hotcss.dpr;
-            }
-            if (!innerWidth) {
-                return false;
-            }
-            document.documentElement.style.fontSize = (innerWidth * 20 / 640) + 'px';
-        };
-        hotcss.mresize();
-        window.addEventListener('resize', function () {
-            clearTimeout(hotcss.tid);
-            hotcss.tid = setTimeout(hotcss.mresize, 400);
-        }, false);
-        window.addEventListener('load', hotcss.mresize, false);
-        setTimeout(function () {
-            hotcss.mresize();
-        }, 333)
-        window.hotcss = hotcss;
-    })(window, document);
-    (function ($) {
-        var mainWit = $(window).width(),
-            mainHit = $(window).height(),
-            carouselBar = $(".page-header-bar"),
-            fixedContact = $(".fixed-contact-wrap");
-        /*fixed-contact*/
-        $(".fixed-contact-wrap").hover(function () {
-            $(this).addClass("active");
-        }, function () {
-            $(this).removeClass("active");
-        });
-        $(window).scroll(function () {
-            if ($(window).width() > 992) {
-                if ($(this).scrollTop() > mainHit / 2) {
-                    carouselBar.addClass("active");
-                    fixedContact.addClass("show");
-                } else {
-                    carouselBar.removeClass("active");
-                    fixedContact.removeClass("show");
-                }
-            }
-        });
-    })(jQuery);
+    })
 </script>
 </body>
 </html>
