@@ -1,11 +1,24 @@
 <?php
 include("connect.php");
-include("header.php");
 ?>
-
-    <link rel="stylesheet" type="text/css" href="demo/template/css/style.css">
-    <link rel="stylesheet" type="text/css" href="demo/template/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="demo/template/css/custom.css">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+        <meta http-equiv="X-UA-Compatible" content="IE=9" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>What are the components of the small flat photovoltaic solar mounting brackets?-bristarpvmount.com</title>
+        <meta name="keywords" content="solar mounting brackets" />
+        <meta name="description" content="Generally,the installation of small flat photovoltaic brackets is mainly divided into three main components,which are triangle beam bracket,cross beam bracket and vertical brack" />
+        <meta name="google-site-verification" content="0hlmt6XTPq9hWJUMwJe9WG8xzEZXv56X8cNMCA1UqUo" />
+        <meta property="og:image" content="uploadfile/news/3c46c1bd13b873ed48ba7b21b76d6154.jpg"/>
+        <link href="uploadfile/userimg/5fb86e9addafa6d964bb096eae4db0c0.ico" rel="shortcut icon"  />
+        <?php include_once 'head.php'; ?>
+    </head>
+<body>
+<?php include_once 'header1.php'; ?>
     <div class="section">
         <div class="page_banner">
         </div>
@@ -16,9 +29,10 @@ include("header.php");
                         <em>Products</em>
                     </div>
                     <div class="bread_right">
-                        <a class="home" href="#"><i class="fa fa-home"></i>Home</a>
-                        <i class="fa fa-angle-right"></i>
-                        <a href="#">Products</a>
+
+                        <a class="home" href="<?php echo $base_url; ?>"><i class="fa fa-home"></i>Home</a>
+                        <i class="fa fa-angle-right"></i><a href="newsList.php">Products </a>
+
                     </div>
                 </div>
             </div>
@@ -27,58 +41,9 @@ include("header.php");
             <div class="container">
                 <div class="page_column clearfix">
                     <div class="page-left clearfix">
-                        <div id="right_column" class="left-cat column clearfix">
-                            <section class="block blockcms column_box">
-                                <span class="left_title"><em>Categories</em><span></span><i
-                                            class="column_icon_toggle icon-plus-sign"></i></span>
-                                <div class="block_content toggle_content">
-                                    <ul class="mtree">
-                                        <?php
-                                        $categories_query = "SELECT * FROM category";
-                                        $categories = mysqli_query($db, $categories_query);
-                                        foreach ($categories as $cat) {
-                                            ?>
-                                            <li><b></b><a href="productdemo.php?category_id=<?php echo $cat['id']; ?>"><?php echo $cat['category'] ?></a>
-                                            </li>
-                                        <?php } ?>
-                                    </ul>
-                                </div>
-                            </section>
-                        </div>
-                        <div id="right_column" class="left-pro column clearfix">
-                            <section class="block blockcms column_box">
-                                <span class="left_title"><em>New Products</em><span></span><i
-                                            class="column_icon_toggle icon-plus-sign"></i></span>
-                                <div class="block_content toggle_content">
-                                    <ul class="list clearfix">
-                                        <?php
-                                        $newProductsQuery = "SELECT * FROM products WHERE product_status = '2'";
-                                        $newProducts = mysqli_query($db, $newProductsQuery);
-                                        if ($newProducts) {
-                                            foreach ($newProducts as $newProductsRow) {
-                                                ?>
-                                                <li class="clearfix">
-                                                    <div class="box clearfix">
-                                                        <div class="image pro_image">
-                                                            <a href="#"></a>
-                                                            <img id="product_detail_img"
-                                                                 alt="<?php echo $newProductsRow['title'] ?>"
-                                                                 src="<?php echo $image_link.$newProductsRow['thumbnail'] ?>"/>
-                                                            <em class="icon"><i></i></em>
-                                                        </div>
-                                                        <div class="main">
-                                                            <a href="#"
-                                                               class="title"><?php echo $newProductsRow['title'] ?></a>
-                                                            <a rel="nofollow" href="#" class="page_more">view more</a>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            <?php }
-                                        } ?>
-                                    </ul>
-                                </div>
-                            </section>
-                        </div>
+                        <?php include_once('categories.php');
+                              include_once('newProducts.php'); ?>
+
                     </div>
                     <div class="col-md-9">
                         <div class="pro-text">
@@ -97,7 +62,7 @@ include("header.php");
                                     $page = isset($_GET['page']) ? $_GET['page'] : 1;
                                     $recordsPerPage = 9;
                                     $fromRecordNum = ($recordsPerPage * $page) - $recordsPerPage;
-                                    $products_query = "SELECT * FROM products WHERE product_status = '1' ".$category." ORDER BY id ASC LIMIT ".$fromRecordNum.",".$recordsPerPage;
+                                    $products_query = "SELECT * FROM products WHERE product_status = '1' ".$category." ORDER BY id DESC LIMIT ".$fromRecordNum.",".$recordsPerPage;
                                     $products = mysqli_query($db, $products_query);
                                     if ($products) {
                                         foreach ($products as $productRow) {

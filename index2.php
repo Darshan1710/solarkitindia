@@ -1,40 +1,22 @@
 <?php
 include("connect.php");
-include("header.php");
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-
-
 <head>
-
-
-    <link type="text/css" rel="stylesheet" href="template/css/font-awesome.min.css">
-
-    <!-- <script type="text/javascript" src="template/js/jquery-1.8.3.js"></script> -->
-    <script src="https://code.jquery.com/jquery-3.6.0.js"
-            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="demo/js/front/common.js"></script>
-    <script type="text/javascript" src="demo/template/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="demo/template/js/demo.js"></script>
-    <script type="text/javascript" src="demo/template/js/jquery.velocity.min.js"></script>
-
-    <link rel="stylesheet" type="text/css" href="demo/template/css/style.css">
-    <link rel="stylesheet" type="text/css" href="demo/template/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="demo/template/css/custom.css">
+    <?php include_once 'head.php'; ?>
     <link rel="stylesheet" type="text/css" href="demo/template/css/owl.carousel.min.css">
     <link rel="stylesheet" type="text/css" href="demo/template/css/owl.theme.default.min.css">
 
 </head>
 <body>
-
+<?php include_once 'header1.php'; ?>
 <div class="slide_content">
     <div class="htmleaf-container">
         <div class="owl-carousel owl-theme">
             <div class="item">
-                <img src="images/banner/solar-mounting_all-product-launch.png" class="img-responsive">
+                <img src="images/banner/solarKit-website.png" class="img-responsive">
             </div>
         </div>
 
