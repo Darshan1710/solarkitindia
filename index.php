@@ -9,7 +9,7 @@ $query = "select * from page1 where url='$url' and zakazat='0'";
  $vysledek = mysqli_query($db,"select * from page1 where url='$url' and zakazat='0'");
 
     $row = mysqli_fetch_assoc($vysledek);
-  
+  //
  $title=$row["title"];
  $desc=$row["description"];
  $keyw=$row["keywords"];
