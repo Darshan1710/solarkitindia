@@ -45,10 +45,10 @@
                             <ul>
                                 <li><a href="">Home</a></li>
                                 <li><a href="about-us">About us</a></li>
-                                <li><a href="products">Products</a></li>
-                                <li><a href="references">References</a></li>
-                                <li><a href="blog">Blog</a></li>
-                                <li><a href="faq">FAQ</a></li>
+                                <li><a href="productdemo.php">Products</a></li>
+                                <li><a href="projects.php">References</a></li>
+                                <li><a href="blogList.php">Blog</a></li>
+                                <li><a href="faq.php">FAQ</a></li>
                                 <li><a href="news.solarkitindia.com">News</a></li>
                                 <li><a href="careers.php">Career</a></li>
                                 <li><a href="contact-us.php">Contact us</a></li>
