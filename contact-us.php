@@ -104,13 +104,20 @@
                                 <input type="text" name="mobile" id="mobile" class="meInput" placeholder="Tel/Whatsapp">
                             </li>
                             <li class="col-sm-6 col-xs-12">
-                                    <select class="meInput" name="product">
-                                        <option>Product 1</option>
-                                        <option>Product 2</option>
+
+                                    <select class="meInput" name="product" id="product">
+                                        <option value="">Please Select Product</option>
+                                        <?php $productsQuery = "SELECT * FROM products";
+                                        $products = mysqli_query($db,$productsQuery);
+                                        if($products){
+                                        foreach($products as $productsRow){
+                                        ?>
+                                        <option value="<?php echo $productsRow['product'] ?>"><?php echo $productsRow['product'] ?></option>
+                                        <?php } } ?>
                                     </select>
                             </li>
                             <li class="col-xs-12 meText">
-                                    <textarea id="message" placeholder="* Enter product details (such as  size, materials etc.) and other specific requirements to receive an accurate quote." maxlength="3000" name="message"></textarea>
+                                    <textarea id="message" placeholder="* Enter product details (such as  size, materials etc.) and other specific requirements to receive an accurate quote." maxlength="3000" name="message" class="meInput"></textarea>
                             </li>
                             <div class="clearfix"></div>
                         </ul>
@@ -260,7 +267,7 @@
 </body>
 </html>
 <script type="text/javascript">
-    $('#contact').submit(function(e) {
+    $('#desktop_contact').submit(function(e) {
         e.preventDefault();
 
         var form_data = new FormData($(this)[0]);
@@ -271,7 +278,7 @@
             data: form_data,
             processData: false,
             contentType: false,
-            url: base_url+'/enquiry.php',
+            url: base_url+'enquiry.php',
             success: function(data) {
                 var obj = $.parseJSON(data);
 
@@ -282,8 +289,8 @@
                     $('.error').remove();
                     $.each(obj.messages, function(key, value) {
                         var element = $('#' + key);
-                        value = '<p class="error">'+value+'</p>';
-                        element.closest('.wpcf7-form-control').after(value);
+                        value = '<span class="error">'+value+'</span>';
+                        element.closest('.meInput').after(value);
 
 
                     });

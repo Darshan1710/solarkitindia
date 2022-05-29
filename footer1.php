@@ -1,5 +1,4 @@
 <div class="footerW clearfix">
-
     <div class="footer">
         <div class="container clearfix">
             <div class="footer_m">
@@ -51,8 +50,8 @@
                                 <li><a href="blog">Blog</a></li>
                                 <li><a href="faq">FAQ</a></li>
                                 <li><a href="news.solarkitindia.com">News</a></li>
-                                <li><a href="career">Career</a></li>
-                                <li><a href="contact">Contact us</a></li>
+                                <li><a href="careers.php">Career</a></li>
+                                <li><a href="contact-us.php">Contact us</a></li>
                             </ul>
                         </div>
                     </section>
@@ -94,3 +93,4 @@
         </div>
     </div>
 </div>
+<input type="hidden" id="base_url" value="<?php echo $base_url; ?>">

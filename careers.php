@@ -11,9 +11,9 @@
 
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-      <link rel="stylesheet" type="text/css" href="../assets/css/grid.css">
+      <link rel="stylesheet" type="text/css" href="assets/css/grid.css">
 
-      <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+      <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -26,7 +26,7 @@
       <div class="slideshow-container">
          <div class="mySlides fade">
             <div class="numbertext"></div>
-            <img src="../assets/images/banner.png" style="width:100%">
+            <img src="assets/images/banner.png" style="width:100%">
             <div class="text"></div>
          </div>
          <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -42,7 +42,7 @@
       <div class="row">
          <div class="col-md-3 col-sm-12">
             <div class="image-div">
-               <img src="../assets/images/men1.png">
+               <img src="assets/images/men1.png">
             </div>
          </div>
          <div class="col-md-9 col-sm-12">
@@ -71,7 +71,7 @@
          </div>
          <div class="col-md-4 col-sm-12">
             <div class="image2-div">
-               <img src="../assets/images/solor.png">
+               <img src="assets/images/solor.png">
             </div>
          </div>
       </div>
@@ -81,7 +81,7 @@
    <div class="container">
       <div class="row">
          <div class="img3-div col-sm-12">
-            <img src="../assets/images/men2.png">
+            <img src="assets/images/men2.png">
          </div>
          <div class="col-md-12 col-sm-12">
             <div class="para2-content">
@@ -113,7 +113,7 @@
          </div>
          <div class="col-md-4 col-sm-12">
             <div class="how-img">
-               <img src="../assets/images/we.png">
+               <img src="assets/images/we.png">
             </div>
          </div>
       </div>
@@ -126,7 +126,7 @@
          <div class="row">
             <div class="col-md-12 col-sm-12">
                <div class="pos-img">
-                  <img src="../assets/images/open.png">
+                  <img src="assets/images/open.png">
                   <h2>OPEN POSITIONS</h2>
                </div>
             </div>
