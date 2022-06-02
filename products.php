@@ -50,11 +50,11 @@ include("connect.php");
                             <div class="column"></div>
                         </div>
                         <div class="main">
-                            <div id="cbp-vm" class="cbp-vm-switcher cbp-vm-view-grid">
+                            <div id="cbp-vm" class="cbp-vm-switcher cbp-vm-view-list">
                                 <div class="cbp-vm-options clearfix">
-                                    <a href="#" class="cbp-vm-icon cbp-vm-grid cbp-vm-selected"
-                                       data-view="cbp-vm-view-grid"></a>
-                                    <a href="#" class="cbp-vm-icon cbp-vm-list" data-view="cbp-vm-view-list"></a>
+<!--                                    <a href="#" class="cbp-vm-icon cbp-vm-grid "-->
+<!--                                       data-view="cbp-vm-view-grid"></a>-->
+                                    <a href="#" class="cbp-vm-icon cbp-vm-list cbp-vm-selected" data-view="cbp-vm-view-list"></a>
                                 </div>
                                 <ul class="wow clearfix">
                                     <?php
@@ -62,7 +62,7 @@ include("connect.php");
                                     $page = isset($_GET['page']) ? $_GET['page'] : 1;
                                     $recordsPerPage = 9;
                                     $fromRecordNum = ($recordsPerPage * $page) - $recordsPerPage;
-                                    $products_query = "SELECT * FROM products WHERE product_status = '1' ".$category." ORDER BY id DESC LIMIT ".$fromRecordNum.",".$recordsPerPage;
+                                    $products_query = "SELECT * FROM sub_products WHERE product_status = '1' ".$category." ORDER BY id DESC LIMIT ".$fromRecordNum.",".$recordsPerPage;
                                     $products = mysqli_query($db, $products_query);
                                     if ($products) {
                                         foreach ($products as $productRow) {
@@ -99,7 +99,7 @@ include("connect.php");
                                                                 } ?>
                                                             </ul>
                                                             <div class="more"><span class="main_more"><a rel="nofollow"
-                                                                                                         href="<?php echo $productRow['id']?>">view more</a></span>
+                                                                                                         href="#">view more</a></span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -113,7 +113,7 @@ include("connect.php");
                                           <div class="page_num clearfix">
                                               <?php
                                               $category_id = isset($_GET['category_id']) ? ' AND category_id = "'.$_GET['category_id'].'"' : '';
-                                              $query = "SELECT COUNT(*) as total_rows FROM products WHERE product_status = '1'".$category_id;
+                                              $query = "SELECT COUNT(*) as total_rows FROM sub_products WHERE product_status = '1'".$category_id;
                                               $pagination = mysqli_query($db,$query);
                                               $row = mysqli_fetch_assoc($pagination);
                                               $total_rows = $row['total_rows'];
@@ -136,7 +136,7 @@ include("connect.php");
 
                                                       // not current page
                                                       else {
-                                                          echo "<a href=".$image_link."productdemo.php?page=".$x.$category_id." class='pages underline'>$x</a>";
+                                                          echo "<a href=".$image_link."products.php?page=".$x.$category_id." class='pages underline'>$x</a>";
                                                       }
                                                   }
                                               }

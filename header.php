@@ -88,7 +88,7 @@ a.appendChild(r);
       <ul id="nav-mobile" class="right hide-on-small-only">
 <li><a href="<?php echo $link;?>/about-us/" itemprop="url" title="About us">About us</a></li>
 <li><a href="<?php echo $link;?>/products/" itemprop="url" title="Products">Products</a></li>
-<li><a href="<?php echo $link;?>/references/" itemprop="url" title="References">References</a></li>
+<li><a href="<?php echo $link;?>/projects.php" itemprop="url" title="References">References</a></li>
 <li><a href="<?php echo $link;?>/blog/" itemprop="url" title="Blog" >Blog</a></li>
 <li><a href="<?php echo $link;?>/faq/" itemprop="url" title="FAQ">FAQ</a></li>
 <li><a href="https://news.solarkitindia.com/" itemprop="url" title="News">News</a></li>
@@ -104,7 +104,7 @@ a.appendChild(r);
   <ul class="sidenav" id="mobile-demo">
 <li><a href="<?php echo $link;?>/about-us/" itemprop="url" title="About us">About us</a></li>
 <li><a href="<?php echo $link;?>/products/" itemprop="url" title="Products">Products</a></li>
-<li><a href="<?php echo $link;?>/references/" itemprop="url" title="References">References</a></li>
+<li><a href="<?php echo $link;?>/projects.php" itemprop="url" title="References">References</a></li>
 <li><a href="<?php echo $link;?>/blog/" itemprop="url" title="Blog" >Blog</a></li>
 <li><a href="<?php echo $link;?>/faq/" itemprop="url" title="FAQ">FAQ</a></li>
 <li><a href="https://news.solarkitindia.com/" itemprop="url" title="News">News</a></li>

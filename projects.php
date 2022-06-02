@@ -35,11 +35,11 @@ include("connect.php");
     <div class="container">
         <div class="breadcrumbm">
             <div class="main_title">
-                <em>Project cases</em>
+                <em>Projects</em>
             </div>
             <div class="bread_right">
                 <a class="home" href="/"><i class="fa fa-home"></i>Home</a>
-                <i class="fa fa-angle-right"></i><a href="/project-cases_nc2"><h2>Project cases</h2></a>
+                <i class="fa fa-angle-right"></i><a href="projects.php"><h2>Projects</h2></a>
             </div>
         </div>
     </div>
@@ -69,7 +69,7 @@ include("connect.php");
                             <div class="line"></div>
                         </div>
                         <div class="wrap">
-                            <a href="/ground-solar-panel-mounting-system_n6" class="title"><?php echo $projectsRow['title']; ?></a>
+                            <a href="projectDetails.php?id=<?php echo $projectsRow['id']; ?>" class="title"><?php echo $projectsRow['title']; ?></a>
                             <div class="text"><?php echo $projectsRow['short_description']; ?>
                             </div>
                         </div>

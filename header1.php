@@ -113,8 +113,8 @@
                                 <nav>
                                     <ul class="clearfix">
                                         <li><a href='about-us.php'>About Us</a></li>
-                                        <li><a href="productdemo.php">Products</a>
-                                        <li><a href="references.php">References</a>
+                                        <li><a href="products.php">Products</a>
+                                        <li><a href="projects.php">References</a>
                                         <li><a href="blogList.php">Blog</a>
                                         </li>
                                         <li><a href="faq.php">FAQ</a>
@@ -137,15 +137,15 @@
                             </ul>
                             <ul class="second-nav">
                                 <li><a href='about-us.php'>About Us</a></li>
-                                <li><a href="productdemo.php">Products</a>
-                                <li><a href="references.php">References</a>
+                                <li><a href="products.php">Products</a>
+                                <li><a href="projects.php">References</a>
                                 <li><a href="blogList.php">Blog</a>
                                 </li>
                                 <li><a href="faq.php">FAQ</a>
                                 </li>
                                 <li><a href="https://news.solarkitindia.com/">News</a>
                                 </li>
-                                <li><a href="career.php">Career</a>
+                                <li><a href="careers.php">Career</a>
                                 </li>
                                 <li><a href="contact-us.php">Contact us</a>
                                 </li>

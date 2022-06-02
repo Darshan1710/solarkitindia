@@ -61,7 +61,7 @@ include("connect.php");
                                     <div class="card-header" id="faqHeading-1">
                                         <div class="mb-0">
                                             <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-1" data-aria-expanded="true" data-aria-controls="faqCollapse-1">
-                                                <span class="badge">1</span>Do you provide solar panel/ installation/inverter services?
+                                                <i class="fa fa-plus" aria-hidden="true"></i> Do you provide solar panel/ installation/inverter services?
                                             </h5>
                                         </div>
                                     </div>
@@ -75,7 +75,7 @@ include("connect.php");
                                     <div class="card-header" id="faqHeading-2">
                                         <div class="mb-0">
                                             <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-2" data-aria-expanded="false" data-aria-controls="faqCollapse-2">
-                                                <span class="badge">2</span> Where are you based at?
+                                                <i class="fa fa-plus" aria-hidden="true"></i> Where are you based at?
                                             </h5>
                                         </div>
                                     </div>
@@ -89,7 +89,7 @@ include("connect.php");
                                     <div class="card-header" id="faqHeading-3">
                                         <div class="mb-0">
                                             <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-3" data-aria-expanded="false" data-aria-controls="faqCollapse-3">
-                                                <span class="badge">3</span>Where is your factory or warehouse located?
+                                                <i class="fa fa-plus" aria-hidden="true"></i> Where is your factory or warehouse located?
                                             </h5>
                                         </div>
                                     </div>
@@ -103,7 +103,7 @@ include("connect.php");
                                     <div class="card-header" id="faqHeading-4">
                                         <div class="mb-0">
                                             <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-4" data-aria-expanded="false" data-aria-controls="faqCollapse-4">
-                                                <span class="badge">4</span> What type of solutions are available?
+                                                <i class="fa fa-plus" aria-hidden="true"></i> What type of solutions are available?
                                             </h5>
                                         </div>
                                     </div>
@@ -117,7 +117,7 @@ include("connect.php");
                                     <div class="card-header" id="faqHeading-5">
                                         <div class="mb-0">
                                             <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-5" data-aria-expanded="false" data-aria-controls="faqCollapse-5">
-                                                <span class="badge">5</span> What services we provide?
+                                                <i class="fa fa-plus" aria-hidden="true"></i> What services we provide?
                                             </h5>
                                         </div>
                                     </div>
@@ -137,7 +137,7 @@ include("connect.php");
                                     <div class="card-header" id="faqHeading-6">
                                         <div class="mb-0">
                                             <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-6" data-aria-expanded="false" data-aria-controls="faqCollapse-6">
-                                                <span class="badge">6</span> Does non-penerative structures can handle the panel load?
+                                                <i class="fa fa-plus" aria-hidden="true"></i> Does non-penerative structures can handle the panel load?
                                             </h5>
                                         </div>
                                     </div>
@@ -151,7 +151,7 @@ include("connect.php");
                                     <div class="card-header" id="faqHeading-7">
                                         <div class="mb-0">
                                             <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-7" data-aria-expanded="false" data-aria-controls="faqCollapse-7">
-                                                <span class="badge">7</span> Can we provide installation service?
+                                                <i class="fa fa-plus" aria-hidden="true"></i> Can we provide installation service?
                                             </h5>
                                         </div>
                                     </div>
@@ -165,7 +165,7 @@ include("connect.php");
                                     <div class="card-header" id="faqHeading-8">
                                         <div class="mb-0">
                                             <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-8" data-aria-expanded="false" data-aria-controls="faqCollapse-8">
-                                                <span class="badge">8</span> Can we provide dealership or distributorship?
+                                                <i class="fa fa-plus" aria-hidden="true"></i> Can we provide dealership or distributorship?
                                             </h5>
                                         </div>
                                     </div>
@@ -179,7 +179,7 @@ include("connect.php");
                                     <div class="card-header" id="faqHeading-9">
                                         <div class="mb-0">
                                             <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-9" data-aria-expanded="false" data-aria-controls="faqCollapse-9">
-                                                <span class="badge">9</span> What is the warranty of structures?
+                                                <i class="fa fa-plus" aria-hidden="true"></i> What is the warranty of structures?
                                             </h5>
                                         </div>
                                     </div>
@@ -193,7 +193,7 @@ include("connect.php");
                                     <div class="card-header" id="faqHeading-10">
                                         <div class="mb-0">
                                             <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-10" data-aria-expanded="false" data-aria-controls="faqCollapse-10">
-                                                <span class="badge">10</span> In which regions you can deliver the product?
+                                                <i class="fa fa-plus" aria-hidden="true"></i> In which regions you can deliver the product?
                                             </h5>
                                         </div>
                                     </div>
@@ -207,7 +207,7 @@ include("connect.php");
                                     <div class="card-header" id="faqHeading-11">
                                         <div class="mb-0">
                                             <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-11" data-aria-expanded="false" data-aria-controls="faqCollapse-11">
-                                                <span class="badge">11</span> How much time it takes to reach their location?
+                                                <i class="fa fa-plus" aria-hidden="true"></i> How much time it takes to reach their location?
                                             </h5>
                                         </div>
                                     </div>
@@ -221,7 +221,7 @@ include("connect.php");
                                     <div class="card-header" id="faqHeading-12">
                                         <div class="mb-0">
                                             <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-12" data-aria-expanded="false" data-aria-controls="faqCollapse-12">
-                                                <span class="badge">12</span> Which certifications do we have for our structures?
+                                                <i class="fa fa-plus" aria-hidden="true"></i> Which certifications do we have for our structures?
                                             </h5>
                                         </div>
                                     </div>
@@ -235,7 +235,7 @@ include("connect.php");
                                     <div class="card-header" id="faqHeading-13">
                                         <div class="mb-0">
                                             <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-13" data-aria-expanded="false" data-aria-controls="faqCollapse-13">
-                                                <span class="badge">13</span> How much capacity is installed till now?
+                                                <i class="fa fa-plus" aria-hidden="true"></i> How much capacity is installed till now?
                                             </h5>
                                         </div>
                                     </div>
@@ -249,7 +249,7 @@ include("connect.php");
                                     <div class="card-header" id="faqHeading-14">
                                         <div class="mb-0">
                                             <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-14" data-aria-expanded="false" data-aria-controls="faqCollapse-14">
-                                                <span class="badge">14</span> What is the minimum quantity order we take?
+                                                <i class="fa fa-plus" aria-hidden="true"></i> What is the minimum quantity order we take?
                                             </h5>
                                         </div>
                                     </div>
@@ -263,7 +263,7 @@ include("connect.php");
                                     <div class="card-header" id="faqHeading-15">
                                         <div class="mb-0">
                                             <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-15" data-aria-expanded="false" data-aria-controls="faqCollapse-15">
-                                                <span class="badge">15</span> From how many years we are dealing in Solar structures?
+                                                <i class="fa fa-plus" aria-hidden="true"></i> From how many years we are dealing in Solar structures?
                                             </h5>
                                         </div>
                                     </div>
@@ -277,7 +277,7 @@ include("connect.php");
                                     <div class="card-header" id="faqHeading-16">
                                         <div class="mb-0">
                                             <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-16" data-aria-expanded="false" data-aria-controls="faqCollapse-16">
-                                                <span class="badge">16</span> What is the price for structures?
+                                                <i class="fa fa-plus" aria-hidden="true"></i> What is the price for structures?
                                             </h5>
                                         </div>
                                     </div>
