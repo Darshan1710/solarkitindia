@@ -800,7 +800,7 @@ header .toggle div {
 .header{transition:all .5s;padding: 0 0 18px; position:relative}
 .header .header_m {position:relative; z-index:99} 
  
-#logo{position:relative;text-align:left;float:left;z-index:999;  margin-top: 16px  }
+#logo{position:relative;text-align:left;float:left;z-index:999;  margin-top: 4%  }
  
 #logo h1{margin:0;padding:0; }
 #logo p{ font-size:40px; color:#333333; margin-left:22px; line-height:44px} 
@@ -1288,7 +1288,7 @@ transform: translateX(-3px); } }
 	/*white-space: nowrap; */
 	margin-top: 27px}
 .in_categL li .column .in_categ_w .line{ display: block; width: 45px; height: 2px; background: #1160cb; margin: 15px auto 31px;}
-.in_categL li .column .in_categ_w .text{ color:#888888; font-size: 12px; line-height: 26px; overflow: hidden; max-height: 52px;}
+.in_categL li .column .in_categ_w .text{ color:#888888; font-size: 12px; line-height: 26px; max-height: 120px;}
 .in_categL li .column .in_categ_w .main_more{ margin-top: 40px;border:1px solid #d1d1d1; background: none; border-radius: 0}
 .in_categL li .column .in_categ_w .main_more a{ color:#888888; letter-spacing: 0; padding: 0 21px; line-height: 42px; height: 42px}
 .in_categL li .column:hover .in_categ_w .main_more{ background: #013eb2; border-color: #013eb2; }

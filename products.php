@@ -70,7 +70,7 @@ include("connect.php");
                                             <li class="wow">
                                                 <div class="clearfix">
                                                     <div class="cbp-vm-image">
-                                                        <a class="link" href="#"></a>
+                                                        <a class="link" href="productDetails.php?id=<?php echo $productRow['id'] ?>"></a>
                                                         <img id="product_detail_img" alt="<?php echo $productRow['title'] ?>"
                                                              src="<?php echo $image_link.$productRow['thumbnail']; ?>"/>
                                                         <div class="cbp-image-hover"><img
@@ -85,7 +85,7 @@ include("connect.php");
                                                     <div class="cbp-list-center clearfix">
                                                         <div class="cbp-list-left">
                                                             <a class="cbp-title"
-                                                               href="#"><?php echo $productRow['title'] ?></a>
+                                                               href="productDetails.php?id=<?php echo $productRow['id'] ?>"><?php echo $productRow['title'] ?></a>
                                                             <span class="line"></span>
                                                             <div class="cbp-vm-details"><?php echo $productRow['short_description'] ?> </div>
                                                             <ul class="post_blog_tag">
@@ -99,7 +99,7 @@ include("connect.php");
                                                                 } ?>
                                                             </ul>
                                                             <div class="more"><span class="main_more"><a rel="nofollow"
-                                                                                                         href="#">view more</a></span>
+                                                                                                         href="productDetails.php?id=<?php echo $productRow['id'] ?>">view more</a></span>
                                                             </div>
                                                         </div>
                                                     </div>

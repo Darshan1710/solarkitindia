@@ -113,7 +113,21 @@
 .faq .card .card-body p {
     margin-bottom: 14px;
 }
+.news_content .list li a.title_team {
+    display: block;
+    font-size: 15px;
+    color: #333333;
+    font-family: 'poppins-semibold';
 
+    overflow: hidden;
+
+    margin-top: 0;
+
+}
+.about_p{
+    margin-bottom: 1%;
+    margin-top: 2%;
+}
 @media (max-width: 991px) {
     .faq {
         margin-bottom: 30px;

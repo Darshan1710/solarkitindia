@@ -5,7 +5,7 @@
         <div class="block_content toggle_content">
             <ul class="list clearfix">
                 <?php
-                $newProductsQuery = "SELECT * FROM products WHERE product_status = '2'";
+                $newProductsQuery = "SELECT * FROM sub_products WHERE product_status = '2'";
                 $newProducts = mysqli_query($db, $newProductsQuery);
                 if ($newProducts) {
                     foreach ($newProducts as $newProductsRow) {

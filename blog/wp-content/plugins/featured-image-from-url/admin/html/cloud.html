@@ -1,0 +1,134 @@
+<div class="wrap" style="opacity:0">
+
+    <div class="header-box">
+        <h1 style="color:white;padding-left:20px;width:98%;font-family:Ubuntu,sans-serif">
+            <span class="dashicons dashicons-cloud-upload" style="font-size:30px"></span><span style="padding-left:20px">FIFU Cloud is coming soon...</span>
+            <a href="https://gcpsignup.page.link/1J6G" target="_blank"><img class="fifu-google-cloud" src="https://storage.googleapis.com/featuredimagefromurl/power-by-gcp2.png"/></a>
+        </h1>        
+    </div>
+
+    <div id="tabs-top" style="float:left; width: 100%; max-width: 1014px !important;">
+        <ul>
+            <li><a href="#tabs-a"><i class="fas fa-info-circle"></i> <?php $fifucloud['tabs']['welcome']() ?></a></li>
+        </ul>
+        <div id="tabs-a" class="cloud-tab">
+            <div class="first-cloud-box">
+                <h2><i class="fas fa-cloud"></i> FIFU Cloud (beta)</h2>
+                <div class="greybox">
+                    <?php $fifucloud['support']['whats']() ?>
+                    <br>
+                    <br>
+                    <table style="background-color: #fff; border-radius: 13px;">
+                        <tr>
+                            <td style="width:50%;text-align:center;border-bottom: 1px solid #ddd !important">
+                                <i class="fas fa-save" style="font-size:30px"></i>
+                            </td>
+                            <td style="width:50%;text-align:center;border-bottom: 1px solid #ddd !important">
+                                <i class="fas fa-bolt" style="font-size:30px"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:50%;text-align:center;border-bottom: 1px solid #ddd !important">
+                                <i><?php $fifucloud['support']['save']() ?></i>
+                            </td>
+                            <td style="width:50%;text-align:center;border-bottom: 1px solid #ddd !important">
+                                <i><?php $fifucloud['support']['fast']() ?></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align: top;">
+                                <?php $fifucloud['support']['save-desc']() ?>
+                            </td>
+                            <td style="vertical-align: top;">
+                                <?php $fifucloud['support']['fast-desc']() ?>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <br>
+
+                    <table style="background-color: #fff; border-radius: 13px;">
+                        <tr>
+                            <td style="width:50%;text-align:center;border-bottom: 1px solid #ddd !important">
+                                <i class="fas fa-microchip" style="font-size:30px"></i>
+                            </td>
+                            <td style="width:50%;text-align:center;border-bottom: 1px solid #ddd !important">
+                                <i class="fas fa-money-bill-alt" style="font-size:30px"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:50%;text-align:center;border-bottom: 1px solid #ddd !important">
+                                <i><?php $fifucloud['support']['process']() ?></i>
+                            </td>
+                            <td style="width:50%;text-align:center;border-bottom: 1px solid #ddd !important">
+                                <i><?php $fifucloud['support']['price']() ?></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align: top;">
+                                <?php $fifucloud['support']['process-desc']() ?>
+                            </td>
+                            <td style="vertical-align: top;">
+                                <?php $fifucloud['support']['price-desc2']() ?>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="box">
+                <h2>
+                    <i class="fas fa-money-bill-alt"></i> <?php $fifucloud['title']['price']() ?>
+                    <output id="pricing_response_message" class="response_message"></output>
+                </h2>
+                <div class="greybox">
+                    <b><div id="availableImages"><?php $fifucloud['pricing']['suggestion']['total']() ?>: </div></b>
+                    <?php $fifucloud['pricing']['suggestion']['question']() ?> US$
+                    <input id="cloud_suggestion_pricing" type="number" min="1" step="1" placeholder="15">/<?php _e('month') ?>
+                    <button style="height:28px;float:right;" onclick="suggestValue()"><i class="fas fa-comment"></i> <?php $fifucloud['pricing']['suggestion']['button']() ?></button>
+                </div>
+            </div>
+
+            <div class="box">
+                <h2>
+                    <i class="far fa-list-alt"></i> <?php $fifucloud['title']['waiting']() ?>
+                    <output id="waiting_response_message" class="response_message"></output>
+                </h2>
+                <div class="greybox">
+                    <?php $fifucloud['waiting']['desc']() ?> 
+                    <input id="cloud_waiting_list" type="email" placeholder="mail@example.com">
+                    <button style="height:28px;float:right" onclick="waitingList()"><i class="fas fa-bell"></i> <?php $fifucloud['waiting']['button']() ?></button>
+                </div>
+            </div>
+
+            <div class="box">
+                <h2>
+                    <i class="fas fa-bug"></i> <?php $fifucloud['title']['tester']() ?>
+                    <output id="tester_response_message" class="response_message"></output>
+                </h2>
+                <div class="greybox">
+                    <?php $fifucloud['tester']['desc']() ?> 
+                    <input id="cloud_beta_tester" type="email" placeholder="mail@example.com">
+                    <button style="height:28px;float:right" onclick="betaTester()"><i class="fas fa-user-check"></i> <?php $fifucloud['tester']['button']() ?></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    jQuery(document).ready(function () {
+        removeNotices();
+    });
+
+    // remove notices from other plugins
+    setTimeout(function () {
+        removeNotices();
+    }, 250);
+
+    function removeNotices() {
+        jQuery('div.header-box > div').remove();
+        jQuery('.notice').remove();
+    }
+</script>

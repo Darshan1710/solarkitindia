@@ -1,35 +1,40 @@
-<?php
-include("connect.php");
-include("header.php");
+<?php include_once 'connect.php';
+$where = isset($_GET) && !empty($_GET) ? ' WHERE id = "'.$_GET['id'].'"' : ' WHERE id = "1"';
+$productQuery = "SELECT * from sub_products".$where;
+$products = mysqli_query($db,$productQuery);
+if($products){
+foreach($products as $productRow){
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title><?php echo $productRow['title'] ?></title>
+    <meta name="keywords" content="Standing Seam Solar Panel Clamp,Standing Seam Roof Solar Mounting System,Standing Seam Metal Roof Clamps" />
+    <meta name="description" content="Visit bristarpvmount.com to explore a variety of Standing Seam Solar Panel Clamp. All our Standing Seam Solar Panel Clamp are simple to install and great value!" />
+    <meta name="google-site-verification" content="0hlmt6XTPq9hWJUMwJe9WG8xzEZXv56X8cNMCA1UqUo" />
 
-
-
-
-    <link type="text/css" rel="stylesheet" href="template/css/bootstrap.css" />
-    <link type="text/css" rel="stylesheet" href="template/css/font-awesome.min.css">
-    <link type="text/css" rel="stylesheet" href="template/css/style.css" />
-    <script type="text/javascript" src="template/js/jquery-1.8.3.js"></script>
-    <script type="text/javascript" src="js/front/common.js"></script>
-    <script type="text/javascript" src="template/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="template/js/demo.js"></script>
-    <script type="text/javascript" src="template/js/jquery.velocity.min.js"></script>
-
-    <link rel="stylesheet" type="text/css" href="demo/template/css/style.css">
-    <link rel="stylesheet" type="text/css" href="demo/template/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="demo/template/css/custom.css">
-
-
-
-
-
-
+    <meta property="og:image" content="https:///"/>
+    <link href="uploadfile/userimg/5fb86e9addafa6d964bb096eae4db0c0.ico" rel="shortcut icon"  />
+    <link rel="alternate" hreflang="en" href="standing-seam-metal-roof-solar-mounting-clip_p15.html" />
+    <link rel="alternate" hreflang="fr" href="https://fr.bristarpvmount.com/standing-seam-metal-roof-solar-mounting-clip_p15.html" />
+    <link rel="alternate" hreflang="es" href="https://es.bristarpvmount.com/standing-seam-metal-roof-solar-mounting-clip_p15.html" />
+    <link rel="alternate" hreflang="pt" href="https://pt.bristarpvmount.com/standing-seam-metal-roof-solar-mounting-clip_p15.html" />
+    <link rel="alternate" hreflang="nl" href="https://nl.bristarpvmount.com/standing-seam-metal-roof-solar-mounting-clip_p15.html" />
+    <link rel="alternate" hreflang="ar" href="https://ar.bristarpvmount.com/standing-seam-metal-roof-solar-mounting-clip_p15.html" />
+    <link rel="alternate" hreflang="ja" href="https://ja.bristarpvmount.com/standing-seam-metal-roof-solar-mounting-clip_p15.html" />
+    <link rel="alternate" hreflang="ms" href="https://ms.bristarpvmount.com/standing-seam-metal-roof-solar-mounting-clip_p15.html" />
+    <link rel="alternate" hreflang="vi" href="https://vi.bristarpvmount.com/standing-seam-metal-roof-solar-mounting-clip_p15.html" />
+    <link rel="alternate" href="standing-seam-metal-roof-solar-mounting-clip_p15.html" hreflang="x-default" />
+    <?php include_once 'head.php'; ?>
 </head>
 <body>
-
+<?php include_once 'header1.php'; ?>
 <div class="page_banner">
 </div>
 
@@ -41,8 +46,8 @@ include("header.php");
             </div>
             <div class="bread_right">
                 <a class="home" href="index.html"><i class="fa fa-home"></i>Home</a>
-                <i class="fa fa-angle-right"></i><a href="rv-solar-panel-mount_c6.html"><h2>RV Solar Panel Mount</h2></a>
-                <i class="fa fa-angle-right"></i>ABS Plastic Solar Panel Corner Mounts
+                <i class="fa fa-angle-right"></i><a href="products.php"><h2>Products</h2></a>
+                <i class="fa fa-angle-right"></i><?php echo $productRow['title']; ?>
             </div>
         </div>
     </div>
@@ -52,16 +57,18 @@ include("header.php");
     <div class="container ">
         <div class="pro_info_web clearfix">
             <div class="prom_img col-sm-4 col-xs-12">
-                <div class="sp-loading"><br><img id="product_detail_img"  alt="Solar Panel Corner Mounts" src="uploadfile/202105/05/b316ea881b3240b9e0ca669c7426d8dd_medium.jpg" /></div>
+                <div class="sp-loading"><br><img id="product_detail_img"  alt="Standing Seam Solar Panel Clamp" src="<?php echo $image_link.$productRow['thumbnail'] ?>" /></div>
                 <div class="sp-wrap">
-                    <a href="uploadfile/202105/05/b316ea881b3240b9e0ca669c7426d8dd_medium.jpg">
-                        <img src="uploadfile/202105/05/b316ea881b3240b9e0ca669c7426d8dd_medium.jpg" alt = "Solar Panel Corner Mounts" /></a>
-                    <a href="uploadfile/202105/05/09a72c225206a583e0259cfacbeadaae_medium.jpg">
-                        <img src="uploadfile/202105/05/09a72c225206a583e0259cfacbeadaae_medium.jpg" alt = "Solar Panel Corner Mounts" /></a>
-                    <a href="uploadfile/202105/05/95a4077c894ec79f851f2e92fe3c45f1_medium.jpg">
-                        <img src="uploadfile/202105/05/95a4077c894ec79f851f2e92fe3c45f1_medium.jpg" alt = "Solar Panel Corner Mounts" /></a>
-                    <a href="uploadfile/202105/05/484febd83fc5212bf5947411cf990362_medium.jpg">
-                        <img src="uploadfile/202105/05/484febd83fc5212bf5947411cf990362_medium.jpg" alt = "Solar Panel Corner Mounts" /></a>
+                    <a href="<?php echo $image_link.$productRow['thumbnail'] ?>">
+                        <img src="<?php echo $image_link.$productRow['thumbnail'] ?>" alt = "Standing Seam Solar Panel Clamp" /></a>
+                    <a href="<?php echo $image_link.$productRow['thumbnail'] ?>">
+                        <img src="<?php echo $image_link.$productRow['thumbnail'] ?>" alt = "Standing Seam Solar Panel Clamp" /></a>
+                    <a href="<?php echo $image_link.$productRow['thumbnail'] ?>">
+                        <img src="<?php echo $image_link.$productRow['thumbnail'] ?>" alt = "Standing Seam Solar Panel Clamp" /></a>
+                    <a href="<?php echo $image_link.$productRow['thumbnail'] ?>">
+                        <img src="<?php echo $image_link.$productRow['thumbnail'] ?>" alt = "Standing Seam Solar Panel Clamp" /></a>
+                    <a href="<?php echo $image_link.$productRow['thumbnail'] ?>">
+                        <img src="<?php echo $image_link.$productRow['thumbnail'] ?>" alt = "Standing Seam Solar Panel Clamp" /></a>
                 </div>
             </div>
             <script>
@@ -69,22 +76,9 @@ include("header.php");
                     $('.sp-wrap').smoothproducts();
                 });
             </script>
-            <div class="prom-right col-sm-8 col-xs-12">
-                <h1>ABS Plastic Solar Panel Corner Mounts</h1>
-                <div class="main"><p>
-                        The <strong>solar panel corner mounts</strong> are used to attach PV modules to the roof of motorhome or deck of boat without drilling holes on the surface.
-                    </p></div>
-                <div class="pro-table clearfix">
-                    <ul class="ptab-list clearfix">
-                        <li><p>Item no.: </p> <span>BR-ABS</span></li>
-                        <li><p>Payment: </p> <span>TT, LC at sight</span></li>
-                        <li><p>Product origin: </p> <span>China</span></li>
-                        <li><p>Color: </p> <span>White, black</span></li>
-                        <li><p>Goods stock: </p> <span>100</span></li>
-                        <li><p>Shipping port: </p> <span>Xiamen, China</span></li>
-                        <li><p>Lead Time: </p> <span>5-20 Days</span></li>
-                    </ul>
-                </div>
+            <div class="prom-right clearfix col-sm-8 col-xs-12">
+                <h1><?php echo $productRow['title']; ?></h1>
+                <div class="main"><?php echo $productRow['short_description']; ?></div>
                 <div class="mobile_inquiry clearfix">
                     <span class="main_more"><a rel="nofollow" href="#pro_inquiry" class="more_inq" data-scroll="" data-options="{ &quot;easing&quot;: &quot;linear&quot; }">Inquire now</a></span>
                 </div>
@@ -92,375 +86,47 @@ include("header.php");
         </div>
     </div>
 </div>
-<!--<div class="page_section clearfix">-->
-<!--    <div class="container">-->
-<!--        <div class="page_column clearfix">-->
-<!---->
-<!--            <div class="page-left clearfix">-->
-<!---->
-<!--                <div id="right_column" class="left-cat column clearfix">-->
-<!--                    <section class="block blockcms column_box">-->
-<!--                        <span class="left_title"><em>Categories</em><span></span><i class="column_icon_toggle icon-plus-sign"></i></span>-->
-<!--                        <div class="block_content toggle_content">-->
-<!--                            <ul class="mtree">-->
-<!--                                <li><b></b><a href="metal-roof-solar-mounting-system_c1.html">Metal Roof Solar Mounting System</a>-->
-<!--                                </li>-->
-<!--                                <li><b></b><a href="tile-roof-solar-mounting-system_c2.html">Tile Roof Solar Mounting System</a>-->
-<!--                                </li>-->
-<!--                                <li><b></b><a href="flat-roof-solar-mounting-system_c3.html">Flat Roof Solar Mounting System</a>-->
-<!--                                </li>-->
-<!--                                <li><b></b><a href="solar-panel-mounting-accessories_c4.html">Solar Panel Mounting Accessories</a>-->
-<!--                                </li>-->
-<!--                                <li><b></b><a href="wire-management_c5.html">Wire Management</a>-->
-<!--                                </li>-->
-<!--                                <li><b></b><a href="rv-solar-panel-mount_c6.html">RV Solar Panel Mount</a>-->
-<!--                                </li>-->
-<!--                                <li><b></b><a href="solar-panel-ground-mounting-system_c7.html">Solar Panel Ground Mounting System</a>-->
-<!--                                </li>-->
-<!--                            </ul>-->
-<!--                        </div>-->
-<!--                    </section>-->
-<!--                </div>-->
-<!---->
-<!--                <div id="right_column" class="left-pro column clearfix">-->
-<!--                    <section class="block blockcms column_box">-->
-<!--                        <span class="left_title"><em>New Products</em><span></span><i class="column_icon_toggle icon-plus-sign"></i></span>-->
-<!--                        <div class="block_content toggle_content">-->
-<!--                            <ul class="list clearfix">-->
-<!---->
-<!---->
-<!--                                <li class="clearfix">-->
-<!--                                    <div class="box clearfix">-->
-<!--                                        <div class="image pro_image">-->
-<!--                                            <a href="rv-solar-panel-mounting-feet-hardware_p47.html"></a>-->
-<!--                                            <img id="product_detail_img"  alt="RV Solar Panel Mounting Hardware" src="uploadfile/202105/05/9a21386b3f7416085134a36d4dcd7459_small.jpg" />                                                <em class="icon"><i></i></em>-->
-<!--                                        </div>-->
-<!--                                        <div class="main">-->
-<!--                                            <a href="rv-solar-panel-mounting-feet-hardware_p47.html" class="title">RV Solar Panel Mounting Feet Hardware</a>-->
-<!--                                            <a rel="nofollow" href="rv-solar-panel-mounting-feet-hardware_p47.html" class="page_more">view more</a>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </li>-->
-<!---->
-<!--                                <li class="clearfix">-->
-<!--                                    <div class="box clearfix">-->
-<!--                                        <div class="image pro_image">-->
-<!--                                            <a href="abs-plastic-solar-panel-corner-mounts_p43.html"></a>-->
-<!--                                            <img id="product_detail_img"  alt="Solar Panel Corner Mounts" src="uploadfile/202105/05/b316ea881b3240b9e0ca669c7426d8dd_small.jpg" />                                                <em class="icon"><i></i></em>-->
-<!--                                        </div>-->
-<!--                                        <div class="main">-->
-<!--                                            <a href="abs-plastic-solar-panel-corner-mounts_p43.html" class="title">ABS Plastic Solar Panel Corner Mounts</a>-->
-<!--                                            <a rel="nofollow" href="abs-plastic-solar-panel-corner-mounts_p43.html" class="page_more">view more</a>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </li>-->
-<!---->
-<!--                                <li class="clearfix">-->
-<!--                                    <div class="box clearfix">-->
-<!--                                        <div class="image pro_image">-->
-<!--                                            <a href="self-locking-304-stainless-steel-cable-ties_p39.html"></a>-->
-<!--                                            <img id="product_detail_img"  alt="Stainless Steel Cable Ties" src="uploadfile/202105/04/c023edc335f5d6a29929708b1331f100_small.jpg" />                                                <em class="icon"><i></i></em>-->
-<!--                                        </div>-->
-<!--                                        <div class="main">-->
-<!--                                            <a href="self-locking-304-stainless-steel-cable-ties_p39.html" class="title">Self Locking 304 Stainless Steel Cable Ties</a>-->
-<!--                                            <a rel="nofollow" href="self-locking-304-stainless-steel-cable-ties_p39.html" class="page_more">view more</a>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </li>-->
-<!---->
-<!--                                <li class="clearfix">-->
-<!--                                    <div class="box clearfix">-->
-<!--                                        <div class="image pro_image">-->
-<!--                                            <a href="stainless-steel-2-core-solar-cable-clip_p33.html"></a>-->
-<!--                                            <img id="product_detail_img"  alt="Solar Cable Clips" src="uploadfile/202105/04/5db9bf09692985b9ff03a720d2374c63_small.jpg" />                                                <em class="icon"><i></i></em>-->
-<!--                                        </div>-->
-<!--                                        <div class="main">-->
-<!--                                            <a href="stainless-steel-2-core-solar-cable-clip_p33.html" class="title">Stainless Steel 2 Core Solar Cable Clip</a>-->
-<!--                                            <a rel="nofollow" href="stainless-steel-2-core-solar-cable-clip_p33.html" class="page_more">view more</a>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </li>-->
-<!---->
-<!--                                <li class="clearfix">-->
-<!--                                    <div class="box clearfix">-->
-<!--                                        <div class="image pro_image">-->
-<!--                                            <a href="stainless-steel-solar-hooks-for-tile-roof_p28.html"></a>-->
-<!--                                            <img id="product_detail_img"  alt="Solar Hooks" src="uploadfile/202104/30/8a8e30d65b10024ea139191fcfa56191_small.jpg" />                                                <em class="icon"><i></i></em>-->
-<!--                                        </div>-->
-<!--                                        <div class="main">-->
-<!--                                            <a href="stainless-steel-solar-hooks-for-tile-roof_p28.html" class="title">Stainless Steel Solar Hooks for Tile Roof</a>-->
-<!--                                            <a rel="nofollow" href="stainless-steel-solar-hooks-for-tile-roof_p28.html" class="page_more">view more</a>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </li>-->
-<!---->
-<!---->
-<!--                            </ul>-->
-<!--                        </div>-->
-<!--                    </section>-->
-<!--                </div>-->
-<!---->
-<!--            </div>-->
-<!--            <div class="page-right clearfix">-->
-<!--                <div class="mostBox clearfix">-->
-<!--                    <div class="pro-tab clearfix">-->
-<!--                        <div id="parentHorizontalTab02" class="clearfix">-->
-<!--                            <ul class="resp-tabs-list hor_1 clearfix">-->
-<!--                                <li>Product Details</li>-->
-<!---->
-<!--                            </ul>-->
-<!--                            <div class="resp-tabs-container hor_1">-->
-<!--                                <div>-->
-<!--                                    <div class="text"><iframe width="560" height="315" src="https://www.youtube.com/embed/kB0izOQQfW0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">-->
-<!--                                        </iframe>-->
-<!--                                        <p>-->
-<!--                                            <strong>Description of Solar Panel Corner Mounts</strong>-->
-<!--                                        </p>-->
-<!--                                        <p>-->
-<!--                                            A set of <strong>Plastic Solar Panel Corner Mounts</strong> includes 4 corner brackets, the solar panel is attached to the corners with screw bolts. The solar panel corner mounts kit can be used for PV modules that is 40W of smaller. But we have set with side mounts too to fix bigger solar panels. The mounting process is quite simply, stick the <strong>ABS solar panel corner mounts</strong> onto the surface of motorhome or boat with glue, and fix the solar panels to the corner mounts with screw bolts, using two bolts on each corner. We provide in white and black color, customized color is acceptable too. &nbsp;-->
-<!--                                        </p>-->
-<!--                                        <p>-->
-<!--                                            <strong>Available Products of Solar Panel Corner Mounts</strong>-->
-<!--                                        </p>-->
-<!--                                        <p>-->
-<!--                                        <div class="table-responsive"><table border="0" cellspacing="0" style="border-collapse:collapse;width:400.5000pt;border:none;" class="ke-zeroborder">-->
-<!--                                                <tbody>-->
-<!--                                                <tr>-->
-<!--                                                    <td width="178" valign="center" style="width:133.5000pt;padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt;border-left:1.0000pt solid #000000;mso-border-left-alt:0.5000pt solid #000000;border-right:1.0000pt solid #000000;mso-border-right-alt:0.5000pt solid #000000;border-top:1.0000pt solid #000000;mso-border-top-alt:0.5000pt solid #000000;border:1.0000pt solid #000000;mso-border-bottom-alt:0.5000pt solid #000000;">-->
-<!--                                                        <p class="" style="vertical-align:middle;">-->
-<!--                                                            <span style="font-family:Arial;font-size:13pt;">Item No. </span><span style="font-family:Arial;font-size:13pt;"></span>-->
-<!--                                                        </p>-->
-<!--                                                    </td>-->
-<!--                                                    <td width="356" valign="center" style="width:267.0000pt;padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt;border-left:none;mso-border-left-alt:none;border-right:1.0000pt solid #000000;mso-border-right-alt:0.5000pt solid #000000;border-top:1.0000pt solid #000000;mso-border-top-alt:0.5000pt solid #000000;border:1.0000pt solid #000000;mso-border-bottom-alt:0.5000pt solid #000000;">-->
-<!--                                                        <p class="" style="vertical-align:middle;">-->
-<!--                                                            <span style="font-family:Arial;font-size:13pt;">Description</span><span style="font-family:Arial;font-size:13pt;"></span>-->
-<!--                                                        </p>-->
-<!--                                                    </td>-->
-<!--                                                </tr>-->
-<!--                                                <tr>-->
-<!--                                                    <td valign="center" style="padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt;border-left:1.0000pt solid #000000;mso-border-left-alt:0.5000pt solid #000000;border-right:1.0000pt solid #000000;mso-border-right-alt:0.5000pt solid #000000;border-top:none;mso-border-top-alt:0.5000pt solid #000000;border:1.0000pt solid #000000;mso-border-bottom-alt:0.5000pt solid #000000;">-->
-<!--                                                        <p class="" style="vertical-align:middle;">-->
-<!--                                                            <span style="font-family:Arial;font-size:11pt;">BR-ABS-01</span><span style="font-family:Arial;font-size:11pt;"></span>-->
-<!--                                                        </p>-->
-<!--                                                    </td>-->
-<!--                                                    <td valign="center" style="padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt;border-left:none;mso-border-left-alt:none;border-right:1.0000pt solid #000000;mso-border-right-alt:0.5000pt solid #000000;border-top:none;mso-border-top-alt:0.5000pt solid #000000;border:1.0000pt solid #000000;mso-border-bottom-alt:0.5000pt solid #000000;">-->
-<!--                                                        <p class="" style="vertical-align:middle;">-->
-<!--                                                            <span style="font-family:Arial;font-size:11pt;">ABS Solar Corner Mounts, 4 pcs per set, White</span><span style="font-family:Arial;font-size:11pt;"></span>-->
-<!--                                                        </p>-->
-<!--                                                    </td>-->
-<!--                                                </tr>-->
-<!--                                                <tr>-->
-<!--                                                    <td valign="center" style="padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt;border-left:1.0000pt solid #000000;mso-border-left-alt:0.5000pt solid #000000;border-right:1.0000pt solid #000000;mso-border-right-alt:0.5000pt solid #000000;border-top:none;mso-border-top-alt:0.5000pt solid #000000;border:1.0000pt solid #000000;mso-border-bottom-alt:0.5000pt solid #000000;">-->
-<!--                                                        <p class="" style="vertical-align:middle;">-->
-<!--                                                            <span style="font-family:Arial;font-size:11pt;">BR-ABS-02</span><span style="font-family:Arial;font-size:11pt;"></span>-->
-<!--                                                        </p>-->
-<!--                                                    </td>-->
-<!--                                                    <td valign="center" style="padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt;border-left:none;mso-border-left-alt:none;border-right:1.0000pt solid #000000;mso-border-right-alt:0.5000pt solid #000000;border-top:none;mso-border-top-alt:0.5000pt solid #000000;border:1.0000pt solid #000000;mso-border-bottom-alt:0.5000pt solid #000000;">-->
-<!--                                                        <p class="" style="vertical-align:middle;">-->
-<!--                                                            <span style="font-family:Arial;font-size:11pt;">ABS Solar Corner Mounts, 4 pcs per set, Black</span><span style="font-family:Arial;font-size:11pt;"></span>-->
-<!--                                                        </p>-->
-<!--                                                    </td>-->
-<!--                                                </tr>-->
-<!--                                                <tr>-->
-<!--                                                    <td valign="center" style="padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt;border-left:1.0000pt solid #000000;mso-border-left-alt:0.5000pt solid #000000;border-right:1.0000pt solid #000000;mso-border-right-alt:0.5000pt solid #000000;border-top:none;mso-border-top-alt:0.5000pt solid #000000;border:1.0000pt solid #000000;mso-border-bottom-alt:0.5000pt solid #000000;">-->
-<!--                                                        <p class="" style="vertical-align:middle;">-->
-<!--                                                            <span style="font-family:Arial;font-size:11pt;">BR-ABS-03</span><span style="font-family:Arial;font-size:11pt;"></span>-->
-<!--                                                        </p>-->
-<!--                                                    </td>-->
-<!--                                                    <td valign="center" style="padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt;border-left:none;mso-border-left-alt:none;border-right:1.0000pt solid #000000;mso-border-right-alt:0.5000pt solid #000000;border-top:none;mso-border-top-alt:0.5000pt solid #000000;border:1.0000pt solid #000000;mso-border-bottom-alt:0.5000pt solid #000000;">-->
-<!--                                                        <p class="" style="vertical-align:middle;">-->
-<!--                                                            <span style="font-family:Arial;font-size:11pt;">ABS Solar Corner Mounts, 6 pcs per set, White</span><span style="font-family:Arial;font-size:11pt;"></span>-->
-<!--                                                        </p>-->
-<!--                                                    </td>-->
-<!--                                                </tr>-->
-<!--                                                <tr>-->
-<!--                                                    <td valign="center" style="padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt;border-left:1.0000pt solid #000000;mso-border-left-alt:0.5000pt solid #000000;border-right:1.0000pt solid #000000;mso-border-right-alt:0.5000pt solid #000000;border-top:none;mso-border-top-alt:0.5000pt solid #000000;border:1.0000pt solid #000000;mso-border-bottom-alt:0.5000pt solid #000000;">-->
-<!--                                                        <p class="" style="vertical-align:middle;">-->
-<!--                                                            <span style="font-family:Arial;font-size:11pt;">BR-ABS-04</span><span style="font-family:Arial;font-size:11pt;"></span>-->
-<!--                                                        </p>-->
-<!--                                                    </td>-->
-<!--                                                    <td valign="center" style="padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt;border-left:none;mso-border-left-alt:none;border-right:1.0000pt solid #000000;mso-border-right-alt:0.5000pt solid #000000;border-top:none;mso-border-top-alt:0.5000pt solid #000000;border:1.0000pt solid #000000;mso-border-bottom-alt:0.5000pt solid #000000;">-->
-<!--                                                        <p class="" style="vertical-align:middle;">-->
-<!--                                                            <span style="font-family:Arial;font-size:11pt;">ABS Solar Corner Mounts, 6 pcs per set, Black</span><span style="font-family:Arial;font-size:11pt;"></span>-->
-<!--                                                        </p>-->
-<!--                                                    </td>-->
-<!--                                                </tr>-->
-<!--                                                <tr>-->
-<!--                                                    <td valign="center" style="padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt;border-left:1.0000pt solid #000000;mso-border-left-alt:0.5000pt solid #000000;border-right:1.0000pt solid #000000;mso-border-right-alt:0.5000pt solid #000000;border-top:none;mso-border-top-alt:0.5000pt solid #000000;border:1.0000pt solid #000000;mso-border-bottom-alt:0.5000pt solid #000000;">-->
-<!--                                                        <p class="" style="vertical-align:middle;">-->
-<!--                                                            <span style="font-family:Arial;font-size:11pt;">BR-ABS-05</span><span style="font-family:Arial;font-size:11pt;"></span>-->
-<!--                                                        </p>-->
-<!--                                                    </td>-->
-<!--                                                    <td valign="center" style="padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt;border-left:none;mso-border-left-alt:none;border-right:1.0000pt solid #000000;mso-border-right-alt:0.5000pt solid #000000;border-top:none;mso-border-top-alt:0.5000pt solid #000000;border:1.0000pt solid #000000;mso-border-bottom-alt:0.5000pt solid #000000;">-->
-<!--                                                        <p class="" style="vertical-align:middle;">-->
-<!--                                                            <span style="font-family:Arial;font-size:11pt;">Cable Entry Gland,1 pc per set, White </span><span style="font-family:Arial;font-size:11pt;"></span>-->
-<!--                                                        </p>-->
-<!--                                                    </td>-->
-<!--                                                </tr>-->
-<!--                                                <tr>-->
-<!--                                                    <td valign="center" style="padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt;border-left:1.0000pt solid #000000;mso-border-left-alt:0.5000pt solid #000000;border-right:1.0000pt solid #000000;mso-border-right-alt:0.5000pt solid #000000;border-top:none;mso-border-top-alt:0.5000pt solid #000000;border:1.0000pt solid #000000;mso-border-bottom-alt:0.5000pt solid #000000;">-->
-<!--                                                        <p class="" style="vertical-align:middle;">-->
-<!--                                                            <span style="font-family:Arial;font-size:11pt;">BR-ABS-06</span><span style="font-family:Arial;font-size:11pt;"></span>-->
-<!--                                                        </p>-->
-<!--                                                    </td>-->
-<!--                                                    <td valign="center" style="padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt;border-left:none;mso-border-left-alt:none;border-right:1.0000pt solid #000000;mso-border-right-alt:0.5000pt solid #000000;border-top:none;mso-border-top-alt:0.5000pt solid #000000;border:1.0000pt solid #000000;mso-border-bottom-alt:0.5000pt solid #000000;">-->
-<!--                                                        <p class="" style="vertical-align:middle;">-->
-<!--                                                            <span style="font-family:Arial;font-size:11pt;">Cable Entry Gland,1 pc per set, Black</span><span style="font-family:Arial;font-size:11pt;"></span>-->
-<!--                                                        </p>-->
-<!--                                                    </td>-->
-<!--                                                </tr>-->
-<!--                                                <tr>-->
-<!--                                                    <td valign="center" style="padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt;border-left:1.0000pt solid #000000;mso-border-left-alt:0.5000pt solid #000000;border-right:1.0000pt solid #000000;mso-border-right-alt:0.5000pt solid #000000;border-top:none;mso-border-top-alt:0.5000pt solid #000000;border:1.0000pt solid #000000;mso-border-bottom-alt:0.5000pt solid #000000;">-->
-<!--                                                        <p class="" style="vertical-align:middle;">-->
-<!--                                                            <span style="font-family:Arial;font-size:11pt;">BR-ABS-07</span><span style="font-family:Arial;font-size:11pt;"></span>-->
-<!--                                                        </p>-->
-<!--                                                    </td>-->
-<!--                                                    <td valign="center" style="padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt;border-left:none;mso-border-left-alt:none;border-right:1.0000pt solid #000000;mso-border-right-alt:0.5000pt solid #000000;border-top:none;mso-border-top-alt:0.5000pt solid #000000;border:1.0000pt solid #000000;mso-border-bottom-alt:0.5000pt solid #000000;">-->
-<!--                                                        <p class="" style="vertical-align:middle;">-->
-<!--                                                            <span style="font-family:Arial;font-size:11pt;">ABS Solar Corner Mounts, 5 pcs per set, White</span><span style="font-family:Arial;font-size:11pt;"></span>-->
-<!--                                                        </p>-->
-<!--                                                    </td>-->
-<!--                                                </tr>-->
-<!--                                                <tr>-->
-<!--                                                    <td valign="center" style="padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt;border-left:1.0000pt solid #000000;mso-border-left-alt:0.5000pt solid #000000;border-right:1.0000pt solid #000000;mso-border-right-alt:0.5000pt solid #000000;border-top:none;mso-border-top-alt:0.5000pt solid #000000;border:1.0000pt solid #000000;mso-border-bottom-alt:0.5000pt solid #000000;">-->
-<!--                                                        <p class="" style="vertical-align:middle;">-->
-<!--                                                            <span style="font-family:Arial;font-size:11pt;">BR-ABS-08</span><span style="font-family:Arial;font-size:11pt;"></span>-->
-<!--                                                        </p>-->
-<!--                                                    </td>-->
-<!--                                                    <td valign="center" style="padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt;border-left:none;mso-border-left-alt:none;border-right:1.0000pt solid #000000;mso-border-right-alt:0.5000pt solid #000000;border-top:none;mso-border-top-alt:0.5000pt solid #000000;border:1.0000pt solid #000000;mso-border-bottom-alt:0.5000pt solid #000000;">-->
-<!--                                                        <p class="" style="vertical-align:middle;">-->
-<!--                                                            <span style="font-family:Arial;font-size:11pt;">ABS Solar Corner Mounts, 5 pcs per set, Black</span><span style="font-family:Arial;font-size:11pt;"></span>-->
-<!--                                                        </p>-->
-<!--                                                    </td>-->
-<!--                                                </tr>-->
-<!--                                                <tr>-->
-<!--                                                    <td valign="center" style="padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt;border-left:1.0000pt solid #000000;mso-border-left-alt:0.5000pt solid #000000;border-right:1.0000pt solid #000000;mso-border-right-alt:0.5000pt solid #000000;border-top:none;mso-border-top-alt:0.5000pt solid #000000;border:1.0000pt solid #000000;mso-border-bottom-alt:0.5000pt solid #000000;">-->
-<!--                                                        <p class="" style="vertical-align:middle;">-->
-<!--                                                            <span style="font-family:Arial;font-size:11pt;">BR-ABS-09</span><span style="font-family:Arial;font-size:11pt;"></span>-->
-<!--                                                        </p>-->
-<!--                                                    </td>-->
-<!--                                                    <td valign="center" style="padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt;border-left:none;mso-border-left-alt:none;border-right:1.0000pt solid #000000;mso-border-right-alt:0.5000pt solid #000000;border-top:none;mso-border-top-alt:0.5000pt solid #000000;border:1.0000pt solid #000000;mso-border-bottom-alt:0.5000pt solid #000000;">-->
-<!--                                                        <p class="" style="vertical-align:middle;">-->
-<!--                                                            <span style="font-family:Arial;font-size:11pt;">ABS Solar Mounts, 7 pcs per set, White</span><span style="font-family:Arial;font-size:11pt;"></span>-->
-<!--                                                        </p>-->
-<!--                                                    </td>-->
-<!--                                                </tr>-->
-<!--                                                <tr>-->
-<!--                                                    <td valign="center" style="padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt;border-left:1.0000pt solid #000000;mso-border-left-alt:0.5000pt solid #000000;border-right:1.0000pt solid #000000;mso-border-right-alt:0.5000pt solid #000000;border-top:none;mso-border-top-alt:0.5000pt solid #000000;border:1.0000pt solid #000000;mso-border-bottom-alt:0.5000pt solid #000000;">-->
-<!--                                                        <p class="" style="vertical-align:middle;">-->
-<!--                                                            <span style="font-family:Arial;font-size:11pt;">BR-ABS-10</span><span style="font-family:Arial;font-size:11pt;"></span>-->
-<!--                                                        </p>-->
-<!--                                                    </td>-->
-<!--                                                    <td valign="center" style="padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt;border-left:none;mso-border-left-alt:none;border-right:1.0000pt solid #000000;mso-border-right-alt:0.5000pt solid #000000;border-top:none;mso-border-top-alt:0.5000pt solid #000000;border:1.0000pt solid #000000;mso-border-bottom-alt:0.5000pt solid #000000;">-->
-<!--                                                        <p class="" style="vertical-align:middle;">-->
-<!--                                                            <span style="font-family:Arial;font-size:11pt;">ABS Solar Mounts, 7 pcs per set, Black</span><span style="font-family:Arial;font-size:11pt;"></span>-->
-<!--                                                        </p>-->
-<!--                                                    </td>-->
-<!--                                                </tr>-->
-<!--                                                <tr>-->
-<!--                                                    <td valign="center" style="padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt;border-left:1.0000pt solid #000000;mso-border-left-alt:0.5000pt solid #000000;border-right:1.0000pt solid #000000;mso-border-right-alt:0.5000pt solid #000000;border-top:none;mso-border-top-alt:0.5000pt solid #000000;border:1.0000pt solid #000000;mso-border-bottom-alt:0.5000pt solid #000000;">-->
-<!--                                                        <p class="" style="vertical-align:middle;">-->
-<!--                                                            <span style="font-family:Arial;font-size:11pt;">BR-ABS-11</span><span style="font-family:Arial;font-size:11pt;"></span>-->
-<!--                                                        </p>-->
-<!--                                                    </td>-->
-<!--                                                    <td valign="center" style="padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt;border-left:none;mso-border-left-alt:none;border-right:1.0000pt solid #000000;mso-border-right-alt:0.5000pt solid #000000;border-top:none;mso-border-top-alt:0.5000pt solid #000000;border:1.0000pt solid #000000;mso-border-bottom-alt:0.5000pt solid #000000;">-->
-<!--                                                        <p class="" style="vertical-align:middle;">-->
-<!--                                                            <span style="font-family:Arial;font-size:11pt;">Solar Side Mounts, 2 pcs per set, White</span><span style="font-family:Arial;font-size:11pt;"></span>-->
-<!--                                                        </p>-->
-<!--                                                    </td>-->
-<!--                                                </tr>-->
-<!--                                                <tr>-->
-<!--                                                    <td valign="center" style="padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt;border-left:1.0000pt solid #000000;mso-border-left-alt:0.5000pt solid #000000;border-right:1.0000pt solid #000000;mso-border-right-alt:0.5000pt solid #000000;border-top:none;mso-border-top-alt:0.5000pt solid #000000;border:1.0000pt solid #000000;mso-border-bottom-alt:0.5000pt solid #000000;">-->
-<!--                                                        <p class="" style="vertical-align:middle;">-->
-<!--                                                            <span style="font-family:Arial;font-size:11pt;">BR-ABS-12</span><span style="font-family:Arial;font-size:11pt;"></span>-->
-<!--                                                        </p>-->
-<!--                                                    </td>-->
-<!--                                                    <td valign="center" style="padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt;border-left:none;mso-border-left-alt:none;border-right:1.0000pt solid #000000;mso-border-right-alt:0.5000pt solid #000000;border-top:none;mso-border-top-alt:0.5000pt solid #000000;border:1.0000pt solid #000000;mso-border-bottom-alt:0.5000pt solid #000000;">-->
-<!--                                                        <p class="" style="vertical-align:middle;">-->
-<!--                                                            <span style="font-family:Arial;font-size:11pt;">Solar Side Mounts, 2 pcs per set, Black</span><span style="font-family:Arial;font-size:11pt;"></span>-->
-<!--                                                        </p>-->
-<!--                                                    </td>-->
-<!--                                                </tr>-->
-<!--                                                <tr>-->
-<!--                                                    <td valign="center" style="padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt;border-left:1.0000pt solid #000000;mso-border-left-alt:0.5000pt solid #000000;border-right:1.0000pt solid #000000;mso-border-right-alt:0.5000pt solid #000000;border-top:none;mso-border-top-alt:0.5000pt solid #000000;border:1.0000pt solid #000000;mso-border-bottom-alt:0.5000pt solid #000000;">-->
-<!--                                                        <p class="" style="vertical-align:middle;">-->
-<!--                                                            <span style="font-family:Arial;font-size:11pt;">BR-ABS-13</span><span style="font-family:Arial;font-size:11pt;"></span>-->
-<!--                                                        </p>-->
-<!--                                                    </td>-->
-<!--                                                    <td valign="center" style="padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt;border-left:none;mso-border-left-alt:none;border-right:1.0000pt solid #000000;mso-border-right-alt:0.5000pt solid #000000;border-top:none;mso-border-top-alt:0.5000pt solid #000000;border:1.0000pt solid #000000;mso-border-bottom-alt:0.5000pt solid #000000;">-->
-<!--                                                        <p class="" style="vertical-align:middle;">-->
-<!--                                                            <span style="font-family:Arial;font-size:11pt;">Long Side Mounts, 2 pcs per set, White</span><span style="font-family:Arial;font-size:11pt;"></span>-->
-<!--                                                        </p>-->
-<!--                                                    </td>-->
-<!--                                                </tr>-->
-<!--                                                <tr>-->
-<!--                                                    <td valign="center" style="padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt;border-left:1.0000pt solid #000000;mso-border-left-alt:0.5000pt solid #000000;border-right:1.0000pt solid #000000;mso-border-right-alt:0.5000pt solid #000000;border-top:none;mso-border-top-alt:0.5000pt solid #000000;border:1.0000pt solid #000000;mso-border-bottom-alt:0.5000pt solid #000000;">-->
-<!--                                                        <p class="" style="vertical-align:middle;">-->
-<!--                                                            <span style="font-family:Arial;font-size:11pt;">BR-ABS-14</span><span style="font-family:Arial;font-size:11pt;"></span>-->
-<!--                                                        </p>-->
-<!--                                                    </td>-->
-<!--                                                    <td valign="center" style="padding:0.0000pt 5.4000pt 0.0000pt 5.4000pt;border-left:none;mso-border-left-alt:none;border-right:1.0000pt solid #000000;mso-border-right-alt:0.5000pt solid #000000;border-top:none;mso-border-top-alt:0.5000pt solid #000000;border:1.0000pt solid #000000;mso-border-bottom-alt:0.5000pt solid #000000;">-->
-<!--                                                        <p class="" style="vertical-align:middle;">-->
-<!--                                                            <span style="font-family:Arial;font-size:11pt;">Long Side Mounts, 2 pcs per set, Black</span><span style="font-family:Arial;font-size:11pt;"></span>-->
-<!--                                                        </p>-->
-<!--                                                    </td>-->
-<!--                                                </tr>-->
-<!--                                                </tbody>-->
-<!--                                            </table></div>-->
-<!--                                        </p>-->
-<!--                                        <p>-->
-<!--                                            <br />-->
-<!--                                        </p>-->
-<!--                                        <p>-->
-<!--                                            <strong>Product Show of Solar Panel Corner Mounts</strong>-->
-<!--                                        </p>-->
-<!--                                        <p>-->
-<!--                                            <img src="js/htmledit/kindeditor/attached/20210505/20210505140721_68803.jpg" alt="Solar Panel Corner Mounts" width="" height="" title="Solar Panel Corner Mounts" align="" />-->
-<!--                                        </p>-->
-<!--                                        <p>-->
-<!--                                            <br />-->
-<!--                                        </p>-->
-<!--                                        <p>-->
-<!--                                            Brief Guide of Solar Panel Corner Mounts-->
-<!--                                        </p>-->
-<!--                                        <p>-->
-<!--                                            <img src="js/htmledit/kindeditor/attached/20210505/20210505140736_10137.jpg" alt="Solar Panel Corner Mounts" width="" height="" title="Solar Panel Corner Mounts" align="" />-->
-<!--                                        </p>-->
-<!--                                        <p>-->
-<!--                                            <br />-->
-<!--                                        </p>-->
-<!--                                        <p>-->
-<!--                                            <strong>Application of Solar Panel Corner Mounts</strong>-->
-<!--                                        </p>-->
-<!--                                        <p>-->
-<!--                                            <img src="js/htmledit/kindeditor/attached/20210505/20210505140747_87340.jpg" alt="Solar Panel Corner Mounts" width="" height="" title="Solar Panel Corner Mounts" align="" />-->
-<!--                                        </p>-->
-<!--                                        <p>-->
-<!--                                            <br />-->
-<!--                                        </p>-->
-<!--                                        <p>-->
-<!--                                            <br />-->
-<!--                                        </p></div>-->
-<!--                                </div>-->
-<!---->
-<!--                            </div>-->
-<!--                        </div>-->
-<!---->
-<!--                    </div>-->
-<!--                </div>-->
+<div class="page_section clearfix">
+    <div class="container">
+        <div class="page_column clearfix">
+
+            <div class="page-left clearfix">
+                <?php include_once('categories.php');
+                include_once('newProducts.php'); ?>
+            </div>
+            <div class="page-right clearfix">
+                <div class="mostBox clearfix">
+                    <div class="pro-tab clearfix">
+                        <div id="parentHorizontalTab02" class="clearfix">
+                            <ul class="resp-tabs-list hor_1 clearfix">
+                                <li>Product Details</li>
+
+                            </ul>
+                            <div class="resp-tabs-container hor_1">
+                                <div>
+                                    <div class="text">
+                                        <?php echo $productRow['long_description']; ?>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
 <!--                <div class="send_content clearfix" id="pro_inquiry">-->
 <!---->
 <!--                    <div class="send_column clearfix">-->
 <!--                        <div class="page_title"><span>Leave A Message</span></div>-->
 <!--                        <div class="text">If you are interested in our products and want to know more details,please leave a message here,we will reply you as soon as we can.</div>-->
 <!--                        <form id="email_form" name="email_form" method="post" action="https://www.bristarpvmount.com/inquiry/addinquiry">-->
-<!--                            <input type="hidden" name="msg_title" value="ABS Plastic Solar Panel Corner Mounts" class="meInput" />-->
-<!--                            <input type="hidden" name="to_proid[]" value="43" class="meInput" />-->
-<!--                            <input type="hidden" name="product_id" value="43" class="meInput" />-->
+<!--                            <input type="hidden" name="msg_title" value="Standing Seam Metal Roof Solar Mounting Clip" class="meInput" />-->
+<!--                            <input type="hidden" name="to_proid[]" value="15" class="meInput" />-->
+<!--                            <input type="hidden" name="product_id" value="15" class="meInput" />-->
 <!--                            <input type='hidden' name='msg_userid' value=1 />-->
 <!--                            <ul class="clearfix row">-->
 <!--                                <li class="col-xs-12">-->
-<!--                                    <p>Subject : <a href="abs-plastic-solar-panel-corner-mounts_p43.html">ABS Plastic Solar Panel Corner Mounts</a></p>-->
+<!--                                    <p>Subject : <a href="standing-seam-metal-roof-solar-mounting-clip_p15.html">Standing Seam Metal Roof Solar Mounting Clip</a></p>-->
 <!--                                </li>-->
 <!--                                <li class="col-sm-6 col-xs-12">-->
 <!--                                    <span class="ms_e"><input type="text" name="msg_email" id="msg_email" class="meInput" placeholder="* Your email" ></span>-->
@@ -479,162 +145,73 @@ include("header.php");
 <!--                    </div>-->
 <!---->
 <!--                </div>-->
-<!---->
-<!--                <ul class="post_blog_tag">-->
-<!--                    <p><i class="fa fa-tags"></i>Tags :</p>-->
-<!--                    <li><a href="solar-panel-corner-mounts_sp.html">Solar Panel Corner Mounts</a></li>-->
-<!--                    <li><a href="plastic-solar-panel-corner-mounts_sp.html">Plastic Solar Panel Corner Mounts</a></li>-->
-<!--                    <li><a href="abs-solar-panel-corner-mounts_sp.html">ABS Solar Panel Corner Mounts</a></li>-->
-<!--                    <li><a href="caravan-solar-mounts_sp.html">caravan solar mounts</a></li>-->
-<!--                    <li><a href="solar-panel-corner-brackets_sp.html">solar panel corner brackets</a></li>-->
-<!--                </ul>-->
+
+                <ul class="post_blog_tag">
+                    <p><i class="fa fa-tags"></i>Tags :</p>
+                    <?php $tags = explode(',', $productRow['tags']);
+                    if (COUNT($tags) > 0) {
+                        foreach ($tags as $tagsRow) {
+                            ?>
+                            <li><a href=""><?php echo $tagsRow; ?></a></li>
+                        <?php }
+                    } ?>
+                </ul>
 <!--                <ul class="navigation clearfix">-->
 <!--                    <li class="prev_post">-->
-<!--                        <a href="rv-solar-panel-mounting-feet-hardware_p47.html">-->
+<!--                        <a href="solar-panel-roof-mount-kit_p13.html">-->
 <!--                            <span class="meta_nav">Previous</span>-->
-<!--                            <h4 class="post_title">RV Solar Panel Mounting Feet Hardware</h4>-->
+<!--                            <h4 class="post_title">Solar Panel Roof Mount Kit</h4>-->
 <!--                        </a>-->
 <!--                    </li>-->
 <!---->
 <!--                    <li class="next_post">-->
-<!--                        <a href="plastic-abs-solar-panel-mounting-brackets-for-rv_p42.html">-->
+<!--                        <a href="metal-roof-clamps-for-solar-panels_p21.html">-->
 <!--                            <span class="meta_nav">Next</span>-->
-<!--                            <h4 class="post_title">Plastic ABS Solar Panel Mounting Brackets for RV</h4>-->
+<!--                            <h4 class="post_title">Metal Roof Clamps for Solar Panels</h4>-->
 <!--                        </a>-->
 <!--                    </li>-->
 <!--                </ul>-->
-<!--            </div>-->
-<!---->
-<!---->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
-<!--<div class="page_pro clearfix">-->
-<!--    <div class="container">-->
-<!--        <div class="page_prom">-->
-<!--            <div class="in_title">-->
-<!--                <span>Related products</span>-->
-<!--            </div>-->
-<!--            <div class="slider autoplay4">-->
-<!---->
-<!---->
-<!--                <div>-->
-<!--                    <div class="li">-->
-<!--                        <div class="image">-->
-<!--                            <a href="plastic-abs-solar-panel-mounting-brackets-for-rv_p42.html"></a>-->
-<!--                            <img id="product_detail_img"  alt="Plastic ABS Solar Mounting" src="uploadfile/202105/05/9bc9f081afb832155c7d87db46b50407_small.jpg" />						<div class="line"></div>-->
-<!--                            <div class="ovrly"></div>-->
-<!--                            <div class="icon_box"><div class="icon"></div></div>-->
-<!--                        </div>-->
-<!--                        <a href="plastic-abs-solar-panel-mounting-brackets-for-rv_p42.html" class="title">Plastic ABS Solar Panel Mounting Brackets for RV</a>-->
-<!--                        <div class="text">-->
-<!--                            The plastic ABS solar panel mounting brackets are applied to fix framed PV modules on top of Motorhome, Boat and other flat surface.-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div>-->
-<!--                    <div class="li">-->
-<!--                        <div class="image">-->
-<!--                            <a href="drill-free-solar-panel-mounts-for-rv-boat_p44.html"></a>-->
-<!--                            <img id="product_detail_img"  alt="Solar Panel Mount for RV" src="uploadfile/202105/05/8f54a7eacee4011ad8800d91fd6300f6_small.jpg" />						<div class="line"></div>-->
-<!--                            <div class="ovrly"></div>-->
-<!--                            <div class="icon_box"><div class="icon"></div></div>-->
-<!--                        </div>-->
-<!--                        <a href="drill-free-solar-panel-mounts-for-rv-boat_p44.html" class="title">Drill-Free Solar Panel Mounts for RV, Boat</a>-->
-<!--                        <div class="text">-->
-<!--                            Bristar offers solar panel mounts for RV to mount solar panels without needing to make holes in the roof of RV or boat.-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div>-->
-<!--                    <div class="li">-->
-<!--                        <div class="image">-->
-<!--                            <a href="solar-panel-mounting-kits-for-rv-campers_p45.html"></a>-->
-<!--                            <img id="product_detail_img"  alt="RV Solar Panel Mounting Kits" src="uploadfile/202105/05/19748fe9a92c120e828c9389d40fcb44_small.jpg" />						<div class="line"></div>-->
-<!--                            <div class="ovrly"></div>-->
-<!--                            <div class="icon_box"><div class="icon"></div></div>-->
-<!--                        </div>-->
-<!--                        <a href="solar-panel-mounting-kits-for-rv-campers_p45.html" class="title">Solar Panel Mounting Kits for RV Campers</a>-->
-<!--                        <div class="text">-->
-<!--                            The RV solar panel mounting kits is designed for small panels to be flat mounted. The RV solar panel mounting kits are great for mobile or marine systems.-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div>-->
-<!--                    <div class="li">-->
-<!--                        <div class="image">-->
-<!--                            <a href="plastic-double-cable-entry-gland-box_p46.html"></a>-->
-<!--                            <img id="product_detail_img"  alt="Double Cable Entry Gland Box" src="uploadfile/202105/05/5c2f607a4c2405154e38a87adeda6148_small.jpg" />						<div class="line"></div>-->
-<!--                            <div class="ovrly"></div>-->
-<!--                            <div class="icon_box"><div class="icon"></div></div>-->
-<!--                        </div>-->
-<!--                        <a href="plastic-double-cable-entry-gland-box_p46.html" class="title">Plastic Double Cable Entry Gland Box</a>-->
-<!--                        <div class="text">-->
-<!--                            The double cable entry gland box is widely used in the installation of solar panels on the motorhome roof and boat deck or flat application.-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div>-->
-<!--                    <div class="li">-->
-<!--                        <div class="image">-->
-<!--                            <a href="rv-solar-panel-mounting-feet-hardware_p47.html"></a>-->
-<!--                            <img id="product_detail_img"  alt="RV Solar Panel Mounting Hardware" src="uploadfile/202105/05/9a21386b3f7416085134a36d4dcd7459_small.jpg" />						<div class="line"></div>-->
-<!--                            <div class="ovrly"></div>-->
-<!--                            <div class="icon_box"><div class="icon"></div></div>-->
-<!--                        </div>-->
-<!--                        <a href="rv-solar-panel-mounting-feet-hardware_p47.html" class="title">RV Solar Panel Mounting Feet Hardware</a>-->
-<!--                        <div class="text">-->
-<!--                            The RV solar panel mounting hardware works for mounting smaller solar panels on flat surface.-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div>-->
-<!--                    <div class="li">-->
-<!--                        <div class="image">-->
-<!--                            <a href="solar-panel-mount-z-brackets_p48.html"></a>-->
-<!--                            <img id="product_detail_img"  alt="Z Brackets for Solar Panels" src="uploadfile/202105/05/c4308ada91b07942197ad141a7e5022f_small.jpg" />						<div class="line"></div>-->
-<!--                            <div class="ovrly"></div>-->
-<!--                            <div class="icon_box"><div class="icon"></div></div>-->
-<!--                        </div>-->
-<!--                        <a href="solar-panel-mount-z-brackets_p48.html" class="title">Solar Panel Mount Z Brackets</a>-->
-<!--                        <div class="text">-->
-<!--                            The Z brackets for solar panels are designed to support the off-grid solar panel installation of single PV module units.-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div>-->
-<!--                    <div class="li">-->
-<!--                        <div class="image">-->
-<!--                            <a href="solar-panel-mounting-z-bracket-set_p49.html"></a>-->
-<!--                            <img id="product_detail_img"  alt="Solar Panel Mounting Z-Bracket Set" src="uploadfile/202105/05/ad12035cf196c1cba0366306fcf9f84d_small.jpg" />						<div class="line"></div>-->
-<!--                            <div class="ovrly"></div>-->
-<!--                            <div class="icon_box"><div class="icon"></div></div>-->
-<!--                        </div>-->
-<!--                        <a href="solar-panel-mounting-z-bracket-set_p49.html" class="title">Solar Panel Mounting Z Bracket Set</a>-->
-<!--                        <div class="text">-->
-<!--                            The solar panel mounting Z bracket set makes it easy to mount PV modules to recreational RVs, boats, motorhome cabins and so on.-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div>-->
-<!--                    <div class="li">-->
-<!--                        <div class="image">-->
-<!--                            <a href="rv-adjustable-folding-triangle-bracket-for-solar-panel_p50.html"></a>-->
-<!--                            <img id="product_detail_img"  alt="RV Adjustable Triangle Tilt Bracket" src="uploadfile/202105/26/f303d2cfc181a0e8a78421dea31a8110_small.jpg" />						<div class="line"></div>-->
-<!--                            <div class="ovrly"></div>-->
-<!--                            <div class="icon_box"><div class="icon"></div></div>-->
-<!--                        </div>-->
-<!--                        <a href="rv-adjustable-folding-triangle-bracket-for-solar-panel_p50.html" class="title">RV Adjustable Folding Triangle Bracket for Solar Panel</a>-->
-<!--                        <div class="text">-->
-<!--                            RV adjustable triangle tilt bracket allows for the mounting of solar panel to the rooftop of a motorhome, boat or other flat surface.-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!---->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
+            </div>
+
+
+        </div>
+    </div>
+</div>
+<?php } } ?>
+<div class="page_pro clearfix">
+    <div class="container">
+        <div class="page_prom">
+            <div class="in_title">
+                <span>Related products</span>
+            </div>
+            <div class="slider autoplay4">
+
+                <?php
+                $relatedWhere = isset($_GET) && !empty($_GET) ? ' WHERE id != "'.$_GET['id'].'"' : ' WHERE id != "1"';
+                $relatedProductsQuery = "SELECT * FROM sub_products ".$relatedWhere." ORDER BY ID DESC LIMIT 10";
+
+                $relatedProducts = mysqli_query($db,$relatedProductsQuery);
+                if($relatedProducts){
+                foreach($relatedProducts as $relatedProductRow){
+                ?>
+                <div>
+                    <div class="li">
+                        <div class="image">
+                            <a href="productDetails.php?id=<?php echo $relatedProductRow['id'] ?>"></a>
+                            <img id="product_detail_img"  alt="Metal Roof Solar Mounts" src="<?php echo $image_link.$relatedProductRow['thumbnail']; ?>" />						<div class="line"></div>
+                            <div class="ovrly"></div>
+                            <div class="icon_box"><div class="icon"></div></div>
+                        </div>
+                        <a href="productDetails.php?id=<?php echo $relatedProductRow['id'] ?>" class="title"><?php echo $relatedProductRow['title']; ?></a>
+                        <div class="text"><?php echo $relatedProductRow['short_description']; ?></div>
+                    </div>
+                </div>
+                <?php } } ?>
+
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="in_newsletterW">
     <div class="container">
@@ -672,161 +249,7 @@ include("header.php");
     </div>
 </div>
 
-<div class="footerW clearfix">
-
-    <div class="footer">
-        <div class="container clearfix">
-            <div class="footer_m clearfix">
-                <div class="fot_about">
-                    <a href="index.html" class="fot_logo"><img src="template/images/fot_logo.png" /></a>
-                    <div class="text">
-                        Bristar is located in Chinese sea port city Xiamen. Since founded in 2008, we own an excellent team for design, produce, sales and service. We built our own factory that is more than 3000 square's land. As global supplier in solar mounting brackets, Bristar has created added value for customers around the world.&nbsp;
-
-
-                        ◆Our Product
-
-
-                        Bristar Products includes the following:
-
-
-                        1, Metal roof solar mounting systems and accessories
-
-
-                        2, Tile&nbsp;roof solar mounting systems and accessories
-
-
-                        3, Concrete flat roof solar mounting systems and accessories
-
-
-                        4, Solar mounting accessories
-
-
-                        5, Products for wire management
-
-
-                        6, RV solar panel mounting brackets
-
-
-                        7, Ground screws
-
-
-                        We supply solar mounting systems all over the globe for residential and commercial projects.
-
-
-
-
-
-
-
-
-                        ◆Production Equipment
-
-
-                        We mainly have equipments: &nbsp;100T Oil Hydraulic Press, Punching Machine, Steel Plate Shearer, Bending Machine, Automatic Welding Machine, Shrink Tube Machine, Turning Lathe, Milling Machine, Carbon Steel Forming Machine ECT.
-
-
-
-
-
-                        ◆Our service
-
-
-                        We provide solar panel mounting solutions which includes design, manufacture and installation guide according to client’s requests.
-
-
-
-
-
-
-
-
-
-                    </div>
-                    <ul class="top_share">
-
-
-                        <li><a href="https://www.facebook.com/" target="_blank" rel="nofollow"><img src="uploadfile/friendlink/2222c032d52ed626b35c9d02803d554a.png" /></a></li>
-                        <li><a href="https://www.linkedin.com/" target="_blank" rel="nofollow"><img src="uploadfile/friendlink/902a07a27101e17cdf72d2c2fa25d5b3.png" /></a></li>
-                        <li><a href="https://www.pinterest.com/" target="_blank" rel="nofollow"><img src="uploadfile/friendlink/c6bd36239d7c530910e4a9691b4e7cd6.png" /></a></li>
-                        <li><a href="https://www.twitter.com/" target="_blank" rel="nofollow"><img src="uploadfile/friendlink/cb47d35ee13ac257c1afc4bcb85f31dc.png" /></a></li>
-                        <li><a href="https://www.youtobe.com/" target="_blank" rel="nofollow"><img src="uploadfile/friendlink/84e58ab43e7f52801cb8865e5ebc6acc.png" /></a></li>
-                    </ul>
-
-                </div>
-
-                <div id="right_column" class="fot_tag clearfix">
-                    <section id="blockbestsellers" class="block products_block column_box">
-                        <span class="fot_title"><em>Hot Tags</em><span></span><i class="column_icon_toggle icon-plus-sign"></i></span>
-                        <div class="block_content toggle_content">
-                            <ul>
-                                <li><a href="metal-roof-solar-mounts_sp.html">Metal Roof Solar Mounts</a></li>
-                                <li><a href="metal-roof-mount-solar-panels_sp.html">Metal Roof Mount Solar Panels</a></li>
-                                <li><a href="solar-panel-tin-roof-mount_sp.html">Solar Panel Tin Roof Mount</a></li>
-                                <li><a href="solar-panel-mounts-for-metal-roof_sp.html">Solar Panel Mounts for Metal Roof</a></li>
-                                <li><a href="metal-roof-solar-panel-mount_sp.html">Metal Roof Solar Panel Mount</a></li>
-                                <li><a href="metal-roof-solar-mounting-structure_sp.html">Metal Roof Solar Mounting Structure</a></li>
-                                <li><a href="solar-mounting-systems-for-metal-roof_sp.html">Solar Mounting Systems for Metal Roof</a></li>
-                                <li><a href="solar-mounting-brackets-for-metal-roof_sp.html">Solar Mounting Brackets for Metal Roof</a></li>
-
-                            </ul>
-                        </div>
-                    </section>
-                </div>
-                <div id="right_column" class="fot_nav clearfix">
-                    <section id="blockbestsellers" class="block products_block column_box">
-                        <span class="fot_title"><em>Need Help</em><span></span><i class="column_icon_toggle icon-plus-sign"></i></span>
-                        <div class="block_content toggle_content">
-                            <ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="about-us_d1.html">About us</a></li>
-                                <li><a href="products.html">Products</a></li>
-                                <li><a href="contact-us_d2.html">Contact us</a></li>
-                                <li><a href="blog.html">Blog</a></li>
-                                <li><a href="news_nc1.html">News</a></li>
-                                <li><a href="privacy-policy_d18.html">Privacy Policy</a></li>
-                            </ul>
-                        </div>
-                    </section>
-                </div>
-                <div id="right_column" class="fot_con clearfix">
-                    <section id="blockbestsellers" class="block products_block column_box">
-                        <span class="fot_title"><em>Contact Us</em><span></span><i class="column_icon_toggle icon-plus-sign"></i></span>
-                        <div class="block_content toggle_content">
-                            <ul class="list clearfix">
-                                <li class="fcon_a">Xiamen Bristar Technology Co., Ltd.</li>
-                                <li class="fcon_t">Tel : <a rel="nofollow" href="Tel:+86 186 5000 7009">+86 186 5000 7009</a></li>
-                                <li class="fcon_e">Email : <a rel="nofollow" target="_blank" href="mailto:ada@bristarxm.com">ada@bristarxm.com</a></li>
-
-                                <li class="fcon_w">Whatsapp : <a rel="nofollow"  target="_blank" href="https://api.whatsapp.com/send?phone=18650007009&amp;text=Hello">18650007009</a></li>
-
-                            </ul>
-                        </div>
-                    </section>
-
-                </div>
-            </div>
-
-
-        </div>
-
-    </div>
-    <div class="footer-bottom clearfix">
-        <div class="container">
-            <div class="copy">
-                Copyright © 2022 Xiamen Bristar Technology Co., Ltd. All Rights Reserved.
-
-
-            </div>
-            <div class="foot_ipv6">
-                <a href="sitemap.html">Sitemap</a> | <a href="sitemap.xml">XML</a> | <span>IPv6 network supported</span><img src="template/images/ipv6.png" />
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-
+<?php include_once 'footer1.php'; ?>
 <a href="javascript:;" rel="nofollow" class="back_top"></a>
 
 <div id="online_qq_layer">
@@ -841,29 +264,29 @@ include("header.php");
         </div>
         <a id="floatHide" rel="nofollow" href="javascript:void(0);" ><i></i></a>
     </div>
-    <div id="onlineService" >
-        <div class="online_form">
-            <div class="i_message_inquiry">
-                <em class="title">Leave A Message</em>
-                <div class="inquiry">
-                    <form role="form" action="https://www.bristarpvmount.com/inquiry/addinquiry" method="post" name="email_form" id="email_form1">
-                        <input type="hidden" name="msg_title" value="Leave a Message" class="meInput" />
-                        <div class="text">If you are interested in our products and want to know more details,please leave a message here,we will reply you as soon as we can.</div>
-                        <div class="input-group">
-                            <span class="ms_e"><input class="form-control" name="msg_email" id="msg_email" tabindex="10" type="text" placeholder="* Email"></span>
-                        </div>
-                        <div class="input-group">
-                            <span class="ms_p"><input class="form-control" name="msg_tel" id="phone" tabindex="10" type="text" placeholder="Tel/WhatsApp"></span>
-                        </div>
-                        <div class="input-group">
-                            <span class="ms_m"><textarea name="msg_content" class="form-control" id="message" tabindex="13" placeholder="* Enter product details (such as color, size, materials etc.) and other specific requirements to receive an accurate quote."></textarea></span>
-                        </div>
-                        <span class="main_more"><input class="submit" type="submit" value="Submit"></span>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+<!--    <div id="onlineService" >-->
+<!--        <div class="online_form">-->
+<!--            <div class="i_message_inquiry">-->
+<!--                <em class="title">Leave A Message</em>-->
+<!--                <div class="inquiry">-->
+<!--                    <form role="form" action="https://www.bristarpvmount.com/inquiry/addinquiry" method="post" name="email_form" id="email_form1">-->
+<!--                        <input type="hidden" name="msg_title" value="Leave a Message" class="meInput" />-->
+<!--                        <div class="text">If you are interested in our products and want to know more details,please leave a message here,we will reply you as soon as we can.</div>-->
+<!--                        <div class="input-group">-->
+<!--                            <span class="ms_e"><input class="form-control" name="msg_email" id="msg_email" tabindex="10" type="text" placeholder="* Email"></span>-->
+<!--                        </div>-->
+<!--                        <div class="input-group">-->
+<!--                            <span class="ms_p"><input class="form-control" name="msg_tel" id="phone" tabindex="10" type="text" placeholder="Tel/WhatsApp"></span>-->
+<!--                        </div>-->
+<!--                        <div class="input-group">-->
+<!--                            <span class="ms_m"><textarea name="msg_content" class="form-control" id="message" tabindex="13" placeholder="* Enter product details (such as color, size, materials etc.) and other specific requirements to receive an accurate quote."></textarea></span>-->
+<!--                        </div>-->
+<!--                        <span class="main_more"><input class="submit" type="submit" value="Submit"></span>-->
+<!--                    </form>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
 </div>
 
 <div class="fixed-contact-wrap">
@@ -914,9 +337,9 @@ include("header.php");
 <script type="text/javascript">
     $('#bootstrap-touch-slider').bsTouchSlider();
 </script>
-<script type="text/javascript" src="template/js/slick.js"></script>
-<script type="text/javascript" src="template/js/wow.min.js"></script>
-<script type="text/javascript" src="template/js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="demo/template/js/slick.js"></script>
+<script type="text/javascript" src="demo/template/js/wow.min.js"></script>
+<script type="text/javascript" src="demo/template/js/owl.carousel.min.js"></script>
 <script type="text/javascript">
     baguetteBox.run('.tz-gallery');
 </script>

@@ -39,7 +39,7 @@ include("connect.php");
                     ?>
                     <li class="col-sm-3 col-xs-6">
                         <div class="column">
-                            <a href="#"></a>
+                            <a href="products.php?category_id=<?php echo $cat['id'] ?>"></a>
                             <div class="images"
                                  style="background-image: url(demo/uploadfile/category/f4fa715dceb26ac5d143123c121ac2d4.jpg)"></div>
                             <div class="in_categ_w">
@@ -48,7 +48,7 @@ include("connect.php");
                                 <p class="title"><?php echo $cat['category'] ?></p>
                                 <em class="line"></em>
                                 <div class="text"><?php echo $cat['short_description']; ?></div>
-                                <span class="main_more"><a rel="nofollow" href="#">view more</a></span>
+                                <span class="main_more"><a rel="nofollow" href="products.php?category_id=<?php echo $cat['id'] ?>">view more</a></span>
                             </div>
                         </div>
                     </li>
@@ -67,8 +67,8 @@ include("connect.php");
                 <p>Company Establishment</p>
             </div>
             <div class="in_videoW">
-                <div class="text">We are specialized in
-                    <span>research, development, produce, service and marketing</span> of solar mounting system.
+                <div class="text">India's leading
+                    <span>solar structure manufacture & supplier</span> offers most economical Metal Roof Solar Mounting Structure.
                 </div>
                 <div class="in_videos video">
 
@@ -188,7 +188,7 @@ include("connect.php");
         </div>
         <ul class="in_proL clearfix">
             <?php
-            $newProductsQuery = "SELECT * FROM products WHERE product_status = '2'";
+            $newProductsQuery = "SELECT * FROM sub_products WHERE product_status = '2'";
             $newProducts = mysqli_query($db, $newProductsQuery);
             if ($newProducts) {
                 foreach ($newProducts as $newProductsRow) { ?>
@@ -206,59 +206,59 @@ include("connect.php");
                 <?php }
             } ?>
         </ul>
-        <div class="slider autoplay2 hidden">
-
-            <div>
-                <div class="li">
-                    <div class="column">
-                        <a href="rv-solar-panel-mounting-feet-hardware_p47.html" class="image"><img
-                                    id="product_detail_img" alt="RV Solar Panel Mounting Hardware"
-                                    src="demo/uploadfile/202105/05/9a21386b3f7416085134a36d4dcd7459_small.jpg"/></a>
-                        <a href="rv-solar-panel-mounting-feet-hardware_p47.html" class="title">RV Solar Panel Mounting
-                            Feet Hardware</a>
-                        <div class="text">The RV solar panel mounting hardware works for mounting smaller solar panels
-                            on flat surface.
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div class="li">
-                    <div class="column">
-                        <a href="abs-plastic-solar-panel-corner-mounts_p43.html" class="image"><img
-                                    id="product_detail_img" alt="Solar Panel Corner Mounts"
-                                    src="demo/uploadfile/202105/05/b316ea881b3240b9e0ca669c7426d8dd_small.jpg"/></a>
-                        <a href="abs-plastic-solar-panel-corner-mounts_p43.html" class="title">ABS Plastic Solar Panel
-                            Corner Mounts</a>
-                        <div class="text">The solar panel corner mounts are used to attach PV modules to the roof of
-                            motorhome or deck of boat without drilling holes on the surface.
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div class="li">
-                    <div class="column">
-                        <a href="self-locking-304-stainless-steel-cable-ties_p39.html" class="image"><img
-                                    id="product_detail_img" alt="Stainless Steel Cable Ties"
-                                    src="demo/uploadfile/202105/04/c023edc335f5d6a29929708b1331f100_small.jpg"/></a>
-                        <a href="self-locking-304-stainless-steel-cable-ties_p39.html" class="title">Self Locking 304
-                            Stainless Steel Cable Ties</a>
-                        <div class="text">The self locking stainless steel cable ties are ideal for bundling wires or
-                            hoses in demanding applications, they are designed with an easy install, low profile,
-                            self-locking ball bearing head.
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
+<!--        <div class="slider autoplay2 hidden">-->
+<!---->
+<!--            <div>-->
+<!--                <div class="li">-->
+<!--                    <div class="column">-->
+<!--                        <a href="rv-solar-panel-mounting-feet-hardware_p47.html" class="image"><img-->
+<!--                                    id="product_detail_img" alt="RV Solar Panel Mounting Hardware"-->
+<!--                                    src="demo/uploadfile/202105/05/9a21386b3f7416085134a36d4dcd7459_small.jpg"/></a>-->
+<!--                        <a href="rv-solar-panel-mounting-feet-hardware_p47.html" class="title">RV Solar Panel Mounting-->
+<!--                            Feet Hardware</a>-->
+<!--                        <div class="text">The RV solar panel mounting hardware works for mounting smaller solar panels-->
+<!--                            on flat surface.-->
+<!--                        </div>-->
+<!---->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!---->
+<!--            <div>-->
+<!--                <div class="li">-->
+<!--                    <div class="column">-->
+<!--                        <a href="abs-plastic-solar-panel-corner-mounts_p43.html" class="image"><img-->
+<!--                                    id="product_detail_img" alt="Solar Panel Corner Mounts"-->
+<!--                                    src="demo/uploadfile/202105/05/b316ea881b3240b9e0ca669c7426d8dd_small.jpg"/></a>-->
+<!--                        <a href="abs-plastic-solar-panel-corner-mounts_p43.html" class="title">ABS Plastic Solar Panel-->
+<!--                            Corner Mounts</a>-->
+<!--                        <div class="text">The solar panel corner mounts are used to attach PV modules to the roof of-->
+<!--                            motorhome or deck of boat without drilling holes on the surface.-->
+<!--                        </div>-->
+<!---->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!---->
+<!--            <div>-->
+<!--                <div class="li">-->
+<!--                    <div class="column">-->
+<!--                        <a href="self-locking-304-stainless-steel-cable-ties_p39.html" class="image"><img-->
+<!--                                    id="product_detail_img" alt="Stainless Steel Cable Ties"-->
+<!--                                    src="demo/uploadfile/202105/04/c023edc335f5d6a29929708b1331f100_small.jpg"/></a>-->
+<!--                        <a href="self-locking-304-stainless-steel-cable-ties_p39.html" class="title">Self Locking 304-->
+<!--                            Stainless Steel Cable Ties</a>-->
+<!--                        <div class="text">The self locking stainless steel cable ties are ideal for bundling wires or-->
+<!--                            hoses in demanding applications, they are designed with an easy install, low profile,-->
+<!--                            self-locking ball bearing head.-->
+<!--                        </div>-->
+<!---->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!---->
+<!---->
+<!--        </div>-->
     </div>
 </div>
 
@@ -352,7 +352,7 @@ include("connect.php");
                     ?>
                     <li class="col-sm-4 col-xs-12">
                         <div class="image">
-                            <a href="<?php echo $blogRow['url'] ?>"></a>
+                            <a href="blogDetails.php?blog_id=<?php echo $blogRow['id'] ?>"></a>
                             <img src="<?php echo $image_link . $blogRow['img'] ?>"
                                  alt="<?php echo $blogRow['title']; ?>">
                             <div class="date"><em>29</em>
@@ -360,13 +360,13 @@ include("connect.php");
 
                         </div>
                         <div class="wrap">
-                            <a href="<?php echo $blogRow['url'] ?>"
+                            <a href="blogDetails.php?blog_id=<?php echo $blogRow['id'] ?>"
                                class="title"><?php echo $blogRow['title']; ?></a>
                             <div class="text"><?php echo $blogRow['description']; ?></div>
                             <span class="page_date">Mar 29, 2021</span>
 
                             <a rel="nofollow"
-                               href="<?php echo $blogRow['url'] ?>"
+                               href="blogDetails.php?blog_id=<?php echo $blogRow['id'] ?>"
                                class="page_more">view more<i></i></a>
                         </div>
                     </li>
