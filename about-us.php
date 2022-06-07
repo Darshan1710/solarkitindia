@@ -99,21 +99,29 @@
                     </div>
                     <div class="in_proW">
                         <div class="container">
-                            <div class="in_title">
-                                <span>Our Goals</span>
-                            </div>
-                            <div class="faq" id="accordion">
+                            <div class="faq" id="accordion1">
                                 <div class="card">
                                     <div class="card-header" id="faqHeading-1">
                                         <div class="mb-0">
                                             <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-1" data-aria-expanded="true" data-aria-controls="faqCollapse-1">
-                                                <i class="fa fa-plus" aria-hidden="true"></i> Best In Market Warranty
+                                                <i class="fa fa-plus" aria-hidden="true"></i> Our Goals
                                             </h5>
                                         </div>
                                     </div>
                                     <div id="faqCollapse-1" class="collapse" aria-labelledby="faqHeading-1" data-parent="#accordion">
                                         <div class="card-body">
-                                            <p>We offer upto 10yrs warranty on our products.</p>
+                                            <ul>
+                                                <li>Best In Market Warranty
+                                                <p>We offer upto 10yrs warranty on our products.</p></li>
+                                                <li>Online Service
+                                                <p>Our team of experts is always ready to help you. </p></li>
+                                                <li>Certified Products
+                                                <p>Quality verified by leading institutes of India. </p></li>
+                                                <li>Make In India
+                                                <p>We manufacture solar-kit products in India. We are based in Mumbai. </p></li>
+                                                <li>Upto 50% Faster Installation
+                                                <p>The solar-kit solution saves upto 50% of the time required for installation.</p></li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
@@ -121,13 +129,14 @@
                                     <div class="card-header" id="faqHeading-2">
                                         <div class="mb-0">
                                             <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-2" data-aria-expanded="false" data-aria-controls="faqCollapse-2">
-                                                <i class="fa fa-plus" aria-hidden="true"></i> Online Service
+                                                <i class="fa fa-plus" aria-hidden="true"></i> Why us?
                                             </h5>
                                         </div>
                                     </div>
                                     <div id="faqCollapse-2" class="collapse" aria-labelledby="faqHeading-2" data-parent="#accordion">
                                         <div class="card-body">
-                                            <p>Our team of experts is always ready to help you. </p>
+                                            <p>Since our origin in this market, we are actively committed towards providing our prestigious patrons with a remarkable range of product.</p>
+                                            <img src="assets/images/why_us.jpg" alt=""/>
                                         </div>
                                     </div>
                                 </div>
@@ -135,41 +144,13 @@
                                     <div class="card-header" id="faqHeading-3">
                                         <div class="mb-0">
                                             <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-3" data-aria-expanded="false" data-aria-controls="faqCollapse-3">
-                                                <i class="fa fa-plus" aria-hidden="true"></i> Certified Products
+                                                <i class="fa fa-plus" aria-hidden="true"></i> QUALITY ASSURANCE
                                             </h5>
                                         </div>
                                     </div>
                                     <div id="faqCollapse-3" class="collapse" aria-labelledby="faqHeading-3" data-parent="#accordion">
                                         <div class="card-body">
-                                            <p>Quality verified by leading institutes of India. </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-header" id="faqHeading-4">
-                                        <div class="mb-0">
-                                            <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-4" data-aria-expanded="false" data-aria-controls="faqCollapse-4">
-                                                <i class="fa fa-plus" aria-hidden="true"></i> Make In India
-                                            </h5>
-                                        </div>
-                                    </div>
-                                    <div id="faqCollapse-4" class="collapse" aria-labelledby="faqHeading-4" data-parent="#accordion">
-                                        <div class="card-body">
-                                            <p>We manufacture solar-kit products in India. We are based in Mumbai. </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-header" id="faqHeading-5">
-                                        <div class="mb-0">
-                                            <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-5" data-aria-expanded="false" data-aria-controls="faqCollapse-5">
-                                                <i class="fa fa-plus" aria-hidden="true"></i> •	Upto 50% Faster Installation
-                                            </h5>
-                                        </div>
-                                    </div>
-                                    <div id="faqCollapse-5" class="collapse" aria-labelledby="faqHeading-5" data-parent="#accordion">
-                                        <div class="card-body">
-                                            <p>The solar-kit solution saves upto 50% of the time required for installation.</p>
+                                            <p>Our success continues to be driven through our team experience and expertise, as well as a complete approach to quality assurance that is supported by comprehensive project management principles during all stages of the design, production and quality assurance stages which helps us to deliver projects on time. </p>
                                         </div>
                                     </div>
                                 </div>
@@ -178,11 +159,6 @@
                             <p></p>
                         </div>
                     </div>
-                    <p class="about_p"><strong>WHY US ? </strong></p>
-                    <p>Since our origin in this market, we are actively committed towards providing our prestigious patrons with a remarkable range of product.</p>
-                    <img src="assets/images/why_us.jpg" alt=""/>
-                    <p class="about_p"><strong>QUALITY ASSURANCE </strong></p>
-                    <p>Our success continues to be driven through our team experience and expertise, as well as a complete approach to quality assurance that is supported by comprehensive project management principles during all stages of the design, production and quality assurance stages which helps us to deliver projects on time</p>
                 </div>
             </div>
         </div>
@@ -227,166 +203,7 @@
         </div>
     </div>
 </div>
-
-<div class="footerW clearfix">
-
-    <div class="footer">
-        <div class="container clearfix">
-            <div class="footer_m clearfix">
-                <div class="fot_about">
-                    <a href="index.html" class="fot_logo"><img src="template/images/fot_logo.png"/></a>
-                    <div class="text">
-                        Bristar is located in Chinese sea port city Xiamen. Since founded in 2008, we own an excellent
-                        team for design, produce, sales and service. We built our own factory that is more than 3000
-                        square's land. As global supplier in solar mounting brackets, Bristar has created added value
-                        for customers around the world.&nbsp;
-
-
-                        ◆Our Product
-
-
-                        Bristar Products includes the following:
-
-
-                        1, Metal roof solar mounting systems and accessories
-
-
-                        2, Tile&nbsp;roof solar mounting systems and accessories
-
-
-                        3, Concrete flat roof solar mounting systems and accessories
-
-
-                        4, Solar mounting accessories
-
-
-                        5, Products for wire management
-
-
-                        6, RV solar panel mounting brackets
-
-
-                        7, Ground screws
-
-
-                        We supply solar mounting systems all over the globe for residential and commercial projects.
-
-
-                        ◆Production Equipment
-
-
-                        We mainly have equipments: &nbsp;100T Oil Hydraulic Press, Punching Machine, Steel Plate
-                        Shearer, Bending Machine, Automatic Welding Machine, Shrink Tube Machine, Turning Lathe, Milling
-                        Machine, Carbon Steel Forming Machine ECT.
-
-
-                        ◆Our service
-
-
-                        We provide solar panel mounting solutions which includes design, manufacture and installation
-                        guide according to client’s requests.
-
-
-                    </div>
-                    <ul class="top_share">
-
-
-                        <li><a href="https://www.facebook.com/" target="_blank" rel="nofollow"><img
-                                        src="uploadfile/friendlink/2222c032d52ed626b35c9d02803d554a.png"/></a></li>
-                        <li><a href="https://www.linkedin.com/" target="_blank" rel="nofollow"><img
-                                        src="uploadfile/friendlink/902a07a27101e17cdf72d2c2fa25d5b3.png"/></a></li>
-                        <li><a href="https://www.pinterest.com/" target="_blank" rel="nofollow"><img
-                                        src="uploadfile/friendlink/c6bd36239d7c530910e4a9691b4e7cd6.png"/></a></li>
-                        <li><a href="https://www.twitter.com/" target="_blank" rel="nofollow"><img
-                                        src="uploadfile/friendlink/cb47d35ee13ac257c1afc4bcb85f31dc.png"/></a></li>
-                        <li><a href="https://www.youtobe.com/" target="_blank" rel="nofollow"><img
-                                        src="uploadfile/friendlink/84e58ab43e7f52801cb8865e5ebc6acc.png"/></a></li>
-                    </ul>
-
-                </div>
-
-                <div id="right_column" class="fot_tag clearfix">
-                    <section id="blockbestsellers" class="block products_block column_box">
-                        <span class="fot_title"><em>Hot Tags</em><span></span><i
-                                    class="column_icon_toggle icon-plus-sign"></i></span>
-                        <div class="block_content toggle_content">
-                            <ul>
-                                <li><a href="metal-roof-solar-mounts_sp.html">Metal Roof Solar Mounts</a></li>
-                                <li><a href="metal-roof-mount-solar-panels_sp.html">Metal Roof Mount Solar Panels</a>
-                                </li>
-                                <li><a href="solar-panel-tin-roof-mount_sp.html">Solar Panel Tin Roof Mount</a></li>
-                                <li><a href="solar-panel-mounts-for-metal-roof_sp.html">Solar Panel Mounts for Metal
-                                        Roof</a></li>
-                                <li><a href="metal-roof-solar-panel-mount_sp.html">Metal Roof Solar Panel Mount</a></li>
-                                <li><a href="metal-roof-solar-mounting-structure_sp.html">Metal Roof Solar Mounting
-                                        Structure</a></li>
-                                <li><a href="solar-mounting-systems-for-metal-roof_sp.html">Solar Mounting Systems for
-                                        Metal Roof</a></li>
-                                <li><a href="solar-mounting-brackets-for-metal-roof_sp.html">Solar Mounting Brackets for
-                                        Metal Roof</a></li>
-
-                            </ul>
-                        </div>
-                    </section>
-                </div>
-                <div id="right_column" class="fot_nav clearfix">
-                    <section id="blockbestsellers" class="block products_block column_box">
-                        <span class="fot_title"><em>Need Help</em><span></span><i
-                                    class="column_icon_toggle icon-plus-sign"></i></span>
-                        <div class="block_content toggle_content">
-                            <ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="about-us_d1.html">About us</a></li>
-                                <li><a href="products.html">Products</a></li>
-                                <li><a href="contact-us_d2.html">Contact us</a></li>
-                                <li><a href="blog.html">Blog</a></li>
-                                <li><a href="news_nc1.html">News</a></li>
-                                <li><a href="privacy-policy_d18.html">Privacy Policy</a></li>
-                            </ul>
-                        </div>
-                    </section>
-                </div>
-                <div id="right_column" class="fot_con clearfix">
-                    <section id="blockbestsellers" class="block products_block column_box">
-                        <span class="fot_title"><em>Contact Us</em><span></span><i
-                                    class="column_icon_toggle icon-plus-sign"></i></span>
-                        <div class="block_content toggle_content">
-                            <ul class="list clearfix">
-                                <li class="fcon_a">Xiamen Bristar Technology Co., Ltd.</li>
-                                <li class="fcon_t">Tel : <a rel="nofollow" href="Tel:+86 186 5000 7009">+86 186 5000
-                                        7009</a></li>
-                                <li class="fcon_e">Email : <a rel="nofollow" target="_blank"
-                                                              href="mailto:ada@bristarxm.com">ada@bristarxm.com</a></li>
-
-                                <li class="fcon_w">Whatsapp : <a rel="nofollow" target="_blank"
-                                                                 href="https://api.whatsapp.com/send?phone=18650007009&amp;text=Hello">18650007009</a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </section>
-
-                </div>
-            </div>
-
-
-        </div>
-
-    </div>
-    <div class="footer-bottom clearfix">
-        <div class="container">
-            <div class="copy">
-                Copyright © 2022 Xiamen Bristar Technology Co., Ltd. All Rights Reserved.
-
-
-            </div>
-            <div class="foot_ipv6">
-                <a href="sitemap.html">Sitemap</a> | <a href="sitemap.xml">XML</a> | <span>IPv6 network supported</span><img
-                        src="template/images/ipv6.png"/>
-            </div>
-        </div>
-    </div>
-</div>
+<?php include_once 'footer1.php'; ?>
 
 
 <a href="javascript:;" rel="nofollow" class="back_top"></a>

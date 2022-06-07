@@ -71,7 +71,7 @@
     font-weight: 400;
     font-size: 15px;
     letter-spacing: 1px;
-    color: #3B566E;
+    color: #333333;
     text-decoration: none !important;
     -webkit-transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
@@ -80,6 +80,7 @@
     cursor: pointer;
     padding-top: 20px;
     padding-bottom: 20px;
+    font-family: 'poppins-semibold';
 }
 
 .faq .card .card-header .faq-title .badge {
@@ -128,6 +129,9 @@
     margin-bottom: 1%;
     margin-top: 2%;
 }
+.mt-20{
+    margin-top:20px;
+ }
 @media (max-width: 991px) {
     .faq {
         margin-bottom: 30px;

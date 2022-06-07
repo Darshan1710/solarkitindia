@@ -194,71 +194,64 @@ include("connect.php");
                 foreach ($newProducts as $newProductsRow) { ?>
                     <li class="col-sm-3">
                         <div class="column">
-                            <a href="#" class="image">
+                            <a href="productDetails.php?id=<?php echo $newProductsRow['id']; ?>" class="image">
                                 <img id="product_detail_img"
                                      alt="<?php echo $newProductsRow['title']; ?>"
                                      src="<?php echo $image_link . $newProductsRow['thumbnail']; ?>"/></a>
-                            <a href="#" class="title"><?php echo $newProductsRow['title']; ?></a>
+                            <a href="productDetails.php?id=<?php echo $newProductsRow['id']; ?>" class="title"><?php echo $newProductsRow['title']; ?></a>
                             <div class="text"><?php echo $newProductsRow['short_description']; ?></div>
-                            <a rel="nofollow" href="#" class="more">view more<i></i></a>
+                            <a rel="nofollow" href="productDetails.php?id=<?php echo $newProductsRow['id']; ?>" class="more">view more<i></i></a>
                         </div>
                     </li>
                 <?php }
             } ?>
         </ul>
-<!--        <div class="slider autoplay2 hidden">-->
-<!---->
-<!--            <div>-->
-<!--                <div class="li">-->
-<!--                    <div class="column">-->
-<!--                        <a href="rv-solar-panel-mounting-feet-hardware_p47.html" class="image"><img-->
-<!--                                    id="product_detail_img" alt="RV Solar Panel Mounting Hardware"-->
-<!--                                    src="demo/uploadfile/202105/05/9a21386b3f7416085134a36d4dcd7459_small.jpg"/></a>-->
-<!--                        <a href="rv-solar-panel-mounting-feet-hardware_p47.html" class="title">RV Solar Panel Mounting-->
-<!--                            Feet Hardware</a>-->
-<!--                        <div class="text">The RV solar panel mounting hardware works for mounting smaller solar panels-->
-<!--                            on flat surface.-->
-<!--                        </div>-->
-<!---->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!---->
-<!--            <div>-->
-<!--                <div class="li">-->
-<!--                    <div class="column">-->
-<!--                        <a href="abs-plastic-solar-panel-corner-mounts_p43.html" class="image"><img-->
-<!--                                    id="product_detail_img" alt="Solar Panel Corner Mounts"-->
-<!--                                    src="demo/uploadfile/202105/05/b316ea881b3240b9e0ca669c7426d8dd_small.jpg"/></a>-->
-<!--                        <a href="abs-plastic-solar-panel-corner-mounts_p43.html" class="title">ABS Plastic Solar Panel-->
-<!--                            Corner Mounts</a>-->
-<!--                        <div class="text">The solar panel corner mounts are used to attach PV modules to the roof of-->
-<!--                            motorhome or deck of boat without drilling holes on the surface.-->
-<!--                        </div>-->
-<!---->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!---->
-<!--            <div>-->
-<!--                <div class="li">-->
-<!--                    <div class="column">-->
-<!--                        <a href="self-locking-304-stainless-steel-cable-ties_p39.html" class="image"><img-->
-<!--                                    id="product_detail_img" alt="Stainless Steel Cable Ties"-->
-<!--                                    src="demo/uploadfile/202105/04/c023edc335f5d6a29929708b1331f100_small.jpg"/></a>-->
-<!--                        <a href="self-locking-304-stainless-steel-cable-ties_p39.html" class="title">Self Locking 304-->
-<!--                            Stainless Steel Cable Ties</a>-->
-<!--                        <div class="text">The self locking stainless steel cable ties are ideal for bundling wires or-->
-<!--                            hoses in demanding applications, they are designed with an easy install, low profile,-->
-<!--                            self-locking ball bearing head.-->
-<!--                        </div>-->
-<!---->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!---->
-<!---->
-<!--        </div>-->
+        <div class="in_title">
+            <span>Testimonials</span>
+        </div>
+        <div class="slider autoplay2">
+
+            <div>
+                <div class="li">
+                    <div class="column">
+                        <div class="text">
+
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            <h5 class="mt-20"> - XYZ</h5>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="li">
+                    <div class="column">
+                        <div class="text">
+
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            <h5 class="mt-20"> - PQR</h5>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="li">
+                    <div class="column">
+                        <div class="text">
+
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            <h5 class="mt-20"> - ABC</h5>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
     </div>
 </div>
 
@@ -277,13 +270,13 @@ include("connect.php");
                     ?>
                     <li class="col-sm-3">
                         <div class="in_CaseL_m">
-                            <a href="#"></a>
+                            <a href="projectDetails.php?id=<?php echo $projectRow['id']; ?>"></a>
                             <img src="<?php echo $image_link . $projectRow['image'] ?>"
                                  alt="<?php echo $projectRow['title'] ?>">
                             <div class="wrap">
                                 <i class="icon"></i>
                                 <div class="in_CaseL_w">
-                                    <a href="#"><?php echo $projectRow['title'] ?></a>
+                                    <a href="projectDetails.php?id=<?php echo $projectRow['id']; ?>"><?php echo $projectRow['title'] ?></a>
                                     <p><?php echo $projectRow['short_description'] ?></p>
                                 </div>
                             </div>
@@ -533,6 +526,12 @@ include("connect.php");
             }
         }
     })
+
+    $('.autoplay2').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
+    });
 </script>
 </body>
 </html>
