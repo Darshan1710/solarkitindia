@@ -86,15 +86,19 @@ a.appendChild(r);
       <a href="#" data-target="mobile-demo" class="sidenav-trigger right black-text "><i class="material-icons">menu</i></a>
       
       <ul id="nav-mobile" class="right hide-on-small-only">
-<li><a href="<?php echo $link;?>/about-us/" itemprop="url" title="About us">About us</a></li>
-<li><a href="<?php echo $link;?>/products/" itemprop="url" title="Products">Products</a></li>
-<li><a href="<?php echo $link;?>/projects.php" itemprop="url" title="References">References</a></li>
-<li><a href="<?php echo $link;?>/blog/" itemprop="url" title="Blog" >Blog</a></li>
-<li><a href="<?php echo $link;?>/faq/" itemprop="url" title="FAQ">FAQ</a></li>
-<li><a href="https://news.solarkitindia.com/" itemprop="url" title="News">News</a></li>
-<li><a href="<?php echo $link;?>/career/" itemprop="url" title="FAQ">Career</a></li>
-<li><a href="<?php echo $link;?>/contact/" itemprop="url" title="FAQ">Contact</a></li>
-<li class="hide more_horiz" ><a href="#"><i class="material-icons">more_horiz</i></a></li>
+          <li><a href='about-us.php'>About Us</a></li>
+          <li><a href="products.php">Products</a>
+          <li><a href="projects.php">References</a>
+          <li><a href="blogList.php">Blog</a>
+          </li>
+          <li><a href="faq.php">FAQ</a>
+          </li>
+          <li><a href="https://news.solarkitindia.com/">News</a>
+          </li>
+          <li><a href="careers.php">Career</a>
+          </li>
+          <li><a href="contact-us.php">Contact us</a>
+          </li>
 
        </ul>
     </div>
@@ -102,14 +106,19 @@ a.appendChild(r);
   
   
   <ul class="sidenav" id="mobile-demo">
-<li><a href="<?php echo $link;?>/about-us/" itemprop="url" title="About us">About us</a></li>
-<li><a href="<?php echo $link;?>/products/" itemprop="url" title="Products">Products</a></li>
-<li><a href="<?php echo $link;?>/projects.php" itemprop="url" title="References">References</a></li>
-<li><a href="<?php echo $link;?>/blog/" itemprop="url" title="Blog" >Blog</a></li>
-<li><a href="<?php echo $link;?>/faq/" itemprop="url" title="FAQ">FAQ</a></li>
-<li><a href="https://news.solarkitindia.com/" itemprop="url" title="News">News</a></li>
-<li><a href="<?php echo $link;?>/career/" itemprop="url" title="Career">Career</a></li>
-<li><a href="<?php echo $link;?>/contact/" itemprop="url" title="FAQ">Contact</a></li>
+      <li><a href='about-us.php'>About Us</a></li>
+      <li><a href="products.php">Products</a>
+      <li><a href="projects.php">References</a>
+      <li><a href="blogList.php">Blog</a>
+      </li>
+      <li><a href="faq.php">FAQ</a>
+      </li>
+      <li><a href="https://news.solarkitindia.com/">News</a>
+      </li>
+      <li><a href="careers.php">Career</a>
+      </li>
+      <li><a href="contact-us.php">Contact us</a>
+      </li>
 <div class="social">
 	<a href="" class="facebook"></a>
 	<a href="" class="instagram"></a>

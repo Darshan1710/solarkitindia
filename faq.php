@@ -51,8 +51,9 @@ include("connect.php");
                         <!-- ***** FAQ Start ***** -->
                         <div class="col-md-12 offset-md-3">
 
-                            <div class="faq-title text-center pb-3">
-                                <h2>FAQ</h2>
+                            <div class="faq-title mb-5  pb-3">
+                                <h2>We are here to help you</h2>
+                                <p>These are the most frequently asked questions. If you can’t find the answer, please <a href="contact-us.php">contact us.</a></p>
                             </div>
                         </div>
                         <div class="col-md-12 offset-md-3">

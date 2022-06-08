@@ -917,7 +917,7 @@ header{width: 100%;z-index: 9999;  }
 
 header.small{ position:fixed;left:0;background-color:#fff;top:0;box-shadow:0 0 20px 2px rgba(0,0,0,0.08); padding:0}
 header.small .header{ padding: 5px 0}
-header.small #logo{ margin-top:2px; }
+header.small #logo{ margin-top:1%; }
 header.small #logo img{max-width:150px;}   
 header.small .mainmenu-area{ padding-top:4px}
 header.small .top_cent{ display:none}

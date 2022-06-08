@@ -22,7 +22,13 @@ include("connect.php");
 
     </div>
 </div>
-
+<div class="container">
+<div class="slider demo">
+    <div><img src="images/banner/solarKit-website.png" class="img-responsive demo_image"></div>
+    <div><img src="images/banner/solarKit-website.png" class="img-responsive demo_image"></div>
+    <div><img src="images/banner/solarKit-website.png" class="img-responsive demo_image"></div>
+</div>
+</div>
 
 <div class="in_categW">
     <div class="container">
@@ -58,7 +64,16 @@ include("connect.php");
 
     </div>
 </div>
-
+<div class="container">
+    <div class="slider video_gallery">
+        <div ><img src="images/banner/solarKit-website.png" class="img-responsive demo_image"></div>
+        <div ><img src="images/banner/solarKit-website.png" class="img-responsive demo_image"></div>
+        <div ><img src="images/banner/solarKit-website.png" class="img-responsive demo_image"></div>
+        <div ><img src="images/banner/solarKit-website.png" class="img-responsive demo_image"></div>
+        <div ><img src="images/banner/solarKit-website.png" class="img-responsive demo_image"></div>
+        <div ><img src="images/banner/solarKit-website.png" class="img-responsive demo_image"></div>
+    </div>
+</div>
 <div class="in_aboutW">
     <div class="container about_topw">
         <div class="about_top clearfix">
@@ -532,6 +547,25 @@ include("connect.php");
         slidesToShow: 3,
         slidesToScroll: 3
     });
+
+    $(document).ready(function(){
+        $('.demo').slick({
+            dots: true,
+            infinite: false,
+            slidesToShow: 2,
+            slidesToScroll: 1
+        });
+    });
+
+    $(document).ready(function(){
+        $('.video_gallery').slick({
+            dots: true,
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 1
+        });
+    });
+
 </script>
 </body>
 </html>

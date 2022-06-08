@@ -86,6 +86,41 @@ foreach($products as $productRow){
         </div>
     </div>
 </div>
+<div class="in_aboutW">
+    <div class="container about_topw">
+        <div class="about_top clearfix">
+            <div class="about_since">
+                <em>2018</em>
+                <p>Company Establishment</p>
+            </div>
+            <div class="in_videoW">
+                <div class="text">India's leading
+                    <span>solar structure manufacture & supplier</span> offers most economical Metal Roof Solar Mounting Structure.
+                </div>
+                <div class="in_videos video">
+
+                    <a href="https://www.youtube.com/watch?v=4M70tvu_gEI"></a>
+
+                    <div class="video_icon">
+                        <div class="video-player">
+                            <p class="video-button">
+                                <i class="fa fa-play"></i>
+                                <span class="line-video-animation line-video-1"></span>
+                                <span class="line-video-animation line-video-2"></span>
+                                <span class="line-video-animation line-video-3"></span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <p class="video_t">Watch Our Video</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="in_aboutbg" style="background-image: url(template/images/about_bg2.jpg)"></div>
+</div>
 <div class="page_section clearfix">
     <div class="container">
         <div class="page_column clearfix">

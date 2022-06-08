@@ -121,7 +121,7 @@
                                         </li>
                                         <li><a href="https://news.solarkitindia.com/">News</a>
                                         </li>
-                                        <li><a href="career.php">Career</a>
+                                        <li><a href="careers.php">Career</a>
                                         </li>
                                         <li><a href="contact-us.php">Contact us</a>
                                         </li>
