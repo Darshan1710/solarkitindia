@@ -82,28 +82,31 @@
                 <!-- Basic responsive configuration -->
                 <div class="panel panel-flat">
                     <form action="#" method="post" id="add" enctype="multipart/form-data">
-
+                        <input type="hidden" value="<?php echo $this->uri->segment(3); ?>" name="id">
                         <div class="modal-body">
                             <div class="form-group">
                                 <div class="row">
                                     <div class="col-sm-3">
                                         <label>Project Name</label>
-                                        <input type="text" placeholder="Project Name" class="form-control" name="title" id="title">
+                                        <input type="text" placeholder="Project Name" class="form-control" name="title" id="title" value="<?= isset($projects) && !empty($projects) ? $projects['title'] : '' ?>">
                                     </div>
                                     <div class="col-sm-3">
                                         <label>Tags</label>
-                                        <input type="text" placeholder="Tags" class="form-control" name="tags" id="tags">
+                                        <input type="text" placeholder="Tags" class="form-control" name="tags" id="tags" value="<?= isset($projects) && !empty($projects) ? $projects['tags'] : '' ?>">
                                     </div>
                                     <div class="col-sm-3">
-                                        <label>Project Image (200 x 200)</label>
-                                        <input type="file" name="file" class="form-control" id="file">
+                                        <label>Project Image (200 x 200)</label><br>
+                                        <img class="image" width="50px" height="50px" src="<?= isset($projects) && !empty($projects) ? base_url().$projects['image'] : '' ?>">
+                                        <button class="btn btn-sm btn-primary change_image" type="button">Change Image</button>
+                                        <input type="hidden" name="file" class="new_image">
+                                        <input type="hidden"  class="form-control old_image" name="old_image">
                                     </div>
                                     <div class="col-sm-3">
                                         <label>Status</label>
                                         <select class="form-control select" name="status" id="status">
                                             <option value="">Please Select Status</option>
-                                            <option value="1" selected>Active</option>
-                                            <option value="0">Inactive</option>
+                                            <option value="1" <?= isset($projects) && !empty($projects) && $projects['status'] == '1' ? 'selected' : '' ?>>Active</option>
+                                            <option value="0" <?= isset($projects) && !empty($projects) && $projects['status'] == '0' ? 'selected' : '' ?>>Inactive</option>
                                         </select>
                                     </div>
                                 </div>
@@ -113,11 +116,15 @@
                                 <div class="row">
                                     <div class="col-sm-12">
                                         <label>Short Description</label>
-                                        <textarea name="short_description" class="form-control" id="short_description"></textarea>
+                                        <textarea name="short_description" class="form-control" id="short_description">
+                                            <?= isset($projects) && !empty($projects) ? $projects['short_description'] : '' ?>
+                                        </textarea>
                                     </div>
                                     <div class="col-sm-12">
                                         <label>Description</label>
-                                        <textarea name="long_description" class="form-control" rows="10" id="long_description"></textarea>
+                                        <textarea name="long_description" class="form-control" rows="10" id="long_description">
+                                            <?= isset($projects) && !empty($projects) ? $projects['long_description'] : '' ?>
+                                        </textarea>
                                     </div>
                                 </div>
                             </div>
@@ -406,12 +413,12 @@
                 data: new_formdata,
                 processData: false,
                 contentType: false,
-                url: base_url + 'Project/addProject',
+                url: base_url + 'Project/updateProject',
                 success: function(data) {
                     var obj = $.parseJSON(data);
                     if (obj.errCode == -1 || obj.errCode == 2) {
                         alert(obj.message);
-                        window.location.href = base_url+'Project/pro'
+                        window.location.href = base_url+'Project/projectList'
                     } else if (obj.errCode == 3) {
                         $('.error').remove();
                         $.each(obj.message, function(key, value) {

@@ -1,59 +1,65 @@
 <?php
 
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Category extends CI_Controller {
+class Category extends CI_Controller
+{
 
-    function __construct() {
+    function __construct()
+    {
         parent::__construct();
     }
 
-    public function categoryList(){
-        $data['category'] = $this->AdminModel->getList('categories');
-        $this->load->view('category/category',$data);
+    public function categoryList()
+    {
+        $data['category'] = $this->AdminModel->getList('category');
+        $this->load->view('category/category', $data);
     }
-    public function addCategory(){
-        $this->form_validation->set_rules('category','Category','required|trim|xss_clean|max_length[255]');
-        $this->form_validation->set_rules('file','','callback_file_check');
-        $this->form_validation->set_rules('status','Status','required|trim|xss_clean|max_length[255]');
-        if($this->form_validation->run()){
-            $filter = array('category_name'=>$this->input->post('category'));
 
-            $checkMenu = $this->AdminModel->getDetails('categories',$filter);
-            if($checkMenu){
-                    $returnArr['errCode']                   = 3;
-                    $returnArr['messages']['category']      = '<p class="error">Products Already Exists</p>';
-            }else{  
-                    if(isset($_FILES)){
-                        $upload = upload_image($_FILES,'file');
+    public function addCategory()
+    {
+        $this->form_validation->set_rules('category', 'Category', 'required|trim|xss_clean|max_length[255]');
+        $this->form_validation->set_rules('file', '', 'callback_file_check');
+        $this->form_validation->set_rules('status', 'Status', 'required|trim|xss_clean|max_length[255]');
+        if ($this->form_validation->run()) {
+            $filter = array('category' => $this->input->post('category'));
 
-                        if($upload['errCode'] == -1){
-                            $image = $upload['image'];
-                        }else{
-                            $returnArr['errCode']      = 3;
-                            $returnArr['message']['image']      = $upload['image'];
-                            echo json_encode($returnArr);exit;
-                        }
-                    }else{
-                        $image = '';
+            $checkMenu = $this->AdminModel->getDetails('category', $filter);
+            if ($checkMenu) {
+                $returnArr['errCode'] = 3;
+                $returnArr['messages']['category'] = '<p class="error">Products Already Exists</p>';
+            } else {
+                if (isset($_FILES)) {
+                    $upload = upload_image($_FILES, 'file');
+
+                    if ($upload['errCode'] == -1) {
+                        $image = $upload['image'];
+                    } else {
+                        $returnArr['errCode'] = 3;
+                        $returnArr['message']['image'] = $upload['image'];
+                        echo json_encode($returnArr);
+                        exit;
                     }
+                } else {
+                    $image = '';
+                }
 
-                    $data = array('category_name'   =>$this->input->post('category'),
-                                  'category_icon'   =>$image,
-                                  'status'          =>$this->input->post('status')
-                              );
+                $data = array('category' => $this->input->post('category'),
+                    'image' => $image,
+                    'status' => $this->input->post('status')
+                );
 
-                    $addExperience = $this->AdminModel->insert('categories',$data);
+                $addExperience = $this->AdminModel->insert('category', $data);
 
-                    if($addExperience){
-                        $returnArr['errCode']     = -1;
-                        $returnArr['message']  = 'Category Added Successfully';
-                    }else{
-                        $returnArr['errCode']     = 2;
-                        $returnArr['message']  = 'Please try again';
-                    }
+                if ($addExperience) {
+                    $returnArr['errCode'] = -1;
+                    $returnArr['message'] = 'Category Added Successfully';
+                } else {
+                    $returnArr['errCode'] = 2;
+                    $returnArr['message'] = 'Please try again';
+                }
             }
-        }else{
+        } else {
             $returnArr['errCode'] = 3;
 
             $returnArr['message']['file'] = form_error('file');
@@ -63,20 +69,22 @@ class Category extends CI_Controller {
         }
         echo json_encode($returnArr);
     }
-    public function editCategory(){
-        $this->form_validation->set_rules('id','Id','required|trim|xss_clean|max_length[255]');
-        if($this->form_validation->run()){
-            $filter = array('id'=>$this->input->post('id'));
 
-            $category = $this->AdminModel->getDetails('categories',$filter);
-            if($category){
-                $returnArr['errCode']      = -1;
-                $returnArr['data']         = $category;
-            }else{
-                $returnArr['errCode']     = 2;
-                $returnArr['data']        = 'No data found';
+    public function editCategory()
+    {
+        $this->form_validation->set_rules('id', 'Id', 'required|trim|xss_clean|max_length[255]');
+        if ($this->form_validation->run()) {
+            $filter = array('id' => $this->input->post('id'));
+
+            $category = $this->AdminModel->getDetails('category', $filter);
+            if ($category) {
+                $returnArr['errCode'] = -1;
+                $returnArr['data'] = $category;
+            } else {
+                $returnArr['errCode'] = 2;
+                $returnArr['data'] = 'No data found';
             }
-        }else{
+        } else {
             $returnArr['errCode'] = 3;
             foreach ($this->input->post() as $key => $value) {
                 $returnArr['message'][$key] = form_error($key);
@@ -84,49 +92,52 @@ class Category extends CI_Controller {
         }
         echo json_encode($returnArr);
     }
-    public function updateCategory(){
-       $this->form_validation->set_rules('id','Id','required|trim|xss_clean|max_length[255]');
-       $this->form_validation->set_rules('category','Category Name','required|trim|xss_clean|max_length[255]');
-        $this->form_validation->set_rules('status','Status','required|trim|xss_clean|max_length[255]');
-        if($this->form_validation->run()){
-            $filter = array('id !='=>$this->input->post('id'),
-                            'category_name'=>$this->input->post('categories'));
 
-            $experience = $this->AdminModel->getDetails('categories',$filter);
-            if($experience){
-                    $returnArr['errCode']               = 3;
-                    $returnArr['message']['product']      = '<p class="error">Category Already Exists</p>';
-            }else{
-                if(isset($_FILES) && !empty($_FILES)){
-                    $upload = upload_image($_FILES,'file');
+    public function updateCategory()
+    {
+        $this->form_validation->set_rules('id', 'Id', 'required|trim|xss_clean|max_length[255]');
+        $this->form_validation->set_rules('category', 'Category Name', 'required|trim|xss_clean|max_length[255]');
+        $this->form_validation->set_rules('status', 'Status', 'required|trim|xss_clean|max_length[255]');
+        if ($this->form_validation->run()) {
+            $filter = array('id !=' => $this->input->post('id'),
+                'category' => $this->input->post('category'));
 
-                    if($upload['errCode'] == -1){
+            $experience = $this->AdminModel->getDetails('category', $filter);
+            if ($experience) {
+                $returnArr['errCode'] = 3;
+                $returnArr['message']['product'] = '<p class="error">Category Already Exists</p>';
+            } else {
+                if (isset($_FILES) && !empty($_FILES)) {
+                    $upload = upload_image($_FILES, 'file');
+
+                    if ($upload['errCode'] == -1) {
                         $image = $upload['image'];
-                    }else{
-                        $returnArr['errCode']      = 3;
-                        $returnArr['message']['image']      = '<p class="error">'.strip_tags($upload['image']).'</p>';; 
-                        echo json_encode($returnArr);die();
+                    } else {
+                        $returnArr['errCode'] = 3;
+                        $returnArr['message']['image'] = '<p class="error">' . strip_tags($upload['image']) . '</p>';;
+                        echo json_encode($returnArr);
+                        die();
                     }
-                }else{
+                } else {
                     $image = $this->input->post('old_image');
                 }
 
-                $filter     = array('id'=>$this->input->post('id'));
-                 $data = array('category_name'   =>$this->input->post('category'),
-                               'category_icon'   =>$image,
-                               'status'          =>$this->input->post('status')
-                              );
-                $updateMenu = $this->AdminModel->update('categories',$filter,$data);
-                if($updateMenu){
-                    $returnArr['errCode']     = -1;
-                    $returnArr['message']     = 'Category Updated Successfully';
-                }else{
-                    $returnArr['errCode']     = 2;
-                    $returnArr['message']     = 'Please try again';
+                $filter = array('id' => $this->input->post('id'));
+                $data = array('category' => $this->input->post('category'),
+                    'image' => $image,
+                    'status' => $this->input->post('status')
+                );
+                $updateMenu = $this->AdminModel->update('category', $filter, $data);
+                if ($updateMenu) {
+                    $returnArr['errCode'] = -1;
+                    $returnArr['message'] = 'Category Updated Successfully';
+                } else {
+                    $returnArr['errCode'] = 2;
+                    $returnArr['message'] = 'Please try again';
                 }
             }
-            
-        }else{
+
+        } else {
             $returnArr['errCode'] = 3;
             foreach ($this->input->post() as $key => $value) {
                 $returnArr['message'][$key] = form_error($key);
@@ -135,45 +146,48 @@ class Category extends CI_Controller {
         echo json_encode($returnArr);
     }
 
-    public function file_check($str){
-        $allowed_mime_type_arr = array('text/x-comma-separated-values', 'text/comma-separated-values', 'application/octet-stream', 'application/vnd.ms-excel', 'application/x-csv', 'text/x-csv', 'text/csv', 'application/csv', 'application/excel', 'application/vnd.msexcel', 'text/plain','application/pdf','image/gif','image/jpeg','image/pjpeg','image/png','image/x-png');
+    public function file_check($str)
+    {
+        $allowed_mime_type_arr = array('text/x-comma-separated-values', 'text/comma-separated-values', 'application/octet-stream', 'application/vnd.ms-excel', 'application/x-csv', 'text/x-csv', 'text/csv', 'application/csv', 'application/excel', 'application/vnd.msexcel', 'text/plain', 'application/pdf', 'image/gif', 'image/jpeg', 'image/pjpeg', 'image/png', 'image/x-png');
         $mime = get_mime_by_extension($_FILES['file']['name']);
-        if(isset($_FILES['file']['name']) && $_FILES['file']['name']!=""){
-            if(in_array($mime, $allowed_mime_type_arr)){
+        if (isset($_FILES['file']['name']) && $_FILES['file']['name'] != "") {
+            if (in_array($mime, $allowed_mime_type_arr)) {
                 return true;
-            }else{
+            } else {
                 $this->form_validation->set_message('file_check', 'Please select only pdf/gif/jpg/png/csv file.');
                 return false;
             }
-        }else{
+        } else {
 
             $this->form_validation->set_message('file_check', 'Please choose a file to upload.');
             return false;
         }
     }
 
-    public function deleteCategory(){
-        $this->form_validation->set_rules('id','Id','required');
-        if($this->form_validation->run()){
+    public function deleteCategory()
+    {
+        $this->form_validation->set_rules('id', 'Id', 'required');
+        if ($this->form_validation->run()) {
             $id = $this->input->post('id');
-            $filter = array('id'=>$id);
-            $data   = array('status'=>'0');
+            $filter = array('id' => $id);
+            $data = array('status' => '0');
 
-            $p_filter = array('category_id'=>$id);
-            $this->AdminModel->update('sub_categories',$p_filter,$data);
-            $this->AdminModel->update('products',$p_filter,$data);
+            $p_filter = array('category_id' => $id);
+            $this->AdminModel->update('sub_categories', $p_filter, $data);
+            $this->AdminModel->update('products', $p_filter, $data);
 
-            $update = $this->AdminModel->update('categories',$filter,$data);
+            $update = $this->AdminModel->update('category', $filter, $data);
 
-            if($update){
+            if ($update) {
                 $returnArr['error'] = false;
                 $returnArr['message'] = 'Delete Successfully';
-            }else{
+            } else {
                 $returnArr['error'] = true;
                 $returnArr['message'] = 'Please trya again';
             }
-        }else{
-            print_r(validation_errors());exit;
+        } else {
+            print_r(validation_errors());
+            exit;
             $returnArr['error'] = true;
             $returnArr['message'] = 'Id is required';
         }

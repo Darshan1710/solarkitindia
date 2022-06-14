@@ -468,6 +468,21 @@ class Admin extends CI_Controller {
 
         echo json_encode($returnArr);
     }
+    public function imageUpload(){
+        if(isset($_FILES)){
+            $upload = upload_image($_FILES,'upload');
+
+            if($upload['errCode'] == -1){
+                $url = base_url().$upload['image'];
+            }else{
+                $url = $upload['image'];
+            }
+        }else{
+            $url = '';
+        }
+
+        echo json_encode(array('url'=>$url));
+    }
     
 
 }   

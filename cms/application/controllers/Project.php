@@ -74,11 +74,11 @@ class Project extends CI_Controller {
 
             $data[] = array(
                 $i,
-                $action,
                 $image,
                 $member->title,
                 $status,
-                date('d-m-Y h:i A',strtotime($member->created_at))
+                date('d-m-Y h:i A',strtotime($member->created_at)),
+                $action
             );
         }
 
@@ -95,27 +95,18 @@ class Project extends CI_Controller {
     public function projectForm(){
         $this->load->view('project/projectForm');
     }
-    public function addProduct(){
+    public function addProject(){
 
-        $this->form_validation->set_rules('product_name','Product Name','required|trim|xss_clean|max_length[255]');
-        $this->form_validation->set_rules('unit_price','Unit Price','required|trim|xss_clean|max_length[255]');
-        $this->form_validation->set_rules('sell_price','Sell Price','required|trim|xss_clean|max_length[255]');
+        $this->form_validation->set_rules('title','Title','required|trim|xss_clean|max_length[255]');
+        $this->form_validation->set_rules('tags','Tags','required|trim|xss_clean|max_length[255]');
+        $this->form_validation->set_rules('status','Status','required|trim|xss_clean|max_length[255]');
         $this->form_validation->set_rules('short_description','Short Description','');
         $this->form_validation->set_rules('long_description','Long Description','');
-        $this->form_validation->set_rules('file','','callback_file_check');
-        $this->form_validation->set_rules('category_id','Category','required|trim|xss_clean|max_length[255]');
-        $this->form_validation->set_rules('subcategory_id','Sub Category','required|trim|xss_clean|max_length[255]');
-        $this->form_validation->set_rules('discount','Discount','trim|xss_clean|max_length[255]');
-        $this->form_validation->set_rules('stock','Stock','trim|xss_clean|max_length[255]');
-        $this->form_validation->set_rules('product_type','Product Type','required|trim|xss_clean|max_length[255]');
-        $this->form_validation->set_rules('active','Active','required|trim|xss_clean|max_length[255]');
-        $this->form_validation->set_rules('status','Status','required|trim|xss_clean|max_length[255]');
-
         if($this->form_validation->run()){
-            $filter = array('product_name'=>$this->input->post('product_name'));
+            $filter = array('title'=>$this->input->post('title'));
 
-            $checkMenu = $this->AdminModel->getDetails('products',$filter);
-            if($checkMenu){
+            $checkExists = $this->AdminModel->getDetails('projects',$filter);
+            if($checkExists){
                 $returnArr['errCode']               = 3;
                 $returnArr['message']['product_name']      = '<p class="error">Products Already Exists</p>';
             }else{
@@ -134,34 +125,18 @@ class Project extends CI_Controller {
                     $image = '';
                 }
 
-                $data = array('product_name'=>$this->input->post('product_name'),
-                    'sku'         =>time(),
-                    'unit_price'  =>$this->input->post('unit_price'),
-                    'sell_price'  =>$this->input->post('sell_price'),
+                $data = array('title'=>$this->input->post('title'),
+                    'tags'  =>$this->input->post('tags'),
+                    'image' => $image,
                     'short_description'=>$this->input->post('short_description'),
                     'long_description' =>$this->input->post('long_description'),
-                    'category_id' =>$this->input->post('category_id'),
-                    'sub_category' =>$this->input->post('subcategory_id'),
-                    'discount'    =>$this->input->post('discount'),
-                    'product_type'=>$this->input->post('product_type'),
-                    'image'       =>$image,
                     'status'      =>$this->input->post('status')
                 );
 
-                $id = $this->AdminModel->insert('products',$data);
+                $id = $this->AdminModel->insert('projects',$data);
 
                 if($id){
-
-                    $stock_data = array('product_id'=>$id,
-                        'stock_in'  =>$this->input->post('stock'),
-                        'stock_out' =>0,
-                        'remaning_stock'=>$this->input->post('stock')
-                    );
-                    $this->AdminModel->insert('stocks',$stock_data);
-
                     $returnArr['errCode']     = -1;
-                    $returnArr['product_id']  = $id;
-                    $returnArr['product_type'] = $this->input->post('product_type');
                     $returnArr['message']  = 'Success';
                 }else{
                     $returnArr['errCode']     = 2;
@@ -169,6 +144,7 @@ class Project extends CI_Controller {
                 }
             }
         }else{
+           // print_r(validation_errors());exit;
             $returnArr['errCode'] = 3;
             $returnArr['message']['file'] = form_error('file');
             foreach ($this->input->post() as $key => $value) {
@@ -193,56 +169,30 @@ class Project extends CI_Controller {
 
         echo json_encode(array('url'=>$url));
     }
-    public function editProduct(){
-        $c_filter = array('status'=>'1');
-        $data['category'] = $this->AdminModel->getList('categories',$c_filter);
-        $data['sub_category'] = $this->AdminModel->getList('sub_categories',$c_filter);
-
+    public function editProject(){
         $filter = array('id'=>$this->uri->segment(3));
-
-        $data['product'] = $this->AdminModel->getDetails('products',$filter);
-
-        $s_filter = array('product_id'=>$this->uri->segment(3));
-        $data['stock'] = $this->AdminModel->getDetails('stocks',$s_filter);
-
-        $this->load->view('product/editProduct',$data);
+        $data['projects'] = $this->AdminModel->getDetails('projects',$filter);
+        $this->load->view('project/editProject',$data);
 
     }
-    public function updateProduct(){
-
-
-        $this->form_validation->set_rules('product_name','Product Name','required|trim|xss_clean|max_length[255]');
-        $this->form_validation->set_rules('unit_price','Unit Price','required|trim|xss_clean|max_length[255]');
-        $this->form_validation->set_rules('sell_price','Sell Price','required|trim|xss_clean|max_length[255]');
+    public function updateProject(){
+        $this->form_validation->set_rules('title','Title','required|trim|xss_clean|max_length[255]');
+        $this->form_validation->set_rules('tags','Tags','required|trim|xss_clean|max_length[255]');
+        $this->form_validation->set_rules('status','Status','required|trim|xss_clean|max_length[255]');
         $this->form_validation->set_rules('short_description','Short Description','');
         $this->form_validation->set_rules('long_description','Long Description','');
-        $this->form_validation->set_rules('category_id','Category','required|trim|xss_clean|max_length[255]');
-        $this->form_validation->set_rules('subcategory_id','Sub Category','required|trim|xss_clean|max_length[255]');
-        $this->form_validation->set_rules('id','Id','required|trim|xss_clean|max_length[255]');
-        $this->form_validation->set_rules('status','Status','required');
-        $this->form_validation->set_rules('product_type','Product Type','required|trim|xss_clean|max_length[255]');
-        $this->form_validation->set_rules('active','Active','required|trim|xss_clean|max_length[255]');
-        $this->form_validation->set_rules('discount','Discount','trim|xss_clean|max_length[255]');
-        $this->form_validation->set_rules('stock','Stock','required|trim|xss_clean|max_length[255]');
         if($this->form_validation->run()){
-            $filter = array('id !='=>$this->uri->segment(3),
-                'sku'=>$this->input->post('sku'));
+            $filter = array('id !='=>$this->input->post('id'),
+                'title'=>$this->input->post('title'));
 
+            $projectData = $this->AdminModel->getDetails('projects',$filter);
 
-            $product_data = $this->AdminModel->getDetails('products',$filter);
-            // echo $this->db->last_query();exit;
-            $price_data   = array('product_id'=>$this->uri->segment(3),
-                'price'     =>$this->input->post('unit_price')
-            );
-
-            $this->db->insert('product_price_backup',$price_data);
-
-            if($product_data){
+            if($projectData){
                 $returnArr['errCode']               = 3;
-                $returnArr['message']['product_name']      = '<p class="error">Product Already Exists</p>';
+                $returnArr['message']['title']      = '<p class="error">Project Already Exists</p>';
             }else{
                 if(isset($_FILES) && !empty($_FILES)){
-                    $upload = upload_image($_FILES,'image');
+                    $upload = upload_image($_FILES,'file');
 
                     if($upload['errCode'] == -1){
                         $image = $upload['image'];
@@ -255,43 +205,22 @@ class Project extends CI_Controller {
                     $image = $this->input->post('old_image');
                 }
 
-                $filter     = array('id'=>$this->uri->segment(3));
-                $data = array('product_name'=>$this->input->post('product_name'),
-                    'unit_price'  =>$this->input->post('unit_price'),
-                    'sell_price'  =>$this->input->post('sell_price'),
+                $filter     = array('id'=>$this->input->post('id'));
+                $data = array('title'=>$this->input->post('title'),
+                    'tags'  =>$this->input->post('tags'),
+                    'image' => $image,
                     'short_description'=>$this->input->post('short_description'),
-                    'long_description'=>$this->input->post('long_description'),
-                    'category_id' =>$this->input->post('category_id'),
-                    'sub_category' =>$this->input->post('subcategory_id'),
-                    'discount'    =>$this->input->post('discount'),
-                    'product_type'=>$this->input->post('product_type'),
-                    'image'       =>$image,
-                    'status'      =>$this->input->post('status'),
-                    'active'      =>$this->input->post('active')
+                    'long_description' =>$this->input->post('long_description'),
+                    'status'      =>$this->input->post('status')
                 );
 
 
 
-                $updateMenu = $this->AdminModel->update('products',$filter,$data);
-                // echo $this->db->last_query();exit;
-                if($updateMenu){
+                $update = $this->AdminModel->update('projects',$filter,$data);
 
-                    $s_filter = array('product_id'=>$this->uri->segment(3));
-                    $stock_details = $this->AdminModel->getDetails('stocks',$s_filter);
-
-                    $stock = $this->input->post('stock');
-                    $stock = $stock - $stock_details['remaning_stock'];
-                    $stock_in = $stock_details['stock_in'];
-
-                    $stock_data = array('stock_in'=>$stock_in + $stock,
-                        'remaning_stock'=>$stock_in + $stock
-                    );
-                    $this->AdminModel->update('stocks',$s_filter,$stock_data);
-
+                if($update){
                     $returnArr['errCode']     = -1;
-                    $returnArr['product_id']  = $this->uri->segment(3);
-                    $returnArr['product_type']= $this->input->post('product_type');
-                    $returnArr['message']  = 'Product Updated Successfully';
+                    $returnArr['message']  = 'Project Updated Successfully';
                 }else{
                     $returnArr['errCode']     = 2;
                     $returnArr['message']  = 'Please try again';

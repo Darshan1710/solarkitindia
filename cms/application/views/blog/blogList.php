@@ -106,7 +106,6 @@
                                     <th>Sr. No.</th>
                                     <th>Title</th>
                                     <th>Image</th>
-                                    <th>Post By</th>
                                     <th>Post Date</th>
                                     <th>Status</th>
                                     <th>Action</th>
@@ -222,21 +221,17 @@
                 "targets": 2
             },
             {
-                "name": "post_by",
+                "name": "date",
                 "targets": 3
             },
             {
-                "name": "date",
-                "targets": 4
-            },
-            {
                 "name": "status",
-                "targets": 5,
+                "targets": 4,
                 "orderable": false
             },
             {
                 "name": "action",
-                "targets": 6,
+                "targets": 5,
                 "orderable": false
             }
 

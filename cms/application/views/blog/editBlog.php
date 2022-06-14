@@ -114,12 +114,6 @@
                     </div>
                     <div class="col-md-3">
                       <div class="form-group">
-                          <label>Post By:</label>
-                          <input type="text" class="form-control" name="post_by" id="post_by" value="<?php echo set_value('blog',isset($blog['post_by']) ? $blog['post_by'] : '')?>"> 
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                      <div class="form-group">
                           <label>Date:</label>
                           <input type="datetime-local" class="form-control" name="date" id="date" value="<?php echo date('Y-m-d\TH:i:s',strtotime($blog['date']))?>">
                         </div>
@@ -129,25 +123,26 @@
                       <div class="form-group">
                           
                           <label>Image (200 x 200)</label><br>
-                                <img class="image" width="50px" height="50px" src="<?php echo $image = !empty($blog['image']) ? base_url().$blog['image']  : ''; ?>">
+                                <img class="image" width="50px" height="50px" src="<?php echo $image = !empty($blog['img']) ? base_url().$blog['img']  : ''; ?>">
                                 <button class="btn btn-sm btn-primary change_image" type="button">Change Image</button>
                                 <input type="hidden" name="image" class="new_image">
-                                <input type="hidden"  class="form-control old_image" name="old_image" value="<?php echo $image = empty($blog['image']) ? set_value('old_image') : $blog['image']?>">
+                                <input type="hidden"  class="form-control old_image" name="old_image" value="<?php echo $image = empty($blog['img']) ? set_value('old_image') : $blog['img']?>">
                         </div>
                     </div>
-                  </div>
-                  <div class="row">
+
+
                     <div class="col-md-3">
-                      <div class="form-group">
-                          <label>Status:</label>
-                          <select name="status" class="form-control select" id="status">
-                              <option value="">Please select status</option>
-                              <option value="1"  <?php echo set_select('status', '1', $blog['status'] == '1' ? TRUE : FALSE ); ?>>Active</option>
-                              <option value="0"  <?php echo set_select('status', '0', $blog['status'] == '0' ? TRUE : FALSE ); ?>>Inactive</option>
-                          </select>
+                        <div class="form-group">
+                            <label>Status:</label>
+                            <select name="status" class="form-control select" id="status">
+                                <option value="">Please select status</option>
+                                <option value="1"  <?php echo set_select('status', '1', $blog['status'] == '1' ? TRUE : FALSE ); ?>>Active</option>
+                                <option value="0"  <?php echo set_select('status', '0', $blog['status'] == '0' ? TRUE : FALSE ); ?>>Inactive</option>
+                            </select>
                         </div>
                     </div>
                   </div>
+
                   <div class="row">
                     <div class="col-md-12">
                     <div class="form-group">
@@ -306,7 +301,7 @@ class MyUploadAdapter {
         // integration to choose the right communication channel. This example uses
         // a POST request with JSON as a data structure but your configuration
         // could be different.
-        xhr.open( 'POST', base_url + 'Product/imageUpload', true );
+        xhr.open( 'POST', base_url + 'Project/imageUpload', true );
         xhr.responseType = 'json';
     }
 

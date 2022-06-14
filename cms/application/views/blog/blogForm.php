@@ -104,12 +104,7 @@
                           <input type="text" class="form-control" name="title" id="title">
                         </div>
                     </div>
-                    <div class="col-md-3">
-                      <div class="form-group">
-                          <label>Post By:</label>
-                          <input type="text" class="form-control" name="post_by" id="post_by"> 
-                        </div>
-                    </div>
+
                     <div class="col-md-3">
                       <div class="form-group">
                           <label>Date:</label>
@@ -123,19 +118,19 @@
                           <input type="file" class="form-control" id="file" name="file" readonly >
                         </div>
                     </div>
+
+                      <div class="col-md-3">
+                          <div class="form-group">
+                              <label>Status:</label>
+                              <select name="status" class="form-control select" id="status">
+                                  <option value="">Please select status</option>
+                                  <option value="1">Active</option>
+                                  <option value="0">Inactive</option>
+                              </select>
+                          </div>
+                      </div>
                   </div>
-                  <div class="row">
-                    <div class="col-md-3">
-                      <div class="form-group">
-                          <label>Status:</label>
-                          <select name="status" class="form-control select" id="status">
-                              <option value="">Please select status</option>
-                              <option value="1">Active</option>
-                              <option value="0">Inactive</option>
-                          </select>
-                        </div>
-                    </div>
-                  </div>
+
                   <div class="row">
                     <div class="col-md-12">
                     <div class="form-group">
@@ -254,7 +249,7 @@ class MyUploadAdapter {
         // integration to choose the right communication channel. This example uses
         // a POST request with JSON as a data structure but your configuration
         // could be different.
-        xhr.open( 'POST', base_url + 'Product/imageUpload', true );
+        xhr.open( 'POST', base_url + 'Project/imageUpload', true );
         xhr.responseType = 'json';
     }
 

@@ -110,11 +110,11 @@
                         <tr>
 
                             <th>Sr. No.</th>
-                            <th>Action</th>
                             <th>Image</th>
                             <th>Project Name</th>
                             <th>Status</th>
                             <th>Created At</th>
+                            <th>Action</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -232,21 +232,21 @@
                     "targets": 0
                 },
                 {
-                    "name": "action",
-                    "orderable": false,
-                    'searchable': false,
+                    "name": "image",
                     "targets": 1
                 },
                 {
-                    "name": "image",
+                    "name": "title",
                     "targets": 2
                 },
                 {
-                    "name": "title",
+                    "name": "status",
                     "targets": 3
                 },
                 {
-                    "name": "status",
+                    "name": "action",
+                    "orderable": false,
+                    'searchable': false,
                     "targets": 4
                 }
             ]

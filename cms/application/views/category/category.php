@@ -115,8 +115,8 @@
                                 ?>
                                     <tr>
                                     <td><?php echo $i; ?></td>
-                                    <td><?php echo $row['category_name']; ?></td>
-                                    <td><img src="<?php echo base_url().$row['category_icon'] ?>" width="50px" height="50px"></td>
+                                    <td><?php echo $row['category']; ?></td>
+                                    <td><img src="<?php echo base_url().$row['image'] ?>" width="50px" height="50px"></td>
                                     <td><?php if($row['status'] == 1) {
                                         echo '<button class="btn btn-sm btn-success">Active</button>';
                                     }else{
@@ -366,9 +366,9 @@
                     var obj = $.parseJSON(data);
                     if (obj.errCode == -1) {
                         $('.id').val(id);
-                        $('.category').val(obj.data.category_name);
+                        $('.category').val(obj.data.category);
                         $(".status").select2().select2('val', obj.data.status);
-                        $(".image").attr('src',base_url+obj.data.category_icon);
+                        $(".image").attr('src',base_url+obj.data.image);
                         $(".old_image").val(obj.data.category_icon);
 
                     } else if (obj.errCode == 2) {

@@ -749,14 +749,14 @@ class AdminModel extends CI_Model {
     }
     private function _get_blog_details_datatables_query($postData){
 
-        $this->db->select('id,title,post_by,date,image,description,status');
+        $this->db->select('id,title,date,img,status');
         $this->db->where('status','1');
         $this->db->from('blogs');
         // Set orderable column fields
-        $this->column_order = array('id','title','post_by','date','description','status');
+        $this->column_order = array('id','title','date','img','status');
 
         // Set searchable column fields
-        $this->column_search = array('title','post_by','date','description','status');
+        $this->column_search = array('title','date','img','status');
         // Set default order
         $this->order = array('id' => 'desc');  
 
