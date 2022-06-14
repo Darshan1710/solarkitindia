@@ -46,7 +46,7 @@
                                 <li><a href="">Home</a></li>
                                 <li><a href="about-us">About us</a></li>
                                 <li><a href="products.php">Products</a></li>
-                                <li><a href="projects.php">References</a></li>
+                                <li><a href="projects.php">Recent Projects</a></li>
                                 <li><a href="blogList.php">Blog</a></li>
                                 <li><a href="faq.php">FAQ</a></li>
                                 <li><a href="news.solarkitindia.com">News</a></li>

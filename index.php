@@ -22,19 +22,15 @@ include("connect.php");
 
     </div>
 </div>
-<div class="container">
-<div class="slider demo">
-    <div><img src="images/banner/solarKit-website.png" class="img-responsive demo_image"></div>
-    <div><img src="images/banner/solarKit-website.png" class="img-responsive demo_image"></div>
-    <div><img src="images/banner/solarKit-website.png" class="img-responsive demo_image"></div>
-</div>
+<div class="container-fluid image-strip">
+    <div><img src="images/Made_in_India_icon_banner.png" class="img-responsive"></div>
 </div>
 
 <div class="in_categW">
     <div class="container">
         <div class="in_title">
             <span>Product Categories</span>
-            <p>We design and manufacture solar mounting systems, also we sell the accessories seperately and accept OEM.&nbsp;</p>
+            <p>SOLAR MOUNTING STRUCTURES CATEGORIES</p>
         </div>
         <ul class="in_categL clearfix">
             <?php
@@ -47,7 +43,7 @@ include("connect.php");
                         <div class="column">
                             <a href="products.php?category_id=<?php echo $cat['id'] ?>"></a>
                             <div class="images"
-                                 style="background-image: url(demo/uploadfile/category/f4fa715dceb26ac5d143123c121ac2d4.jpg)"></div>
+                                 style="background-image: url(<?= $image_link.$cat['background'] ?>)"></div>
                             <div class="in_categ_w">
                                 <img class="in_categ_img" src="<?php echo $image_link . $cat['image']; ?>"
                                      alt="Metal Roof Solar Mounting System">
@@ -66,12 +62,17 @@ include("connect.php");
 </div>
 <div class="container">
     <div class="slider video_gallery">
-        <div ><img src="images/banner/solarKit-website.png" class="img-responsive demo_image"></div>
-        <div ><img src="images/banner/solarKit-website.png" class="img-responsive demo_image"></div>
-        <div ><img src="images/banner/solarKit-website.png" class="img-responsive demo_image"></div>
-        <div ><img src="images/banner/solarKit-website.png" class="img-responsive demo_image"></div>
-        <div ><img src="images/banner/solarKit-website.png" class="img-responsive demo_image"></div>
-        <div ><img src="images/banner/solarKit-website.png" class="img-responsive demo_image"></div>
+        <?php
+            $videoQuery = "SELECT * FROM video WHERE status = '1'";
+            $video = mysqli_query($db, $videoQuery);
+            if ($video) {
+                foreach ($video as $videoRow) { ?>
+        <div >
+            <iframe
+                    src="https://www.youtube.com/embed/<?= $videoRow['link'] ?>">
+            </iframe>
+        </div>
+        <?php }  }?>
     </div>
 </div>
 <div class="in_aboutW">
@@ -82,6 +83,9 @@ include("connect.php");
                 <p>Company Establishment</p>
             </div>
             <div class="in_videoW">
+                <div class="in_design">
+                    <span>DESIGN IN EUROPE, MADE IN INDIA</span>
+                </div>
                 <div class="text">India's leading
                     <span>solar structure manufacture & supplier</span> offers most economical Metal Roof Solar Mounting Structure.
                 </div>
@@ -133,18 +137,18 @@ include("connect.php");
                 <ul class="adv_list clearfix">
                     <li class="col-xs-6">
                         <div class="icon"><img src="demo/uploadfile/single/ebf2cf8d7cad921567249bd6aee313cb.png"
-                                               alt="R&D Team"></div>
+                                               alt="R&D - Quality Assurance"></div>
                         <div class="wrap">
-                            <em class="title">R&D Team</em>
-                            <div class="text">We design and manufacture the solar mounting systems.</div>
+                            <em class="title">R&D - Quality Assurance</em>
+                            <div class="text">We have crafted innovative solar stand towards excellence.</div>
                         </div>
                     </li>
                     <li class="col-xs-6">
                         <div class="icon"><img src="demo/uploadfile/single/3fbde64e606e045cb2ce8783bca6cb6c.png"
-                                               alt="Professional Certification"></div>
+                                               alt="Make In India"></div>
                         <div class="wrap">
-                            <em class="title">Professional Certification</em>
-                            <div class="text">We offer certificates according to customer's requests.</div>
+                            <em class="title">Make In India</em>
+                            <div class="text">We manufacture & supply quality solar standing structures in India</div>
                         </div>
                     </li>
 
@@ -198,8 +202,8 @@ include("connect.php");
 <div class="in_proW">
     <div class="container">
         <div class="in_title">
-            <span>Hot Products</span>
-            <p>We have stocks for most of items, we accept small orders for them and can ship goods quickly.&nbsp;</p>
+            <span>HIGHEST SELLING SOLAR STRUCTURES</span>
+            <p>SOLAR STAND WITH BEST IN MARKET WARRANTY AND QUICK TO INSTALL</p>
         </div>
         <ul class="in_proL clearfix">
             <?php
@@ -225,47 +229,24 @@ include("connect.php");
             <span>Testimonials</span>
         </div>
         <div class="slider autoplay2">
-
+            <?php
+            $testimonialsQuery = "SELECT * FROM testimonials";
+            $testimonials = mysqli_query($db, $testimonialsQuery);
+            if ($testimonials) {
+            foreach ($testimonials as $testimonialsRow) { ?>
             <div>
                 <div class="li">
-                    <div class="column">
+                    <div class="column testi_coulumn">
                         <div class="text">
 
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                            <h5 class="mt-20"> - XYZ</h5>
+                            <p><?= $testimonialsRow['review'] ?></p>
+                            <h5 class="mt-20"> - <?= $testimonialsRow['review_by'] ?></h5>
                         </div>
 
                     </div>
                 </div>
             </div>
-
-            <div>
-                <div class="li">
-                    <div class="column">
-                        <div class="text">
-
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                            <h5 class="mt-20"> - PQR</h5>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div class="li">
-                    <div class="column">
-                        <div class="text">
-
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                            <h5 class="mt-20"> - ABC</h5>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-
+            <?php } } ?>
         </div>
     </div>
 </div>
@@ -274,7 +255,7 @@ include("connect.php");
     <div class="container">
         <div class="in_title">
             <span>Our Projects</span>
-            <p>Projects we have done all around the world.&nbsp;</p>
+            <p>PROJECTS WE HAVE DELIVERED ACROSS INDIA</p>
         </div>
         <ul class="in_CaseL clearfix">
             <?php $projectQuery = "SELECT * FROM projects WHERE status = '1'";
@@ -317,27 +298,27 @@ include("connect.php");
                 </div>
                 <div class="numbers__one"
                      style="background-image:url(demo/uploadfile/single/125d707a2943df4c83c8b6559f09887b.png)">
-                    <div class="numbers__body chart" data-percent="26000">
-                        <div class="numbers__num percent">26000</div>
+                    <div class="numbers__body chart" data-percent="5000">
+                        <div class="numbers__num percent">5000</div>
 
                     </div>
-                    <div class="number__desc">Factory area(m²)</div>
+                    <div class="number__desc">Warehouse area (Sq ft)</div>
                 </div>
                 <div class="numbers__one numbers__thr"
                      style="background-image:url(demo/uploadfile/single/b8117e2069bdeb24f7aba1e3f20130c0.png)">
-                    <div class="numbers__body chart" data-percent="90">
-                        <div class="numbers__num percent">90</div>
+                    <div class="numbers__body chart" data-percent="120">
+                        <div class="numbers__num percent">120</div>
                         <span>+</span>
                     </div>
-                    <div class="number__desc">Countries</div>
+                    <div class="number__desc">Project Completed</div>
                 </div>
                 <div class="numbers__one"
                      style="background-image:url(demo/uploadfile/single/a7e2eaedc03fe3a2b215f59a17c3525b.png)">
-                    <div class="numbers__body chart" data-percent="60000">
-                        <div class="numbers__num percent">60000</div>
+                    <div class="numbers__body chart" data-percent="500">
+                        <div class="numbers__num percent">500</div>
 
                     </div>
-                    <div class="number__desc">Annual Sales(M)</div>
+                    <div class="number__desc">Project Size (MW)</div>
                 </div>
 
 
@@ -350,7 +331,7 @@ include("connect.php");
     <div class="container">
         <div class="in_title">
             <span>News & Knowledge </span>
-            <p>Know more about the solar mounting systems</p>
+            <p>KNOW MORE ABOUT MOUNTING SOLAR-KIT</p>
         </div>
         <ul class="list clearfix">
             <?php $blogQuery = "SELECT * FROM blogs LIMIT 3";

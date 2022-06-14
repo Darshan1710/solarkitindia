@@ -114,7 +114,7 @@
                                     <ul class="clearfix">
                                         <li><a href='about-us.php'>About Us</a></li>
                                         <li><a href="products.php">Products</a>
-                                        <li><a href="projects.php">References</a>
+                                        <li><a href="projects.php">Recent Project</a>
                                         <li><a href="blogList.php">Blog</a>
                                         </li>
                                         <li><a href="faq.php">FAQ</a>

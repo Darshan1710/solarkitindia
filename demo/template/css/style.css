@@ -1586,6 +1586,7 @@ transform: translateX(-3px); } }
 .in_proW .slider .li .column{border: 2px solid #eeeeee;padding: 10px;position: relative;}
 .in_proW .slider .li .image{display: block;background: #000;position: relative;z-index: 5;}
 .in_proW .slider .li .image img{transition: all .9s;width: 100%;}
+.testi_coulumn{height: 300px}
  
 .in_proW .slider .li .title{display: block;margin-top: 15px;margin-bottom: 5px;color: #333333;font-size: 16px;line-height: 26px;overflow: hidden;height: 52px;font-family: 'poppins-semibold';position: relative;z-index: 5;} 
 .in_proW .slider .text{color: #888888;font-size: 12px;line-height: 24px;overflow: hidden;padding:10%;margin-bottom: 10px;position: relative;z-index: 5;}

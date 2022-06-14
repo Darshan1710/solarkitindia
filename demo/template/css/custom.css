@@ -149,3 +149,13 @@
 .video_gallery{
     margin-bottom: 5%;
 }
+.in_design span {
+    color: #000000bf;
+    font-size: 50px;
+    line-height: 52px;
+    padding-bottom: 12px;
+    font-family: 'BebasNeue';
+}
+.image-strip{
+    padding:0px!important;
+}

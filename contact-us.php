@@ -116,7 +116,20 @@
                                         <?php } } ?>
                                     </select>
                             </li>
-                            <li class="col-xs-12 meText">
+                            <li class="col-sm-6 col-xs-12">
+
+                                <select class="meInput" name="product" id="product">
+                                    <option value="">Please Select Product</option>
+                                    <?php $cityQuery = "SELECT * FROM city";
+                                    $city = mysqli_query($db,$cityQuery);
+                                    if($city){
+                                        foreach($city as $cityRow){
+                                            ?>
+                                            <option value="<?php echo $cityRow['name'] ?>"><?php echo $cityRow['name'] ?></option>
+                                        <?php } } ?>
+                                </select>
+                            </li>
+                            <li class="col-sm-6 col-xs-12 meText">
                                     <textarea id="message" placeholder="* Enter product details (such as  size, materials etc.) and other specific requirements to receive an accurate quote." maxlength="3000" name="message" class="meInput"></textarea>
                             </li>
                             <div class="clearfix"></div>

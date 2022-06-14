@@ -65,9 +65,9 @@
 <!--                                        -->
 <!--                                    </ul>-->
 <!--                                </li>-->
-<!--                                <li>-->
-<!--                                    <a href="#"><i class="icon-wrench3"></i> <span>Store</span></a>-->
-<!--                                    <ul>-->
+                                <li>
+                                    <a href="#"><i class="icon-wrench3"></i> <span>Store</span></a>
+                                    <ul>
 <!--                                       -->
 <!--                                        <li>-->
 <!--                                            <a href="#">Product</a>-->
@@ -84,9 +84,9 @@
 <!--                                         <li class="nav-item nav-item-submenu nav-item-open">-->
 <!--                                            <a href="--><?php //echo base_url()?><!--Banner/bannerList" class="nav-link "><i class="icon-price-tag3"></i> <span>Banner</span></a>-->
 <!--                                        </li>-->
-<!--                                        <li class="nav-item nav-item-submenu nav-item-open">-->
-<!--                                            <a href="--><?php //echo base_url()?><!--Blog/blogList" class="nav-link "><i class="icon-price-tag3"></i> <span>Blog</span></a>-->
-<!--                                        </li>-->
+                                        <li class="nav-item nav-item-submenu nav-item-open">
+                                            <a href="<?php echo base_url()?>Blog/blogList" class="nav-link "><i class="icon-price-tag3"></i> <span>Blog</span></a>
+                                        </li>
 <!--                                        <li class="nav-item nav-item-submenu nav-item-open">-->
 <!--                                            <a href="--><?php //echo base_url()?><!--Enquiry/enquiryList" class="nav-link "><i class="icon-price-tag3"></i> <span>Enquiry</span></a>-->
 <!--                                        </li>-->
@@ -97,7 +97,7 @@
 <!--                                            <a href="--><?php //echo base_url()?><!--Advertise/advertiseList" class="nav-link "><i class="icon-price-tag3"></i> <span>Advertise</span></a>-->
 <!--                                        </li>-->
 <!--                                    </ul>-->
-<!--                                </li>-->
+                                </li>
 
                             <?php } ?>
                                 <!-- /main -->
