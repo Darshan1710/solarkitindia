@@ -32,7 +32,7 @@
                                 <li class="nav-item nav-item-submenu nav-item-open">
                                     <a href="#" class="nav-link "><i class="icon-price-tag3"></i> <span>Catalog</span></a>
                                     <ul class="nav nav-group-sub" data-submenu-title="Form components">
-<!--                                        <li class="nav-item"><a href="--><?php //echo base_url()?><!--Product/productList" class="nav-link">Products</a></li>-->
+                                        <li class="nav-item"><a href="<?php echo base_url()?>Component/componentList" class="nav-link">Components</a></li>
 <!--                                        <li class="nav-item"><a href="--><?php //echo base_url()?><!--Product/affiliateProductList" class="nav-link">Affiliate Products</a></li>-->
                                         <li class="nav-item"><a href="<?php echo base_url()?>Category/categoryList" class="nav-link">Category</a></li>
 <!--                                        <li class="nav-item"><a href="--><?php //echo base_url()?><!--SubCategory/subCategoryList" class="nav-link">Sub Category</a></li>-->
@@ -86,6 +86,12 @@
 <!--                                        </li>-->
                                         <li class="nav-item nav-item-submenu nav-item-open">
                                             <a href="<?php echo base_url()?>Blog/blogList" class="nav-link "><i class="icon-price-tag3"></i> <span>Blog</span></a>
+                                        </li>
+                                        <li class="nav-item nav-item-submenu nav-item-open">
+                                            <a href="<?php echo base_url()?>Video/videoList" class="nav-link "><i class="icon-price-tag3"></i> <span>Video</span></a>
+                                        </li>
+                                        <li class="nav-item nav-item-submenu nav-item-open">
+                                            <a href="<?php echo base_url()?>Testimonials/testimonialsList" class="nav-link "><i class="icon-price-tag3"></i> <span>Testimonials</span></a>
                                         </li>
 <!--                                        <li class="nav-item nav-item-submenu nav-item-open">-->
 <!--                                            <a href="--><?php //echo base_url()?><!--Enquiry/enquiryList" class="nav-link "><i class="icon-price-tag3"></i> <span>Enquiry</span></a>-->
