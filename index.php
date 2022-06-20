@@ -68,7 +68,7 @@ include("connect.php");
             if ($video) {
                 foreach ($video as $videoRow) { ?>
         <div >
-            <iframe
+            <iframe class="video_iframe"
                     src="https://www.youtube.com/embed/<?= $videoRow['link'] ?>">
             </iframe>
         </div>
@@ -159,12 +159,37 @@ include("connect.php");
                 <div class="slider autoplay1">
                     <div>
                         <div class="li"><a href="#"><img
-                                        src="demo/uploadfile/bannerimg/16230471101468.jpg"
+                                        src="demo/uploadfile/bannerimg/1.jpg"
                                         alt="Metal Roof Solar Mounts"></a></div>
                     </div>
                     <div>
                         <div class="li"><a href="#"><img
-                                        src="demo/uploadfile/bannerimg/1617011897434831503.jpg"
+                                        src="demo/uploadfile/bannerimg/2.jpg"
+                                        alt="Metal Roof Solar Mounts"></a></div>
+                    </div>
+                    <div>
+                        <div class="li"><a href="#"><img
+                                        src="demo/uploadfile/bannerimg/3.jpg"
+                                        alt="Metal Roof Solar Mounts"></a></div>
+                    </div>
+                    <div>
+                        <div class="li"><a href="#"><img
+                                        src="demo/uploadfile/bannerimg/4.jpg"
+                                        alt="Metal Roof Solar Mounts"></a></div>
+                    </div>
+                    <div>
+                        <div class="li"><a href="#"><img
+                                        src="demo/uploadfile/bannerimg/5.jpg"
+                                        alt="Metal Roof Solar Mounts"></a></div>
+                    </div>
+                    <div>
+                        <div class="li"><a href="#"><img
+                                        src="demo/uploadfile/bannerimg/6.jpg"
+                                        alt="Metal Roof Solar Mounts"></a></div>
+                    </div>
+                    <div>
+                        <div class="li"><a href="#"><img
+                                        src="demo/uploadfile/bannerimg/7.jpg"
                                         alt="Metal Roof Solar Mounts"></a></div>
                     </div>
 
@@ -239,8 +264,8 @@ include("connect.php");
                     <div class="column testi_coulumn">
                         <div class="text">
 
-                            <p><?= $testimonialsRow['review'] ?></p>
-                            <h5 class="mt-20"> - <?= $testimonialsRow['review_by'] ?></h5>
+                            <p class="testimonials"><?= $testimonialsRow['review'] ?></p>
+                            <h5 class="mt-20 review_by"> - <?= $testimonialsRow['review_by'] ?></h5>
                         </div>
 
                     </div>

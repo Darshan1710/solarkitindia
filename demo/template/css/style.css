@@ -506,7 +506,7 @@ header .toggle div {
 
 
 /*mainmenu*/
-.mainmenu-area{display:block;padding-top:12px; padding-right:0;float: right;   }
+.mainmenu-area{display:block; padding-right:0;float: right;   }
 .mainmenu_box{float:left;width:36%;padding-right:0;}
 
 .mainmenu-left {
@@ -797,10 +797,10 @@ header .toggle div {
 	}
  
  /*index*/ 
-.header{transition:all .5s;padding: 0 0 18px; position:relative}
+.header{transition:all .5s;padding: 0px; position:relative}
 .header .header_m {position:relative; z-index:99} 
  
-#logo{position:relative;text-align:left;float:left;z-index:999;  margin-top: 4%  }
+#logo{position:relative;text-align:left;float:left;z-index:999;  margin-top: 2%  }
  
 #logo h1{margin:0;padding:0; }
 #logo p{ font-size:40px; color:#333333; margin-left:22px; line-height:44px} 
