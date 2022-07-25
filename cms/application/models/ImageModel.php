@@ -1,4 +1,3 @@
-
 <?php
 
 class ImageModel extends CI_Model {

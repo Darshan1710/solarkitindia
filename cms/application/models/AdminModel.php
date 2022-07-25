@@ -250,7 +250,7 @@ class AdminModel extends CI_Model {
         return $query->result();
     }
     public function countAllProductDetails(){
-        $this->db->from('products');
+        $this->db->from('sub_products');
         return $this->db->count_all_results();
     }
     public function countFilteredProductDetails($postData){
@@ -260,21 +260,22 @@ class AdminModel extends CI_Model {
     }
     private function _get_product_details_datatables_query($postData){
         
-        $this->db->select('p.*,p.id as product_id,category_name');
-        $this->db->join('categories c','c.id = p.category_id');
+        $this->db->select('title,rail_type.name as rail_type,panel_position.name as panel_position,roof_type.name as roof_type,height.name as height');
+        $this->db->join('rail_type','rail_type.id = p.rail_type_id');
+        $this->db->join('panel_position','panel_position.id = p.panel_position_id');
+        $this->db->join('roof_type','roof_type.id = p.roof_type_id');
+        $this->db->join('height','height.id = p.height_id');
         $this->db->where('p.status','1');
         $this->db->order_by('p.id','desc');
-        $this->db->from('products p');
+        $this->db->from('sub_products p');
         // Set orderable column fields
-        $this->column_order = array(null,'product_name','product_type','packaging_size','unit_price','sell_price','category_name','p.status');
+        $this->column_order = array(null,'title','rail_type','panel_position','roof_type','height','p.status');
 
         // Set searchable column fields
-        $this->column_search = array('product_name','product_type','packaging_size','unit_price','sell_price','category_name','p.status');
+        $this->column_search = array('title','rail_type.name','panel_position.name','roof_type.name','height.name','category_name','p.status');
         // Set default order
         $this->order = array('p.created_at' => 'desc');  
-
-
-
+        
         foreach ($_POST['columns'] as $key => $value) {
                 if(!empty($value['search']['value'])){
 

@@ -16,6 +16,7 @@ include("connect.php");
         <meta property="og:image" content="uploadfile/news/3c46c1bd13b873ed48ba7b21b76d6154.jpg"/>
         <link href="uploadfile/userimg/5fb86e9addafa6d964bb096eae4db0c0.ico" rel="shortcut icon"  />
         <?php include_once 'head.php'; ?>
+        <script type="text/javascript" src="js/product.js"></script>
     </head>
 <body>
 <?php include_once 'header1.php'; ?>
@@ -39,6 +40,44 @@ include("connect.php");
         </div>
         <div class="page_section clearfix">
             <div class="container">
+                <div class="filter-strip">
+                <div class="col-md-2 filter-input">
+                    <label>Step 1</label>
+                    <select class="selectInput" name="rail_type" id="rail_type">
+                        <option value="">Select Rail Type</option>
+                        <?php $railTypeId = isset($_SESSION['railTypeId']) ? 'WHERE id="'.$_SESSION['railTypeId'].'"' : '';
+                        $railTypeQuery = "SELECT * FROM rail_type ".$railTypeId." ORDER BY id";
+                        $railTypes = mysqli_query($db, $railTypeQuery); 
+                        foreach($railTypes as $row){ ?>
+                        <option value="<?= $row['id'] ?>"><?php echo $row['name'] ?></option>
+                        <?php } ?>
+                    </select>
+                </div>
+                <div class="col-md-2 filter-input">
+                    <label>Step 2</label>
+                    <select class="selectInput" name="panel_position" id="panel_position" disabled>
+                        <option value="">Panel Position</option>
+                    </select>
+                </div>
+                <div class="col-md-2 filter-input">
+                    <label>Step 3</label>
+                    <select class="selectInput" name="roof_type" id="roof_type" disabled>
+                        <option value="">Roof Type</option>
+                    </select>
+                </div>
+                <div class="col-md-2 filter-input height-input">
+                    <label>Step 4</label>
+                    <select class="selectInput" name="height" id="height" disabled>
+                        <option value="">Height</option>
+                    </select>
+                </div>
+                    <div class="col-md-1">
+                        <label>&nbsp;</label>
+                        <a class="btn btn-primary quote-btn" href="#getQuote"><span>Get Quote</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
                 <div class="page_column clearfix">
                     <div class="page-left clearfix">
                         <?php include_once('categories.php');
@@ -56,95 +95,12 @@ include("connect.php");
 <!--                                       data-view="cbp-vm-view-grid"></a>-->
                                     <a href="#" class="cbp-vm-icon cbp-vm-list cbp-vm-selected" data-view="cbp-vm-view-list"></a>
                                 </div>
-                                <ul class="wow clearfix">
-                                    <?php
-                                    $category = isset($_GET['category_id']) ? 'AND category_id="'.$_GET['category_id'].'"' : '';
-                                    $page = isset($_GET['page']) ? $_GET['page'] : 1;
-                                    $recordsPerPage = 9;
-                                    $fromRecordNum = ($recordsPerPage * $page) - $recordsPerPage;
-                                    $products_query = "SELECT * FROM sub_products WHERE product_status = '1' ".$category." ORDER BY id DESC LIMIT ".$fromRecordNum.",".$recordsPerPage;
-                                    $products = mysqli_query($db, $products_query);
-                                    if ($products) {
-                                        foreach ($products as $productRow) {
-                                            ?>
-                                            <li class="wow">
-                                                <div class="clearfix">
-                                                    <div class="cbp-vm-image">
-                                                        <a class="link" href="productDetails.php?id=<?php echo $productRow['id'] ?>"></a>
-                                                        <img id="product_detail_img" alt="<?php echo $productRow['title'] ?>"
-                                                             src="<?php echo $image_link.$productRow['thumbnail']; ?>"/>
-                                                        <div class="cbp-image-hover"><img
-                                                                    src="<?php echo $image_link.$productRow['thumbnail']; ?>"
-                                                                    alt="<?php echo $productRow['title'] ?>"></div>
-                                                        <div class="line"></div>
-                                                        <div class="ovrly"></div>
-                                                        <div class="icon_box">
-                                                            <div class="icon"></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="cbp-list-center clearfix">
-                                                        <div class="cbp-list-left">
-                                                            <a class="cbp-title"
-                                                               href="productDetails.php?id=<?php echo $productRow['id'] ?>"><?php echo $productRow['title'] ?></a>
-                                                            <span class="line"></span>
-                                                            <div class="cbp-vm-details"><?php echo $productRow['short_description'] ?> </div>
-                                                            <ul class="post_blog_tag">
-                                                                <p><i></i>Tags :</p>
-                                                                <?php $tags = explode(',', $productRow['tags']);
-                                                                if (COUNT($tags) > 0) {
-                                                                    foreach ($tags as $tagsRow) {
-                                                                        ?>
-                                                                        <li><a href=""><?php echo $tagsRow; ?></a></li>
-                                                                    <?php }
-                                                                } ?>
-                                                            </ul>
-                                                            <div class="more"><span class="main_more"><a rel="nofollow"
-                                                                                                         href="productDetails.php?id=<?php echo $productRow['id'] ?>">view more</a></span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        <?php }
-                                    } ?>
+                                <ul class="wow clearfix" id="products">
+                                            
                                 </ul>
                             </div>
                         </div>
-                                          <div class="page_num clearfix">
-                                              <?php
-                                              $category_id = isset($_GET['category_id']) ? ' AND category_id = "'.$_GET['category_id'].'"' : '';
-                                              $query = "SELECT COUNT(*) as total_rows FROM sub_products WHERE product_status = '1'".$category_id;
-                                              $pagination = mysqli_query($db,$query);
-                                              $row = mysqli_fetch_assoc($pagination);
-                                              $total_rows = $row['total_rows'];
-                                              $total_pages = ceil($total_rows/$recordsPerPage);
-                                              $range = 5;
-                                              $initial_num = $page - $range;
-                                              $condition_limit_num = ($page + $range)  + 1;
-                                              $category_id = isset($_GET['category_id']) ? '&category_id='.$_GET['category_id'] : '';
 
-                                              for ($x=$initial_num; $x<$condition_limit_num; $x++) {
-
-                                                  // be sure '$x is greater than 0' AND 'less than or equal to the $total_pages'
-                                                  if (($x > 0) && ($x <= $total_pages)) {
-
-                                                      // current page
-                                                      $activeClass = isset($_GET['page']) && $_GET['page'] == $x ? 'active-menu' : '';
-                                                      if ($x == $page) {
-                                                          echo "<a href='#' class='pages underline $activeClass'>$x</a>";
-                                                      }
-
-                                                      // not current page
-                                                      else {
-                                                          echo "<a href=".$image_link."products.php?page=".$x.$category_id." class='pages underline'>$x</a>";
-                                                      }
-                                                  }
-                                              }
-                                              ?>
-                                             
-
-                                             <p>A total of <strong><?php echo $total_rows; ?></strong> pages</p>
-                                          </div>
                         <script>
                             (function () {
 
@@ -315,3 +271,83 @@ include("connect.php");
     <div class="result"><?php  echo $text; ?></div>
 
     <?php include("footer1.php");
+include_once 'sidebar.php';
+?>
+
+<script>
+    (function (window, document) {
+        'use strict';
+        var hotcss = {};
+        (function () {
+            var viewportEl = document.querySelector('meta[name="viewport"]'),
+                hotcssEl = document.querySelector('meta[name="hotcss"]'),
+                dpr = window.devicePixelRatio || 1,
+                maxWidth = 640,
+                designWidth = 0;
+
+            document.documentElement.setAttribute('data-dpr', dpr);
+            hotcss.dpr = dpr;
+            document.documentElement.setAttribute('max-width', maxWidth);
+            hotcss.maxWidth = maxWidth;
+            if (designWidth) {
+                document.documentElement.setAttribute('design-width', designWidth);
+                hotcss.designWidth = designWidth;
+            }
+        })();
+        hotcss.px2rem = function (px, designWidth) {
+            if (!designWidth) {
+                designWidth = parseInt(hotcss.designWidth, 10);
+            }
+            return parseInt(px, 10) * 640 / designWidth / 20;
+        }
+        hotcss.rem2px = function (rem, designWidth) {
+            if (!designWidth) {
+                designWidth = parseInt(hotcss.designWidth, 10);
+            }
+            return rem * 20 * designWidth / 640;
+        }
+        hotcss.mresize = function () {
+            var innerWidth = document.documentElement.getBoundingClientRect().width || window.innerWidth;
+            if (hotcss.maxWidth && (innerWidth / hotcss.dpr > hotcss.maxWidth)) {
+                innerWidth = hotcss.maxWidth * hotcss.dpr;
+            }
+            if (!innerWidth) {
+                return false;
+            }
+            document.documentElement.style.fontSize = (innerWidth * 20 / 640) + 'px';
+        };
+        hotcss.mresize();
+        window.addEventListener('resize', function () {
+            clearTimeout(hotcss.tid);
+            hotcss.tid = setTimeout(hotcss.mresize, 400);
+        }, false);
+        window.addEventListener('load', hotcss.mresize, false);
+        setTimeout(function () {
+            hotcss.mresize();
+        }, 333)
+        window.hotcss = hotcss;
+    })(window, document);
+    (function ($) {
+        var mainWit = $(window).width(),
+            mainHit = $(window).height(),
+            carouselBar = $(".page-header-bar"),
+            fixedContact = $(".fixed-contact-wrap");
+        /*fixed-contact*/
+        $(".fixed-contact-wrap").hover(function () {
+            $(this).addClass("active");
+        }, function () {
+            $(this).removeClass("active");
+        });
+        $(window).scroll(function () {
+            if ($(window).width() > 992) {
+                if ($(this).scrollTop() > mainHit / 2) {
+                    carouselBar.addClass("active");
+                    fixedContact.addClass("show");
+                } else {
+                    carouselBar.removeClass("active");
+                    fixedContact.removeClass("show");
+                }
+            }
+        });
+    })(jQuery);
+</script>

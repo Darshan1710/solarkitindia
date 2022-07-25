@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Setup
     CKEDITOR.replace('short_description', {
-        height: 400,
+        height: 800,
         extraPlugins: 'forms'
     });
 

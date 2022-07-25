@@ -99,37 +99,13 @@
                             <div class="row">
                             <div class="col-md-7">
                             <a class="btn btn-sm btn-success" href="#" data-target="#add_modal" data-toggle="modal"><i class="icon-plus2"></i> Add Products</a>
-                             <a class="btn btn-sm btn-success" href="<?php echo base_url()?>Product/importProductPriceForm"><i class="icon-file-excel"></i> Import Products</a>        
-                            <!--  <a class="btn btn-sm btn-success" id="stock_in"><i class="icon-home4"></i> Stock In</a>
-                             <a class="btn btn-sm btn-success" id="out_of_stock"><i class="icon-home4"></i> Out Of Stock</a> -->
+                             <a class="btn btn-sm btn-success" href="<?php echo base_url()?>Product/importProductPriceForm"><i class="icon-file-excel"></i> Import Products</a>
                              <a class="btn btn-sm btn-success" id="active"><i class="icon-home4"></i> Active </a>
                              <a class="btn btn-sm btn-success" id="inactive"><i class="icon-home4"></i> In Active </a>
                              </div>
-                             <div class="col-md-2">
-                             <a>
-                                <select class="form-control select" name="section" id="section">
-                                    <option value="">Please Select Section</option>
-                                    <?php 
-                                    if(isset($section)){
-                                    foreach($section as $row){?>
-
-                                        <option value="<?php echo $row['id'] ?>"><?php echo $row['title'] ?></option>
-                                    <?php } } ?>
-                                </select>
-                            </a>
-                            </div>
-                            <div class="col-md-2">
-                             <a>
-                                <select class="form-control select" name="apply" id="apply">
-                                    <option value="">Please Select Section</option>
-                                        <option value="add">Add</option>
-                                        <option value="remove">Remove</option>
-                                </select>
-                            </a>
-                            </div>
-                            <div class="col-md-1">
-                             <a href="#" id="section-submit" class="btn btn-primary">Submit</a>
-                            </div>
+                             
+                            
+                            
                             </div>
                         </div>
 
@@ -142,13 +118,10 @@
                                     <th>Action</th>
                                     <th>Product Image</th>
                                     <th>Product Name</th>
-                                    <th>Product Type</th>
-                                    <th>Packaging Size</th>
-                                    <th>Market Price</th>
-                                    <th>Our Price</th>
-                                    <th>Category</th>
-                                    <th>New Products</th>
-                                    <th>Featured Products</th>
+                                    <th>Rail Type</th>
+                                    <th>Panel Position</th>
+                                    <th>Roof Type</th>
+                                    <th>Height</th>
                                     <th>Status</th>
                                     <th>Created At</th>
                                     
@@ -195,67 +168,67 @@
                         <div class="row">
                             <div class="col-sm-3">
                                 <label>Product Name</label>
-                                <input type="text" placeholder="Product Name" class="form-control" name="product_name" id="product_name">
+                                <input type="text" placeholder="Product Name" class="form-control" name="name" id="name">
                             </div>
-                            <div class="col-sm-3">
-                                <label>Category</label>
-                                <select class="form-control select" name="category_id" id="category_id">
-                                    <option value="">Please Select Category</option>
-                                    <?php foreach($category as $row){?>
-                                    <option value="<?php echo $row['id'] ?>"><?php echo $row['category_name'] ?></option>
-                                    <?php } ?>
-                                </select>
-                            </div>
-                            <div class="col-sm-3">
-                                <label>Sub Category</label>
-                                <select class="form-control select" name="subcategory_id" id="subcategory_id">
-                                    
-                                </select>
-                            </div>
-                            <div class="col-sm-3">
-                                <label>Market Price</label>
-                                <input type="number" placeholder="Market Price" class="form-control" name="unit_price" id="unit_price">
-                            </div>
-                            
-                            
 
-                        </div>
-                    </div>
-
-
-
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <label>Our Price</label>
-                                <input type="number" placeholder="Our Price" class="form-control" name="sell_price" id="sell_price">
-                            </div>
-                            <div class="col-sm-3">
-                                <label>Discount</label>
-                                <input type="number" placeholder="Discount" class="form-control" name="discount" id="discount">
-                            </div>
-                            <div class="col-sm-3">
-                                <label>Stock</label>
-                                <input type="number" placeholder="Stock" class="form-control" name="stock" id="stock">
-                            </div>
-                            
                             <div class="col-sm-3">
                                 <label>Product Image (200 x 200)</label>
                                 <input type="file" name="file" class="form-control" id="file">
                             </div>
+
+                            <div class="col-sm-3">
+                                <label>Rail Type</label>
+                                <select class="form-control select" name="rail_type_id" id="rail_type_id">
+                                    <option value="">Please Select Rail Type</option>
+                                    <?php if(isset($railType)):
+                                        foreach($railType as $row){ ?>
+                                            <option value="<?= $row['id'] ?>"><?= $row['name'] ?></option>
+                                        <?php }
+                                    endif; ?>
+                                </select>
+                            </div>
+
+                            <div class="col-sm-3">
+                                <label>Panel Position</label>
+                                <select class="form-control select" name="panel_position_id" id="panel_position_id">
+                                    <option value="">Please Select Panel Position</option>
+                                    <?php if(isset($panelPosition)):
+                                        foreach($panelPosition as $row){ ?>
+                                            <option value="<?= $row['id'] ?>"><?= $row['name'] ?></option>
+                                        <?php }
+                                    endif; ?>
+                                </select>
+                            </div>
+
                             
-                            
+
                         </div>
                     </div>
 
+
+
                     <div class="form-group">
                         <div class="row">
-                            <div class="col-sm-3">
-                                <label>Product Type</label>
-                                <select class="form-control select" name="product_type" id="product_type">
-                                    <option value="">Please Select Type</option>
-                                    <option value="1" selected>Simple</option>
-                                    <option value="2">Configurable</option>
+                            <div class="col-md-3">
+                                <label>Roof Type</label>
+                                <select class="form-control select" id="roof_type_id" name="roof_type_id">
+                                    <option value="">Select Roof Type</option>
+                                    <?php if(isset($roofType)):
+                                        foreach($roofType as $row){ ?>
+                                            <option value="<?= $row['id'] ?>"><?= $row['name'] ?></option>
+                                        <?php }
+                                    endif; ?>
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <label>Height</label>
+                                <select class="form-control select" id="height_id" name="height_id">
+                                    <option value="">Select Height</option>
+                                    <?php if(isset($height)):
+                                        foreach($height as $row){ ?>
+                                            <option value="<?= $row['id'] ?>"><?= $row['name'] ?></option>
+                                        <?php }
+                                    endif; ?>
                                 </select>
                             </div>
                             <div class="col-sm-3">
@@ -266,18 +239,9 @@
                                     <option value="0">Inactive</option>
                                 </select>
                             </div>
-                            <div class="col-sm-3">
-                                <label>Active</label>
-                                <select class="form-control select" name="active" id="active">
-                                    <option value="">Please Select</option>
-                                    <option value="1" selected>Active</option>
-                                    <option value="2">Inactive</option>
-                                </select>
-                            </div>
                         </div>
                     </div>
-
-
+                    
                     <div class="form-group">
                         <div class="row">
                             <div class="col-sm-6">
@@ -664,37 +628,25 @@ function MyCustomUploadAdapterPlugin( editor ) {
                 "targets": 4
             },
             {
-                "name": "product_type",
+                "name": "rail_type",
                 "orderable" : false,
                 "targets": 5
             },
             {
-                "name": "packaging_size",
+                "name": "panel_position",
                 "targets": 6
             },
             {
-                "name": "unit_price",
+                "name": "roof_type",
                 "targets": 7
             },
             {
-                "name": "sell_price",
+                "name": "height",
                 "targets": 8
             },
             {
-                "name": "category_name",
-                "targets": 9
-            },
-            {
-                "name": "new_products",
-                "targets": 10
-            },
-            {
-                "name": "feautured_products",
-                "targets": 11
-            },
-            {
                 "name": "status",
-                "targets": 12
+                "targets": 9
             }
             ]
         });
@@ -759,37 +711,13 @@ function MyCustomUploadAdapterPlugin( editor ) {
                     var obj = $.parseJSON(data);
                     if (obj.errCode == -1) {
                         alert(obj.message);
-                        if(obj.product_type == 2){
-                            window.location.href = base_url+'Product/attributeValues/'+obj.product_id;
-                        }else{
-                        
-                            var new_form_data = new FormData($('#add')[0]);
-                            $.ajax({
-                                type: 'post',
-                                data: new_form_data,
-                                processData: false,
-                                contentType: false,
-                                url: base_url + 'Product/updateProduct/'+obj.product_id,
-                                success: function(data) {
-                                    var obj = $.parseJSON(data);
-                                    
-                                    if(obj.product_type == 2){
-                                        window.location.href = base_url+'Product/attributeValues/'+obj.product_id;
-                                    }else{
-                                        location.reload();
-                                    }
-                                    
-                                }
-                            });
-                        }
-                        
                     } else if (obj.errCode == 2) {
                         alert(obj.message);
                     } else if (obj.errCode == 3) {
                         $('.error').remove();
                         $.each(obj.message, function(key, value) {
                             var element = $('#' + key);
-                            if(key == 'status' || key == 'category_id'){
+                            if(key == 'status' || key == 'rail_type_id' || key == 'roof_type_id' || key == 'panel_position_id' || key == 'height'){
                                 element.closest('.select').next('.select2').after(value);
                             }else{
                                 element.closest('.form-control').after(value);
@@ -803,99 +731,7 @@ function MyCustomUploadAdapterPlugin( editor ) {
             });
 
         });
-
-
-
-      
-
-        $('#section-submit').on('click', function(e) {
-            e.preventDefault();
-            var base_url = $('#base_url').val();
-            var selectedIds = table.columns().checkboxes.selected()[0];
-            var section = $('#section').val();
-            var apply = $('#apply').val();
-
-            if(apply == 'add'){
-                url_data = base_url + 'Product/addSectionProductsStatus';
-            }else{
-                url_data = base_url + 'Product/removeSectionProductsStatus';
-            }
-            if(selectedIds.length != 0){
-                var ids = selectedIds.toString();
-                $.ajax({
-                    type: 'post',
-                    data: {
-                        section : section,
-                        ids: ids
-                    },
-                    url:url_data ,
-                    success: function(data) {
-                        alert('success');
-
-                        $("input[type=checkbox]").prop("checked", false);
-                        table.state.clear();
-                       // window.location.reload();
-                    }
-
-                });
-            }else{
-                alert('Please Select Atleast one record');
-            }
-
-        });
-
-
-        $('#out_of_stock').on('click', function(e) {
-            e.preventDefault();
-            var base_url = $('#base_url').val();
-            var ids = [];
-            $.each($("input[name='checkbox']:checked"), function(){
-                ids.push($(this).val());
-            });
-
-            $.ajax({
-                type: 'post',
-                data: {
-                    ids: ids
-                },
-                url: base_url + 'Product/outOfStock',
-                success: function(data) {
-                    alert('success');
-                    $('#message_model').modal('hide');
-                    $("input[type=checkbox]").prop("checked", false);
-                    table.state.clear();
-                    window.location.reload();
-                }
-
-            });
-
-        });
-
-        $('#stock_in').on('click', function(e) {
-            e.preventDefault();
-            var base_url = $('#base_url').val();
-            var ids = [];
-            $.each($("input[name='checkbox']:checked"), function(){
-                ids.push($(this).val());
-            });
-
-            $.ajax({
-                type: 'post',
-                data: {
-                    ids: ids
-                },
-                url: base_url + 'Product/stockIn',
-                success: function(data) {
-                    alert('success');
-                    $('#message_model').modal('hide');
-                    $("input[type=checkbox]").prop("checked", false);
-                    table.state.clear();
-                    window.location.reload();
-                }
-
-            });
-
-        });
+        
 
         $('#active').on('click', function(e) {
             e.preventDefault();
@@ -943,32 +779,6 @@ function MyCustomUploadAdapterPlugin( editor ) {
                     $("input[type=checkbox]").prop("checked", false);
                     table.state.clear();
                    // window.location.reload();
-                }
-
-            });
-
-        });
-
-         $('#category_id').on('change', function(e) {
-
-            e.preventDefault();
-            var base_url = $('#base_url').val();
-            var id = $(this).val();
-            $.ajax({
-                type: 'post',
-                data: {
-                    id: id
-                },
-                url: base_url + 'SubCategory/getSubCategories',
-                success: function(data) {
-                    var obj = $.parseJSON(data);
-                    $('#subcategory_id').empty();
-                    $('#subcategory_id').append('<option ="">Please Select SubCategory</option>');
-                    $.each(obj.sub_category, function(key, value) {
-
-                        $('#subcategory_id').append('<option value="'+value.id+'">'+value.sub_category+'</option>');
-                        $('#subcategory_id').select2();
-                    }); 
                 }
 
             });

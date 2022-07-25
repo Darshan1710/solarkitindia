@@ -14,7 +14,6 @@
 <script type="text/javascript" src="demo/template/js/jquery-1.8.3.js"></script>
 <script type="text/javascript" src="demo/js/front/common.js"></script>
 <script type="text/javascript" src="demo/template/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="demo/template/js/demo.js"></script>
 <script type="text/javascript" src="demo/template/js/jquery.velocity.min.js"></script>
 <!--[if ie9]
    <script src="/template/js/html5shiv.min.js"></script>

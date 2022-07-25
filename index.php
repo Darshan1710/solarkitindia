@@ -6,6 +6,7 @@ include("connect.php");
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <?php include_once 'head.php'; ?>
+    <script type="text/javascript" src="demo/template/js/demo.js"></script>
     <link rel="stylesheet" type="text/css" href="demo/template/css/owl.carousel.min.css">
     <link rel="stylesheet" type="text/css" href="demo/template/css/owl.theme.default.min.css">
 
@@ -67,7 +68,7 @@ include("connect.php");
             $video = mysqli_query($db, $videoQuery);
             if ($video) {
                 foreach ($video as $videoRow) { ?>
-        <div >
+        <div>
             <iframe class="video_iframe"
                     src="https://www.youtube.com/embed/<?= $videoRow['link'] ?>">
             </iframe>
