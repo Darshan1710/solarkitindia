@@ -15,7 +15,8 @@ $( document ).ready(function() {
                         $.each(data.panelPosition, function (key, value) {
                             $('#panel_position').append('<option value="' + value.id + '">' + value.name + '</option>');
                         });
-
+                        
+                        $('#rail_type').css('border-color','#0277bd');
                         $('#panel_position').removeAttr('disabled');
                         $('#panel_position').prop('selectedIndex',0);
                     }
@@ -54,6 +55,7 @@ $( document ).ready(function() {
                             $('#roof_type').append('<option value="' + value.id + '">' + value.name + '</option>');
                         });
 
+                        $('#panel_position').css('border-color','#0277bd');
                         $('#roof_type').removeAttr('disabled');
                         $('#roof_type').prop('selectedIndex',0);
                     }
@@ -91,7 +93,8 @@ $( document ).ready(function() {
                     if(data.roofType){
                         addComponent(data.roofType);    
                     }
-                    
+
+                    $('#roof_type').css('border-color','#0277bd');
                     $('#height').removeAttr('disabled');
                     $('#height').prop('selectedIndex',0);
                 }
@@ -117,6 +120,7 @@ $( document ).ready(function() {
                     
                     if(data.height){
                         addComponent(data.height);
+                        $('#height').css('border-color','#0277bd');
                     }
                     
                     if(data.screwFlag){
@@ -212,7 +216,7 @@ $( document ).ready(function() {
                 '</div>' +
                 '</li>';
 
-            $('#products').prepend(html);
+            $('#products').append(html);
         });
     }
 
@@ -221,7 +225,7 @@ $( document ).ready(function() {
             var html =
                 '<li class="wow">' +
                 '<div class="clearfix">' +
-                '<div class="cbp-vm-image">' +
+                '<div class="cbp-vm-image product-image">' +
                 '<a class="link" href="productDetails.php?id='+value.id+'"></a>' +
                 '<img id="product_detail_img" alt="'+value.title+'"' +
                 'src="'+value.image+'"/>' +
@@ -234,8 +238,8 @@ $( document ).ready(function() {
                 '<div class="icon"></div>' +
                 '</div>' +
                 '</div>' +
-                '<div class="cbp-list-center clearfix">' +
-                '<div class="cbp-list-left">' +
+                '<div class="cbp-list-center product-description">' +
+                '<div class="cbp-list-left description-left">' +
                 '<a class="cbp-title">'+value.title+'</a>' +
                 '<span class="line"></span>' +
                 '<div class="cbp-vm-details">'+value.short_description+'</div>' +
@@ -245,6 +249,22 @@ $( document ).ready(function() {
                 '</ul>' +
                 '</div>' +
                 '</div>' +
+                '</div>'+
+                '<div class="clearfix"></div>'+
+                '<div>' +
+                '<div class="col-md-3">'+
+                    '<img src="http://localhost/solarkitindia.com/images/products1/BF_FTP_FR_SS.png">'+
+                '</div>'+
+                '<div class="col-md-3">'+
+                '<img src="http://localhost/solarkitindia.com/images/products1/BF_FTP_FR_SS.png">'+
+                '</div>'+
+                '<div class="col-md-3">'+
+                '<img src="http://localhost/solarkitindia.com/images/products1/BF_FTP_FR_SS.png">'+
+                '</div>'+
+                '<div class="col-md-3">'+
+                '<iframe class="youtube-link" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>'+
+                '</div>'+
+                '</div>'
                 '</div>' +
                 '</li>';
 

@@ -1,7 +1,8 @@
 <?php
 include_once 'connect.php';
 $result = [];
-$screwQuery = "SELECT * FROM screw WHERE rail_type_id = ".$_POST['railTypeId']." AND panel_position_id = ".$_POST['panelPositionId']." AND roof_type_id = ".$_POST['roofTypeId']." AND height_id = ".$_POST['heightId']." ORDER BY id ASC";
+$screwWhere = isset($_POST['screwId']) ? ' AND id = '.$_POST['screwId'] : '';
+$screwQuery = "SELECT * FROM screw WHERE rail_type_id = ".$_POST['railTypeId']." AND panel_position_id = ".$_POST['panelPositionId']." AND roof_type_id = ".$_POST['roofTypeId']." AND height_id = ".$_POST['heightId'].$screwWhere." ORDER BY id ASC";
 $screw = mysqli_query($db, $screwQuery);
 $result['screwFlag'] = mysqli_num_rows($screw) ?? false;
 if(mysqli_num_rows($screw)) {

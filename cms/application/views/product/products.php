@@ -211,7 +211,7 @@
                         <div class="row">
                             <div class="col-md-3">
                                 <label>Roof Type</label>
-                                <select class="form-control select" id="roof_type_id" name="roof_type_id">
+                                <select class="form-control select" id="roof_type_id" name="roof_type_id" multiple>
                                     <option value="">Select Roof Type</option>
                                     <?php if(isset($roofType)):
                                         foreach($roofType as $row){ ?>
@@ -230,6 +230,10 @@
                                         <?php }
                                     endif; ?>
                                 </select>
+                            </div>
+                            <div class="col-sm-3">
+                                <label>Video</label>
+                                <input type="text" class="form-control" name="video" placeholder="https://www.youtube.com/embed/tgbNymZ7vqY">
                             </div>
                             <div class="col-sm-3">
                                 <label>Status</label>
@@ -711,6 +715,7 @@ function MyCustomUploadAdapterPlugin( editor ) {
                     var obj = $.parseJSON(data);
                     if (obj.errCode == -1) {
                         alert(obj.message);
+                        window.location.href = base_url+'Product/getProductList';
                     } else if (obj.errCode == 2) {
                         alert(obj.message);
                     } else if (obj.errCode == 3) {

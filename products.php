@@ -41,6 +41,7 @@ include("connect.php");
         <div class="page_section clearfix">
             <div class="container">
                 <div class="filter-strip">
+                    <h1 class="text-center step-title">Build Your Own Solution (Step 1 of 5)</h1>
                 <div class="col-md-2 filter-input">
                     <label>Step 1</label>
                     <select class="selectInput" name="rail_type" id="rail_type">
@@ -79,12 +80,7 @@ include("connect.php");
             </div>
             <div class="container">
                 <div class="page_column clearfix">
-                    <div class="page-left clearfix">
-                        <?php include_once('categories.php');
-                              include_once('newProducts.php'); ?>
-
-                    </div>
-                    <div class="col-md-9">
+                    <div class="col-md-12">
                         <div class="pro-text">
                             <div class="column"></div>
                         </div>
@@ -229,6 +225,7 @@ include("connect.php");
                 </div>
             </div>
         </div>
+        <?php include_once 'contactUsForm.php'; ?>
         <div class="in_newsletterW">
             <div class="container">
                 <div class="in_newsletter">

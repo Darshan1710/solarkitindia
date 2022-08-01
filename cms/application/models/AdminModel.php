@@ -259,8 +259,7 @@ class AdminModel extends CI_Model {
         return $query->num_rows();
     }
     private function _get_product_details_datatables_query($postData){
-        
-        $this->db->select('title,rail_type.name as rail_type,panel_position.name as panel_position,roof_type.name as roof_type,height.name as height');
+        $this->db->select('p.id as product_id,title,p.image,rail_type.name as rail_type,panel_position.name as panel_position,roof_type.name as roof_type,height.name as height,product_status as status,p.created_at');
         $this->db->join('rail_type','rail_type.id = p.rail_type_id');
         $this->db->join('panel_position','panel_position.id = p.panel_position_id');
         $this->db->join('roof_type','roof_type.id = p.roof_type_id');

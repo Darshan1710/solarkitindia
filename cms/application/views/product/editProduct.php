@@ -259,36 +259,12 @@
                 success: function(data) {
                     var obj = $.parseJSON(data);
                     if (obj.errCode == -1) {
-                        
-                        if(obj.product_type == 2){
-                            window.location.href = base_url+'Product/attributeValues/'+id;
-                        }else{
-                            var new_form_data = new FormData($('#update')[0]);
-                            $.ajax({
-                                type: 'post',
-                                data: new_form_data,
-                                processData: false,
-                                contentType: false,
-                                url: base_url + 'Product/updateProduct/'+id,
-                                success: function(data) {
-                                    var obj = $.parseJSON(data);
-                                    
-                                    if(obj.product_type == 2){
-                                        window.location.href = base_url+'Product/attributeValues/'+id;
-                                    }else{
-                                        location.reload();
-                                    }
-                                    
-                                }
-                            });
-                            // location.reload();    
-                        }
+                        window.location.href = base_url+'Product/getProductList';
                     } else if (obj.errCode == 2) {
                         alert(obj.message);
                     } else if (obj.errCode == 3) {
                         $('.error').remove();
                         $.each(obj.message, function(key, value) {
-
                             var element = $('.' + key);
                             if(key == 'category_id' || key == 'status'){
                                 element.closest('.select').next('.select2').after(value);

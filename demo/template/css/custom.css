@@ -186,9 +186,26 @@
 }
 a.btn.btn-primary.quote-btn {
     border-radius: 0px !important;
-    height: 9% !important;
     vertical-align: middle !important;
 }
 a.btn.btn-primary.quote-btn span{
-    
+    line-height: 40px;
+}
+.step-title{
+    padding: 3%;
+    font-size: 35px;
+    font-weight: 700;
+}
+.product-image{
+    width: 41.66% !important;
+}
+.product-description{
+    width: 58.33% !important;
+    display: block !important;
+}
+.youtube-link{
+    height:36%;
+}
+.description-left{
+    padding-left: 80% !important;
 }

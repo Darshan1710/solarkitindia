@@ -97,6 +97,7 @@ class Product extends CI_Controller {
         $this->form_validation->set_rules('panel_position_id','Panel Position','required|trim|xss_clean|max_length[255]');
         $this->form_validation->set_rules('roof_type_id','Roof Type','required|trim|xss_clean|max_length[255]');
         $this->form_validation->set_rules('height_id','Height','required|trim|xss_clean|max_length[255]');
+        $this->form_validation->set_rules('video','Video','required|trim|xss_clean|max_length[255]');
         $this->form_validation->set_rules('status','Status','required|trim|xss_clean|max_length[255]');
 
         if($this->form_validation->run()){
@@ -121,7 +122,10 @@ class Product extends CI_Controller {
                     }else{
                         $image = '';
                     }
-
+                    
+                    $videoLink = substr($this->input->post('video'),strrpos($this->input->post('video'),'/')+1);
+                    
+                    
                     $data = array('title'       =>$this->input->post('name'),
                                   'image'       =>$image,
                                   'short_description'=>$this->input->post('short_description'),
@@ -130,6 +134,7 @@ class Product extends CI_Controller {
                                   'panel_position_id' =>$this->input->post('panel_position_id'),
                                   'roof_type_id' =>$this->input->post('roof_type_id'),
                                   'height_id'    =>$this->input->post('height_id'),
+                                  'video'       =>$videoLink,
                                   'status'      =>$this->input->post('status')
                               );
 
@@ -174,6 +179,7 @@ class Product extends CI_Controller {
         $this->form_validation->set_rules('panel_position_id','Panel Position','required|trim|xss_clean|max_length[255]');
         $this->form_validation->set_rules('roof_type_id','Roof Type','trim|xss_clean|max_length[255]');
         $this->form_validation->set_rules('height_id','Height','trim|xss_clean|max_length[255]');
+        $this->form_validation->set_rules('video','Video','trim|xss_clean|max_length[255]');
         $this->form_validation->set_rules('status','Status','required|trim|xss_clean|max_length[255]');
         if($this->form_validation->run()){
             $filter = array('id !='=>$this->uri->segment(3));
@@ -198,6 +204,8 @@ class Product extends CI_Controller {
                     $image = $this->input->post('old_image');
                 }
 
+                $videoLink = substr($this->input->post('video'),strrpos($this->ipnut->post('video'),'/')+1);
+                
                 $filter     = array('id'=>$this->uri->segment(3));
                 $data = array(  'title'       =>$this->input->post('title'),
                                 'image'       =>$image,
@@ -206,6 +214,7 @@ class Product extends CI_Controller {
                                 'panel_position_id' =>$this->input->post('panel_position_id'),
                                 'roof_type_id' =>$this->input->post('roof_type_id'),
                                 'height_id'    =>$this->input->post('height_id'),
+                                'video'       =>$videoLink,
                                 'status'      =>$this->input->post('status')
                             );
 
