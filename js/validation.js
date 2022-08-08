@@ -15,7 +15,8 @@ function zf_ValidateAndSubmit(){
 				return false;
 			}
 		}else{
-			alert();
+			console.log(errorFlag);
+			$('.error').remove();
 			$.each(errorFlag, function( key, value ) {
 				var element = $('#' + key);
 				element.closest('.form-control').after('<span class="error">'+value+'</span>');
@@ -335,7 +336,7 @@ function zf_ValidateAndSubmit(){
 		var lastname = $('#lastname').val();
 		var mobile = $('#mobile').val();
 		var email = $('#email').val();
-		
+		alert(lastname);
 		var errorMsg = {};
 		var error = false;
 		if(!lastname){
@@ -351,13 +352,13 @@ function zf_ValidateAndSubmit(){
 			errorMsg['mobile'] = 'Please enter valid mobile number';
 		}
 
-		var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+		
 		if(!email){
 			error = true;
 			errorMsg['email'] = 'Email is required';
-		}else if(regex.test(email)){
-			error = true;
-			errorMsg['email'] = 'Please enter a valid email';
+		}else if(isValidEmailAddress(email)){
+			error = false;
+		//	errorMsg['email'] = 'Please enter a valid email';
 		}
 		
 		if(error){
@@ -366,3 +367,13 @@ function zf_ValidateAndSubmit(){
 			return '';
 		}
 	}
+
+	function isValidEmailAddress(emailAddress) {
+		var pattern = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+		// alert( pattern.test(emailAddress) );
+		if(!pattern.test(email)) {
+			return false;
+		}else{
+			return true;
+		}
+	};
