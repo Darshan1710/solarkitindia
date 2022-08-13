@@ -27,7 +27,7 @@ include("connect.php");
 <body>
 <?php include_once('header1.php'); ?>
 <div class="page_banner">
-    <a href="javascript:void(0);"><img src="demo/uploadfile/bannerimg/161701094863631503.jpg"
+    <a href="javascript:void(0);"><img src="<?= $link; ?>demo/uploadfile/bannerimg/161701094863631503.jpg"
                                        alt="Metal Roof|Tile Roof Solar Mounting System"></a>
 </div>
 
@@ -200,7 +200,7 @@ include("connect.php");
             <div>
                 <i class="icon"></i>
                 <a>
-                    <p>Scan to wechat :</p><img src="/uploadfile/single/e88e5502116a406cfcf8e37a16f1b9a8.png"/>
+                    <p>Scan to wechat :</p><img src="<?= $link; ?>/uploadfile/single/e88e5502116a406cfcf8e37a16f1b9a8.png"/>
                 </a>
             </div>
         </li>

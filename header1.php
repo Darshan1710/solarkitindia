@@ -3,7 +3,7 @@
         <div class="container">
             <div class="header_m clearfix">
                 <div id="logo" class="clearfix">
-                    <a href="https://www.solarkitindia.com/" class="top_logo" title="Xiamen Solar Kit Technology Co., Ltd."><img alt="Xiamen Solar Kit Technology Co., Ltd." src="images/SK_logo_187x42.png" /></a>
+                    <a href="https://www.solarkitindia.com/" class="top_logo" title="Xiamen Solar Kit Technology Co., Ltd."><img alt="Xiamen Solar Kit Technology Co., Ltd." src="<?= $link; ?>images/SK_logo_187x42.png" /></a>
                 </div>
                 <div class="head-right clearfix">
                     <div class="top_cent clearfix">
@@ -28,61 +28,61 @@
                                     <ul class="menu-dropdown">
                                         <li>
                                             <a href="#">
-                                                <img src="demo/template/images/en.png" />
+                                                <img src="<?= $link; ?>demo/template/images/en.png" />
                                                 <p>English</p>
                                             </a>
                                         </li>
                                         <li>
                                             <a href="#">
-                                                <img src="demo/template/images/fr.png" />
+                                                <img src="<?= $link; ?>demo/template/images/fr.png" />
                                                 <p>français</p>
                                             </a>
                                         </li>
                                         <li>
                                             <a href="#">
-                                                <img src="demo/template/images/es.png" />
+                                                <img src="<?= $link; ?>demo/template/images/es.png" />
                                                 <p>español</p>
                                             </a>
                                         </li>
                                         <li>
                                             <a href="#">
-                                                <img src="demo/template/images/pt.png" />
+                                                <img src="<?= $link; ?>demo/template/images/pt.png" />
                                                 <p>português</p>
                                             </a>
                                         </li>
                                         <li>
                                             <a href="#">
-                                                <img src="demo/template/images/nl.png" />
+                                                <img src="<?= $link; ?>demo/template/images/nl.png" />
                                                 <p>Nederlands</p>
                                             </a>
                                         </li>
                                         <li>
                                             <a href="#">
-                                                <img src="demo/template/images/ar.png" />
+                                                <img src="<?= $link; ?>demo/template/images/ar.png" />
                                                 <p>العربية</p>
                                             </a>
                                         </li>
                                         <li>
                                             <a href="#">
-                                                <img src="demo/template/images/ja.png" />
+                                                <img src="<?= $link; ?>demo/template/images/ja.png" />
                                                 <p>日本語</p>
                                             </a>
                                         </li>
                                         <li>
                                             <a href="#">
-                                                <img src="demo/template/images/ms.png" />
+                                                <img src="<?= $link; ?>demo/template/images/ms.png" />
                                                 <p>Melayu</p>
                                             </a>
                                         </li>
                                         <li>
                                             <a href="#">
-                                                <img src="demo/template/images/vi.png" />
+                                                <img src="<?= $link; ?>demo/template/images/vi.png" />
                                                 <p>Tiếng việt</p>
                                             </a>
                                         </li>
                                         <li>
                                             <a href="#">
-                                                <img src="demo/template/images/cn.png" >
+                                                <img src="<?= $link; ?>demo/template/images/cn.png" >
                                                 <p>中文</p>
                                             </a>
                                         </li>
@@ -112,18 +112,18 @@
                             <div class="mainmenu">
                                 <nav>
                                     <ul class="clearfix">
-                                        <li><a href='about-us.php'>About Us</a></li>
-                                        <li><a href="products.php">Products</a>
-                                        <li><a href="projects.php">Recent Project</a>
-                                        <li><a href="blogList.php">Blog</a>
+                                        <li><a href='about-us/'>About Us</a></li>
+                                        <li><a href="products/">Products</a>
+                                        <li><a href="references/">Recent Project</a>
+                                        <li><a href="blog/">Blog</a>
                                         </li>
-                                        <li><a href="faq.php">FAQ</a>
+                                        <li><a href="faq/">FAQ</a>
                                         </li>
                                         <li><a href="https://news.solarkitindia.com/">News</a>
                                         </li>
-                                        <li><a href="careers.php">Career</a>
+                                        <li><a href="careers/">Career</a>
                                         </li>
-                                        <li><a href="contact-us.php">Contact us</a>
+                                        <li><a href="contact-us/">Contact us</a>
                                         </li>
                                     </ul>
                                 </nav>
@@ -136,18 +136,18 @@
                                 <li><a href="#">Home</a></li>
                             </ul>
                             <ul class="second-nav">
-                                <li><a href='about-us.php'>About Us</a></li>
-                                <li><a href="products.php">Products</a>
-                                <li><a href="projects.php">References</a>
-                                <li><a href="blogList.php">Blog</a>
+                                <li><a href='about-us/'>About Us</a></li>
+                                <li><a href="products/">Products</a>
+                                <li><a href="references/">Recent Project</a>
+                                <li><a href="blog/">Blog</a>
                                 </li>
-                                <li><a href="faq.php">FAQ</a>
+                                <li><a href="faq/">FAQ</a>
                                 </li>
                                 <li><a href="https://news.solarkitindia.com/">News</a>
                                 </li>
-                                <li><a href="careers.php">Career</a>
+                                <li><a href="careers/">Career</a>
                                 </li>
-                                <li><a href="contact-us.php">Contact us</a>
+                                <li><a href="contact-us/">Contact us</a>
                                 </li>
                             </ul>
                         </nav>

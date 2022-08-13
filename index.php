@@ -137,7 +137,7 @@ include("connect.php");
                                                       href="#">Contact Us<i></i></a></span>
                 <ul class="adv_list clearfix">
                     <li class="col-xs-6">
-                        <div class="icon"><img src="demo/uploadfile/single/ebf2cf8d7cad921567249bd6aee313cb.png"
+                        <div class="icon"><img src="<?= $link; ?>demo/uploadfile/single/ebf2cf8d7cad921567249bd6aee313cb.png"
                                                alt="R&D - Quality Assurance"></div>
                         <div class="wrap">
                             <em class="title">R&D - Quality Assurance</em>
@@ -145,7 +145,7 @@ include("connect.php");
                         </div>
                     </li>
                     <li class="col-xs-6">
-                        <div class="icon"><img src="demo/uploadfile/single/3fbde64e606e045cb2ce8783bca6cb6c.png"
+                        <div class="icon"><img src="<?= $link; ?>demo/uploadfile/single/3fbde64e606e045cb2ce8783bca6cb6c.png"
                                                alt="Make In India"></div>
                         <div class="wrap">
                             <em class="title">Make In India</em>
@@ -160,37 +160,37 @@ include("connect.php");
                 <div class="slider autoplay1">
                     <div>
                         <div class="li"><a href="#"><img
-                                        src="demo/uploadfile/bannerimg/1.jpg"
+                                        src="<?= $link; ?>demo/uploadfile/bannerimg/1.jpg"
                                         alt="Metal Roof Solar Mounts"></a></div>
                     </div>
                     <div>
                         <div class="li"><a href="#"><img
-                                        src="demo/uploadfile/bannerimg/2.jpg"
+                                        src="<?= $link; ?>demo/uploadfile/bannerimg/2.jpg"
                                         alt="Metal Roof Solar Mounts"></a></div>
                     </div>
                     <div>
                         <div class="li"><a href="#"><img
-                                        src="demo/uploadfile/bannerimg/3.jpg"
+                                        src="<?= $link; ?>demo/uploadfile/bannerimg/3.jpg"
                                         alt="Metal Roof Solar Mounts"></a></div>
                     </div>
                     <div>
                         <div class="li"><a href="#"><img
-                                        src="demo/uploadfile/bannerimg/4.jpg"
+                                        src="<?= $link; ?>demo/uploadfile/bannerimg/4.jpg"
                                         alt="Metal Roof Solar Mounts"></a></div>
                     </div>
                     <div>
                         <div class="li"><a href="#"><img
-                                        src="demo/uploadfile/bannerimg/5.jpg"
+                                        src="<?= $link; ?>demo/uploadfile/bannerimg/5.jpg"
                                         alt="Metal Roof Solar Mounts"></a></div>
                     </div>
                     <div>
                         <div class="li"><a href="#"><img
-                                        src="demo/uploadfile/bannerimg/6.jpg"
+                                        src="<?= $link; ?>demo/uploadfile/bannerimg/6.jpg"
                                         alt="Metal Roof Solar Mounts"></a></div>
                     </div>
                     <div>
                         <div class="li"><a href="#"><img
-                                        src="demo/uploadfile/bannerimg/7.jpg"
+                                        src="<?= $link; ?>demo/uploadfile/bannerimg/7.jpg"
                                         alt="Metal Roof Solar Mounts"></a></div>
                     </div>
 

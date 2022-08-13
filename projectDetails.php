@@ -212,7 +212,7 @@ if($project){
             <div>
                 <i class="icon"></i>
                 <a>
-                    <p>Scan to wechat :</p><img src="uploadfile/single/e88e5502116a406cfcf8e37a16f1b9a8.png" />
+                    <p>Scan to wechat :</p><img src="<?= $link; ?>uploadfile/single/e88e5502116a406cfcf8e37a16f1b9a8.png" />
                 </a>
             </div>
         </li>

@@ -81,6 +81,15 @@
 
 RewriteEngine On
 
+RewriteCond %{HTTPS} !=on
+RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R=301,NE,L]
+RewriteCond %{HTTP_HOST} ^solar-kit.in
+RewriteRule ^(.*)$ https://www.solarkit.com/$1 [R=301,QSA,L]
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/
+RewriteRule ^index\.html$ https://www.solarkit.com/ [R=301,L] 
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\ HTTP/
+RewriteRule ^index\.php$ https://www.solarkit.com/ [R=301,L] 
+
 
 
 RewriteRule ^admin/.*$ - [PT]
@@ -92,7 +101,16 @@ RewriteRule ^complex-styles/.*$ - [PT]
 
 RewriteRule ^flextilt-inovation-2021 /flextilt-pro-tilted-solar-structure [R]
 
+
+RewriteRule ^about-us/$ about-us.php [PT]
+RewriteRule ^products/$ products.php [PT]
+RewriteRule ^references/$ projects.php [PT]
+RewriteRule ^blog/$ blogList.php [PT]
+RewriteRule ^faq/$ faq.php [PT]
+RewriteRule ^news/$ https://news.solarkitindia.com/ [PT]
 RewriteRule ^careers/$ careers.php [PT]
+RewriteRule ^contact/$ contact-us.php [PT]
+
 
 #RewriteRule ^products/$ prod.php [PT]
 RewriteRule ^products2/$ products2.php [PT]
@@ -104,7 +122,7 @@ RewriteRule ^product-metal-roof/$ products.php [PT]
 #RewriteRule ^product-flat-roof/$ prod3.php [PT]
 #RewriteRule ^product-metal-roof/$ prodx4.php [PT]  
 
-RewriteRule ^references/$ references.php [PT]
+
 
 RewriteRule ^career/$ careers.php [PT]
 

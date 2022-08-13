@@ -78,11 +78,11 @@
                     <div class="text">Any requests, please feel free to contact us.&nbsp;</div>
                 </div>
                 <ul class="social_icons clearfix">
-                    <li><a href="https://www.facebook.com/SolarKitIndia/" target="_blank" rel="nofollow"><img src="demo/uploadfile/friendlink/2222c032d52ed626b35c9d02803d554a.png" /></a></li>
-                    <li><a href="https://www.linkedin.com/company/mounting-solar-kit-private-limited/?viewAsMember=true" target="_blank" rel="nofollow"><img src="demo/uploadfile/friendlink/902a07a27101e17cdf72d2c2fa25d5b3.png" /></a></li>
-                    <li><a href="https://www.pinterest.com/" target="_blank" rel="nofollow"><img src="demo/uploadfile/friendlink/c6bd36239d7c530910e4a9691b4e7cd6.png" /></a></li>
-                    <li><a href="https://twitter.com/solarkit_in" target="_blank" rel="nofollow"><img src="demo/uploadfile/friendlink/cb47d35ee13ac257c1afc4bcb85f31dc.png" /></a></li>
-                    <li><a href="https://www.youtube.com/channel/UC0Re8bR_jgjnbuxOFEv9b9A" target="_blank" rel="nofollow"><img src="demo/uploadfile/friendlink/84e58ab43e7f52801cb8865e5ebc6acc.png" /></a></li>
+                    <li><a href="https://www.facebook.com/SolarKitIndia/" target="_blank" rel="nofollow"><img src="<?= $link; ?>demo/uploadfile/friendlink/2222c032d52ed626b35c9d02803d554a.png" /></a></li>
+                    <li><a href="https://www.linkedin.com/company/mounting-solar-kit-private-limited/?viewAsMember=true" target="_blank" rel="nofollow"><img src="<?= $link; ?>demo/uploadfile/friendlink/902a07a27101e17cdf72d2c2fa25d5b3.png" /></a></li>
+                    <li><a href="https://www.pinterest.com/" target="_blank" rel="nofollow"><img src="<?= $link; ?>demo/uploadfile/friendlink/c6bd36239d7c530910e4a9691b4e7cd6.png" /></a></li>
+                    <li><a href="https://twitter.com/solarkit_in" target="_blank" rel="nofollow"><img src="<?= $link; ?>demo/uploadfile/friendlink/cb47d35ee13ac257c1afc4bcb85f31dc.png" /></a></li>
+                    <li><a href="https://www.youtube.com/channel/UC0Re8bR_jgjnbuxOFEv9b9A" target="_blank" rel="nofollow"><img src="<?= $link; ?>demo/uploadfile/friendlink/84e58ab43e7f52801cb8865e5ebc6acc.png" /></a></li>
                 </ul>
 
             </div>
@@ -254,7 +254,7 @@
             <div>
                 <i class="icon"></i>
                 <a>
-                    <p>Scan to wechat :</p><img src="uploadfile/single/e88e5502116a406cfcf8e37a16f1b9a8.png" />
+                    <p>Scan to wechat :</p><img src="<?= $link; ?>uploadfile/single/e88e5502116a406cfcf8e37a16f1b9a8.png" />
                 </a>
             </div>
         </li>

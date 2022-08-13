@@ -63,7 +63,7 @@
 
                                         <li class="col-sm-4 col-xs-12">
                                             <div class="image">
-                                                <img src="assets/images/team/portrait1.png"
+                                                <img src="<?= $link; ?>assets/images/team/portrait1.png"
                                                      alt="">
                                             </div>
                                             <div class="wrap">
@@ -74,7 +74,7 @@
 
                                 <li class="col-sm-4 col-xs-12">
                                     <div class="image">
-                                        <img src="assets/images/team/portrait2.png"
+                                        <img src="<?= $link; ?>assets/images/team/portrait2.png"
                                              alt="">
                                     </div>
                                     <div class="wrap">
@@ -85,7 +85,7 @@
 
                                 <li class="col-sm-4 col-xs-12">
                                     <div class="image">
-                                        <img src="assets/images/team/portrait3.png"
+                                        <img src="<?= $link; ?>assets/images/team/portrait3.png"
                                              alt="">
                                     </div>
                                     <div class="wrap">
@@ -136,7 +136,7 @@
                                     <div id="faqCollapse-2" class="collapse" aria-labelledby="faqHeading-2" data-parent="#accordion">
                                         <div class="card-body">
                                             <p>Since our origin in this market, we are actively committed towards providing our prestigious patrons with a remarkable range of product.</p>
-                                            <img src="assets/images/why_us.jpg" alt=""/>
+                                            <img src="<?= $link; ?>assets/images/why_us.jpg" alt=""/>
                                         </div>
                                     </div>
                                 </div>
@@ -265,9 +265,9 @@
 <script type="text/javascript">
     $('#bootstrap-touch-slider').bsTouchSlider();
 </script>
-<script type="text/javascript" src="template/js/slick.js"></script>
-<script type="text/javascript" src="template/js/wow.min.js"></script>
-<script type="text/javascript" src="template/js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="<?= $link ?>demo/template/js/slick.js"></script>
+<script type="text/javascript" src="<?= $link ?>demo/template/js/wow.min.js"></script>
+<script type="text/javascript" src="<?= $link ?>demo/template/js/owl.carousel.min.js"></script>
 <script type="text/javascript">
     baguetteBox.run('.tz-gallery');
 </script>

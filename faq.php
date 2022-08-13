@@ -17,7 +17,7 @@ include("connect.php");
     <meta name="google-site-verification" content="0hlmt6XTPq9hWJUMwJe9WG8xzEZXv56X8cNMCA1UqUo" />
     <link rel="canonical" href="https:///" />
     <meta property="og:image" content=""/>
-    <link href="uploadfile/userimg/5fb86e9addafa6d964bb096eae4db0c0.ico" rel="shortcut icon"  />
+    <link href="<?= $link; ?>uploadfile/userimg/5fb86e9addafa6d964bb096eae4db0c0.ico" rel="shortcut icon"  />
     <link rel="alternate" hreflang="en" href="news-knowledge-_nc1.html" />
     <?php include_once('head.php'); ?>
 

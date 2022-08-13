@@ -3,7 +3,7 @@
         <div class="container clearfix">
             <div class="footer_m">
                 <div class="fot_about">
-                    <a href="index.html" class="fot_logo"><img src="images/SK_logo_187x42.png" /></a>
+                    <a href="index.html" class="fot_logo"><img src="<?= $link; ?>images/SK_logo_187x42.png" /></a>
                     <div class="text">
                         Established in the year 2018 at Navi Mumbai, Maharashtra, We "Mounting Solar-Kit Private Limited”
                         are a Sole Proprietorship based firm, engaged as the foremost Manufacturer and Supplier of Solar Panel Mounting
@@ -11,11 +11,11 @@
                         Structure.
                     </div>
                     <ul class="top_share">
-                        <li><a href="https://www.facebook.com/SolarKitIndia/" target="_blank" rel="nofollow"><img src="demo/uploadfile/friendlink/2222c032d52ed626b35c9d02803d554a.png" /></a></li>
-                        <li><a href="https://www.linkedin.com/company/mounting-solar-kit-private-limited/?viewAsMember=true" target="_blank" rel="nofollow"><img src="demo/uploadfile/friendlink/902a07a27101e17cdf72d2c2fa25d5b3.png" /></a></li>
-                        <li><a href="https://www.pinterest.com/" target="_blank" rel="nofollow"><img src="demo/uploadfile/friendlink/c6bd36239d7c530910e4a9691b4e7cd6.png" /></a></li>
-                        <li><a href="https://twitter.com/solarkit_in" target="_blank" rel="nofollow"><img src="demo/uploadfile/friendlink/cb47d35ee13ac257c1afc4bcb85f31dc.png" /></a></li>
-                        <li><a href="https://www.youtube.com/channel/UC0Re8bR_jgjnbuxOFEv9b9A" target="_blank" rel="nofollow"><img src="demo/uploadfile/friendlink/84e58ab43e7f52801cb8865e5ebc6acc.png" /></a></li>
+                        <li><a href="https://www.facebook.com/SolarKitIndia/" target="_blank" rel="nofollow"><img src="<?= $link; ?>demo/uploadfile/friendlink/2222c032d52ed626b35c9d02803d554a.png" /></a></li>
+                        <li><a href="https://www.linkedin.com/company/mounting-solar-kit-private-limited/?viewAsMember=true" target="_blank" rel="nofollow"><img src="<?= $link; ?>demo/uploadfile/friendlink/902a07a27101e17cdf72d2c2fa25d5b3.png" /></a></li>
+                        <li><a href="https://www.pinterest.com/" target="_blank" rel="nofollow"><img src="<?= $link; ?>demo/uploadfile/friendlink/c6bd36239d7c530910e4a9691b4e7cd6.png" /></a></li>
+                        <li><a href="https://twitter.com/solarkit_in" target="_blank" rel="nofollow"><img src="<?= $link; ?>demo/uploadfile/friendlink/cb47d35ee13ac257c1afc4bcb85f31dc.png" /></a></li>
+                        <li><a href="https://www.youtube.com/channel/UC0Re8bR_jgjnbuxOFEv9b9A" target="_blank" rel="nofollow"><img src="<?= $link; ?>demo/uploadfile/friendlink/84e58ab43e7f52801cb8865e5ebc6acc.png" /></a></li>
                     </ul>
 
                 </div>
