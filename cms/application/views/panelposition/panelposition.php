@@ -171,7 +171,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h5 class="modal-title">Rail Type</h5>
+                <h5 class="modal-title">Panel Position</h5>
             </div>
 
             <form action="#" method="post" id="add">
@@ -229,7 +229,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h5 class="modal-title">Rail Type form</h5>
+                <h5 class="modal-title">Panel Position</h5>
             </div>
 
             <form action="#" method="post" id="update">

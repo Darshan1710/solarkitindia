@@ -197,7 +197,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <label>Rail Type</label>
-                                <select class="form-control" id="rail_type_id" name="rail_type_id">
+                                <select class="form-control rail_type" id="rail_type_id" name="rail_type_id">
                                     <option>Select Rail Type</option>
                                     <?php if(isset($railType)):
                                         foreach($railType as $row){ ?>
@@ -210,11 +210,6 @@
                                 <label>Panel Position</label>
                                 <select class="form-control" id="panel_position_id" name="panel_position_id">
                                     <option>Select Panel Position</option>
-                                    <?php if(isset($panelPosition)):
-                                        foreach($panelPosition as $row){ ?>
-                                            <option value="<?= $row['id'] ?>"><?= $row['name'] ?></option>
-                                        <?php }
-                                    endif; ?>
                                 </select>
                             </div>
                         </div>
@@ -280,11 +275,6 @@
                                 <label>Panel Position</label>
                                 <select class="form-control panel_position_id" id="panel_position_id" name="panel_position_id">
                                     <option>Select Panel Position</option>
-                                    <?php if(isset($panelPosition)):
-                                        foreach($panelPosition as $row){ ?>
-                                            <option value="<?= $row['id'] ?>" ><?= $row['name'] ?></option>
-                                        <?php }
-                                    endif; ?>
                                 </select>
                             </div>
                         </div>
@@ -394,6 +384,78 @@
 
         });
 
+        $('#rail_type_id').on('change',function(e) {
+            e.preventDefault();
+            var rail_type_id = $('#rail_type_id').val();
+            var base_url = $('#base_url').val();
+            $.ajax({
+                type: 'post',
+                data: {'rail_type_id':rail_type_id},
+                url: base_url + 'PanelPosition/getPanelPosition',
+                success: function(data) {
+                    var obj = $.parseJSON(data);
+                    if (obj.errCode == -1) {
+                        $('#panel_position_id').empty();
+                        $.each(obj.message, function(key, value) {
+                            $('#panel_position_id').append('<option value="'+value.id+'">'+value.name+'</option>');
+                        });  
+                    } else if (obj.errCode == 2) {
+                        alert(obj.message);
+                    } else if (obj.errCode == 3) {
+                        $('.error').remove();
+                        $.each(obj.message, function(key, value) {
+                            var element = $('#' + key);
+                            if(key == 'status'){
+                                element.closest('.select').next('.select2').after(value);
+                            }else{
+                                element.closest('.form-control').after(value);
+                            }
+
+                        });
+                    }
+
+                }
+
+            });
+
+        });
+
+        $('.rail_type_id').on('change',function(e) {
+            e.preventDefault();
+            var rail_type_id = $('.rail_type_id').val();
+            var base_url = $('#base_url').val();
+            $.ajax({
+                type: 'post',
+                data: {'rail_type_id':rail_type_id},
+                url: base_url + 'PanelPosition/getPanelPosition',
+                success: function(data) {
+                    var obj = $.parseJSON(data);
+                    if (obj.errCode == -1) {
+                        $('.panel_position_id').empty();
+                        $.each(obj.message, function(key, value) {
+                            $('.panel_position_id').append('<option value="'+value.id+'">'+value.name+'</option>');
+                        });
+                    } else if (obj.errCode == 2) {
+                        alert(obj.message);
+                    } else if (obj.errCode == 3) {
+                        $('.error').remove();
+                        $.each(obj.message, function(key, value) {
+                            var element = $('#' + key);
+                            if(key == 'status'){
+                                element.closest('.select').next('.select2').after(value);
+                            }else{
+                                element.closest('.form-control').after(value);
+                            }
+
+                        });
+                    }
+
+                }
+
+            });
+
+        });
+
         $(document).on('click', '.editRoofType', function() {
             var base_url = $('#base_url').val();
             var id = $(this).attr('id');
@@ -412,8 +474,14 @@
                         $(".image").attr('src',base_url+obj.data.image);
                         $(".old_image").val(obj.data.image);
                         $(".rail_type_id").val(obj.data.rail_type_id);
-                        $(".panel_position_id").val(obj.data.panel_position_id);
+                        
                         $(".short_description").val(obj.data.short_description);
+                        
+                        $('.panel_position_id').empty();
+                        $.each(obj.panels, function(key, value) {
+                            $('.panel_position_id').append('<option value="'+value.id+'">'+value.name+'</option>');
+                        });
+                        $(".panel_position_id").val(obj.data.panel_position_id);
 
                     } else if (obj.errCode == 2) {
                         alert(obj.data);

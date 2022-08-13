@@ -19,21 +19,41 @@ class RoofType extends CI_Controller
         $this->load->view('rooftype/rooftype', $data);
     }
 
+    public function getRoofType()
+    {
+        $this->form_validation->set_rules('rail_type_id', 'Rail Type Id', 'required|trim|xss_clean|max_length[255]');
+        if ($this->form_validation->run()) {
+            $filter = array('rail_type_id' => $this->input->post('rail_type_id'),
+                            'panel_position_id' => $this->input->post('panel_position_id'));
+            $data = $this->AdminModel->getList('roof_type', $filter);
+            if ($data) {
+                $returnArr['errCode'] = -1;
+                $returnArr['message'] = $data;
+            } else {
+                $returnArr['errCode'] = 2;
+                $returnArr['message'] = 'Please try again';
+            }
+        } else {
+            $returnArr['errCode'] = 3;
+            foreach ($this->input->post() as $key => $value) {
+                $returnArr['message'][$key] = form_error($key);
+            }
+        }
+        echo json_encode($returnArr);
+    }
+
     public function addRoofType()
     {
         $this->form_validation->set_rules('name', 'Name', 'required|trim|xss_clean|max_length[255]');
         $this->form_validation->set_rules('file', '', 'callback_file_check');
-        $this->form_validation->set_rules('short_description', 'Short Description', 'required|trim|xss_clean|max_length[255]');
+        $this->form_validation->set_rules('short_description', 'Short Description', '');
         $this->form_validation->set_rules('rail_type_id', 'Rail Type', 'required|trim|xss_clean|max_length[255]');
         $this->form_validation->set_rules('panel_position_id', 'Panel Position', 'required|trim|xss_clean|max_length[255]');
         if ($this->form_validation->run()) {
             $filter = array('name' => $this->input->post('name'));
             $checkExist = $this->AdminModel->getDetails('roof_type', $filter);
 
-            if ($checkExist) {
-                $returnArr['errCode'] = 3;
-                $returnArr['messages']['name'] = '<p class="error">Roof Type Already Exists</p>';
-            } else {
+            
                 if(isset($_FILES)){
                     $upload = upload_image($_FILES, 'file');
 
@@ -65,7 +85,6 @@ class RoofType extends CI_Controller
                     $returnArr['errCode'] = 2;
                     $returnArr['message'] = 'Please try again';
                 }
-            }
         } else {
             $returnArr['errCode'] = 3;
             $returnArr['message']['file'] = form_error('file');
@@ -82,10 +101,14 @@ class RoofType extends CI_Controller
         if ($this->form_validation->run()) {
             $filter = array('id' => $this->input->post('id'));
             $category = $this->AdminModel->getDetails('roof_type', $filter);
+            
+            $panel_filter = array('rail_type_id'=>$category['rail_type_id']);
+            $panels = $this->AdminModel->getList('panel_position',$panel_filter);
 
             if ($category) {
                 $returnArr['errCode'] = -1;
                 $returnArr['data'] = $category;
+                $returnArr['panels'] = $panels;
             } else {
                 $returnArr['errCode'] = 2;
                 $returnArr['data'] = 'No data found';
@@ -103,18 +126,14 @@ class RoofType extends CI_Controller
     {
         $this->form_validation->set_rules('id', 'Id', 'required|trim|xss_clean|max_length[255]');
         $this->form_validation->set_rules('name', 'Name', 'required|trim|xss_clean|max_length[255]');
-        $this->form_validation->set_rules('short_description', 'Short Description', 'required|trim|xss_clean|max_length[255]');
+        $this->form_validation->set_rules('short_description', 'Short Description', '');
         $this->form_validation->set_rules('rail_type_id', 'Rail Type', 'required|trim|xss_clean|max_length[255]');
         $this->form_validation->set_rules('panel_position_id', 'Panel Position', 'required|trim|xss_clean|max_length[255]');
         if ($this->form_validation->run()) {
             $filter = array('id !=' => $this->input->post('id'),
                 'name' => $this->input->post('name'));
 
-            $exists = $this->AdminModel->getDetails('roof_type', $filter);
-            if ($exists) {
-                $returnArr['errCode'] = 3;
-                $returnArr['message']['name'] = '<p class="error">Roof Type Already Exists</p>';
-            } else {
+            
                 if (isset($_FILES) && !empty($_FILES)) {
                     $upload = upload_image($_FILES, 'file');
 
@@ -146,7 +165,6 @@ class RoofType extends CI_Controller
                     $returnArr['errCode'] = 2;
                     $returnArr['message'] = 'Please try again';
                 }
-            }
 
         } else {
             $returnArr['errCode'] = 3;

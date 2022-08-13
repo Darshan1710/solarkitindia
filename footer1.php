@@ -94,3 +94,4 @@
     </div>
 </div>
 <input type="hidden" id="base_url" value="<?php echo $base_url; ?>">
+<input type="hidden" id="image_link" value="<?php echo $image_link; ?>">

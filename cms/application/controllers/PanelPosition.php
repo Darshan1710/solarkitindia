@@ -18,6 +18,28 @@ class PanelPosition extends CI_Controller
         $this->load->view('panelposition/panelposition', $data);
     }
 
+    public function getPanelPosition()
+    {
+        $this->form_validation->set_rules('rail_type_id', 'Rail Type Id', 'required|trim|xss_clean|max_length[255]');
+        if ($this->form_validation->run()) {
+            $filter = array('rail_type_id' => $this->input->post('rail_type_id'));
+            $data = $this->AdminModel->getList('panel_position', $filter);
+            if ($data) {
+                $returnArr['errCode'] = -1;
+                $returnArr['message'] = $data;
+            } else {
+                $returnArr['errCode'] = 2;
+                $returnArr['message'] = 'Please try again';
+            }
+        } else {
+            $returnArr['errCode'] = 3;
+            foreach ($this->input->post() as $key => $value) {
+                $returnArr['message'][$key] = form_error($key);
+            }
+        }
+        echo json_encode($returnArr);
+    }
+
     public function addPanelPosition()
     {
         $this->form_validation->set_rules('name', 'Name', 'required|trim|xss_clean|max_length[255]');
@@ -25,13 +47,8 @@ class PanelPosition extends CI_Controller
         $this->form_validation->set_rules('short_description', 'Short Description', '');
         $this->form_validation->set_rules('rail_type_id', 'Rail Type', 'required|trim|xss_clean|max_length[255]');
         if ($this->form_validation->run()) {
-            $filter = array('name' => $this->input->post('name'));
-            $checkExist = $this->AdminModel->getDetails('panel_position', $filter);
-
-            if ($checkExist) {
-                $returnArr['errCode'] = 3;
-                $returnArr['messages']['name'] = '<p class="error">Panel Position Already Exists</p>';
-            } else {
+            
+            
                 if(isset($_FILES)){
                     $upload = upload_image($_FILES, 'file');
 
@@ -62,7 +79,7 @@ class PanelPosition extends CI_Controller
                     $returnArr['errCode'] = 2;
                     $returnArr['message'] = 'Please try again';
                 }
-            }
+            
         } else {
             $returnArr['errCode'] = 3;
             $returnArr['message']['file'] = form_error('file');

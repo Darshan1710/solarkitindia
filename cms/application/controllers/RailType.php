@@ -20,7 +20,7 @@ class RailType extends CI_Controller
     {
         $this->form_validation->set_rules('name', 'Name', 'required|trim|xss_clean|max_length[255]');
         $this->form_validation->set_rules('file', '', 'callback_file_check');
-        $this->form_validation->set_rules('short_description', 'Short Description', 'required|trim|xss_clean|max_length[255]');
+        $this->form_validation->set_rules('short_description', 'Short Description', '');
         if ($this->form_validation->run()) {
             $filter = array('name' => $this->input->post('name'));
             $checkExist = $this->AdminModel->getDetails('rail_type', $filter);
@@ -96,7 +96,7 @@ class RailType extends CI_Controller
     {
         $this->form_validation->set_rules('id', 'Id', 'required|trim|xss_clean|max_length[255]');
         $this->form_validation->set_rules('name', 'Name', 'required|trim|xss_clean|max_length[255]');
-        $this->form_validation->set_rules('short_description', 'Short Description', 'required|trim|xss_clean|max_length[255]');
+        $this->form_validation->set_rules('short_description', 'Short Description', '');
         if ($this->form_validation->run()) {
             $filter = array('id !=' => $this->input->post('id'),
                             'name' => $this->input->post('name'));

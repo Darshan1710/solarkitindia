@@ -1,7 +1,7 @@
 <?php 
 include_once 'connect.php';
 $result = [];
-$panelPositionQuery = "SELECT * FROM panel_position ORDER BY id ASC";
+$panelPositionQuery = "SELECT * FROM panel_position WHERE rail_type_id = ".$_POST['railTypeId']." ORDER BY id ASC";
 $panelPositions = mysqli_query($db, $panelPositionQuery);
 if(mysqli_num_rows($panelPositions)) {
     while ($row = mysqli_fetch_assoc($panelPositions)) {

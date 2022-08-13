@@ -83,9 +83,10 @@ $( document ).ready(function() {
                 data : {roofTypeId:roofTypeId,railTypeId:railTypeId,panelPositionId:panelPositionId},
                 success : function(data){
                     $('#height').empty();
+                    $('#height').append('<option value="">Please Select Height</option>');
                     if(data.height){
                         $.each(data.height, function (key, value) {
-                            $('#height').append('<option value="">Please Select Height</option>');
+                            
                             $('#height').append('<option value="' + value.id + '">' + value.name + '</option>');
                         });
                     }
@@ -185,6 +186,7 @@ $( document ).ready(function() {
     });
     
     function addComponent(data){
+        var image_link = $('#image_link').val();
         $.each(data, function (key, value) {
             var html =
                 '<li class="wow">' +
@@ -192,9 +194,9 @@ $( document ).ready(function() {
                 '<div class="cbp-vm-image">' +
                 '<a class="link" ></a>' +
                 '<img id="product_detail_img" alt="'+value.name+'"' +
-                'src="'+value.image+'"/>' +
+                'src="'+image_link+value.image+'"/>' +
                 '<div class="cbp-image-hover">' +
-                '<img src="'+value.image+'"' +
+                '<img src="'+image_link+value.image+'"' +
                 'alt="'+value.name+'"></div>' +
                 '<div class="line"></div>' +
                 '<div class="ovrly"></div>' +
@@ -221,6 +223,7 @@ $( document ).ready(function() {
     }
 
     function addProduct(data){
+        var image_link = $('#image_link').val();
         $.each(data, function (key, value) {
             var html =
                 '<li class="wow">' +
@@ -228,9 +231,9 @@ $( document ).ready(function() {
                 '<div class="cbp-vm-image product-image">' +
                 '<a class="link" href="productDetails.php?id='+value.id+'"></a>' +
                 '<img id="product_detail_img" alt="'+value.title+'"' +
-                'src="'+value.image+'"/>' +
+                'src="'+image_link+value.image+'"/>' +
                 '<div class="cbp-image-hover">' +
-                '<img src="'+value.image+'"' +
+                '<img src="'+image_link+value.image+'"' +
                 'alt="'+value.title+'"></div>' +
                 '<div class="line"></div>' +
                 '<div class="ovrly"></div>' +

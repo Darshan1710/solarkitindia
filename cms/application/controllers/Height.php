@@ -32,10 +32,7 @@ class Height extends CI_Controller
             $filter = array('name' => $this->input->post('name'));
             $checkExist = $this->AdminModel->getDetails('roof_type', $filter);
 
-            if ($checkExist) {
-                $returnArr['errCode'] = 3;
-                $returnArr['messages']['name'] = '<p class="error">Roof Type Already Exists</p>';
-            } else {
+            
                 if(isset($_FILES)){
                     $upload = upload_image($_FILES, 'file');
 
@@ -63,12 +60,12 @@ class Height extends CI_Controller
 
                 if ($add) {
                     $returnArr['errCode'] = -1;
-                    $returnArr['message'] = 'Roof Type Added Successfully';
+                    $returnArr['message'] = 'Height Added Successfully';
                 } else {
                     $returnArr['errCode'] = 2;
                     $returnArr['message'] = 'Please try again';
                 }
-            }
+
         } else {
             $returnArr['errCode'] = 3;
             $returnArr['message']['file'] = form_error('file');
@@ -114,11 +111,7 @@ class Height extends CI_Controller
             $filter = array('id !=' => $this->input->post('id'),
                 'name' => $this->input->post('name'));
 
-            $exists = $this->AdminModel->getDetails('height', $filter);
-            if ($exists) {
-                $returnArr['errCode'] = 3;
-                $returnArr['message']['name'] = '<p class="error">Height Already Exists</p>';
-            } else {
+
                 if (isset($_FILES) && !empty($_FILES)) {
                     $upload = upload_image($_FILES, 'file');
 
@@ -151,7 +144,6 @@ class Height extends CI_Controller
                     $returnArr['errCode'] = 2;
                     $returnArr['message'] = 'Please try again';
                 }
-            }
 
         } else {
             $returnArr['errCode'] = 3;

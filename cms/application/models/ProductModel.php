@@ -25,7 +25,7 @@ class ProductModel extends CI_Model
         if($filter){
             $this->db->where($filter);
         }
-        $this->db->select('r.*,rt.name as rail_type,pp.name as panel_position,r.name as roof_type');
+        $this->db->select('h.*,h.name as height,rt.name as rail_type,pp.name as panel_position,r.name as roof_type');
         $this->db->join('rail_type rt','rt.id = h.rail_type_id');
         $this->db->join('panel_position pp','pp.id = h.panel_position_id');
         $this->db->join('roof_type r','r.id = h.roof_type_id');

@@ -5,9 +5,9 @@
    - Code lines with comments Do not remove this code are required for the form to work properly, make sure that you do not remove these lines of code. 
    - The Mandatory check script can modified as to suit your business needs. 
    - It is important that you test the modified form before going live.-->
-        <div class="col-md-6">
+        <div class="col-md-8">
 <div id='crmWebToEntityForm' class='zcwf_lblLeft crmWebToEntityForm'
-     style='background-color: white;color: black;max-width: 600px;'>
+     style='background-color: white;color: black;'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <META HTTP-EQUIV='content-type' CONTENT='text/html;charset=UTF-8'>
     <script src='https://www.google.com/recaptcha/api.js' async defer></script>
@@ -156,7 +156,7 @@
             }
 
             .zcwf_lblLeft .zcwf_row {
-                margin: 15px 0px;
+                margin: 5px 0px;
             }
 
             .zcwf_lblLeft .formsubmit {
@@ -265,9 +265,12 @@
                 }
             }
         </style>
+        <div class="col-md-12">
         <div class='zcwf_title' style='max-width: 600px;color: black;'>
             <div class="page_title"><span> Contact Us</span></div>
         </div>
+        </div>
+        <div class="col-md-6">
         <div class='zcwf_row'>
             <div class='zcwf_col_fld'><input type='text' id='Last_Name' name='Last Name' maxlength='80' class="meInput"
                                              placeholder="* Last Name"></input>
@@ -277,6 +280,8 @@
                 </div>
             </div>
         </div>
+        </div>
+        <div class="col-md-6">
         <div class='zcwf_row'>
             <div class='zcwf_col_fld'><input type='text' id='Mobile' name='Mobile' maxlength='30' class="meInput"
                                              placeholder="* Mobile"></input>
@@ -286,6 +291,8 @@
                 </div>
             </div>
         </div>
+        </div>
+        <div class="col-md-6">
         <div class='zcwf_row'>
             <div class='zcwf_col_fld'><input type='text' ftype='email' id='Email' name='Email' maxlength='100'
                                              class="meInput" placeholder="* Email"></input>
@@ -295,6 +302,8 @@
                 </div>
             </div>
         </div>
+        </div>
+        <div class="col-md-12">
         <div class='zcwf_row'>
             <div class='zcwf_col_fld'><textarea id='Description' name='Description' class="meInput"
                                                 placeholder="* Message"></textarea>
@@ -304,12 +313,13 @@
                 </div>
             </div>
         </div>
+        
         <div class='zcwf_row'>
             <div class='zcwf_col_fld'>
                 <div class='g-recaptcha' data-sitekey='6Lde-1ghAAAAAD7qRCGJhA12kuCJAgXqRj2eyQ6D' data-theme='light'
                      data-callback='rccallback3599922000077851001' captcha-verified='false'
                      id='recap3599922000077851001'></div>
-                <div id='recapErr3599922000077851001' style='font-size:12px;color:red;visibility:hidden;'>Captcha
+                <div id='recapErr3599922000077851001' style='font-size:12px;color:red;display:none;'>Captcha
                     validation failed. If you are not a robot then please try again.
                 </div>
             </div>
@@ -336,9 +346,10 @@
                     </div>
                 </div>
                 <div id='privacyErr3599922000077851001'
-                     style='font-size:12px;color:red;padding-left: 5px;visibility:hidden;'>Please accept this
+                     style='font-size:12px;color:red;padding-left: 5px;display: none;'>Please accept this
                 </div>
             </div>
+        </div>
         </div>
         <div class='zcwf_row wfrm_fld_dpNn'>
             <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='Lead_Status'>Lead
@@ -390,9 +401,9 @@
             </div>
         </div>
         <div class='zcwf_row'>
-            
-            <div class='zcwf_col_fld'><span class="main_more"> <input type='submit' id='formsubmit' class='formsubmit zcwf_button'
-                                             value='Send Message' title='Send Message'></span></div>
+            <div class='zcwf_col_fld'><span class="main_more"> 
+                    <input type='submit' id='formsubmit' class='formsubmit zcwf_button' value='Send Message' title='Send Message'></span>
+            </div>
         </div>
         <script>
             function privacyAlert3599922000077851001() {
@@ -560,7 +571,7 @@
         <!-- Do not remove this --- Analytics Tracking code ends. --></form>
 </div>
     </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
             <div class="vertical-center vertical-center-text">
                 <span>Start using the most effective mounting system</span>
                 <p>Ask our specialist about all the benefits of Solar-Kit system or leave your contact and our specialist will contact you within 24 hours.</p>

@@ -210,3 +210,43 @@ a.btn.btn-primary.quote-btn span{
 .description-left{
     padding-left: 80% !important;
 }
+.social_footer {
+    margin: 2% 0;
+}
+.social_footer .s__btn {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    background-repeat: no-repeat;
+    height: 80px;
+    width: 80px;
+    background-color: #00000017;
+    background-size: 1.5rem;
+
+    background-position: center center;
+    border-radius: 50%;
+}
+.ic_fb {
+    background-image: url('../images/facebook.png');
+}
+.ic_twitter {
+    background-image: url('../images/twitter.png') !important;
+}
+.ic_instagram {
+    background-image: url('../images/instagram.png');
+}
+.ic_youtube {
+    background-image: url('../images/youtube.png');
+}
+.ic_linkedin {
+    background-image: url('../images/linkedin.png');
+}
+.ic_email {
+    background-image: url('../images/email.png');
+}
+.ic_whatsapp {
+    background-image: url('../images/whatsapp.png');
+}
+.ic_pintrest {
+    background-image: url('../images/pinterest.png');
+}

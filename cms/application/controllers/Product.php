@@ -91,7 +91,7 @@ class Product extends CI_Controller {
 
         $this->form_validation->set_rules('name','Product Name','required|trim|xss_clean|max_length[255]');
         $this->form_validation->set_rules('short_description','Short Description','');
-        $this->form_validation->set_rules('long_description','Short Description','');
+        $this->form_validation->set_rules('long_description','Long Description','');
         $this->form_validation->set_rules('file','','callback_file_check');
         $this->form_validation->set_rules('rail_type_id','Rail Type','required|trim|xss_clean|max_length[255]');
         $this->form_validation->set_rules('panel_position_id','Panel Position','required|trim|xss_clean|max_length[255]');
@@ -174,6 +174,7 @@ class Product extends CI_Controller {
     public function updateProduct(){
         $this->form_validation->set_rules('title','Product Name','required|trim|xss_clean|max_length[255]');
         $this->form_validation->set_rules('short_description','Short Description','');
+        $this->form_validation->set_rules('long_description','Long Description','');
         $this->form_validation->set_rules('file','','callback_file_check');
         $this->form_validation->set_rules('rail_type_id','Rail Type','required|trim|xss_clean|max_length[255]');
         $this->form_validation->set_rules('panel_position_id','Panel Position','required|trim|xss_clean|max_length[255]');
@@ -210,6 +211,7 @@ class Product extends CI_Controller {
                 $data = array(  'title'       =>$this->input->post('title'),
                                 'image'       =>$image,
                                 'short_description'=>$this->input->post('short_description'),
+                                'long_description'=>$this->input->post('long_description'),
                                 'rail_type_id' =>$this->input->post('rail_type_id'),
                                 'panel_position_id' =>$this->input->post('panel_position_id'),
                                 'roof_type_id' =>$this->input->post('roof_type_id'),
