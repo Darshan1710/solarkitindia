@@ -1,10 +1,11 @@
 $( document ).ready(function() {
-
+    //
+    var base_url = $('#base_url').val();
     $('#rail_type').on('change',function(){
         var railTypeId = $('#rail_type').val();
         if(railTypeId){
             $.ajax({
-                url: "getPanelPosition.php",
+                url: base_url + "getPanelPosition.php",
                 type : 'post',
                 dataType : 'json',
                 data : {railTypeId:railTypeId},
@@ -43,7 +44,7 @@ $( document ).ready(function() {
         var panelPositionId = $('#panel_position').val();
         if(panelPositionId && railTypeId){
             $.ajax({
-                url: "getRoofType.php",
+                url: base_url + "getRoofType.php",
                 type : 'post',
                 dataType : 'json',
                 data : {railTypeId:railTypeId,panelPositionId:panelPositionId},
@@ -77,16 +78,17 @@ $( document ).ready(function() {
         var panelPositionId = $('#panel_position').val();
         if(roofTypeId){
             $.ajax({
-                url: "getHeight.php",
+                url: base_url + "getHeight.php",
                 type : 'post',
                 dataType : 'json',
                 data : {roofTypeId:roofTypeId,railTypeId:railTypeId,panelPositionId:panelPositionId},
                 success : function(data){
+                    
                     $('#height').empty();
                     $('#height').append('<option value="">Please Select Height</option>');
                     if(data.height){
+                        $(".height-input").css("display", "block");
                         $.each(data.height, function (key, value) {
-                            
                             $('#height').append('<option value="' + value.id + '">' + value.name + '</option>');
                         });
                     }
@@ -113,7 +115,7 @@ $( document ).ready(function() {
         var heightId = $('#height').val();
         if(railTypeId && roofTypeId && panelPositionId && heightId){
             $.ajax({
-                url: "getProducts.php",
+                url: base_url + "getProducts.php",
                 type : 'post',
                 dataType : 'json',
                 data : {roofTypeId:roofTypeId,railTypeId:railTypeId,panelPositionId:panelPositionId,heightId:heightId},
@@ -163,7 +165,7 @@ $( document ).ready(function() {
         var screwId = $('#screw').val();
         if(railTypeId && roofTypeId && panelPositionId && heightId && screwId){
             $.ajax({
-                url: "getProducts.php",
+                url: base_url + "getProducts.php",
                 type : 'post',
                 dataType : 'json',
                 data : {roofTypeId:roofTypeId,railTypeId:railTypeId,panelPositionId:panelPositionId,heightId:heightId,screwId:screwId},

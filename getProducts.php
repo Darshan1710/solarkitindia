@@ -10,6 +10,7 @@ if(mysqli_num_rows($screw)) {
         $result['screw'][] = $row;
     }
 }
+
 if(isset($_POST['screwId'])) {
     $where = isset($_POST['screwId']) ? ' AND screw_id = ' . $_POST['screwId'] . ' ' : '';
     $productQuery = "SELECT * FROM sub_products WHERE rail_type_id = " . $_POST['railTypeId'] . " AND panel_position_id = " . $_POST['panelPositionId'] . " AND roof_type_id = " . $_POST['roofTypeId'] . " AND height_id = " . $_POST['heightId'] . $where . "ORDER BY id ASC";
