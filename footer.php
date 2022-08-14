@@ -169,8 +169,8 @@
 
                                             <span class="privacy">By sending the message, you agree to the
 
-				<a href="http://localhost/solarkitindia.com/terms-and-conditions">Terms and Conditions</a> and <a
-                                                        href="http://localhost/solarkitindia.com/privacy-policy">Privacy Policy</a>
+				<a href="<?= $link;?>terms-and-conditions/">Terms and Conditions</a> and <a
+                                                        href="<?= $link;?>privacy-policy/">Privacy Policy</a>
 
 					</span>
 
@@ -489,7 +489,7 @@
             </div>
             <div class="col s12 m3">
                 <ul class="mtree transit">
-                    <li><a href="index2.php">Home Page</a></li>
+                    <li><a href="<?= $link;?>">Home Page</a></li>
                     <li><a href="productdemo.php">Product</a> </li>
                 </ul>
             </div>

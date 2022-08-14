@@ -96,8 +96,8 @@ class Product extends CI_Controller {
         $this->form_validation->set_rules('rail_type_id','Rail Type','required|trim|xss_clean|max_length[255]');
         $this->form_validation->set_rules('panel_position_id','Panel Position','required|trim|xss_clean|max_length[255]');
         $this->form_validation->set_rules('roof_type_id','Roof Type','required|trim|xss_clean|max_length[255]');
-        $this->form_validation->set_rules('height_id','Height','required|trim|xss_clean|max_length[255]');
-        $this->form_validation->set_rules('video','Video','required|trim|xss_clean|max_length[255]');
+        $this->form_validation->set_rules('height_id','Height','trim|xss_clean|max_length[255]');
+        $this->form_validation->set_rules('video','Video','');
         $this->form_validation->set_rules('status','Status','required|trim|xss_clean|max_length[255]');
 
         if($this->form_validation->run()){
@@ -160,15 +160,33 @@ class Product extends CI_Controller {
     }
 
     public function editProduct(){
-            $data['rail_type'] = $this->AdminModel->getList('rail_type');
-            $data['roof_type'] = $this->AdminModel->getList('roof_type');
-            $data['panel_position'] = $this->AdminModel->getList('panel_position');
-            $data['height'] = $this->AdminModel->getList('height');
+        $filter = array('id'=>$this->uri->segment(3));
+        $data['product'] = $this->AdminModel->getDetails('sub_products',$filter);
+        
+        $data['railType'] = $this->AdminModel->getList('rail_type');
+    
+        $panelPositionFilter = [];
+        if(isset($data['product']['rail_type_id'])){
+            $panelPositionFilter = array('rail_type_id'=>$data['product']['rail_type_id']);
+        }
+        $data['panelPosition'] = $this->AdminModel->getList('panel_position',$panelPositionFilter);
+    
+        $roofTypeFilter = [];
+        if(isset($data['product']['rail_type_id'])){
+            $roofTypeFilter = array('rail_type_id'=>$data['product']['rail_type_id'],
+                                    'panel_position_id'=>$data['product']['panel_position_id']);
+        }
+        $data['roofType'] = $this->AdminModel->getList('roof_type',$roofTypeFilter);
+    
+        $heightFilter = [];
+        if(isset($data['product']['height_id'])){
+            $heightFilter = array('rail_type_id'=>$data['product']['rail_type_id'],
+                                  'panel_position_id'=>$data['product']['panel_position_id'],
+                                  'roof_type_id'=>$data['product']['roof_type_id']);
+        }
+        $data['height'] = $this->AdminModel->getList('height',$heightFilter);
 
-            $filter = array('id'=>$this->uri->segment(3));
-            $data['product'] = $this->AdminModel->getDetails('sub_products',$filter);
-            
-            $this->load->view('product/editProduct',$data);
+        $this->load->view('product/editProduct',$data);
 
     }
     public function updateProduct(){
@@ -180,19 +198,12 @@ class Product extends CI_Controller {
         $this->form_validation->set_rules('panel_position_id','Panel Position','required|trim|xss_clean|max_length[255]');
         $this->form_validation->set_rules('roof_type_id','Roof Type','trim|xss_clean|max_length[255]');
         $this->form_validation->set_rules('height_id','Height','trim|xss_clean|max_length[255]');
-        $this->form_validation->set_rules('video','Video','trim|xss_clean|max_length[255]');
+        $this->form_validation->set_rules('video','Video','');
         $this->form_validation->set_rules('status','Status','required|trim|xss_clean|max_length[255]');
         if($this->form_validation->run()){
-            $filter = array('id !='=>$this->uri->segment(3));
-            
-            $exists = $this->AdminModel->getDetails('products',$filter);
-
-            if($exists){
-                    $returnArr['errCode']               = 3;
-                    $returnArr['message']['product_name']      = '<p class="error">Product Already Exists</p>';
-            }else{
+                
                 if(isset($_FILES) && !empty($_FILES)){
-                    $upload = upload_image($_FILES,'image');
+                    $upload = upload_image($_FILES,'file');
 
                     if($upload['errCode'] == -1){
                         $image = $upload['image'];
@@ -205,7 +216,7 @@ class Product extends CI_Controller {
                     $image = $this->input->post('old_image');
                 }
 
-                $videoLink = substr($this->input->post('video'),strrpos($this->ipnut->post('video'),'/')+1);
+                $videoLink = substr($this->input->post('video'),strrpos($this->input->post('video'),'/')+1);
                 
                 $filter     = array('id'=>$this->uri->segment(3));
                 $data = array(  'title'       =>$this->input->post('title'),
@@ -230,10 +241,9 @@ class Product extends CI_Controller {
                     $returnArr['errCode']     = 2;
                     $returnArr['message']  = 'Please try again';
                 }
-            }
+
         }else{
             $returnArr['errCode'] = 3;
-
             foreach ($this->input->post() as $key => $value) {
                 $returnArr['message'][$key] = form_error($key);
             }

@@ -104,7 +104,6 @@ if(!function_exists('upload_image')){
 
 
             $upload_data = $ci->upload->data();
-
             // $config2['image_library']   = 'gd2';
             // $config2['source_image']    = $upload_data['full_path'];
             // $config2['create_thumb']    = TRUE;

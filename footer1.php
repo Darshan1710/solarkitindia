@@ -44,14 +44,19 @@
                         <div class="block_content toggle_content">
                             <ul>
                                 <li><a href="">Home</a></li>
-                                <li><a href="about-us">About us</a></li>
-                                <li><a href="products.php">Products</a></li>
-                                <li><a href="projects.php">Recent Projects</a></li>
-                                <li><a href="blogList.php">Blog</a></li>
-                                <li><a href="faq.php">FAQ</a></li>
-                                <li><a href="news.solarkitindia.com">News</a></li>
-                                <li><a href="careers.php">Career</a></li>
-                                <li><a href="contact-us.php">Contact us</a></li>
+                                <li><a href='<?= $link; ?>about-us/'>About Us</a></li>
+                                <li><a href="<?= $link; ?>products/">Products</a>
+                                <li><a href="<?= $link; ?>references/">Recent Project</a>
+                                <li><a href="<?= $link; ?>blog/">Blog</a>
+                                </li>
+                                <li><a href="<?= $link; ?>faq/">FAQ</a>
+                                </li>
+                                <li><a href="https://news.solarkitindia.com/">News</a>
+                                </li>
+                                <li><a href="<?= $link; ?>careers/">Career</a>
+                                </li>
+                                <li><a href="<?= $link; ?>contact-us/">Contact us</a>
+                                </li>
                             </ul>
                         </div>
                     </section>

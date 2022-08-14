@@ -14,7 +14,7 @@ include("connect.php");
     <meta name="description" content="Generally,the installation of small flat photovoltaic brackets is mainly divided into three main components,which are triangle beam bracket,cross beam bracket and vertical brack" />
     <meta name="google-site-verification" content="0hlmt6XTPq9hWJUMwJe9WG8xzEZXv56X8cNMCA1UqUo" />
     <meta property="og:image" content="uploadfile/news/3c46c1bd13b873ed48ba7b21b76d6154.jpg"/>
-    <link href="uploadfile/userimg/5fb86e9addafa6d964bb096eae4db0c0.ico" rel="shortcut icon"  />
+    <link href="<?= $link;?>uploadfile/userimg/5fb86e9addafa6d964bb096eae4db0c0.ico" rel="shortcut icon"  />
     <?php include_once 'head.php'; ?>
     <script type="text/javascript" src="js/product.js"></script>
 </head>

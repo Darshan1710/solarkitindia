@@ -14,7 +14,7 @@
     <meta name="google-site-verification" content="0hlmt6XTPq9hWJUMwJe9WG8xzEZXv56X8cNMCA1UqUo" />
 
     <meta property="og:image" content=""/>
-    <link href="uploadfile/userimg/5fb86e9addafa6d964bb096eae4db0c0.ico" rel="shortcut icon"  />
+    <link href="<?= $link;?>uploadfile/userimg/5fb86e9addafa6d964bb096eae4db0c0.ico" rel="shortcut icon"  />
     <?php include_once 'head.php'; ?>
 </head>
 <body>
@@ -31,8 +31,8 @@
                 <em>Contact us</em>
             </div>
             <div class="bread_right">
-                <a class="home" href="<?php echo $base_url; ?>"><i class="fa fa-home"></i>Home</a>
-                <i class="fa fa-angle-right"></i><a href="contact-us.php"><h2>Contact us</h2></a>
+                <a class="home" href="<?= $link;?>"><i class="fa fa-home"></i>Home</a>
+                <i class="fa fa-angle-right"></i><a href="<?= $link;?>contact-us/"><h2>Contact us</h2></a>
             </div>
         </div>
     </div>

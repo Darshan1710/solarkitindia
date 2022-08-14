@@ -14,9 +14,9 @@ include("connect.php");
         <meta name="description" content="Generally,the installation of small flat photovoltaic brackets is mainly divided into three main components,which are triangle beam bracket,cross beam bracket and vertical brack" />
         <meta name="google-site-verification" content="0hlmt6XTPq9hWJUMwJe9WG8xzEZXv56X8cNMCA1UqUo" />
         <meta property="og:image" content="uploadfile/news/3c46c1bd13b873ed48ba7b21b76d6154.jpg"/>
-        <link href="uploadfile/userimg/5fb86e9addafa6d964bb096eae4db0c0.ico" rel="shortcut icon"  />
+        <link href="<?= $link;?>uploadfile/userimg/5fb86e9addafa6d964bb096eae4db0c0.ico" rel="shortcut icon"  />
         <?php include_once 'head.php'; ?>
-        <script type="text/javascript" src="js/product.js"></script>
+        <script type="text/javascript" src="<?= $link; ?>js/product.js"></script>
     </head>
 <body>
 <?php include_once 'header1.php'; ?>
@@ -66,7 +66,7 @@ include("connect.php");
                         <option value="">Roof Type</option>
                     </select>
                 </div>
-                <div class="col-md-2 filter-input height-input">
+                <div class="col-md-2 filter-input height-input" style="display: none">
                     <label>Step 4</label>
                     <select class="selectInput" name="height" id="height" disabled>
                         <option value="">Height</option>

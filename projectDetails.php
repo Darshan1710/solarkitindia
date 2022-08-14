@@ -14,7 +14,7 @@
     <meta name="google-site-verification" content="0hlmt6XTPq9hWJUMwJe9WG8xzEZXv56X8cNMCA1UqUo" />
 
     <meta property="og:image" content="uploadfile/news/3c46c1bd13b873ed48ba7b21b76d6154.jpg"/>
-    <link href="uploadfile/userimg/5fb86e9addafa6d964bb096eae4db0c0.ico" rel="shortcut icon"  />
+    <link href="<?= $link;?>uploadfile/userimg/5fb86e9addafa6d964bb096eae4db0c0.ico" rel="shortcut icon"  />
     <?php include_once 'head.php'; ?>
 </head>
 <body>
@@ -72,7 +72,7 @@ if($project){
                                         foreach($previousNews as $previousRow){
                                             ?>
                                             <li class="prev_post">
-                                                <a href="projectDetails.php?id=<?php echo $previousId; ?>">
+                                                <a href="<?= $link;?>project-details/?id=<?php echo $previousId; ?>">
                                                     <span class="meta_nav">Previous</span>
                                                     <h4 class="post_title"><?php echo $previousRow['title'] ?></h4>
                                                 </a>
@@ -85,7 +85,7 @@ if($project){
                                     foreach($nextNews as $nextNewsRow){
                                         ?>
                                         <li class="next_post">
-                                            <a href="projectDetails.php?id=<?php echo $nextId; ?>">
+                                            <a href="<?= $link;?>project-details/?id=<?php echo $nextId; ?>">
                                                 <span class="meta_nav">Next</span>
                                                 <h4 class="post_title"><?php echo $nextNewsRow['title'] ?></h4>
                                             </a>

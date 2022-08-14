@@ -16,17 +16,7 @@
     <meta name="google-site-verification" content="0hlmt6XTPq9hWJUMwJe9WG8xzEZXv56X8cNMCA1UqUo"/>
 
     <meta property="og:image" content=""/>
-    <link href="uploadfile/userimg/5fb86e9addafa6d964bb096eae4db0c0.ico" rel="shortcut icon"/>
-    <link rel="alternate" hreflang="en" href="about-us_d1.html"/>
-    <link rel="alternate" hreflang="fr" href="https://fr.bristarpvmount.com/about-us_d1"/>
-    <link rel="alternate" hreflang="es" href="https://es.bristarpvmount.com/about-us_d1"/>
-    <link rel="alternate" hreflang="pt" href="https://pt.bristarpvmount.com/about-us_d1"/>
-    <link rel="alternate" hreflang="nl" href="https://nl.bristarpvmount.com/about-us_d1"/>
-    <link rel="alternate" hreflang="ar" href="https://ar.bristarpvmount.com/about-us_d1"/>
-    <link rel="alternate" hreflang="ja" href="https://ja.bristarpvmount.com/about-us_d1"/>
-    <link rel="alternate" hreflang="ms" href="https://ms.bristarpvmount.com/about-us_d1"/>
-    <link rel="alternate" hreflang="vi" href="https://vi.bristarpvmount.com/about-us_d1"/>
-    <link rel="alternate" href="about-us_d1.html" hreflang="x-default"/>
+    <link href="<?= $link;?>uploadfile/userimg/5fb86e9addafa6d964bb096eae4db0c0.ico" rel="shortcut icon"/>
     <?php include_once('head.php'); ?>
 </head>
 <body>
@@ -41,8 +31,8 @@
                 <em>About us</em>
             </div>
             <div class="bread_right">
-                <a class="home" href="#"><i class="fa fa-home"></i>Home</a>
-                <i class="fa fa-angle-right"></i><a href="about-us.php"><h2>About us</h2></a>
+                <a class="home" href="<?= $link;?>"><i class="fa fa-home"></i>Home</a>
+                <i class="fa fa-angle-right"></i><a href="<?= $link;?>about-us/"><h2>About us</h2></a>
             </div>
         </div>
     </div>

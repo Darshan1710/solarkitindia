@@ -15,8 +15,7 @@
     <meta name="google-site-verification" content="0hlmt6XTPq9hWJUMwJe9WG8xzEZXv56X8cNMCA1UqUo" />
     <link rel="canonical" href="https:///" />
     <meta property="og:image" content=""/>
-    <link href="uploadfile/userimg/5fb86e9addafa6d964bb096eae4db0c0.ico" rel="shortcut icon"  />
-    <link rel="alternate" hreflang="en" href="news-knowledge-_nc1.html" />
+    <link href="<?= $link;?>uploadfile/userimg/5fb86e9addafa6d964bb096eae4db0c0.ico" rel="shortcut icon"  />
     <?php include_once('head.php'); ?>
 
 </head>
@@ -31,10 +30,10 @@
                 <em>News & Knowledge </em>
             </div>
             <div class="bread_right">
-                <a class="home" href="index.html"><i class="fa fa-home"></i>Home</a>
+                <a class="home" href="<?= $link;?>"><i class="fa fa-home"></i>Home</a>
                 <i class="fa fa-angle-right"></i>
-                <a href="news-knowledge_nc1.html">
-                    <h2>News & Knowledge </h2>
+                <a href="<?= $link;?>blogs/">
+                    <h2>Blogs </h2>
                 </a>
             </div>
         </div>
@@ -60,14 +59,14 @@
                     ?>
                     <li class="clearfix">
                         <div class="image">
-                            <a href="blogDetails.php?id=<?php echo $blogRow['id']; ?>"></a>
+                            <a href="<?= $link;?>blog-details/?id=<?php echo $blogRow['id']; ?>"></a>
                             <img src="<?php echo $image_link.$blogRow['img']; ?>" alt="<?php echo $blogRow['title']; ?>" />
                         </div>
                         <div class="main">
                             <span class="page_date"><?php echo date('M d ,Y',strtotime($blogRow['date'])); ?></span>
-                            <a class="title" href="blogDetails.php?id=<?php echo $blogRow['id']; ?>"><?php echo $blogRow['title']; ?></a>
+                            <a class="title" href="<?= $link;?>blog-details/?id=<?php echo $blogRow['id']; ?>"><?php echo $blogRow['title']; ?></a>
                             <div class="text"><?php echo $blogRow['description']; ?></div>
-                            <a rel="nofollow" href="blogDetails.php?id=<?php echo $blogRow['id']; ?>" class="page_more">view more<i></i></a>
+                            <a rel="nofollow" href="<?= $link;?>blog-details/?id=<?php echo $blogRow['id']; ?>" class="page_more">view more<i></i></a>
                         </div>
                     </li>
                     <?php } } ?>

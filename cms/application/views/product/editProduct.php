@@ -100,120 +100,104 @@
                 <div class="panel-body">
                   <h5 class="panel-title">Product Form </h5>
                   <hr>
-                  <form action="#" method="post" id="update" enctype="multipart/form-data">
-                <input type="hidden" name="id" value="<?php echo $this->uri->segment(3) ?>" class="id" id="id">
-                <input type="hidden" name="sku" value="<?php echo set_value('sku',isset($product['sku']) ? $product['sku'] : '')?>">
-                <div class="modal-body">
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <label>Product Name</label>
-                                <input type="text" placeholder="Product Name" class="form-control product_name" name="product_name" value="<?php echo set_value('product_name',isset($product['product_name']) ? $product['product_name'] : '')?>">
+                    <form action="#" method="post" id="update" enctype="multipart/form-data">
+                        <input type="hidden" name="id" value="<?php echo $this->uri->segment(3) ?>" class="id" id="id">
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <label>Product Name</label>
+                                        <input type="text" placeholder="Product Name" class="form-control name" name="title" value="<?= set_value('title',isset($product['title']) ? $product['title'] : '')?>">
+                                    </div>
+
+                                    <div class="col-sm-3">
+                                        <label>Product Image (200 x 200)</label>
+                                        <img class="image" width="50px" height="50px" src="<?php echo $image = !empty($product['image']) ? base_url().$product['image']  : ''; ?>">
+                                        <button class="btn btn-sm btn-primary change_image" type="button">Change Image</button>
+                                        <input type="hidden" name="file" class="new_image">
+                                        <input type="hidden"  class="form-control old_image" name="old_image" value="<?php echo $image = empty($product['image']) ? set_value('old_image') : $product['image']?>">
+                                    </div>
+
+                                    <div class="col-sm-3">
+                                        <label>Rail Type</label>
+                                        <select class="form-control select rail_type_id" name="rail_type_id" >
+                                            <option value="">Please Select Rail Type</option>
+                                            <?php foreach($railType as $row){?>
+                                                <option value="<?php echo $row['id'] ?>" <?php echo set_select('rail_type_id', '1', $product['rail_type_id'] == $row['id'] ? TRUE : FALSE ); ?>><?php echo $row['name'] ?></option>
+                                            <?php } ?>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-sm-3">
+                                        <label>Panel Position</label>
+                                        <select class="form-control select panel_position_id" name="panel_position_id">
+                                            <option value="">Please Select Panel Position</option>
+                                            <?php foreach($panelPosition as $row){?>
+                                                <option value="<?php echo $row['id'] ?>" <?php echo set_select('panel_position_id', '1', $product['panel_position_id'] == $row['id'] ? TRUE : FALSE ); ?>><?php echo $row['name'] ?></option>
+                                            <?php } ?>
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-sm-3">
-                                <label>Category</label>
-                                <select class="form-control select category_id" name="category_id">
-                                    <option value="">Please Select Category</option>
-                                    <?php foreach($category as $row){?>
-                                    <option value="<?php echo $row['id'] ?>" <?php echo set_select('category_id', '1', $product['category_id'] == $row['id'] ? TRUE : FALSE ); ?>><?php echo $row['category_name'] ?></option>
-                                    <?php } ?>
-                                </select>
+
+
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <label>Roof Type</label>
+                                        <select class="form-control select roof_type_id" name="roof_type_id">
+                                            <option value="">Select Roof Type</option>
+                                            <?php foreach($roofType as $row){?>
+                                                <option value="<?php echo $row['id'] ?>" <?php echo set_select('roof_type_id', '1', $product['id'] == $row['id'] ? TRUE : FALSE ); ?>><?php echo $row['name'] ?></option>
+                                            <?php } ?>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label>Height</label>
+                                        <select class="form-control select height_id" name="height_id">
+                                            <option value="">Select Height</option>
+                                            <?php foreach($height as $row){?>
+                                                <option value="<?php echo $row['id'] ?>" <?php echo set_select('height_id', '1', $product['id'] == $row['id'] ? TRUE : FALSE ); ?>><?php echo $row['name'] ?></option>
+                                            <?php } ?>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <label>Video</label>
+                                        <input type="text" class="form-control" name="video" placeholder="https://www.youtube.com/embed/tgbNymZ7vqY">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <label>Status</label>
+                                        <select class="form-control select status" name="status">
+                                            <option value="">Please Select Status</option>
+                                            <option value="1" selected>Active</option>
+                                            <option value="0">Inactive</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-sm-3">
-                                <label>Sub Category</label>
-                                <select class="form-control select subcategory_id" name="subcategory_id">
-                                    <?php foreach($sub_category as $row){?>
-                                    <option value="<?php echo $row['id'] ?>" <?php echo set_select('subcategory_id', '1', $product['sub_category'] == $row['id'] ? TRUE : FALSE ); ?>><?php echo $row['sub_category'] ?></option>
-                                    <?php } ?>
-                                </select>
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <label>Short Description</label>
+                                        <textarea name="short_description" class="form-control short_description"></textarea>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label>Description</label>
+                                        <textarea name="long_description" class="form-control long_description" rows="10"></textarea>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-sm-3">
-                                <label>Market Price</label>
-                                <input type="text" placeholder="Market Price" class="form-control unit_price" name="unit_price" value="<?php echo set_value('unit_price',isset($product['unit_price']) ? $product['unit_price'] : '')?>">
-                            </div>
-                            
+
 
                         </div>
-                    </div>
 
-
-                     <div class="form-group">
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <label>Our Price</label>
-                                <input type="text" placeholder="Our Price" class="form-control sell_price" name="sell_price" value="<?php echo set_value('sell_price',isset($product['sell_price']) ? $product['sell_price'] : '')?>">
-                            </div>
-                            <div class="col-sm-3">
-                                <label>Stock</label>
-                                <input type="number" placeholder="Stock" class="form-control stock" name="stock" value="<?php echo set_value('stock',isset($stock['remaning_stock']) ? $stock['remaning_stock'] : '')?>">
-                            </div>
-                            <div class="col-sm-3">
-                                <label>Discount</label>
-                                <input type="text" placeholder="Discount" class="form-control discount" name="discount" value="<?php echo set_value('discount',isset($product['discount']) ? $product['discount'] : '')?>">
-                            </div>
-                            <div class="col-sm-3">
-                                <label>Image (200 x 200)</label><br>
-                                <img class="image" width="50px" height="50px" src="<?php echo $image = !empty($product['image']) ? base_url().$product['image']  : ''; ?>">
-                                <button class="btn btn-sm btn-primary change_image" type="button">Change Image</button>
-                                <input type="hidden" name="image" class="new_image">
-                                <input type="hidden"  class="form-control old_image" name="old_image" value="<?php echo $image = empty($product['image']) ? set_value('old_image') : $product['image']?>">
-                            </div>
-                            
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Submit form</button>
                         </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <label>Product Type</label>
-                                <select class="form-control select product_type" name="1" disabled>
-                                    <option value="">Please Select Type</option>
-                                    <option value="1"  <?php echo set_select('product_type', '1', $product['product_type'] == '1' ? TRUE : FALSE ); ?>>Simple</option>
-                                    <option value="2" <?php echo set_select('product_type', '1', $product['product_type'] == '2' ? TRUE : FALSE ); ?>>Configurable</option>
-                                </select>
-                            </div>
-                            
-                            <input type="hidden" name="product_type"  class="product_type" value="<?php echo $product['product_type']; ?>">
-                            <div class="col-sm-3">
-                                <label>Status</label>
-                                <select class="form-control select status" name="status">
-                                    <option value="">Please Select Status</option>
-                                    <option value="1" <?php echo set_select('status', '1', $product['status'] == '1' ? TRUE : FALSE ); ?>>Active</option>
-                                    <option value="0" <?php echo set_select('status', '0', $product['status'] == '0' ? TRUE : FALSE ); ?>>Inactive</option>
-                                </select>
-                            </div>
-                            <div class="col-sm-3">
-                                <label>Active</label>
-                                <select class="form-control select active" name="active">
-                                    <option value="">Please Select</option>
-                                    <option value="1" <?php echo set_select('active', '1', $product['active'] == '1' ? TRUE : FALSE ); ?>>Active</option>
-                                    <option value="2" <?php echo set_select('active', '1', $product['active'] == '2' ? TRUE : FALSE ); ?>>Inactive</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <label>Short Description</label>
-                                <textarea name="short_description" class="form-control short_description"><?php echo $short_description = empty($product['short_description']) ? set_value('short_description') : $product['short_description']?></textarea>
-                            </div>
-                            <div class="col-sm-6">
-                                <label>Description</label>
-                                <textarea name="long_description" class="form-control long_description" rows="10"><?php echo $long_description = empty($product['long_description']) ? set_value('long_description') : $product['long_description']?></textarea>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Submit form</button>
-                </div>
-            </form>
+                    </form>
               </div>
             </div>
           </div>

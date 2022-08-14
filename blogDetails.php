@@ -14,7 +14,7 @@
     <meta name="google-site-verification" content="0hlmt6XTPq9hWJUMwJe9WG8xzEZXv56X8cNMCA1UqUo" />
 
     <meta property="og:image" content="uploadfile/news/3c46c1bd13b873ed48ba7b21b76d6154.jpg"/>
-    <link href="uploadfile/userimg/5fb86e9addafa6d964bb096eae4db0c0.ico" rel="shortcut icon"  />
+    <link href="<?= $link;?>uploadfile/userimg/5fb86e9addafa6d964bb096eae4db0c0.ico" rel="shortcut icon"  />
     <?php include_once 'head.php'; ?>
 </head>
 <body>
@@ -38,9 +38,9 @@ if($news){
                 <em>News & Knowledge </em>
             </div>
             <div class="bread_right">
-                <a class="home" href="<?php echo $base_url; ?>"><i class="fa fa-home"></i>Home</a>
-                <i class="fa fa-angle-right"></i><a href="newsList.php">News & Knowledge </a>
-                <i class="fa fa-angle-right"></i><a href="newsDetails.php?id=<?php echo $newsRow['id'] ?>"><h2>What are the components of the small flat photovoltaic solar mounting brackets?</h2></a>
+                <a class="home" href="<?= $link;?>"><i class="fa fa-home"></i>Home</a>
+                <i class="fa fa-angle-right"></i><a href="<?= $link;?>blog/">News & Knowledge </a>
+                <i class="fa fa-angle-right"></i><a href="<?= $link;?>blog-details/?id=<?php echo $newsRow['id'] ?>"><h2>What are the components of the small flat photovoltaic solar mounting brackets?</h2></a>
             </div>
         </div>
     </div>
@@ -72,7 +72,7 @@ if($news){
                                 foreach($previousNews as $previousRow){
                             ?>
                         <li class="prev_post">
-                            <a href="newsDetails.php?id=<?php echo $previousId; ?>">
+                            <a href="<?= $link;?>blog-details/?id=<?php echo $previousId; ?>">
                                 <span class="meta_nav">Previous</span>
                                 <h4 class="post_title"><?php echo $previousRow['title'] ?></h4>
                             </a>
@@ -85,7 +85,7 @@ if($news){
                         foreach($nextNews as $nextNewsRow){
                         ?>
                         <li class="next_post">
-                            <a href="newsDetails.php?id=<?php echo $nextId; ?>">
+                            <a href="<?= $link;?>blog-details/?id=<?php echo $nextId; ?>">
                                 <span class="meta_nav">Next</span>
                                 <h4 class="post_title"><?php echo $nextNewsRow['title'] ?></h4>
                             </a>

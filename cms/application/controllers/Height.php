@@ -196,4 +196,30 @@ class Height extends CI_Controller
 
     }
 
+    public function getHeight()
+    {
+        $this->form_validation->set_rules('rail_type_id', 'Rail Type Id', 'required|trim|xss_clean|max_length[255]');
+        $this->form_validation->set_rules('panel_position_id', 'Panel Position Id', 'required|trim|xss_clean|max_length[255]');
+        $this->form_validation->set_rules('roof_type_id', 'Roof Type Id', 'required|trim|xss_clean|max_length[255]');
+        if ($this->form_validation->run()) {
+            $filter = array('rail_type_id' => $this->input->post('rail_type_id'),
+                            'panel_position_id'=>$this->input->post('panel_position_id'),
+                            'roof_type_id'  =>$this->input->post('roof_type_id'));
+            $data = $this->AdminModel->getList('height', $filter);
+            if ($data) {
+                $returnArr['errCode'] = -1;
+                $returnArr['message'] = $data;
+            } else {
+                $returnArr['errCode'] = 2;
+                $returnArr['message'] = 'Please try again';
+            }
+        } else {
+            $returnArr['errCode'] = 3;
+            foreach ($this->input->post() as $key => $value) {
+                $returnArr['message'][$key] = form_error($key);
+            }
+        }
+        echo json_encode($returnArr);
+    }
+
 }

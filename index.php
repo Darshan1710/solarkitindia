@@ -6,9 +6,9 @@ include("connect.php");
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <?php include_once 'head.php'; ?>
-    <script type="text/javascript" src="demo/template/js/demo.js"></script>
-    <link rel="stylesheet" type="text/css" href="demo/template/css/owl.carousel.min.css">
-    <link rel="stylesheet" type="text/css" href="demo/template/css/owl.theme.default.min.css">
+    <script type="text/javascript" src="<?= $link;?>demo/template/js/demo.js"></script>
+    <link rel="stylesheet" type="text/css" href="<?= $link;?>demo/template/css/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="<?= $link;?>demo/template/css/owl.theme.default.min.css">
 
 </head>
 <body>
@@ -239,13 +239,13 @@ include("connect.php");
                 foreach ($newProducts as $newProductsRow) { ?>
                     <li class="col-sm-3">
                         <div class="column">
-                            <a href="productDetails.php?id=<?php echo $newProductsRow['id']; ?>" class="image">
+                            <a href="<?= $link;?>product-details/?id=<?php echo $newProductsRow['id']; ?>" class="image">
                                 <img id="product_detail_img"
                                      alt="<?php echo $newProductsRow['title']; ?>"
                                      src="<?php echo $image_link . $newProductsRow['thumbnail']; ?>"/></a>
-                            <a href="productDetails.php?id=<?php echo $newProductsRow['id']; ?>" class="title"><?php echo $newProductsRow['title']; ?></a>
+                            <a href="<?= $link;?>product-details/?id=<?php echo $newProductsRow['id']; ?>" class="title"><?php echo $newProductsRow['title']; ?></a>
                             <div class="text"><?php echo $newProductsRow['short_description']; ?></div>
-                            <a rel="nofollow" href="productDetails.php?id=<?php echo $newProductsRow['id']; ?>" class="more">view more<i></i></a>
+                            <a rel="nofollow" href="<?= $link;?>product-details/?id=<?php echo $newProductsRow['id']; ?>" class="more">view more<i></i></a>
                         </div>
                     </li>
                 <?php }
@@ -292,13 +292,13 @@ include("connect.php");
                     ?>
                     <li class="col-sm-3">
                         <div class="in_CaseL_m">
-                            <a href="projectDetails.php?id=<?php echo $projectRow['id']; ?>"></a>
+                            <a href="<?= $link;?>product-details/?id=<?php echo $projectRow['id']; ?>"></a>
                             <img src="<?php echo $image_link . $projectRow['image'] ?>"
                                  alt="<?php echo $projectRow['title'] ?>">
                             <div class="wrap">
                                 <i class="icon"></i>
                                 <div class="in_CaseL_w">
-                                    <a href="projectDetails.php?id=<?php echo $projectRow['id']; ?>"><?php echo $projectRow['title'] ?></a>
+                                    <a href="<?= $link;?>product-details/?id=<?php echo $projectRow['id']; ?>"><?php echo $projectRow['title'] ?></a>
                                     <p><?php echo $projectRow['short_description'] ?></p>
                                 </div>
                             </div>
@@ -367,7 +367,7 @@ include("connect.php");
                     ?>
                     <li class="col-sm-4 col-xs-12">
                         <div class="image">
-                            <a href="blogDetails.php?blog_id=<?php echo $blogRow['id'] ?>"></a>
+                            <a href="<?= $link;?>blog-details/?blog_id=<?php echo $blogRow['id'] ?>"></a>
                             <img src="<?php echo $image_link . $blogRow['img'] ?>"
                                  alt="<?php echo $blogRow['title']; ?>">
                             <div class="date"><em>29</em>
@@ -375,13 +375,13 @@ include("connect.php");
 
                         </div>
                         <div class="wrap">
-                            <a href="blogDetails.php?blog_id=<?php echo $blogRow['id'] ?>"
+                            <a href="<?= $link;?>blog-details/?blog_id=<?php echo $blogRow['id'] ?>"
                                class="title"><?php echo $blogRow['title']; ?></a>
                             <div class="text"><?php echo $blogRow['description']; ?></div>
                             <span class="page_date">Mar 29, 2021</span>
 
                             <a rel="nofollow"
-                               href="blogDetails.php?blog_id=<?php echo $blogRow['id'] ?>"
+                               href="<?= $link;?>blog-details/?blog_id=<?php echo $blogRow['id'] ?>"
                                class="page_more">view more<i></i></a>
                         </div>
                     </li>

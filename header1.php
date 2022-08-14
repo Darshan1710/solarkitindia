@@ -112,18 +112,18 @@
                             <div class="mainmenu">
                                 <nav>
                                     <ul class="clearfix">
-                                        <li><a href='about-us/'>About Us</a></li>
-                                        <li><a href="products/">Products</a>
-                                        <li><a href="references/">Recent Project</a>
-                                        <li><a href="blog/">Blog</a>
+                                        <li><a href='<?= $link; ?>about-us/'>About Us</a></li>
+                                        <li><a href="<?= $link; ?>products/">Products</a>
+                                        <li><a href="<?= $link; ?>references/">Recent Project</a>
+                                        <li><a href="<?= $link; ?>blog/">Blog</a>
                                         </li>
-                                        <li><a href="faq/">FAQ</a>
+                                        <li><a href="<?= $link; ?>faq/">FAQ</a>
                                         </li>
                                         <li><a href="https://news.solarkitindia.com/">News</a>
                                         </li>
-                                        <li><a href="careers/">Career</a>
+                                        <li><a href="<?= $link; ?>careers/">Career</a>
                                         </li>
-                                        <li><a href="contact-us/">Contact us</a>
+                                        <li><a href="<?= $link; ?>contact-us/">Contact us</a>
                                         </li>
                                     </ul>
                                 </nav>
@@ -136,18 +136,18 @@
                                 <li><a href="#">Home</a></li>
                             </ul>
                             <ul class="second-nav">
-                                <li><a href='about-us/'>About Us</a></li>
-                                <li><a href="products/">Products</a>
-                                <li><a href="references/">Recent Project</a>
-                                <li><a href="blog/">Blog</a>
+                                <li><a href='<?= $link; ?>about-us/'>About Us</a></li>
+                                <li><a href="<?= $link; ?>products/">Products</a>
+                                <li><a href="<?= $link; ?>references/">Recent Project</a>
+                                <li><a href="<?= $link; ?>blog/">Blog</a>
                                 </li>
-                                <li><a href="faq/">FAQ</a>
+                                <li><a href="<?= $link; ?>faq/">FAQ</a>
                                 </li>
                                 <li><a href="https://news.solarkitindia.com/">News</a>
                                 </li>
-                                <li><a href="careers/">Career</a>
+                                <li><a href="<?= $link; ?>careers/">Career</a>
                                 </li>
-                                <li><a href="contact-us/">Contact us</a>
+                                <li><a href="<?= $link; ?>contact-us/">Contact us</a>
                                 </li>
                             </ul>
                         </nav>

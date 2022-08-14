@@ -18,7 +18,6 @@ include("connect.php");
     <link rel="canonical" href="https:///" />
     <meta property="og:image" content=""/>
     <link href="<?= $link; ?>uploadfile/userimg/5fb86e9addafa6d964bb096eae4db0c0.ico" rel="shortcut icon"  />
-    <link rel="alternate" hreflang="en" href="news-knowledge-_nc1.html" />
     <?php include_once('head.php'); ?>
 
 </head>
@@ -33,9 +32,9 @@ include("connect.php");
                 <em>FAQ </em>
             </div>
             <div class="bread_right">
-                <a class="home" href="index.html"><i class="fa fa-home"></i>Home</a>
+                <a class="home" href="<?= $link;?>"><i class="fa fa-home"></i>Home</a>
                 <i class="fa fa-angle-right"></i>
-                <a href="#">
+                <a href="<?= $link;?>faq/">
                     <h2>FAQ </h2>
                 </a>
             </div>

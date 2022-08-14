@@ -263,7 +263,7 @@ class AdminModel extends CI_Model {
         $this->db->join('rail_type','rail_type.id = p.rail_type_id');
         $this->db->join('panel_position','panel_position.id = p.panel_position_id');
         $this->db->join('roof_type','roof_type.id = p.roof_type_id');
-        $this->db->join('height','height.id = p.height_id');
+        $this->db->join('height','height.id = p.height_id','left');
         $this->db->where('p.status','1');
         $this->db->order_by('p.id','desc');
         $this->db->from('sub_products p');
@@ -271,7 +271,7 @@ class AdminModel extends CI_Model {
         $this->column_order = array(null,'title','rail_type','panel_position','roof_type','height','p.status');
 
         // Set searchable column fields
-        $this->column_search = array('title','rail_type.name','panel_position.name','roof_type.name','height.name','category_name','p.status');
+        $this->column_search = array('title','rail_type.name','panel_position.name','roof_type.name','height.name','p.status');
         // Set default order
         $this->order = array('p.created_at' => 'desc');  
         

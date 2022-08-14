@@ -10,7 +10,7 @@
                 foreach ($categories as $cat) {
                     ?>
                     <li><b></b><a
-                                href="products.php?category_id=<?php echo $cat['id']; ?>"><?php echo $cat['category'] ?></a>
+                                href="<?= $link;?>products/?category_id=<?php echo $cat['id']; ?>"><?php echo $cat['category'] ?></a>
                     </li>
                 <?php } ?>
             </ul>

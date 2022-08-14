@@ -21,16 +21,6 @@ foreach($products as $productRow){
 
     <meta property="og:image" content="https:///"/>
     <link href="uploadfile/userimg/5fb86e9addafa6d964bb096eae4db0c0.ico" rel="shortcut icon"  />
-    <link rel="alternate" hreflang="en" href="standing-seam-metal-roof-solar-mounting-clip_p15.html" />
-    <link rel="alternate" hreflang="fr" href="https://fr.bristarpvmount.com/standing-seam-metal-roof-solar-mounting-clip_p15.html" />
-    <link rel="alternate" hreflang="es" href="https://es.bristarpvmount.com/standing-seam-metal-roof-solar-mounting-clip_p15.html" />
-    <link rel="alternate" hreflang="pt" href="https://pt.bristarpvmount.com/standing-seam-metal-roof-solar-mounting-clip_p15.html" />
-    <link rel="alternate" hreflang="nl" href="https://nl.bristarpvmount.com/standing-seam-metal-roof-solar-mounting-clip_p15.html" />
-    <link rel="alternate" hreflang="ar" href="https://ar.bristarpvmount.com/standing-seam-metal-roof-solar-mounting-clip_p15.html" />
-    <link rel="alternate" hreflang="ja" href="https://ja.bristarpvmount.com/standing-seam-metal-roof-solar-mounting-clip_p15.html" />
-    <link rel="alternate" hreflang="ms" href="https://ms.bristarpvmount.com/standing-seam-metal-roof-solar-mounting-clip_p15.html" />
-    <link rel="alternate" hreflang="vi" href="https://vi.bristarpvmount.com/standing-seam-metal-roof-solar-mounting-clip_p15.html" />
-    <link rel="alternate" href="standing-seam-metal-roof-solar-mounting-clip_p15.html" hreflang="x-default" />
     <?php include_once 'head.php'; ?>
 </head>
 <body>
@@ -45,8 +35,8 @@ foreach($products as $productRow){
                 <em>Products</em>
             </div>
             <div class="bread_right">
-                <a class="home" href="index.html"><i class="fa fa-home"></i>Home</a>
-                <i class="fa fa-angle-right"></i><a href="products.php"><h2>Products</h2></a>
+                <a class="home" href="<?= $link;?>"><i class="fa fa-home"></i>Home</a>
+                <i class="fa fa-angle-right"></i><a href="<?= $link;?>products/"><h2>Products</h2></a>
                 <i class="fa fa-angle-right"></i><?php echo $productRow['title']; ?>
             </div>
         </div>
@@ -197,12 +187,12 @@ foreach($products as $productRow){
                 <div>
                     <div class="li">
                         <div class="image">
-                            <a href="productDetails.php?id=<?php echo $relatedProductRow['id'] ?>"></a>
+                            <a href="<?= $link;?>product-details/?id=<?php echo $relatedProductRow['id'] ?>"></a>
                             <img id="product_detail_img"  alt="Metal Roof Solar Mounts" src="<?php echo $image_link.$relatedProductRow['thumbnail']; ?>" />						<div class="line"></div>
                             <div class="ovrly"></div>
                             <div class="icon_box"><div class="icon"></div></div>
                         </div>
-                        <a href="productDetails.php?id=<?php echo $relatedProductRow['id'] ?>" class="title"><?php echo $relatedProductRow['title']; ?></a>
+                        <a href="<?= $link;?>product-details/?id=<?php echo $relatedProductRow['id'] ?>" class="title"><?php echo $relatedProductRow['title']; ?></a>
                         <div class="text"><?php echo $relatedProductRow['short_description']; ?></div>
                     </div>
                 </div>
