@@ -192,11 +192,6 @@
                                 <label>Panel Position</label>
                                 <select class="form-control select" name="panel_position_id" id="panel_position_id">
                                     <option value="">Please Select Panel Position</option>
-                                    <?php if(isset($panelPosition)):
-                                        foreach($panelPosition as $row){ ?>
-                                            <option value="<?= $row['id'] ?>"><?= $row['name'] ?></option>
-                                        <?php }
-                                    endif; ?>
                                 </select>
                             </div>
 
@@ -211,24 +206,14 @@
                         <div class="row">
                             <div class="col-md-3">
                                 <label>Roof Type</label>
-                                <select class="form-control select" id="roof_type_id" name="roof_type_id" multiple>
+                                <select class="form-control select" id="roof_type_id" name="roof_type_id">
                                     <option value="">Select Roof Type</option>
-                                    <?php if(isset($roofType)):
-                                        foreach($roofType as $row){ ?>
-                                            <option value="<?= $row['id'] ?>"><?= $row['name'] ?></option>
-                                        <?php }
-                                    endif; ?>
                                 </select>
                             </div>
                             <div class="col-md-3">
                                 <label>Height</label>
                                 <select class="form-control select" id="height_id" name="height_id">
                                     <option value="">Select Height</option>
-                                    <?php if(isset($height)):
-                                        foreach($height as $row){ ?>
-                                            <option value="<?= $row['id'] ?>"><?= $row['name'] ?></option>
-                                        <?php }
-                                    endif; ?>
                                 </select>
                             </div>
                             <div class="col-sm-3">
@@ -627,8 +612,7 @@ function MyCustomUploadAdapterPlugin( editor ) {
                 "targets": 3
             },
             {
-                "name": "product_name",
-
+                "name": "title",
                 "targets": 4
             },
             {
@@ -784,6 +768,233 @@ function MyCustomUploadAdapterPlugin( editor ) {
                     $("input[type=checkbox]").prop("checked", false);
                     table.state.clear();
                    // window.location.reload();
+                }
+
+            });
+
+        });
+
+        $('#rail_type_id').on('change',function(e) {
+            e.preventDefault();
+            var rail_type_id = $('#rail_type_id').val();
+            var base_url = $('#base_url').val();
+            $.ajax({
+                type: 'post',
+                data: {'rail_type_id':rail_type_id},
+                url: base_url + 'PanelPosition/getPanelPosition',
+                success: function(data) {
+                    var obj = $.parseJSON(data);
+                    if (obj.errCode == -1) {
+                        $('#panel_position_id').empty();
+                        $('#height').empty();
+                        $('#panel_position_id').append('<option value="">Please Select Position</option>');
+                        $.each(obj.message, function(key, value) {
+                            $('#panel_position_id').append('<option value="'+value.id+'">'+value.name+'</option>');
+                        });
+                    } else if (obj.errCode == 2) {
+                        alert(obj.message);
+                    } else if (obj.errCode == 3) {
+                        $('.error').remove();
+                        $.each(obj.message, function(key, value) {
+                            var element = $('#' + key);
+                            if(key == 'status'){
+                                element.closest('.select').next('.select2').after(value);
+                            }else{
+                                element.closest('.form-control').after(value);
+                            }
+
+                        });
+                    }
+
+                }
+
+            });
+
+        });
+
+        $('.rail_type_id').on('change',function(e) {
+            e.preventDefault();
+            var rail_type_id = $('.rail_type_id').val();
+            var base_url = $('#base_url').val();
+            $.ajax({
+                type: 'post',
+                data: {'rail_type_id':rail_type_id},
+                url: base_url + 'PanelPosition/getPanelPosition',
+                success: function(data) {
+                    var obj = $.parseJSON(data);
+                    if (obj.errCode == -1) {
+                        $('.panel_position_id').empty();
+                        $('.height').empty();
+                        $('.panel_position_id').append('<option value="">Please Select Position</option>');
+                        $.each(obj.message, function(key, value) {
+                            $('.panel_position_id').append('<option value="'+value.id+'">'+value.name+'</option>');
+                        });
+                    } else if (obj.errCode == 2) {
+                        alert(obj.message);
+                    } else if (obj.errCode == 3) {
+                        $('.error').remove();
+                        $.each(obj.message, function(key, value) {
+                            var element = $('#' + key);
+                            if(key == 'status'){
+                                element.closest('.select').next('.select2').after(value);
+                            }else{
+                                element.closest('.form-control').after(value);
+                            }
+
+                        });
+                    }
+
+                }
+
+            });
+
+        });
+
+        $('#panel_position_id').on('change',function(e) {
+            e.preventDefault();
+            var rail_type_id = $('#rail_type_id').val();
+            var panel_position_id = $('#panel_position_id').val();
+            var base_url = $('#base_url').val();
+            $.ajax({
+                type: 'post',
+                data: {'rail_type_id':rail_type_id,'panel_position_id':panel_position_id},
+                url: base_url + 'RoofType/getRoofType',
+                success: function(data) {
+                    var obj = $.parseJSON(data);
+                    if (obj.errCode == -1) {
+                        $('#roof_type_id').empty();
+                        $('#roof_type_id').append('<option value="">Please Select Roof Type</option>');
+                        $.each(obj.message, function(key, value) {
+                            $('#roof_type_id').append('<option value="'+value.id+'">'+value.name+'</option>');
+                        });
+                    } else if (obj.errCode == 2) {
+                        alert(obj.message);
+                    } else if (obj.errCode == 3) {
+                        $('.error').remove();
+                        $.each(obj.message, function(key, value) {
+                            var element = $('#' + key);
+                            if(key == 'status'){
+                                element.closest('.select').next('.select2').after(value);
+                            }else{
+                                element.closest('.form-control').after(value);
+                            }
+
+                        });
+                    }
+
+                }
+
+            });
+
+        });
+
+        $('.panel_position_id').on('change',function(e) {
+            e.preventDefault();
+            var rail_type_id = $('.rail_type_id').val();
+            var panel_position_id = $('.panel_position_id').val();
+            $.ajax({
+                type: 'post',
+                data: {'rail_type_id':rail_type_id,'panel_position_id':panel_position_id},
+                url: base_url + 'RoofType/getRoofType',
+                success: function(data) {
+                    var obj = $.parseJSON(data);
+                    if (obj.errCode == -1) {
+                        $('.roof_type_id').empty();
+                        $('#roof_type_id').append('<option value="">Please Select Roof Type</option>');
+                        $.each(obj.message, function(key, value) {
+                            $('.roof_type_id').append('<option value="'+value.id+'">'+value.name+'</option>');
+                        });
+                    } else if (obj.errCode == 2) {
+                        alert(obj.message);
+                    } else if (obj.errCode == 3) {
+                        $('.error').remove();
+                        $.each(obj.message, function(key, value) {
+                            var element = $('#' + key);
+                            if(key == 'status'){
+                                element.closest('.select').next('.select2').after(value);
+                            }else{
+                                element.closest('.form-control').after(value);
+                            }
+
+                        });
+                    }
+
+                }
+
+            });
+
+        });
+
+        $('#roof_type_id').on('change',function(e) {
+            e.preventDefault();
+            var rail_type_id = $('#rail_type_id').val();
+            var panel_position_id = $('#panel_position_id').val();
+            var roof_type_id = $('#roof_type_id').val();
+            var base_url = $('#base_url').val();
+            $.ajax({
+                type: 'post',
+                data: {'rail_type_id':rail_type_id,'panel_position_id':panel_position_id,'roof_type_id':roof_type_id},
+                url: base_url + 'Height/getHeight',
+                success: function(data) {
+                    var obj = $.parseJSON(data);
+                    if (obj.errCode == -1) {
+                        $('#height_id').empty();
+                        $('#height_id').append('<option value="">Please Select Height</option>');
+                        $.each(obj.message, function(key, value) {
+                            $('#height_id').append('<option value="'+value.id+'">'+value.name+'</option>');
+                        });
+                    } else if (obj.errCode == 2) {
+                        alert(obj.message);
+                    } else if (obj.errCode == 3) {
+                        $('.error').remove();
+                        $.each(obj.message, function(key, value) {
+                            var element = $('#' + key);
+                            if(key == 'status'){
+                                element.closest('.select').next('.select2').after(value);
+                            }else{
+                                element.closest('.form-control').after(value);
+                            }
+
+                        });
+                    }
+
+                }
+
+            });
+
+        });
+
+        $('.roof_type_id').on('change',function(e) {
+            e.preventDefault();
+            var rail_type_id = $('.height_id').val();
+            var panel_position_id = $('.height_id').val();
+            $.ajax({
+                type: 'post',
+                data: {'rail_type_id':rail_type_id,'panel_position_id':panel_position_id,'height_id':height_id},
+                url: base_url + 'Height/getHeight',
+                success: function(data) {
+                    var obj = $.parseJSON(data);
+                    if (obj.errCode == -1) {
+                        $('.height_id').empty();
+                        $('.height_id').append('<option value="">Please Select Height</option>');
+                        $.each(obj.message, function(key, value) {
+                            $('.height_id').append('<option value="'+value.id+'">'+value.name+'</option>');
+                        });
+                    } else if (obj.errCode == 2) {
+                        alert(obj.message);
+                    } else if (obj.errCode == 3) {
+                        $('.error').remove();
+                        $.each(obj.message, function(key, value) {
+                            var element = $('#' + key);
+                            if(key == 'status'){
+                                element.closest('.select').next('.select2').after(value);
+                            }else{
+                                element.closest('.form-control').after(value);
+                            }
+
+                        });
+                    }
+
                 }
 
             });
