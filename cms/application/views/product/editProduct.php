@@ -114,7 +114,7 @@
                                         <label>Product Image (200 x 200)</label>
                                         <img class="image" width="50px" height="50px" src="<?php echo $image = !empty($product['image']) ? base_url().$product['image']  : ''; ?>">
                                         <button class="btn btn-sm btn-primary change_image" type="button">Change Image</button>
-                                        <input type="hidden" name="file" class="new_image">
+                                        <input type="hidden" name="file" class="file">
                                         <input type="hidden"  class="form-control old_image" name="old_image" value="<?php echo $image = empty($product['image']) ? set_value('old_image') : $product['image']?>">
                                     </div>
 
@@ -149,7 +149,7 @@
                                         <select class="form-control select roof_type_id" name="roof_type_id">
                                             <option value="">Select Roof Type</option>
                                             <?php foreach($roofType as $row){?>
-                                                <option value="<?php echo $row['id'] ?>" <?php echo set_select('roof_type_id', '1', $product['id'] == $row['id'] ? TRUE : FALSE ); ?>><?php echo $row['name'] ?></option>
+                                                <option value="<?php echo $row['id'] ?>" <?php echo set_select('roof_type_id', '1', $product['roof_type_id'] == $row['id'] ? TRUE : FALSE ); ?>><?php echo $row['name'] ?></option>
                                             <?php } ?>
                                         </select>
                                     </div>
@@ -158,7 +158,16 @@
                                         <select class="form-control select height_id" name="height_id">
                                             <option value="">Select Height</option>
                                             <?php foreach($height as $row){?>
-                                                <option value="<?php echo $row['id'] ?>" <?php echo set_select('height_id', '1', $product['id'] == $row['id'] ? TRUE : FALSE ); ?>><?php echo $row['name'] ?></option>
+                                                <option value="<?php echo $row['id'] ?>" <?php echo set_select('height_id', '1', $product['height_id'] == $row['id'] ? TRUE : FALSE ); ?>><?php echo $row['name'] ?></option>
+                                            <?php } ?>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label>Screw</label>
+                                        <select class="form-control select screw_id" name="screw_id">
+                                            <option value="">Select Screw</option>
+                                            <?php foreach($screw as $row){?>
+                                                <option value="<?php echo $row['id'] ?>" <?php echo set_select('screw_id', '1', $product['screw_id'] == $row['id'] ? TRUE : FALSE ); ?>><?php echo $row['name'] ?></option>
                                             <?php } ?>
                                         </select>
                                     </div>
@@ -166,15 +175,20 @@
                                         <label>Video</label>
                                         <input type="text" class="form-control" name="video" placeholder="https://www.youtube.com/embed/tgbNymZ7vqY">
                                     </div>
-                                    <div class="col-sm-3">
-                                        <label>Status</label>
-                                        <select class="form-control select status" name="status">
-                                            <option value="">Please Select Status</option>
-                                            <option value="1" selected>Active</option>
-                                            <option value="0">Inactive</option>
-                                        </select>
-                                    </div>
+                                    
                                 </div>
+                            </div>
+                            <div class="form-group">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label>Status</label>
+                                    <select class="form-control select status" name="status">
+                                        <option value="">Please Select Status</option>
+                                        <option value="1" selected>Active</option>
+                                        <option value="0">Inactive</option>
+                                    </select>
+                                </div>
+                            </div>
                             </div>
 
                             <div class="form-group">
@@ -243,7 +257,8 @@
                 success: function(data) {
                     var obj = $.parseJSON(data);
                     if (obj.errCode == -1) {
-                        window.location.href = base_url+'Product/getProductList';
+                       // window.location.href = base_url+'Product/getProductList';
+                        window.location.reload();
                     } else if (obj.errCode == 2) {
                         alert(obj.message);
                     } else if (obj.errCode == 3) {

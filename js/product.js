@@ -11,6 +11,7 @@ $( document ).ready(function() {
                 data : {railTypeId:railTypeId},
                 success : function(data){
                     $('#panel_position').empty();
+                    $('.railType,.panelPosition,.roofType,.height,.product').remove();
                     if(data.panelPosition) {
                         $('#panel_position').append('<option value="">Please Select Panel Position</option>');
                         $.each(data.panelPosition, function (key, value) {
@@ -23,7 +24,7 @@ $( document ).ready(function() {
                     }
 
                     if(data.railType) {
-                        addComponent(data.railType);
+                        addComponent(data.railType,'railType');
                     };
                     
                 }
@@ -50,6 +51,7 @@ $( document ).ready(function() {
                 data : {railTypeId:railTypeId,panelPositionId:panelPositionId},
                 success : function(data){
                     $('#roof_type').empty();
+                    $('.panelPosition,.roofType,.height,.product').remove();
                     if(data.roofType) {
                         $('#roof_type').append('<option value="">Please Select Roof Type</option>');
                         $.each(data.roofType, function (key, value) {
@@ -62,7 +64,7 @@ $( document ).ready(function() {
                     }
                     
                     if(data.panelPosition){
-                        addComponent(data.panelPosition);
+                        addComponent(data.panelPosition,'panelPosition');
                     }
                 }
             });
@@ -83,7 +85,7 @@ $( document ).ready(function() {
                 dataType : 'json',
                 data : {roofTypeId:roofTypeId,railTypeId:railTypeId,panelPositionId:panelPositionId},
                 success : function(data){
-                    
+                    $('.roofType,.height,.product').remove();
                     $('#height').empty();
                     $('#height').append('<option value="">Please Select Height</option>');
                     if(data.height){
@@ -92,10 +94,14 @@ $( document ).ready(function() {
                             $('#height').append('<option value="' + value.id + '">' + value.name + '</option>');
                         });
                     }
+
+                    getProduct();
                     
                     if(data.roofType){
-                        addComponent(data.roofType);    
+                        addComponent(data.roofType,'roofType');    
                     }
+
+                    
 
                     $('#roof_type').css('border-color','#0277bd');
                     $('#height').removeAttr('disabled');
@@ -120,9 +126,9 @@ $( document ).ready(function() {
                 dataType : 'json',
                 data : {roofTypeId:roofTypeId,railTypeId:railTypeId,panelPositionId:panelPositionId,heightId:heightId},
                 success : function(data){
-                    
+                    $('.height,.product').remove();
                     if(data.height){
-                        addComponent(data.height);
+                        addComponent(data.height,'height');
                         $('#height').css('border-color','#0277bd');
                     }
                     
@@ -158,40 +164,51 @@ $( document ).ready(function() {
     });
 
     $(document).on('change','#screw',function(){
+        getProduct();
+    });
+    
+        
+    function getProduct() {
         var roofTypeId = $('#roof_type').val();
         var railTypeId = $('#rail_type').val();
         var panelPositionId = $('#panel_position').val();
-        var heightId = $('#height').val();
-        var screwId = $('#screw').val();
-        if(railTypeId && roofTypeId && panelPositionId && heightId && screwId){
+        var heightId = $('#height').val() ?? 0;
+        var screwId = $('#screw').val() ?? 0;
+        if (railTypeId && roofTypeId && panelPositionId) {
             $.ajax({
                 url: base_url + "getProducts.php",
-                type : 'post',
-                dataType : 'json',
-                data : {roofTypeId:roofTypeId,railTypeId:railTypeId,panelPositionId:panelPositionId,heightId:heightId,screwId:screwId},
-                success : function(data){
-
-                    if(data.screw){
-                        addComponent(data.screw);
+                type: 'post',
+                dataType: 'json',
+                data: {
+                    roofTypeId: roofTypeId,
+                    railTypeId: railTypeId,
+                    panelPositionId: panelPositionId,
+                    heightId: heightId,
+                    screwId: screwId
+                },
+                success: function (data) {
+                    $('.product').remove();
+                    if (data.screw) {
+                        //  addComponent(data.screw,'screw');
                     }
 
-                    if(data.product){
+                    if (data.product) {
                         addProduct(data.product);
                     }
-
                 }
             });
-        }else{
+        } else {
             alert('Please Select Screw');
         }
+    }
 
-    });
     
-    function addComponent(data){
+    
+    function addComponent(data,divclass){
         var image_link = $('#image_link').val();
         $.each(data, function (key, value) {
             var html =
-                '<li class="wow">' +
+                '<li class="wow '+divclass+'">' +
                 '<div class="clearfix">' +
                 '<div class="cbp-vm-image">' +
                 '<a class="link" ></a>' +
@@ -228,7 +245,7 @@ $( document ).ready(function() {
         var image_link = $('#image_link').val();
         $.each(data, function (key, value) {
             var html =
-                '<li class="wow">' +
+                '<li class="wow product">' +
                 '<div class="clearfix">' +
                 '<div class="cbp-vm-image product-image">' +
                 '<a class="link" href="productDetails.php?id='+value.id+'"></a>' +

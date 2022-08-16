@@ -37,6 +37,7 @@
                                         <li class="nav-item"><a href="<?php echo base_url()?>PanelPosition/getPanelPositionList" class="nav-link">Panel Position</a></li>
                                         <li class="nav-item"><a href="<?php echo base_url()?>RoofType/getRoofTypeList" class="nav-link">Roof Type</a></li>
                                         <li class="nav-item"><a href="<?php echo base_url()?>Height/getHeightList" class="nav-link">Height</a></li>
+                                        <li class="nav-item"><a href="<?php echo base_url()?>Screw/getScrewList" class="nav-link">Screw</a></li>
 <!--                                        <li class="nav-item"><a href="--><?php //echo base_url()?><!--Product/affiliateProductList" class="nav-link">Affiliate Products</a></li>-->
 <!--                                        <li class="nav-item"><a href="--><?php //echo base_url()?><!--Category/categoryList" class="nav-link">Category</a></li>-->
 <!--                                        <li class="nav-item"><a href="--><?php //echo base_url()?><!--SubCategory/subCategoryList" class="nav-link">Sub Category</a></li>-->

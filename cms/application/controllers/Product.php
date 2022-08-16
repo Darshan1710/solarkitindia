@@ -186,6 +186,15 @@ class Product extends CI_Controller {
         }
         $data['height'] = $this->AdminModel->getList('height',$heightFilter);
 
+        $screwFilter = [];
+       // if(isset($data['product']['screw_id'])){
+            $screwFilter = array('rail_type_id'=>$data['product']['rail_type_id'],
+                'panel_position_id'=>$data['product']['panel_position_id'],
+                'roof_type_id'=>$data['product']['roof_type_id'],
+                'height_id'    =>$data['product']['height_id']);
+        //}
+        $data['screw'] = $this->AdminModel->getList('screw',$screwFilter);
+       // echo $this->db->last_query();exit;
         $this->load->view('product/editProduct',$data);
 
     }
@@ -193,7 +202,6 @@ class Product extends CI_Controller {
         $this->form_validation->set_rules('title','Product Name','required|trim|xss_clean|max_length[255]');
         $this->form_validation->set_rules('short_description','Short Description','');
         $this->form_validation->set_rules('long_description','Long Description','');
-        $this->form_validation->set_rules('file','','callback_file_check');
         $this->form_validation->set_rules('rail_type_id','Rail Type','required|trim|xss_clean|max_length[255]');
         $this->form_validation->set_rules('panel_position_id','Panel Position','required|trim|xss_clean|max_length[255]');
         $this->form_validation->set_rules('roof_type_id','Roof Type','trim|xss_clean|max_length[255]');
@@ -201,8 +209,7 @@ class Product extends CI_Controller {
         $this->form_validation->set_rules('video','Video','');
         $this->form_validation->set_rules('status','Status','required|trim|xss_clean|max_length[255]');
         if($this->form_validation->run()){
-                
-                if(isset($_FILES) && !empty($_FILES)){
+                if(isset($_FILES['file']['name']) && !empty($_FILES['file']['name'])){
                     $upload = upload_image($_FILES,'file');
 
                     if($upload['errCode'] == -1){
@@ -227,6 +234,7 @@ class Product extends CI_Controller {
                                 'panel_position_id' =>$this->input->post('panel_position_id'),
                                 'roof_type_id' =>$this->input->post('roof_type_id'),
                                 'height_id'    =>$this->input->post('height_id'),
+                                'screw_id'     => $this->input->post('screw_id'),
                                 'video'       =>$videoLink,
                                 'status'      =>$this->input->post('status')
                             );
@@ -342,8 +350,9 @@ class Product extends CI_Controller {
     }
     public function file_check($str){
         $allowed_mime_type_arr = array('text/x-comma-separated-values', 'text/comma-separated-values', 'application/octet-stream', 'application/vnd.ms-excel', 'application/x-csv', 'text/x-csv', 'text/csv', 'application/csv', 'application/excel', 'application/vnd.msexcel', 'text/plain','application/pdf','image/gif','image/jpeg','image/pjpeg','image/png','image/x-png','image/jpg');
-        $mime = get_mime_by_extension($_FILES['file']['name']);
+        
         if(isset($_FILES['file']['name']) && $_FILES['file']['name']!=""){
+            $mime = get_mime_by_extension($_FILES['file']['name']);
             if(in_array($mime, $allowed_mime_type_arr)){
                 return true;
             }else{

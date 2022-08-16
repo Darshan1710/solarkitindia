@@ -81,14 +81,7 @@
 
 RewriteEngine On
 
-RewriteCond %{HTTPS} !=on
-RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R=301,NE,L]
-RewriteCond %{HTTP_HOST} ^solar-kit.in
-RewriteRule ^(.*)$ https://www.solarkit.com/$1 [R=301,QSA,L]
-RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/
-RewriteRule ^index\.html$ https://www.solarkit.com/ [R=301,L] 
-RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\ HTTP/
-RewriteRule ^index\.php$ https://www.solarkit.com/ [R=301,L] 
+
 
 
 
@@ -110,6 +103,7 @@ RewriteRule ^faq/$ faq.php [PT]
 RewriteRule ^news/$ https://news.solarkitindia.com/ [PT]
 RewriteRule ^careers/$ careers.php [PT]
 RewriteRule ^contact/$ contact-us.php [PT]
+RewriteRule ^form-submitted/$ success.php [PT]
 
 
 #RewriteRule ^products/$ prod.php [PT]

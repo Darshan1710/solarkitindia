@@ -8,7 +8,7 @@ if(mysqli_num_rows($height)) {
     };
 }
 
-$roofTypeQuery = "SELECT * FROM roof_type WHERE rail_type_id = ".$_POST['railTypeId']." AND panel_position_id = ".$_POST['panelPositionId']." AND id = ".$_POST['roofTypeId']." ORDER BY id ASC";
+$roofTypeQuery = "SELECT * FROM roof_type WHERE rail_type_id = ".$_POST['railTypeId']." AND panel_position_id = ".$_POST['panelPositionId']." AND id = ".$_POST['roofTypeId']." ORDER BY id DESC";
 $roofType = mysqli_query($db, $roofTypeQuery);
 if(mysqli_num_rows($roofType)) {
     while ($row = mysqli_fetch_assoc($roofType)) {

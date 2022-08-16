@@ -21,7 +21,7 @@
                value='87e02a7af85ee721b7ca2876d1d9b8d69d6887f9f394644d3786c2ffac28824d'></input>
         <input type='text' style='display:none;' name='actionType' value='TGVhZHM='></input>
         <input type='text' style='display:none;' name='returnURL'
-               value='https&#x3a;&#x2f;&#x2f;www.solar-kit.in&#x2f;form-submitted'> </input>
+               value='https&#x3a;&#x2f;&#x2f;www.solarkitindia.com&#x2f;form-submitted'> </input>
         <!-- Do not remove this code. -->
         <input type='text' style='display:none;' id='ldeskuid' name='ldeskuid'></input>
         <input type='text' style='display:none;' id='LDTuvid' name='LDTuvid'></input>
@@ -41,19 +41,22 @@
                 
             }
             .vertical-center span{
-                text-transform: uppercase;
                 z-index: 1;
                 color: #333;
                 margin: 0;
-                font-size: 80px;
-                line-height: 80px;
+                font-size: 55px;
+                line-height: 60px;
                 vertical-align: middle;
                 font-family: 'BebasNeue';
                 font-weight: 800;
             }
             .vertical-center-text{
-                padding: 15%;
+                padding: 13%;
+                margin-top: 10%;
                 text-align: center;
+            }
+            .vertical-center-text P{
+                margin-top: 40%;
             }
             .contact-form-container-2{
                 padding: 20px;
@@ -335,10 +338,10 @@
                     <div>
                         <div class="privacy_text">
                              By sending the message, you agree to the&nbsp;<a
-                                href='https://www.solar-kit.in/terms-and-conditions'
-                                title='https://www.solar-kit.in/terms-and-conditions' target='_blank'>Terms and
-                            Conditions</a>&nbsp;and&nbsp;<a href='https://www.solar-kit.in/privacy-policy'
-                                                            title='https://www.solar-kit.in/privacy-policy'
+                                href='https://www.solarkitindia.com/terms-and-conditions'
+                                title='https://www.solarkitindia.com/terms-and-conditions' target='_blank'>Terms and
+                            Conditions</a>&nbsp;and&nbsp;<a href='https://www.solarkitindia.com/privacy-policy'
+                                                            title='https://www.solarkitindia.com/privacy-policy'
                                                             target='_blank'>Privacy Policy</a>
                            
                         </div>

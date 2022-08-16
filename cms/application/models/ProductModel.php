@@ -31,5 +31,17 @@ class ProductModel extends CI_Model
         $this->db->join('roof_type r','r.id = h.roof_type_id');
         return $this->db->get('height h')->result_array();
     }
+
+    public function getScrewList($filter = NULL){
+        if($filter){
+            $this->db->where($filter);
+        }
+        $this->db->select('s.*,s.name as screw,h.name as height,rt.name as rail_type,pp.name as panel_position,r.name as roof_type');
+        $this->db->join('rail_type rt','rt.id = s.rail_type_id');
+        $this->db->join('panel_position pp','pp.id = s.panel_position_id');
+        $this->db->join('roof_type r','r.id = s.roof_type_id');
+        $this->db->join('height h','h.id = s.height_id');
+        return $this->db->get('screw s')->result_array();
+    }
 }
 ?>
