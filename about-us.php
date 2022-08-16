@@ -11,9 +11,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>solar mounting brackets,Metal roof solar mounting systems,Tile roof solar mounting systems </title>
     <meta name="keywords" content="concrete flat roof solar mounting systems,Solar mounting accessories"/>
-    <meta name="description"
-          content="Bristar is a global supplier in solar mounting brackets,we have created added value for customers around the world. "/>
-    <meta name="google-site-verification" content="0hlmt6XTPq9hWJUMwJe9WG8xzEZXv56X8cNMCA1UqUo"/>
 
     <meta property="og:image" content=""/>
     <link href="<?= $link;?>uploadfile/userimg/5fb86e9addafa6d964bb096eae4db0c0.ico" rel="shortcut icon"/>
@@ -215,7 +212,7 @@
             <div class="i_message_inquiry">
                 <em class="title">Leave A Message</em>
                 <div class="inquiry">
-                    <form role="form" action="https://www.bristarpvmount.com/inquiry/addinquiry" method="post"
+                    <form role="form" action="#" method="post"
                           name="email_form" id="email_form1">
                         <input type="hidden" name="msg_title" value="Leave a Message" class="meInput"/>
                         <div class="text">If you are interested in our products and want to know more details,please

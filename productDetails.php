@@ -16,9 +16,6 @@ foreach($products as $productRow){
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title><?php echo $productRow['title'] ?></title>
     <meta name="keywords" content="Standing Seam Solar Panel Clamp,Standing Seam Roof Solar Mounting System,Standing Seam Metal Roof Clamps" />
-    <meta name="description" content="Visit bristarpvmount.com to explore a variety of Standing Seam Solar Panel Clamp. All our Standing Seam Solar Panel Clamp are simple to install and great value!" />
-    <meta name="google-site-verification" content="0hlmt6XTPq9hWJUMwJe9WG8xzEZXv56X8cNMCA1UqUo" />
-
     <meta property="og:image" content="https:///"/>
     <link href="uploadfile/userimg/5fb86e9addafa6d964bb096eae4db0c0.ico" rel="shortcut icon"  />
     <?php include_once 'head.php'; ?>

@@ -8,11 +8,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=9" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>What are the components of the small flat photovoltaic solar mounting brackets?-bristarpvmount.com</title>
+    <title>What are the components of the small flat photovoltaic solar mounting brackets</title>
     <meta name="keywords" content="solar mounting brackets" />
-    <meta name="description" content="Generally,the installation of small flat photovoltaic brackets is mainly divided into three main components,which are triangle beam bracket,cross beam bracket and vertical brack" />
-    <meta name="google-site-verification" content="0hlmt6XTPq9hWJUMwJe9WG8xzEZXv56X8cNMCA1UqUo" />
-
     <meta property="og:image" content="uploadfile/news/3c46c1bd13b873ed48ba7b21b76d6154.jpg"/>
     <link href="<?= $link;?>uploadfile/userimg/5fb86e9addafa6d964bb096eae4db0c0.ico" rel="shortcut icon"  />
     <?php include_once 'head.php'; ?>
@@ -161,7 +158,7 @@ if($project){
             <div class="i_message_inquiry">
                 <em class="title">Leave A Message</em>
                 <div class="inquiry">
-                    <form role="form" action="https://www.bristarpvmount.com/inquiry/addinquiry" method="post" name="email_form" id="email_form1">
+                    <form role="form" action="#" method="post" name="email_form" id="email_form1">
                         <input type="hidden" name="msg_title" value="Leave a Message" class="meInput" />
                         <div class="text">If you are interested in our products and want to know more details,please leave a message here,we will reply you as soon as we can.</div>
                         <div class="input-group">
@@ -193,7 +190,7 @@ if($project){
         <li class="online_e">
             <div>
                 <i class="icon"></i>
-                <a rel="nofollow" target="_blank" href="mailto:ada@bristarxm.com">ada@bristarxm.com</a>
+                <a rel="nofollow" target="_blank" href="mailto:ada@xyz.com">ada@xyz.com</a>
             </div>
         </li>
 

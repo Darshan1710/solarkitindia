@@ -451,7 +451,7 @@ include("connect.php");
             <div class="i_message_inquiry">
                 <em class="title">Leave A Message</em>
                 <div class="inquiry">
-                    <form role="form" action="https://www.bristarpvmount.com/inquiry/addinquiry" method="post"
+                    <form role="form" action="#" method="post"
                           name="email_form" id="email_form1">
                         <input type="hidden" name="msg_title" value="Leave a Message" class="meInput"/>
                         <div class="text">If you are interested in our products and want to know more details,please
@@ -490,7 +490,7 @@ include("connect.php");
         <li class="online_e">
             <div>
                 <i class="icon"></i>
-                <a rel="nofollow" target="_blank" href="mailto:ada@bristarxm.com">ada@bristarxm.com</a>
+                <a rel="nofollow" target="_blank" href="mailto:ada@xyz.com">ada@xyz.com</a>
             </div>
         </li>
 

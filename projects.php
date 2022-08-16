@@ -14,9 +14,6 @@ include("connect.php");
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Solar Panel Mounting Brackets,Flat Pv Solar Mounting Brackets,Photovoltaic Solar Mounting </title>
     <meta name="keywords" content="Solar Pv Mounting Brackets,Solar Panel Mounting Brackets For Roof"/>
-    <meta name="description"
-          content="Get the Latest news of Solar Panel Mounting Brackets from bristarpvmount.com. Learn more here!"/>
-    <meta name="google-site-verification" content="0hlmt6XTPq9hWJUMwJe9WG8xzEZXv56X8cNMCA1UqUo"/>
     <link rel="canonical" href="https:///"/>
     <meta property="og:image" content=""/>
     <link href="uploadfile/userimg/5fb86e9addafa6d964bb096eae4db0c0.ico" rel="shortcut icon"/>
@@ -183,7 +180,7 @@ include("connect.php");
         <li class="online_e">
             <div>
                 <i class="icon"></i>
-                <a rel="nofollow" target="_blank" href="mailto:lancy@bristarxm.com">lancy@bristarxm.com</a>
+                <a rel="nofollow" target="_blank" href="mailto:lancy@xyz.com">lancy@xyz.com</a>
             </div>
         </li>
 

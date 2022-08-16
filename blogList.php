@@ -11,9 +11,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Solar Panel Mounting Brackets,Flat Pv Solar Mounting Brackets,Photovoltaic Solar Mounting </title>
     <meta name="keywords" content="Solar Pv Mounting Brackets,Solar Panel Mounting Brackets For Roof" />
-    <meta name="description" content="Get the Latest news of Solar Panel Mounting Brackets from bristarpvmount.com. Learn more here!" />
-    <meta name="google-site-verification" content="0hlmt6XTPq9hWJUMwJe9WG8xzEZXv56X8cNMCA1UqUo" />
-    <link rel="canonical" href="https:///" />
     <meta property="og:image" content=""/>
     <link href="<?= $link;?>uploadfile/userimg/5fb86e9addafa6d964bb096eae4db0c0.ico" rel="shortcut icon"  />
     <?php include_once('head.php'); ?>
@@ -159,7 +156,7 @@
             <div class="i_message_inquiry">
                 <em class="title">Leave A Message</em>
                 <div class="inquiry">
-                    <form role="form" action="https://www.bristarpvmount.com/inquiry/addinquiry" method="post" name="email_form" id="email_form1">
+                    <form role="form" action="#" method="post" name="email_form" id="email_form1">
                         <input type="hidden" name="msg_title" value="Leave a Message" class="meInput" />
                         <div class="text">If you are interested in our products and want to know more details,please leave a message here,we will reply you as soon as we can.</div>
                         <div class="input-group">

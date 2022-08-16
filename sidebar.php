@@ -9,7 +9,7 @@
         <li class="online_e">
             <div>
                 <i class="icon"></i>
-                <a rel="nofollow" target="_blank" href="mailto:ada@bristarxm.com">ada@bristarxm.com</a>
+                <a rel="nofollow" target="_blank" href="mailto:ada@xyz.com">ada@xyz.com</a>
             </div>
         </li>
         <li class="online_w">

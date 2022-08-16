@@ -1,12 +1,4 @@
-<link rel="alternate" hreflang="fr" href="https://fr.bristarpvmount.com/news-knowledge-_nc1" />
-<link rel="alternate" hreflang="es" href="https://es.bristarpvmount.com/news-knowledge-_nc1" />
-<link rel="alternate" hreflang="pt" href="https://pt.bristarpvmount.com/news-knowledge-_nc1" />
-<link rel="alternate" hreflang="nl" href="https://nl.bristarpvmount.com/news-knowledge-_nc1" />
-<link rel="alternate" hreflang="ar" href="https://ar.bristarpvmount.com/news-knowledge-_nc1" />
-<link rel="alternate" hreflang="ja" href="https://ja.bristarpvmount.com/news-knowledge-_nc1" />
-<link rel="alternate" hreflang="ms" href="https://ms.bristarpvmount.com/news-knowledge-_nc1" />
-<link rel="alternate" hreflang="vi" href="https://vi.bristarpvmount.com/news-knowledge-_nc1" />
-<link rel="alternate" href="news-knowledge-_nc1.html" hreflang="x-default" />
+
 <link type="text/css" rel="stylesheet" href="<?= $link ?>demo/template/css/bootstrap.css" />
 <link type="text/css" rel="stylesheet" href="<?= $link ?>demo/template/css/font-awesome.min.css">
 <link type="text/css" rel="stylesheet" href="<?= $link ?>demo/template/css/style.css" />

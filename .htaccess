@@ -104,6 +104,8 @@ RewriteRule ^news/$ https://news.solarkitindia.com/ [PT]
 RewriteRule ^careers/$ careers.php [PT]
 RewriteRule ^contact/$ contact-us.php [PT]
 RewriteRule ^form-submitted/$ success.php [PT]
+RewriteRule ^blog-details/$ blogDetails.php [PT]
+RewriteRule ^product-details/$ productDetails.php [PT]
 
 
 #RewriteRule ^products/$ prod.php [PT]
