@@ -12,12 +12,12 @@ if($result['screwFlag']) {
     }
 }
 
-$result['height'] = [];
+$heightData['height'] = [];
 $heightQuery = "SELECT * FROM height WHERE rail_type_id = ".$_POST['railTypeId']." AND panel_position_id = ".$_POST['panelPositionId']." AND roof_type_id = ".$_POST['roofTypeId']." ORDER BY id DESC";
 $height = mysqli_query($db, $heightQuery);
 if(mysqli_num_rows($height)) {
     while ($row = mysqli_fetch_assoc($height)) {
-        $result['height'][] = $row;
+        $heightData['height'][] = $row;
     };
 }
 
@@ -26,7 +26,7 @@ $panelPositionWhere = $_POST['panelPositionId'] ?? '';
 $roofTypeWhere = $_POST['roofTypeId'] ?? '';
 $heightWhere = $_POST['heightId'] ?? '';
 $screwWhere = $_POST['screwId'] ?? '';
-if(empty($result['height'])) {
+if(empty($heightData['height']) && !$result['screwFlag'] || $heightData['height'] && $result['screwFlag']) {
     if ($railTypeWhere || $panelPositionWhere || $roofTypeWhere || $heightWhere || $screwWhere) {
         $productQuery = "SELECT * FROM sub_products";
         if ($railTypeWhere) {

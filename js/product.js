@@ -11,6 +11,7 @@ $( document ).ready(function() {
                 data : {railTypeId:railTypeId},
                 success : function(data){
                     $('#panel_position').empty();
+                    $('#screw').remove();
                     $('.railType,.panelPosition,.roofType,.height,.product').remove();
                     if(data.panelPosition) {
                         $('#panel_position').append('<option value="">Please Select Panel Position</option>');
@@ -93,6 +94,8 @@ $( document ).ready(function() {
                         $.each(data.height, function (key, value) {
                             $('#height').append('<option value="' + value.id + '">' + value.name + '</option>');
                         });
+                    }else{
+                        $(".height-input,.screw-div").css("display", "none");
                     }
 
                     getProduct();
@@ -121,7 +124,7 @@ $( document ).ready(function() {
         var heightId = $('#height').val();
         if(railTypeId && roofTypeId && panelPositionId && heightId){
             $.ajax({
-                url: base_url + "getProducts.php",
+                url: base_url + "getScrew.php",
                 type : 'post',
                 dataType : 'json',
                 data : {roofTypeId:roofTypeId,railTypeId:railTypeId,panelPositionId:panelPositionId,heightId:heightId},
@@ -132,7 +135,7 @@ $( document ).ready(function() {
                         $('#height').css('border-color','#0277bd');
                     }
                     
-                    if(data.screwFlag){
+                    if(data.screw){
                         $('.screw-div').empty();
                         var screwInput = '<div class="col-md-2 screw-div">\n' +
                             '                    <label>Step 5</label>\n' +
