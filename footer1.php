@@ -55,7 +55,7 @@
                                 </li>
                                 <li><a href="<?= $link; ?>careers/">Career</a>
                                 </li>
-                                <li><a href="<?= $link; ?>contact-us/">Contact us</a>
+                                <li><a href="<?= $link; ?>contact/">Contact us</a>
                                 </li>
                             </ul>
                         </div>

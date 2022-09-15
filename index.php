@@ -46,7 +46,7 @@ include("connect.php");
                             <div class="images"
                                  style="background-image: url(<?= $image_link.$cat['background'] ?>)"></div>
                             <div class="in_categ_w">
-                                <img class="in_categ_img" src="<?php echo $image_link . $cat['image']; ?>"
+                                <img class="in_categ_img" src="<?php echo $link . $cat['image']; ?>"
                                      alt="Metal Roof Solar Mounting System">
                                 <p class="title"><?php echo $cat['category'] ?></p>
                                 <em class="line"></em>
